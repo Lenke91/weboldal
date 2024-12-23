@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés & Regisztráció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            font-size: 16px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .form-toggle {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <a href="#" id="en-btn">EN</a> | 
+        <a href="#" id="hu-btn">HU</a>
+    </div>
+
+    <div class="form-container">
+        <!-- Login Form -->
+        <div class="login-form en-content">
+            <h2>Login</h2>
+            <input type="text" id="username" class="input-field" placeholder="Username" required>
+            <input type="password" id="password" class="input-field" placeholder="Password" required>
+            <button class="button" onclick="login()">Login</button>
+            <div class="form-toggle">
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div class="register-form hu-content" style="display: none;">
+            <h2>Regisztráció</h2>
+            <input type="text" id="reg-username" class="input-field" placeholder="Felhasználónév" required>
+            <input type="email" id="reg-email" class="input-field" placeholder="E-mail" required>
+            <input type="password" id="reg-password" class="input-field" placeholder="Jelszó" required>
+            <button class="button" onclick="register()">Regisztráció</button>
+            <div class="form-toggle">
+                <p>Már van fiókod? <a href="#" onclick="toggleForms()">Bejelentkezés</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Nyelvváltás
+        document.getElementById('en-btn').addEventListener('click', () => {
+            document.querySelector('.hu-content').style.display = 'none';
+            document.querySelector('.en-content').style.display = 'block';
+        });
+        document.getElementById('hu-btn').addEventListener('click', () => {
+            document.querySelector('.en-content').style.display = 'none';
+            document.querySelector('.hu-content').style.display = 'block';
+        });
+
+        // Form switch
+        function toggleForms() {
+            const loginForm = document.querySelector('.login-form');
+            const registerForm = document.querySelector('.register-form');
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+        }
+
+        // Login function
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username && password) {
+                alert("Sikeres bejelentkezés!");
+            } else {
+                alert("Kérjük, adja meg a felhasználónevet és a jelszót.");
+            }
+        }
+
+        // Register function
+        function register() {
+            const regUsername = document.getElementById('reg-username').value;
+            const regEmail = document.getElementById('reg-email').value;
+            const regPassword = document.getElementById('reg-password').value;
+            if (regUsername && regEmail && regPassword) {
+                alert("Sikeres regisztráció!");
+            } else {
+                alert("Kérjük, töltse ki az összes mezőt.");
+            }
+        }
+    </script>
+
+</body>
+</html>
