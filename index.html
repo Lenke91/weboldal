@@ -1,276 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to VStyleDesign, your partner in modern web design and creative solutions.">
-  <title>VStyleDesign - Modern Web Design & Creative Solutions</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7fa;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern web design and creative portfolio by VStyleDesign. Discover our services and get in touch!">
+    <meta name="keywords" content="web design, creative services, portfolio, VStyleDesign">
+    <meta name="author" content="VStyleDesign">
+    <meta name="robots" content="index, follow">
+    <title>VStyleDesign - Creative Web Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
 
-    header {
-      background-color: #1e3d58;
-      color: white;
-      padding: 2rem 0;
-    }
+        .navbar {
+            background-color: #1e3d58;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-    }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-    }
+        .navbar ul li {
+            margin: 0 15px;
+        }
 
-    nav ul li {
-      margin: 0 10px;
-    }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease-in-out;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 15px;
-      display: block;
-    }
+        .navbar a:hover {
+            color: #00aaff;
+        }
 
-    nav a:hover {
-      background-color: #555;
-    }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 4px;
+        }
 
-    .dropdown {
-      position: relative;
-    }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 150px;
-      margin-top: 5px;
-      padding: 10px 0;
-      border-radius: 4px;
-    }
+        section {
+            padding: 4rem 1rem;
+            text-align: center;
+            animation: fadeIn 1.2s ease-out;
+            margin-top: 60px; /* To avoid overlap with fixed navbar */
+        }
 
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .dropdown-menu a {
-      color: white;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-    }
+        footer {
+            background-color: #1e3d58;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .dropdown-menu a:hover {
-      background-color: #555;
-    }
+        footer a {
+            color: #ffdd57;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
 
-    header h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
+        footer a:hover {
+            color: #fff;
+        }
 
-    section.features {
-      display: flex;
-      justify-content: space-around;
-      padding: 2rem;
-      background-color: #ffffff;
-    }
+        .button {
+            background-color: #00aaff;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
 
-    .feature {
-      text-align: center;
-      width: 30%;
-    }
+        .button:hover {
+            background-color: #0077cc;
+        }
 
-    .feature i {
-      font-size: 3rem;
-      color: #0077cc;
-    }
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
-    footer {
-      background-color: #1e3d58;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+        form input, form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
 
-    .language-switch {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
+        form button {
+            width: fit-content;
+            align-self: center;
+        }
 
-    .language-switch button {
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      margin: 0 5px;
-    }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
 
-    .language-switch button:hover {
-      background-color: #005fa3;
-    }
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    @media screen and (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
+            .navbar {
+                position: relative;
+            }
 
-      section.features {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .feature {
-        width: 80%;
-      }
-    }
-  </style>
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="home.html" data-key="nav_home">Home</a></li>
+                <li><a href="about me.html" data-key="nav_about">About Me</a></li>
+                <li><a href="services.html" data-key="nav_services">Services</a></li>
+                <li><a href="portfolio.html" data-key="nav_portfolio">Portfolio</a></li>
+                <li><a href="marketing.html" data-key="nav_marketing">Marketing</a></li>
+                <li><a href="payment options.html" data-key="nav_payment">Payment Options</a></li>
+                <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" data-key="nav_language">Language</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-lang="hu" data-key="nav_language_hu">Magyar</a></li>
+                        <li><a href="#" data-lang="en" data-key="nav_language_en">English</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" data-key="nav_home">Home</a></li>
-      <li><a href="about me.html" data-key="nav_about">About Me</a></li>
-      <li><a href="services.html" data-key="nav_services">Services</a></li>
-      <li><a href="portfolio.html" data-key="nav_portfolio">Portfolio</a></li>
-      <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
-      <li class="dropdown">
-        <a href="#" data-key="nav_language">Language</a>
-        <ul class="dropdown-menu">
-          <li><a href="#" data-lang="hu" data-key="nav_language_hu">Magyar</a></li>
-          <li><a href="#" data-lang="en" data-key="nav_language_en">English</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+    <section id="home">
+        <div class="container">
+            <h1 id="home-title" data-key="home_title">Welcome to VStyleDesign</h1>
+            <p id="home-text" data-key="home_text">Your partner in modern web design and creative solutions!</p>
+        </div>
+    </section>
 
-  <header>
-    <div class="container">
-      <h1 id="home-title" data-key="home_title">Welcome to VStyleDesign</h1>
-      <p id="home-text" data-key="home_text">Your partner in modern web design and creative solutions!</p>
-    </div>
-  </header>
+    <section id="contact">
+        <div class="container">
+            <h2 id="contact-title" data-key="contact_title">Contact</h2>
+            <p id="contact-text" data-key="contact_text">Feel free to reach out!</p>
+            <form action="/submit-form" method="post">
+                <label for="name" data-key="form_name_label">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email" data-key="form_email_label">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message" data-key="form_message_label">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit" class="button" data-key="form_submit_button">Send</button>
+            </form>
+        </div>
+    </section>
 
-  <section class="features">
-    <div class="container">
-      <div class="feature">
-        <i class="fas fa-cogs"></i>
-        <h3 data-key="feature_1_title">Custom Design</h3>
-        <p data-key="feature_1_text">We create unique and tailored designs to match your brand identity.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-mobile-alt"></i>
-        <h3 data-key="feature_2_title">Responsive</h3>
-        <p data-key="feature_2_text">Optimized for all screen sizes, ensuring a seamless experience on mobile and desktop.</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-rocket"></i>
-        <h3 data-key="feature_3_title">Fast & Reliable</h3>
-        <p data-key="feature_3_text">Speed and performance are our top priorities to ensure smooth functionality.</p>
-      </div>
-    </div>
-  </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 VStyleDesign</p>
+            <p>
+                <a href="https://vstyledesign.com" target="_blank" data-key="footer_vstyledesign">VStyleDesign</a>
+                <a href="https://www.facebook.com/varro" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/vstyledesign" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/vstyledesign" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </p>
+        </div>
+    </footer>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 VStyleDesign. All rights reserved.</p>
-      <p>
-        <a href="https://vstyledesign.com" target="_blank" data-key="footer_vstyledesign">VStyleDesign</a>
-        <a href="https://www.facebook.com/varro" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/vstyledesign" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/vstyledesign" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </p>
-    </div>
-  </footer>
+    <script>
+        const translations = {
+            hu: {
+                nav_home: "Kezdőlap",
+                nav_about: "Rólam",
+                nav_services: "Szolgáltatások",
+                nav_portfolio: "Portfólió",
+                nav_marketing: "Marketing",
+                nav_payment: "Fizetési opciók",
+                nav_contact: "Kapcsolat",
+                nav_language: "Nyelv",
+                nav_language_hu: "Magyar",
+                nav_language_en: "English",
+                home_title: "Üdvözlöm az oldalon, VStyleDesign",
+                home_text: "A modern webdesign és kreatív megoldások partnere!",
+                contact_title: "Kapcsolat",
+                contact_text: "Érdeklődjen bátran!",
+                form_name_label: "Név:",
+                form_email_label: "Email:",
+                form_message_label: "Üzenet:",
+                form_submit_button: "Küldés",
+                footer_vstyledesign: "VStyleDesign"
+            },
+            en: {
+                nav_home: "Home",
+                nav_about: "About Me",
+                nav_services: "Services",
+                nav_portfolio: "Portfolio",
+                nav_marketing: "Marketing",
+                nav_payment: "Payment Options",
+                nav_contact: "Contact",
+                nav_language: "Language",
+                nav_language_hu: "Magyar",
+                nav_language_en: "English",
+                home_title: "Welcome to VStyleDesign",
+                home_text: "Your partner in modern web design and creative solutions!",
+                contact_title: "Contact",
+                contact_text: "Feel free to reach out!",
+                form_name_label: "Name:",
+                form_email_label: "Email:",
+                form_message_label: "Message:",
+                form_submit_button: "Send",
+                footer_vstyledesign: "VStyleDesign"
+            }
+        };
 
-  <script>
-    const translations = {
-      hu: {
-        nav_home: "Kezdőlap",
-        nav_about: "Rólam",
-        nav_services: "Szolgáltatások",
-        nav_portfolio: "Portfólió",
-        nav_contact: "Kapcsolat",
-        nav_language: "Nyelv",
-        nav_language_hu: "Magyar",
-        nav_language_en: "English",
-        home_title: "Üdvözlöm az oldalon, VStyleDesign",
-        home_text: "A modern webdesign és kreatív megoldások partnere!",
-        feature_1_title: "Egyedi tervezés",
-        feature_1_text: "Egyedi és márkádhoz illeszkedő tervezést készítünk.",
-        feature_2_title: "Reszponzív",
-        feature_2_text: "Minden képernyőmérethez optimalizálva, zökkenőmentes élmény mobil és asztali gépeken.",
-        feature_3_title: "Gyors és megbízható",
-        feature_3_text: "Sebesség és teljesítmény a legfontosabb prioritásaink, hogy sima működést biztosítsunk.",
-        footer_vstyledesign: "VStyleDesign"
-      },
-      en: {
-        nav_home: "Home",
-        nav_about: "About Me",
-        nav_services: "Services",
-        nav_portfolio: "Portfolio",
-        nav_contact: "Contact",
-        nav_language: "Language",
-        nav_language_hu: "Magyar",
-        nav_language_en: "English",
-        home_title: "Welcome to VStyleDesign",
-        home_text: "Your partner in modern web design and creative solutions!",
-        feature_1_title: "Custom Design",
-        feature_1_text: "We create unique and tailored designs to match your brand identity.",
-        feature_2_title: "Responsive",
-        feature_2_text: "Optimized for all screen sizes, ensuring a seamless experience on mobile and desktop.",
-        feature_3_title: "Fast & Reliable",
-        feature_3_text: "Speed and performance are our top priorities to ensure smooth functionality.",
-        footer_vstyledesign: "VStyleDesign"
-      }
-    };
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            const lang = document.documentElement.lang || 'en';
+            element.innerText = translations[lang][key];
+        });
 
-    document.querySelectorAll('[data-key]').forEach(element => {
-      const key = element.getAttribute('data-key');
-      const lang = document.documentElement.lang || 'en';
-      element.innerText = translations[lang][key];
-    });
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const lang = link.getAttribute('data-lang');
+                document.documentElement.lang = lang;
+                localStorage.setItem('preferredLang', lang);
+                updateLanguage(lang);
+            });
+        });
 
-    document.querySelectorAll('.dropdown-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        const lang = link.getAttribute('data-lang');
-        document.documentElement.lang = lang;
-        localStorage.setItem('preferredLang', lang);
-        updateLanguage(lang);
-      });
-    });
+        window.addEventListener('load', () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'en';
+            document.documentElement.lang = savedLang;
+            updateLanguage(savedLang);
+        });
 
-    window.addEventListener('load', () => {
-      const savedLang = localStorage.getItem('preferredLang') || 'en';
-      document.documentElement.lang = savedLang;
-      updateLanguage(savedLang);
-    });
-
-    function updateLanguage(lang) {
-      document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        element.innerText = translations[lang][key];
-      });
-    }
-  </script>
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                element.innerText = translations[lang][key];
+            });
+        }
+    </script>
 </body>
 </html>
 
+    
+
+    
+ 
+  
+    
+     
+       
+       
+  
+     
 
       
 
