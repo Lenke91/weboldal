@@ -3,15 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Recommendations</title>
+  <title data-key="page_title">Book Recommendations</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .language-switch {
+      margin-top: 1rem;
+    }
+
+    .language-switch button {
+      background-color: #fff;
+      color: #0077cc;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .language-switch button:hover {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .book-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .book {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 280px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .book:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .book h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .book {
+        width: calc(100% - 2rem); /* 100% - 2rem margin */
+      }
+    }
+
+    footer {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer blockquote {
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1 id="page-title">Recommended Book List</h1>
+    <h1 id="page-title" data-key="page_title">Recommended Book List</h1>
     <div class="language-switch">
-      <button onclick="switchLanguage('en')">English</button>
-      <button onclick="switchLanguage('hu')">Magyar</button>
+      <button onclick="switchLanguage('en')" data-key="btn_english">English</button>
+      <button onclick="switchLanguage('hu')" data-key="btn_hungarian">Magyar</button>
     </div>
   </header>
 
@@ -41,6 +129,45 @@
     <p>&copy; 2024 Book Portfolio. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const translations = {
+      hu: {
+        page_title: "Ajánlott könyvlista",
+        btn_english: "Angol",
+        btn_hungarian: "Magyar"
+      },
+      en: {
+        page_title: "Recommended Book List",
+        btn_english: "English",
+        btn_hungarian: "Magyar"
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.documentElement.lang = lang;
+      updateLanguage(lang);
+    }
+
+    function updateLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        element.innerText = translations[lang][key];
+      });
+
+      document.querySelectorAll('.book').forEach(book => {
+        const title = book.getAttribute(`data-${lang}-title`);
+        book.querySelector('.book-title').innerText = title;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'en';
+      document.documentElement.lang = savedLang;
+      updateLanguage(savedLang);
+    });
+
+  </script>
 </body>
 </html>
+
+       
