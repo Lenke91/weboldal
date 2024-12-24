@@ -156,13 +156,13 @@
     <nav class="navbar">
         <div class="container">
             <ul>
-                <li><a href="home.html" data-key="nav_home">Home</a></li>
-                <li><a href="about me.html" data-key="nav_about">About Me</a></li>
-                <li><a href="services.html" data-key="nav_services">Services</a></li>
-                <li><a href="portfolio.html" data-key="nav_portfolio">Portfolio</a></li>
-                <li><a href="marketing.html" data-key="nav_marketing">Marketing</a></li>
-                <li><a href="payment options.html" data-key="nav_payment">Payment Options</a></li>
-                <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+                <li><a href="#" data-key="nav_home">Home</a></li>
+                <li><a href="#" data-key="nav_about">About Me</a></li>
+                <li><a href="#" data-key="nav_services">Services</a></li>
+                <li><a href="#" data-key="nav_portfolio">Portfolio</a></li>
+                <li><a href="#" data-key="nav_marketing">Marketing</a></li>
+                <li><a href="#" data-key="nav_payment">Payment Options</a></li>
+                <li><a href="#" data-key="nav_contact">Contact</a></li>
                 <li class="dropdown">
                     <a href="#" data-key="nav_language">Language</a>
                     <ul class="dropdown-menu">
@@ -282,6 +282,15 @@
                 element.innerText = translations[lang][key];
             });
         }
+
+        // Redirect 404 to homepage
+        window.addEventListener('hashchange', () => {
+            if (!location.hash) {
+                location.hash = '#home'; // Redirect to home if hash is missing
+            }
+        });
     </script>
 </body>
 </html>
+
+           
