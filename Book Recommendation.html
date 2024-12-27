@@ -1,173 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-key="page_title">Book Recommendations</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7fa;
-      color: #333;
-    }
-
-    header {
-      background-color: #0077cc;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    .language-switch {
-      margin-top: 1rem;
-    }
-
-    .language-switch button {
-      background-color: #fff;
-      color: #0077cc;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .language-switch button:hover {
-      background-color: #0077cc;
-      color: white;
-    }
-
-    main {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .book-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .book {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      width: 280px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease-in-out;
-    }
-
-    .book:hover {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .book h3 {
-      margin: 0 0 0.5rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      .book {
-        width: calc(100% - 2rem); /* 100% - 2rem margin */
-      }
-    }
-
-    footer {
-      background-color: #0077cc;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    footer blockquote {
-      font-style: italic;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Könyvajánló</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .book-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Start off-screen */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            display: none; /* Hide by default */
+        }
+        .book-item.show {
+            opacity: 1;
+            transform: translateY(0);
+            display: block; /* Show when animated */
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1 id="page-title" data-key="page_title">Recommended Book List</h1>
-    <div class="language-switch">
-      <button onclick="switchLanguage('en')" data-key="btn_english">English</button>
-      <button onclick="switchLanguage('hu')" data-key="btn_hungarian">Magyar</button>
+<header>
+    <h1 id="header-text">Könyvajánló</h1>
+    <p id="header-description">Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.</p>
+    <div class="lang-switch">
+        <a href="#" id="hu-btn">HU</a> | <a href="#" id="en-btn">EN</a>
     </div>
-  </header>
+</header>
 
-  <main>
-    <section class="book-list">
-      <div class="book" data-en-title="Think and Grow Rich" data-hu-title="Gondolkodj és gazdagodj">
-        <h3 class="book-title"></h3>
-        <p class="book-description"></p>
-      </div>
-      <div class="book" data-en-title="Rich Dad Poor Dad" data-hu-title="Gazdag papa, szegény papa">
-        <h3 class="book-title"></h3>
-        <p class="book-description"></p>
-      </div>
-      <div class="book" data-en-title="The Psychology of Money" data-hu-title="A pénz pszichológiája">
-        <h3 class="book-title"></h3>
-        <p class="book-description"></p>
-      </div>
-      <div class="book" data-en-title="Growth Hacker" data-hu-title="Növekedési hacker">
-        <h3 class="book-title"></h3>
-        <p class="book-description"></p>
-      </div>
-    </section>
-  </main>
+<div class="container">
+    <!-- Hungarian Content -->
+    <div class="book-list hu-content">
+        <div class="book-item">
+            <h2>Gondolkodj és Gazdagodj</h2>
+            <p>Napoleon Hill klasszikus útmutatója a gazdagságépítéshez.</p>
+        </div>
+        <div class="book-item">
+            <h2>Gazdag Papa, Szegény Papa</h2>
+            <p>Robert Kiyosaki tanulságai a pénzügyi tudatosságról.</p>
+        </div>
+        <div class="book-item">
+            <h2>A Pénz pszichológiája</h2>
+            <p>Morgan Housel mélyreható elemzése a pénz és a gazdagság mentális oldaláról.</p>
+        </div>
+        <div class="book-item">
+            <h2>A 4 órás munkahét</h2>
+            <p>Tim Ferriss útmutatója a szabadság és az automatikus jövedelem eléréséhez.</p>
+        </div>
+        <div class="book-item">
+            <h2>Nulláról Egyre</h2>
+            <p>Peter Thiel útmutatója az áttörő startupok építéséhez.</p>
+        </div>
+    </div>
 
-  <footer>
-    <blockquote>"The secret to success is action and continuous learning." - Napoleon Hill</blockquote>
-    <p>&copy; 2024 Book Portfolio. All rights reserved.</p>
-  </footer>
+    <!-- English Content (Initially hidden) -->
+    <div class="book-list en-content" style="display: none;">
+        <div class="book-item">
+            <h2>Think and Grow Rich</h2>
+            <p>Napoleon Hill's classic guide to wealth-building principles.</p>
+        </div>
+        <div class="book-item">
+            <h2>Rich Dad Poor Dad</h2>
+            <p>Robert Kiyosaki's insightful lessons on financial education.</p>
+        </div>
+        <div class="book-item">
+            <h2>The Psychology of Money</h2>
+            <p>Morgan Housel's exploration of money and the mindset behind wealth.</p>
+        </div>
+        <div class="book-item">
+            <h2>The 4-Hour Workweek</h2>
+            <p>Tim Ferriss' blueprint for creating freedom and automated income.</p>
+        </div>
+        <div class="book-item">
+            <h2>Zero to One</h2>
+            <p>Peter Thiel's guide to building groundbreaking startups.</p>
+        </div>
+    </div>
+</div>
 
-  <script>
-    const translations = {
-      hu: {
-        page_title: "Ajánlott könyvlista",
-        btn_english: "Angol",
-        btn_hungarian: "Magyar"
-      },
-      en: {
-        page_title: "Recommended Book List",
-        btn_english: "English",
-        btn_hungarian: "Magyar"
-      }
-    };
+<footer>
+    <p id="footer-text">Könyvajánló &copy; 2024. Minden jog fenntartva.</p>
+</footer>
 
+<script>
+    // Language Switch with Animation
     function switchLanguage(lang) {
-      document.documentElement.lang = lang;
-      updateLanguage(lang);
+        const bookItems = document.querySelectorAll('.book-item');
+        
+        bookItems.forEach(item => item.classList.remove('show')); // Hide all items first
+
+        if (lang === 'en') {
+            document.querySelector('.hu-content').style.display = 'none';
+            document.querySelector('.en-content').style.display = 'block';
+            document.querySelectorAll('.en-content .book-item').forEach(item => item.classList.add('show'));
+            document.getElementById('header-text').innerText = 'Book Recommendations';
+            document.getElementById('header-description').innerText = 'Discover powerful books to boost your mindset and entrepreneurial journey.';
+            document.getElementById('page-title').innerText = 'Book Recommendations';
+            document.getElementById('footer-text').innerText = 'Book Recommendations &copy; 2024. All rights reserved.';
+        } else {
+            document.querySelector('.en-content').style.display = 'none';
+            document.querySelector('.hu-content').style.display = 'block';
+            document.querySelectorAll('.hu-content .book-item').forEach(item => item.classList.add('show'));
+            document.getElementById('header-text').innerText = 'Könyvajánló';
+            document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.';
+            document.getElementById('page-title').innerText = 'Könyvajánló';
+            document.getElementById('footer-text').innerText = 'Könyvajánló &copy; 2024. Minden jog fenntartva.';
+        }
     }
 
-    function updateLanguage(lang) {
-      document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        element.innerText = translations[lang][key];
-      });
+    document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+    document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
+</script>
 
-      document.querySelectorAll('.book').forEach(book => {
-        const title = book.getAttribute(`data-${lang}-title`);
-        book.querySelector('.book-title').innerText = title;
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('preferredLang') || 'en';
-      document.documentElement.lang = savedLang;
-      updateLanguage(savedLang);
-    });
-
-  </script>
 </body>
 </html>
-
-       
