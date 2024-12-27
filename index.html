@@ -98,37 +98,44 @@
         }
 
         .button {
-            background-color: #00aaff;
+            background-color: #0077cc;
             color: white;
-            padding: 0.7rem 1.5rem;
-            border: none;
+            padding: 0.8rem 1.5rem;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
         }
 
         .button:hover {
-            background-color: #0077cc;
+            background-color: #005fa3;
         }
 
-        form {
-            max-width: 600px;
-            margin: 2rem auto;
+        .page-slider {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            padding: 2rem;
         }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+        .page-content {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
         }
 
-        form button {
-            width: fit-content;
-            align-self: center;
+        .page {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 2rem;
+            text-align: center;
+            display: none;
+        }
+
+        .page.active {
+            display: block;
         }
 
         @keyframes fadeIn {
@@ -136,6 +143,15 @@
             100% { opacity: 1; }
         }
 
+        .navigation {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .navigation .button {
+            margin: 0 5px;
+        }
+        
         @media screen and (max-width: 768px) {
             .navbar ul {
                 flex-direction: column;
@@ -149,6 +165,10 @@
             section {
                 padding: 2rem 1rem;
             }
+
+            .page {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -157,11 +177,11 @@
         <div class="container">
             <ul>
                 <li><a href="index.html" data-key="nav_home">Home</a></li>
-                <li><a href="about me.html" data-key="nav_about">About Me</a></li>
+                <li><a href="about-me.html" data-key="nav_about">About Me</a></li>
                 <li><a href="services.html" data-key="nav_services">Services</a></li>
                 <li><a href="portfolio.html" data-key="nav_portfolio">Portfolio</a></li>
                 <li><a href="marketing.html" data-key="nav_marketing">Marketing</a></li>
-                <li><a href="payment options.html" data-key="nav_payment">Payment Options</a></li>
+                <li><a href="payment-options.html" data-key="nav_payment">Payment Options</a></li>
                 <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
                 <li class="dropdown">
                     <a href="#" data-key="nav_language">Language</a>
@@ -174,40 +194,43 @@
         </div>
     </nav>
 
-    <section id="home">
+    <section id="page-slider">
         <div class="container">
-            <h1 id="home-title" data-key="home_title">Welcome to VStyleDesign</h1>
-            <p id="home-text" data-key="home_text">Your partner in modern web design and creative solutions!</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 id="contact-title" data-key="contact_title">Contact</h2>
-            <p id="contact-text" data-key="contact_text">Feel free to reach out!</p>
-            <form action="/submit-form" method="post">
-                <label for="name" data-key="form_name_label">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email" data-key="form_email_label">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message" data-key="form_message_label">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit" class="button" data-key="form_submit_button">Send</button>
-            </form>
+            <div class="page-content">
+                <div class="page active" id="section-1">
+                    <h2 data-key="page_section_1_title">About Me</h2>
+                    <p data-key="page_section_1_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="page" id="section-2">
+                    <h2 data-key="page_section_2_title">Our Services</h2>
+                    <p data-key="page_section_2_text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="page" id="section-3">
+                    <h2 data-key="page_section_3_title">Portfolio</h2>
+                    <p data-key="page_section_3_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="page" id="section-4">
+                    <h2 data-key="page_section_4_title">Contact</h2>
+                    <p data-key="page_section_4_text">Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <button id="prev" class="button" data-key="page_prev">Previous</button>
+                <button id="next" class="button" data-key="page_next">Next</button>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-          <p>&copy; 2024 VStyleDesign. All rights reserved.</p>
-          <p>
-            <a href="https://www.facebook.com/lenke.deli.1" target="_blank" data-key="footer_facebook"><i class="fab fa-facebook"></i></a> 
-            <a href="https://www.instagram.com/lenkevarro/" target="_blank" data-key="footer_instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank" data-key="footer_linkedin"><i class="fab fa-linkedin"></i></a>
-          </p>
+            <p>&copy; 2024 VStyleDesign. All rights reserved.</p>
+            <p>
+                <a href="https://www.facebook.com/lenke.deli.1" target="_blank" data-key="footer_facebook"><i class="fab fa-facebook"></i></a> 
+                <a href="https://www.instagram.com/lenkevarro/" target="_blank" data-key="footer_instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank" data-key="footer_linkedin"><i class="fab fa-linkedin"></i></a>
+            </p>
         </div>
     </footer>
-    
 
     <script>
         const translations = {
@@ -221,15 +244,17 @@
                 nav_contact: "Kapcsolat",
                 nav_language: "Nyelv",
                 nav_language_hu: "Magyar",
-                nav_language_en: "English",
-                home_title: "Üdvözlöm az oldalon, VStyleDesign",
-                home_text: "A modern webdesign és kreatív megoldások partnere!",
-                contact_title: "Kapcsolat",
-                contact_text: "Érdeklődjen bátran!",
-                form_name_label: "Név:",
-                form_email_label: "Email:",
-                form_message_label: "Üzenet:",
-                form_submit_button: "Küldés",
+                nav_language_en: "Angol",
+                page_section_1_title: "Rólam",
+                page_section_1_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                page_section_2_title: "Szolgáltatások",
+                page_section_2_text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                page_section_3_title: "Portfólió",
+                page_section_3_text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+                page_section_4_title: "Kapcsolat",
+                page_section_4_text: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+                page_prev: "Előző",
+                page_next: "Következő",
                 footer_facebook: "Facebook",
                 footer_instagram: "Instagram",
                 footer_linkedin: "LinkedIn"
@@ -243,16 +268,18 @@
                 nav_payment: "Payment Options",
                 nav_contact: "Contact",
                 nav_language: "Language",
-                nav_language_hu: "Magyar",
+                nav_language_hu: "Hungarian",
                 nav_language_en: "English",
-                home_title: "Welcome to VStyleDesign",
-                home_text: "Your partner in modern web design and creative solutions!",
-                contact_title: "Contact",
-                contact_text: "Feel free to reach out!",
-                form_name_label: "Name:",
-                form_email_label: "Email:",
-                form_message_label: "Message:",
-                form_submit_button: "Send",
+                page_section_1_title: "About Me",
+                page_section_1_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                page_section_2_title: "Our Services",
+                page_section_2_text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                page_section_3_title: "Portfolio",
+                page_section_3_text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+                page_section_4_title: "Contact",
+                page_section_4_text: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+                page_prev: "Previous",
+                page_next: "Next",
                 footer_facebook: "Facebook",
                 footer_instagram: "Instagram",
                 footer_linkedin: "LinkedIn"
@@ -286,13 +313,45 @@
                 element.innerText = translations[lang][key];
             });
         }
+
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+        const totalPages = pages.length;
+
+        function showPage(index) {
+            pages.forEach((page, i) => {
+                page.classList.remove('active');
+                if (i === index) {
+                    page.classList.add('active');
+                }
+            });
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentPage = (currentPage + 1) % totalPages;
+            showPage(currentPage);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentPage = (currentPage - 1 + totalPages) % totalPages;
+            showPage(currentPage);
+        });
     </script>
 </body>
 </html>
 
+          
       
+
        
-       
+      
+         
+
+     
+    
+           
+            
+         
 
 
 
