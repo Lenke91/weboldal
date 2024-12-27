@@ -171,20 +171,35 @@
 
 <script>
     // Nyelvváltás
-    document.getElementById('en-btn').addEventListener('click', () => {
-        document.querySelectorAll('.hu-content').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.en-content').forEach(el => el.style.display = 'block');
-        document.getElementById('header-text').innerText = 'Affiliate Marketing Guide';
-        document.getElementById('header-description').innerText = 'Start earning online today with Affiliate Marketing!';
+    function switchLanguage(lang) {
+        const enContent = document.querySelectorAll('.en-content');
+        const huContent = document.querySelectorAll('.hu-content');
+        const headerText = document.getElementById('header-text');
+        const headerDescription = document.getElementById('header-description');
+
+        if (lang === 'en') {
+            huContent.forEach(el => el.style.display = 'none');
+            enContent.forEach(el => el.style.display = 'block');
+            headerText.innerText = 'Affiliate Marketing Guide';
+            headerDescription.innerText = 'Start earning online today with Affiliate Marketing!';
+        } else if (lang === 'hu') {
+            enContent.forEach(el => el.style.display = 'none');
+            huContent.forEach(el => el.style.display = 'block');
+            headerText.innerText = 'Affiliate Marketing Útmutató';
+            headerDescription.innerText = 'Kezdd el a pénzkeresést online az affiliate marketinggel már ma!';
+        }
+    }
+
+    // Alapértelmezett nyelv beállítása
+    document.addEventListener('DOMContentLoaded', () => {
+        switchLanguage('en'); // Az alapértelmezett nyelv legyen angol
     });
 
-    document.getElementById('hu-btn').addEventListener('click', () => {
-        document.querySelectorAll('.en-content').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.hu-content').forEach(el => el.style.display = 'block');
-        document.getElementById('header-text').innerText = 'Affiliate Marketing Útmutató';
-        document.getElementById('header-description').innerText = 'Kezdd el a pénzkeresést online az affiliate marketinggel már ma!';
-    });
+    // Nyelvi gombok eseménykezelői
+    document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+    document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 </script>
+
 
 </body>
 </html>
