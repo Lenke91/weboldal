@@ -3,374 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern web design and creative portfolio by VStyleDesign. Discover our services and get in touch!">
-    <meta name="keywords" content="web design, creative services, portfolio, VStyleDesign">
-    <meta name="author" content="VStyleDesign">
-    <meta name="robots" content="index, follow">
-    <title>VStyleDesign - Creative Web Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>VStyleDesign - LENKE VARO PR</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fa;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #333;
         }
 
         .navbar {
-            background-color: #1e3d58;
-            color: white;
-            padding: 1rem;
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar ul {
-            list-style: none;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            padding: 15px;
             display: flex;
-            justify-content: space-around;
-            padding: 0;
-            margin: 0;
-        }
-
-        .navbar ul li {
-            margin: 0 15px;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar a {
-            color: white;
+            margin: 0 10px;
             text-decoration: none;
+            color: #333;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s ease-in-out;
         }
 
         .navbar a:hover {
-            color: #00aaff;
+            color: #007bff;
         }
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 4px;
+        .navbar a.active {
+            color: #007bff;
         }
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-
-        section {
-            padding: 4rem 1rem;
-            text-align: center;
-            animation: fadeIn 1.2s ease-out;
-            margin-top: 60px; /* To avoid overlap with fixed navbar */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background-color: #1e3d58;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            margin-top: 2rem;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        footer a {
-            color: #ffdd57;
+        .nav-link {
             margin: 0 10px;
-            font-size: 1.5rem;
             text-decoration: none;
+            color: #333;
         }
 
-        footer a:hover {
-            color: #fff;
-        }
-
-        .button {
-            background-color: #0077cc;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .button:hover {
-            background-color: #005fa3;
-        }
-
-        .page-slider {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .page-content {
-            display: flex;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .page {
-            min-width: 100%;
-            box-sizing: border-box;
-            padding: 2rem;
+        .content-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
             text-align: center;
-            display: none;
+            margin-top: 60px; /* Offset for fixed navbar */
         }
 
-        .page.active {
-            display: block;
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        p {
+            margin-bottom: 15px;
+            color: #555;
         }
 
-        .navigation {
-            text-align: center;
-            margin-top: 2rem;
+        .language-switcher {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
         }
 
-        .navigation .button {
+        .lang-btn {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
             margin: 0 5px;
+            font-weight: bold;
         }
-        
-        @media screen and (max-width: 768px) {
-            .navbar ul {
-                flex-direction: column;
-                align-items: center;
-            }
 
-            .navbar {
-                position: relative;
-            }
-
-            section {
-                padding: 2rem 1rem;
-            }
-
-            .page {
-                padding: 1rem;
-            }
+        .active-lang {
+            color: #007bff;
         }
     </style>
 </head>
 <body>
+
+    <!-- Navbar for language switching and navigation -->
     <nav class="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="index.html" data-key="nav_home">Home</a></li>
-                <li><a href="about me.html" data-key="nav_about">About Me</a></li>
-                <li><a href="services.html" data-key="nav_services">Services</a></li>
-                <li><a href="portfolio.html" data-key="nav_portfolio">Portfolio</a></li>
-                <li><a href="marketing.html" data-key="nav_marketing">Marketing</a></li>
-                <li><a href="payment-options.html" data-key="nav_payment">Payment Options</a></li>
-                <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" data-key="nav_language">Language</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" data-lang="hu" data-key="nav_language_hu">Magyar</a></li>
-                        <li><a href="#" data-lang="en" data-key="nav_language_en">English</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <a href="index.html" class="active">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="payment option.html">Payment Options</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
-    <section id="page-slider">
-        <div class="container">
-            <div class="page-content">
-                <div class="page active" id="section-1">
-                    <h2 data-key="page_section_1_title">About Me</h2>
-                    <p data-key="page_section_1_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="page" id="section-2">
-                    <h2 data-key="page_section_2_title">Our Services</h2>
-                    <p data-key="page_section_2_text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="page" id="section-3">
-                    <h2 data-key="page_section_3_title">Portfolio</h2>
-                    <p data-key="page_section_3_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                </div>
-                <div class="page" id="section-4">
-                    <h2 data-key="page_section_4_title">Contact</h2>
-                    <p data-key="page_section_4_text">Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                </div>
-            </div>
-            <div class="navigation">
-                <button id="prev" class="button" data-key="page_prev">Previous</button>
-                <button id="next" class="button" data-key="page_next">Next</button>
-            </div>
-        </div>
-    </section>
+    <!-- Language switcher -->
+    <div class="language-switcher">
+        <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
+        <a href="#" id="hu-btn" class="lang-btn">HU</a>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 VStyleDesign. All rights reserved.</p>
-            <p>
-                <a href="https://www.facebook.com/lenke.deli.1" target="_blank" data-key="footer_facebook"><i class="fab fa-facebook"></i></a> 
-                <a href="https://www.instagram.com/lenkevarro/" target="_blank" data-key="footer_instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank" data-key="footer_linkedin"><i class="fab fa-linkedin"></i></a>
-            </p>
-        </div>
-    </footer>
+    <!-- Main content container for Home section -->
+    <div class="content-container">
+        <h1 id="welcome-heading">Welcome to LENKE VARO PR VStyleDesign!</h1>
+        <p id="welcome-text">
+            As a beginner entrepreneur, I am dedicated to creating modern, professional websites that are not only visually stunning but also help drive your business growth. I believe every business has potential, and my goal is to provide tailored solutions that meet your unique needs.
+        </p>
+    </div>
 
+    <!-- JavaScript for language switching and page navigation -->
     <script>
         const translations = {
-            hu: {
-                nav_home: "Kezdőlap",
-                nav_about: "Rólam",
-                nav_services: "Szolgáltatások",
-                nav_portfolio: "Portfólió",
-                nav_marketing: "Marketing",
-                nav_payment: "Fizetési opciók",
-                nav_contact: "Kapcsolat",
-                nav_language: "Nyelv",
-                nav_language_hu: "Magyar",
-                nav_language_en: "Angol",
-                page_section_1_title: "Rólam",
-                page_section_1_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                page_section_2_title: "Szolgáltatások",
-                page_section_2_text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                page_section_3_title: "Portfólió",
-                page_section_3_text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-                page_section_4_title: "Kapcsolat",
-                page_section_4_text: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-                page_prev: "Előző",
-                page_next: "Következő",
-                footer_facebook: "Facebook",
-                footer_instagram: "Instagram",
-                footer_linkedin: "LinkedIn"
-            },
             en: {
-                nav_home: "Home",
-                nav_about: "About Me",
-                nav_services: "Services",
-                nav_portfolio: "Portfolio",
-                nav_marketing: "Marketing",
-                nav_payment: "Payment Options",
-                nav_contact: "Contact",
-                nav_language: "Language",
-                nav_language_hu: "Hungarian",
-                nav_language_en: "English",
-                page_section_1_title: "About Me",
-                page_section_1_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                page_section_2_title: "Our Services",
-                page_section_2_text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                page_section_3_title: "Portfolio",
-                page_section_3_text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-                page_section_4_title: "Contact",
-                page_section_4_text: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-                page_prev: "Previous",
-                page_next: "Next",
-                footer_facebook: "Facebook",
-                footer_instagram: "Instagram",
-                footer_linkedin: "LinkedIn"
+                heading: "Welcome to LENKE VARO PR VStyleDesign!",
+                text: "As a beginner entrepreneur, I am dedicated to creating modern, professional websites that are not only visually stunning but also help drive your business growth. I believe every business has potential, and my goal is to provide tailored solutions that meet your unique needs."
+            },
+            hu: {
+                heading: "Üdvözöllek a LENKE VARO PR VStyleDesign weboldalán!",
+                text: "Kezdő vállalkozóként elköteleztem magam, hogy segítsek modern, professzionális weboldalak létrehozásában, amelyek nemcsak esztétikailag lenyűgözőek, hanem segítenek vállalkozásod növekedésében is. Hiszem, hogy minden vállalkozásnak megvan a potenciálja, és az én célom, hogy egyedi megoldásokat nyújtsak, amelyek megfelelnek az egyedi igényeidnek."
             }
         };
 
-        document.querySelectorAll('[data-key]').forEach(element => {
-            const key = element.getAttribute('data-key');
-            const lang = document.documentElement.lang || 'en';
-            element.innerText = translations[lang][key];
-        });
+        function switchLanguage(lang) {
+            document.getElementById('welcome-heading').textContent = translations[lang].heading;
+            document.getElementById('welcome-text').textContent = translations[lang].text;
 
-        document.querySelectorAll('.dropdown-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                const lang = link.getAttribute('data-lang');
-                document.documentElement.lang = lang;
-                localStorage.setItem('preferredLang', lang);
-                updateLanguage(lang);
-            });
-        });
-
-        window.addEventListener('load', () => {
-            const savedLang = localStorage.getItem('preferredLang') || 'en';
-            document.documentElement.lang = savedLang;
-            updateLanguage(savedLang);
-        });
-
-        function updateLanguage(lang) {
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                element.innerText = translations[lang][key];
-            });
+            document.getElementById('en-btn').classList.remove('active-lang');
+            document.getElementById('hu-btn').classList.remove('active-lang');
+            document.getElementById(`${lang}-btn`).classList.add('active-lang');
         }
 
-        let currentPage = 0;
-        const pages = document.querySelectorAll('.page');
-        const totalPages = pages.length;
+        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 
-        function showPage(index) {
-            pages.forEach((page, i) => {
-                page.classList.remove('active');
-                if (i === index) {
-                    page.classList.add('active');
-                }
+        // Navigation between pages
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default link behavior
+                const targetPage = link.getAttribute('data-target');
+                window.location.href = targetPage; // Redirect to the target page
             });
-        }
-
-        document.getElementById('next').addEventListener('click', () => {
-            currentPage = (currentPage + 1) % totalPages;
-            showPage(currentPage);
-        });
-
-        document.getElementById('prev').addEventListener('click', () => {
-            currentPage = (currentPage - 1 + totalPages) % totalPages;
-            showPage(currentPage);
         });
     </script>
+
 </body>
 </html>
 
+    
           
-      
-
-       
-      
-         
-
-     
-    
-           
-            
-         
-
-
-
-     
-        
-
-     
-    
-  
- 
-
-        
-      
-    
-     
-       
-       
-  
-     
+   
 
       
 
