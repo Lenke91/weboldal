@@ -6,7 +6,6 @@
     <meta name="description" content="Contact form in English and Hungarian language. Get in touch with us for inquiries.">
     <meta name="author" content="Your Name">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="contact.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -89,11 +88,13 @@
         <!-- English Content -->
         <div class="form-content en-content">
             <h1>Contact Me</h1>
-            <form id="en-form">
+            <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" placeholder="Enter your name" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
                 <label for="message">Message:</label>
                 <textarea id="message" placeholder="Enter your message" required></textarea>
                 <button type="submit">Send</button>
@@ -103,11 +104,13 @@
         <!-- Hungarian Content -->
         <div class="form-content hu-content" style="display: none;">
             <h1>Kapcsolatfelvétel</h1>
-            <form id="hu-form">
+            <form id="contact-form">
                 <label for="name">Név:</label>
                 <input type="text" id="name" placeholder="Írd be a neved" required>
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" placeholder="Írd be az e-mail címed" required>
+                <label for="phone">Telefonszám:</label>
+                <input type="tel" id="phone" placeholder="Írd be a telefonszámod" required>
                 <label for="message">Üzenet:</label>
                 <textarea id="message" placeholder="Írd ide az üzeneted" required></textarea>
                 <button type="submit">Küldés</button>
@@ -115,35 +118,49 @@
         </div>
     </div>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Function to switch between languages
-        document.getElementById('en-btn').addEventListener('click', () => {
+        emailjs.init('JcGCzcpxr-CACFzdD'); // Replace 'JcGCzcpxr-CACFzdD' with your actual Public Key
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const params = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params)
+                .then(function(response) {
+                    alert('E-mail sikeresen elküldve!');
+                }, function(error) {
+                    alert('Hiba történt: ' + error.text);
+                });
+        });
+
+        document.getElementById('en-btn').addEventListener('click', function() {
             switchLanguage('en');
         });
 
-        document.getElementById('hu-btn').addEventListener('click', () => {
+        document.getElementById('hu-btn').addEventListener('click', function() {
             switchLanguage('hu');
         });
 
-        // Function to switch the content based on selected language
         function switchLanguage(lang) {
-            // Hide all language contents
             const contents = document.querySelectorAll('.form-content');
             contents.forEach(content => content.style.display = 'none');
 
-            // Show the selected language content
             document.querySelector(`.${lang}-content`).style.display = 'block';
 
-            // Update the active language button
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(button => button.classList.remove('active-lang'));
             document.getElementById(`${lang}-btn`).classList.add('active-lang');
 
-            // Save language preference in local storage
             localStorage.setItem('preferredLang', lang);
         }
 
-        // Load preferred language from local storage
         window.addEventListener('load', () => {
             const savedLang = localStorage.getItem('preferredLang') || 'en';
             switchLanguage(savedLang);
