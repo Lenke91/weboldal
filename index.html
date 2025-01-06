@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>VStyleDesign - LENKE VARO PR</title>
     <style>
         body {
@@ -12,9 +14,8 @@
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .navbar {
@@ -44,12 +45,6 @@
             color: #007bff;
         }
 
-        .nav-link {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-        }
-
         .content-container {
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
@@ -58,7 +53,9 @@
             width: 100%;
             max-width: 600px;
             text-align: center;
-            margin-top: 60px; /* Offset for fixed navbar */
+            margin: 60px auto; /* Centering container horizontally */
+            opacity: 0; /* Hidden by default */
+            transition: opacity 1s ease-in-out; /* Fade-in animation */
         }
 
         h1 {
@@ -90,6 +87,23 @@
         .active-lang {
             color: #007bff;
         }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -97,7 +111,7 @@
     <!-- Navbar for language switching and navigation -->
     <nav class="navbar">
         <a href="index.html" class="active">Home</a>
-        <a href="about me.html">About Me</a>
+        <a href="about-me.html">About Me</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
     </nav>
@@ -109,12 +123,30 @@
     </div>
 
     <!-- Main content container for Home section -->
-    <div class="content-container">
+    <div class="content-container" id="content-container">
         <h1 id="welcome-heading">Welcome to LENKE VARO PR VStyleDesign!</h1>
         <p id="welcome-text">
             As a beginner entrepreneur, I am dedicated to creating modern, professional websites that are not only visually stunning but also help drive your business growth. I believe every business has potential, and my goal is to provide tailored solutions that meet your unique needs.
         </p>
     </div>
+
+    <!-- Footer with social media links -->
+    <footer>
+        <div class="social-icons">
+            <div class="social-icons">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/lenke.varo.1" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        </div>
+    </footer>
 
     <!-- JavaScript for language switching and page navigation -->
     <script>
@@ -141,30 +173,13 @@
         document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
         document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 
-        // Navigation between pages
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent default link behavior
-                const targetPage = link.getAttribute('data-target');
-                window.location.href = targetPage; // Redirect to the target page
-            });
+        // Content fade-in animation
+        document.addEventListener("DOMContentLoaded", () => {
+            const contentContainer = document.getElementById('content-container');
+            contentContainer.style.opacity = 0; // Start hidden
+            setTimeout(() => contentContainer.style.opacity = 1, 500); // Fade in effect
         });
     </script>
 
 </body>
 </html>
-
-    
-          
-   
-
-      
-
-        
-            
-
-     
-     
-      
