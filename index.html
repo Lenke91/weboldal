@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+
+          <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>VStyleDesign - LENKE VARO PR</title>
     <style>
@@ -28,6 +28,7 @@
             display: flex;
             justify-content: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
         .navbar a {
@@ -53,7 +54,7 @@
             width: 100%;
             max-width: 600px;
             text-align: center;
-            margin: 60px auto; /* Centering container horizontally */
+            margin: 120px auto 20px; /* Increased margin for navbar */
             opacity: 0; /* Hidden by default */
             transition: opacity 1s ease-in-out; /* Fade-in animation */
         }
@@ -70,17 +71,16 @@
         }
 
         .language-switcher {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Space between buttons */
         }
 
         .lang-btn {
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             color: #333;
-            margin: 0 5px;
             font-weight: bold;
         }
 
@@ -95,60 +95,105 @@
             text-align: center;
         }
 
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
         .social-icons a {
             color: white;
-            margin: 0 10px;
             font-size: 24px;
         }
 
         .social-icons a:hover {
             color: #007bff;
         }
+
+        /* Mobilbarát kialakítás */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .navbar a {
+                margin: 0 5px;
+            }
+
+            .content-container {
+                padding: 15px;
+                width: 90%; /* Kisebb szélesség mobilon */
+            }
+
+            h1 {
+                font-size: 22px; /* Kisebb betűméret */
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .language-switcher {
+                gap: 5px;
+            }
+
+            .lang-btn {
+                font-size: 14px; /* Még kisebb betűméret nagyon kis kijelzőn */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .navbar {
+                flex-wrap: wrap; /* Sorba törés a menüpontoknál */
+                justify-content: space-around;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navbar for language switching and navigation -->
+    <!-- Navbar for navigation -->
     <nav class="navbar">
         <a href="index.html" class="active">Home</a>
-        <a href="about me.html">About Me</a>
+        <a href="about-me.html">About Me</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
     </nav>
 
-    <!-- Language switcher -->
-    <div class="language-switcher">
-        <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
-        <a href="#" id="hu-btn" class="lang-btn">HU</a>
-    </div>
-
-    <!-- Main content container for Home section -->
+    <!-- Main content container -->
     <div class="content-container" id="content-container">
         <h1 id="welcome-heading">Welcome to LENKE VARO PR VStyleDesign!</h1>
         <p id="welcome-text">
             As a beginner entrepreneur, I am dedicated to creating modern, professional websites that are not only visually stunning but also help drive your business growth. I believe every business has potential, and my goal is to provide tailored solutions that meet your unique needs.
         </p>
+
+        <!-- Language switcher under welcome message -->
+        <div class="language-switcher">
+            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a>
+            <a href="#" id="hu-btn" class="lang-btn">HU</a>
+        </div>
     </div>
 
     <!-- Footer with social media links -->
     <footer>
         <div class="social-icons">
-            <div class="social-icons">
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/lenke.varo.1" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
-                </div>
-                
-            </div>
-            
-        </div>
-        
+            <a href="https://www.facebook.com/lenke.varo.1" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
 
-    <!-- JavaScript for language switching and page navigation -->
+    <!-- JavaScript for language switching -->
     <script>
         const translations = {
             en: {
