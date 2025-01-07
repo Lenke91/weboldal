@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="description" content="Explore my portfolio featuring websites, animations, and SEO articles that I have worked on.">
+    <meta name="keywords" content="websites, animations, SEO articles, portfolio, web development, animation projects, SEO content">
+    <meta name="author" content="Your Name">
+    <title>My Portfolio | Websites, Animations & SEO Articles</title>
     <style>
         /* Global Styles */
         body {
@@ -17,7 +20,7 @@
         header {
             background: linear-gradient(135deg, #6a5acd, #3b5f87);
             color: white;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -133,15 +136,46 @@
             .portfolio {
                 flex-direction: column;
                 align-items: center;
+                padding: 20px;
             }
 
             .category {
                 width: 100%;
+                margin: 20px 0;
             }
 
             .portfolio-item {
                 width: 80%;
                 margin: 10px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            .tablink {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .language-switcher a {
+                font-size: 1em;
+            }
+
+            .tablink {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .portfolio-item {
+                width: 90%;
             }
         }
     </style>
@@ -171,11 +205,11 @@
             <h2 class="en-content">Websites</h2>
             <h2 class="hu-content" style="display:none;">Weboldalak</h2>
             <div class="portfolio-links">
-                <a class="portfolio-item" href="Book Recommendation.html">
+                <a class="portfolio-item" href="Book Recommendation.html" alt="Book Recommendation Website">
                     <h3 class="en-content">Website 1</h3>
                     <h3 class="hu-content" style="display:none;">Weboldal 1</h3>
                 </a>
-                <a class="portfolio-item" href="marketing.html">
+                <a class="portfolio-item" href="marketing.html" alt="Marketing Website">
                     <h3 class="en-content">Website 2</h3>
                     <h3 class="hu-content" style="display:none;">Weboldal 2</h3>
                 </a>
@@ -187,11 +221,11 @@
             <h2 class="en-content">Animations</h2>
             <h2 class="hu-content" style="display:none;">Animációk</h2>
             <div class="portfolio-links">
-                <a class="portfolio-item" href="css animation effect.html">
+                <a class="portfolio-item" href="css-animation-effect.html" alt="CSS Animation Effect">
                     <h3 class="en-content">Animation 1</h3>
                     <h3 class="hu-content" style="display:none;">Animáció 1</h3>
                 </a>
-                <a class="portfolio-item" href="loading animation.html">
+                <a class="portfolio-item" href="loading-animation.html" alt="Loading Animation">
                     <h3 class="en-content">Animation 2</h3>
                     <h3 class="hu-content" style="display:none;">Animáció 2</h3>
                 </a>
@@ -203,18 +237,17 @@
             <h2 class="en-content">SEO Articles</h2>
             <h2 class="hu-content" style="display:none;">SEO Cikkek</h2>
             <div class="portfolio-links">
-                <a class="portfolio-item" href="seo-article-1.html">
+                <a class="portfolio-item" href="" alt="SEO Article 1">
                     <h3 class="en-content">SEO Article 1</h3>
                     <h3 class="hu-content" style="display:none;">SEO Cikk 1</h3>
                 </a>
-                <a class="portfolio-item" href="seo-article-2.html">
+                <a class="portfolio-item" href="pajzsmirigy es a fogyas.html" alt="SEO Article 2">
                     <h3 class="en-content">SEO Article 2</h3>
                     <h3 class="hu-content" style="display:none;">SEO Cikk 2</h3>
                 </a>
             </div>
         </div>
-
-      
+    </section>
 
     <script>
         // Language Switcher Functionality
@@ -255,10 +288,20 @@
 </body>
 </html>
 
-       
+        
+      
+      
+
+   
+      
+    
+  
   
 
-     
-     
 
-         
+
+       
+      
+
+   
+        
