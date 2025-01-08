@@ -6,17 +6,21 @@
     <meta name="description" content="Amazing animated text hover effects using HTML and CSS. Explore creative CSS hover text animations!">
     <meta name="keywords" content="CSS, HTML, hover effect, animation, creative text">
     <meta name="author" content="Lenke Varró/ Lenke Varo">
+    <meta property="og:title" content="CSS Creative Menu Hover Text Animation Effects">
+    <meta property="og:description" content="Explore amazing animated hover text effects using CSS!">
+    <meta property="og:image" content="image_url.jpg">
+    <meta property="og:url" content="https://vstyledesign.com">
+    <meta name="twitter:card" content="summary_large_image">
     <title>CSS Creative Menu Hover Text Animation Effects</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,7 +30,7 @@
             padding: 0;
         }
 
-        ul{
+        ul {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -35,12 +39,12 @@
             list-style: none;
         }
 
-        ul li{
+        ul li {
             position: relative;
             list-style: none;
         }
 
-        ul li a{
+        ul li a {
             position: relative;
             font-size: 4em;
             text-decoration: none;
@@ -48,11 +52,11 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: transparent;
-            -webkit-text-stroke: 1px rgba(255,255,255, 0.5);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
             display: block;
         }
 
-        ul li a::before{
+        ul li a::before {
             content: attr(data-text); 
             position: absolute; 
             color: var(--clr);
@@ -60,10 +64,10 @@
             overflow: hidden;
             transition: 1s;
             border-right: 8px solid var(--clr);
-            -webkit-text-stroke: 1px var(--clr)
+            -webkit-text-stroke: 1px var(--clr);
         }
 
-        ul li a:hover::before{
+        ul li a:hover::before {
             width: 100%;
             filter: drop-shadow(0 0 25px var(--clr));
         }
@@ -84,7 +88,6 @@
                 font-size: 2em;
             }
         }
-
     </style>
 </head>
 <body>
