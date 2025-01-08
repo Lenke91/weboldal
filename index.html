@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern, professional website design tailored to help your business grow. Explore VStyleDesign by Lenke Varó for custom web solutions.">
+    <meta name="keywords" content="web design, professional websites, business growth, custom solutions, Lenke Varó, VStyleDesign">
+    <meta name="author" content="Lenke Varó">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>VStyleDesign - LENKE VARO PR</title>
     <style>
@@ -23,15 +26,15 @@
             left: 0;
             width: 100%;
             background: #fff;
-            padding: 15px;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
         .navbar a {
-            margin: 0 7px;  /* Itt csökkentettük a margót */
+            margin: 0 10px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
@@ -50,12 +53,12 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
+            width: 90%;
             max-width: 600px;
             text-align: center;
-            margin: 120px auto 20px; /* Increased margin for navbar */
-            opacity: 0; /* Hidden by default */
-            transition: opacity 1s ease-in-out; /* Fade-in animation */
+            margin: 120px auto 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         h1 {
@@ -73,7 +76,7 @@
             margin-top: 20px;
             display: flex;
             justify-content: center;
-            gap: 10px; /* Space between buttons */
+            gap: 10px;
         }
 
         .lang-btn {
@@ -109,24 +112,20 @@
             color: #007bff;
         }
 
-        /* Mobilbarát kialakítás */
         @media (max-width: 768px) {
             .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
                 padding: 10px;
-                font-size: 14px;
-            }
-
-            .navbar a {
-                margin: 0 5px;
             }
 
             .content-container {
                 padding: 15px;
-                width: 90%; /* Kisebb szélesség mobilon */
+                margin-top: 100px;
             }
 
             h1 {
-                font-size: 22px; /* Kisebb betűméret */
+                font-size: 22px;
             }
 
             p {
@@ -138,7 +137,7 @@
             }
 
             .lang-btn {
-                font-size: 14px; /* Még kisebb betűméret nagyon kis kijelzőn */
+                font-size: 14px;
             }
         }
 
@@ -150,49 +149,47 @@
             p {
                 font-size: 12px;
             }
+        }
 
-            .navbar {
-                flex-wrap: wrap; /* Sorba törés a menüpontoknál */
-                justify-content: space-around;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Navbar for navigation -->
     <nav class="navbar">
         <a href="index.html" class="active">Home</a>
-        <a href="about me.html">About Me</a>
+        <a href="about-me.html">About Me</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- Main content container -->
     <div class="content-container" id="content-container">
         <h1 id="welcome-heading">Welcome to LENKE VARO PR VStyleDesign!</h1>
         <p id="welcome-text">
             As a beginner entrepreneur, I am dedicated to creating modern, professional websites that are not only visually stunning but also help drive your business growth. I believe every business has potential, and my goal is to provide tailored solutions that meet your unique needs.
         </p>
-
-        <!-- Language switcher under welcome message -->
         <div class="language-switcher">
             <a href="#" id="en-btn" class="lang-btn active-lang">EN</a>
             <a href="#" id="hu-btn" class="lang-btn">HU</a>
         </div>
     </div>
 
-    <!-- Footer with social media links -->
     <footer>
         <div class="social-icons">
-            <a href="https://www.facebook.com/lenke.varo.1" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/lenke.varo.1" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/lenkevarro/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@lenkev33" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
 
-    <!-- JavaScript for language switching -->
     <script>
         const translations = {
             en: {
@@ -216,19 +213,6 @@
 
         document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
         document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
-
-        // Content fade-in animation
-        document.addEventListener("DOMContentLoaded", () => {
-            const contentContainer = document.getElementById('content-container');
-            contentContainer.style.opacity = 0; // Start hidden
-            setTimeout(() => contentContainer.style.opacity = 1, 500); // Fade in effect
-        });
     </script>
-
 </body>
 </html>
-
-   
-         
-
-       
