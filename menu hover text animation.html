@@ -3,80 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazing animated text hover effects using HTML and CSS. Explore creative CSS hover text animations!">
+    <meta name="keywords" content="CSS, HTML, hover effect, animation, creative text">
+    <meta name="author" content="Lenke Varró/ Lenke Varo">
+    <title>CSS Creative Menu Hover Text Animation Effects</title>
     <link rel="stylesheet" href="style.css">
     <style>
         *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #252839;
-}
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #252839;
+            margin: 0;
+            padding: 0;
+        }
 
-ul{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+        ul{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0;
+            list-style: none;
+        }
 
-ul li{
-    position: relative;
-    list-style: none;
-}
+        ul li{
+            position: relative;
+            list-style: none;
+        }
 
-ul li a{
-    position: relative;
-    font-size: 4em;
-    text-decoration: none;
-    line-height: 1em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255, 0.5);
-}
+        ul li a{
+            position: relative;
+            font-size: 4em;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255, 0.5);
+            display: block;
+        }
 
-ul li a::before{
-  content: attr(data-text); 
-  position: absolute; 
-  color: var(--clr);
-  width: 0;
-  overflow: hidden;
-  transition: 1s;
-  border-right: 8px solid var(--clr);
-  -webkit-text-stroke: 1px var(--clr)
-}
+        ul li a::before{
+            content: attr(data-text); 
+            position: absolute; 
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr)
+        }
 
-ul li a:hover::before{
-width: 100%;
-filter: drop-shadow(0 0 25px var(--clr));
-}
+        ul li a:hover::before{
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            ul li a {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            ul li a {
+                font-size: 2em;
+            }
+        }
+
     </style>
-    <title>CSS Creative Menu Hover Text Animation Effects  Amazing Animated Text using Html & CSS</title>
 </head>
 <body>
     <ul>
         <li style="--clr:#00ade1">
-            <a href="" data-text="&nbsp;Home">&nbsp;Home&nbsp;</a>
+            <a href="#" data-text="Home">Home</a>
         </li>
         <li style="--clr:#ff6493">
-            <a href="" data-text="&nbsp;About">&nbsp;About&nbsp;</a>
+            <a href="#" data-text="About">About</a>
         </li>
         <li style="--clr:#ffdd1c">
-            <a href="" data-text="&nbsp;Services">&nbsp;Services&nbsp;</a>
+            <a href="#" data-text="Services">Services</a>
         </li>
         <li style="--clr:#00dc82">
-            <a href="" data-text="&nbsp;Team">&nbsp;Team&nbsp;</a>
+            <a href="#" data-text="Team">Team</a>
         </li>
         <li style="--clr:#dc00d4">
-            <a href="" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
+            <a href="#" data-text="Contact">Contact</a>
         </li>
     </ul>
 </body>
