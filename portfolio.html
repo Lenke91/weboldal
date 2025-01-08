@@ -1,294 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore my portfolio featuring websites, animations, and SEO articles that I have worked on.">
-    <meta name="keywords" content="websites, animations, SEO articles, portfolio, web development, animation projects, SEO content">
-    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:title" content="My Portfolio | Websites, Animations & SEO Articles">
-    <meta property="og:description" content="Explore my portfolio featuring websites, animations, and SEO articles that I have worked on.">
-    <meta property="og:image" content="image_url.jpg">
-    <meta property="og:url" content="https://vstyledesign.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>My Portfolio | Websites, Animations & SEO Articles</title>
+    <meta name="description" content="LENKE VARO PR VSTYLEDESIGN - Weboldal sablonok és SEO cikkek készítése vállalkozások számára.">
+    <meta name="keywords" content="weboldal sablonok, SEO, reszponzív design, SEO cikkek, vállalkozás weboldal">
+    <title>LENKE VARO PR VSTYLEDESIGN | Portfolio</title>
     <style>
-        /* Global Styles */
+        /* Reszponzív dizájn */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f4f4f4;
         }
 
         header {
-            background: linear-gradient(135deg, #6a5acd, #3b5f87);
+            background-color: #333;
             color: white;
-            padding: 50px 20px;
+            padding: 10px 0;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 1px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
         }
 
         nav ul li {
             display: inline;
-        }
-
-        .tablink {
-            background-color: #3b5f87;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            cursor: pointer;
-            font-size: 1.1em;
-            border-radius: 30px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .tablink:hover, .tablink.active {
-            background-color: #4b76a2;
-            transform: scale(1.05);
-        }
-
-        .language-switcher {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .language-switcher a {
             margin: 0 15px;
-            font-size: 1.2em;
-            color: #333;
+        }
+
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
-        .language-switcher a:hover {
-            color: #6a5acd;
-        }
-
-        .portfolio {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-
-        .category {
-            width: 100%;
-            margin: 20px 0;
-            text-align: center;
-            display: none;
-        }
-
-        .portfolio-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            width: 250px;
-            text-align: center;
+        section {
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            text-decoration: none;
-            color: #333;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
         }
 
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
         }
 
-        .portfolio-item h3 {
-            margin-top: 15px;
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .portfolio-item img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Responsive Styles */
+        /* Reszponzív */
         @media (max-width: 768px) {
-            .portfolio {
-                flex-direction: column;
-                align-items: center;
-                padding: 20px;
-            }
-
-            .category {
-                width: 100%;
-                margin: 20px 0;
-            }
-
-            .portfolio-item {
-                width: 80%;
+            nav ul li {
+                display: block;
                 margin: 10px 0;
             }
 
-            nav ul {
-                flex-direction: column;
-                margin-top: 20px;
-            }
-
-            .tablink {
-                padding: 12px 25px;
-                font-size: 1em;
+            section {
+                margin: 10px;
             }
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .language-switcher a {
-                font-size: 1em;
-            }
-
-            .tablink {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-
-            .portfolio-item {
-                width: 90%;
-            }
+        /* Nyelvváltó stílus */
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div class="language-selector" onclick="changeLanguage()">Magyar</div>
 
     <header>
-        <h1 class="en-content">My Portfolio</h1>
-        <h1 class="hu-content" style="display:none;">Portfólióm</h1>
+        <h1 id="page-title">LENKE VARO PR VSTYLEDESIGN Portfolio</h1>
         <nav>
             <ul>
-                <li><button class="tablink" onclick="openCategory(event, 'websites')"><span class="en-content">Websites</span><span class="hu-content" style="display:none;">Weboldalak</span></button></li>
-                <li><button class="tablink" onclick="openCategory(event, 'animations')"><span class="en-content">Animations</span><span class="hu-content" style="display:none;">Animációk</span></button></li>
-                <li><button class="tablink" onclick="openCategory(event, 'seo')"><span class="en-content">SEO Articles</span><span class="hu-content" style="display:none;">SEO Cikkek</span></button></li>
+                <li><a href="#templates" id="templates-link">Weboldal sablonok</a></li>
+                <li><a href="#seo-articles" id="seo-articles-link">SEO cikkek</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="language-switcher">
-        <a href="#" id="en-btn" class="lang-btn">EN</a>
-        <a href="#" id="hu-btn" class="lang-btn">HU</a>
-    </div>
-
-    <section class="portfolio">
-        <!-- Websites Category -->
-        <div id="websites" class="category">
-            <h2 class="en-content">Websites</h2>
-            <h2 class="hu-content" style="display:none;">Weboldalak</h2>
-            <div class="portfolio-links">
-                <a class="portfolio-item" href="Book Recommendation.html" alt="Book Recommendation Website">
-                    <h3 class="en-content">Website 1</h3>
-                    <h3 class="hu-content" style="display:none;">Weboldal 1</h3>
-                </a>
-                <a class="portfolio-item" href="marketing.html" alt="Marketing Website">
-                    <h3 class="en-content">Website 2</h3>
-                    <h3 class="hu-content" style="display:none;">Weboldal 2</h3>
-                </a>
-            </div>
-        </div>
-
-        <!-- Animations Category -->
-        <div id="animations" class="category" style="display:none;">
-            <h2 class="en-content">Animations</h2>
-            <h2 class="hu-content" style="display:none;">Animációk</h2>
-            <div class="portfolio-links">
-                <a class="portfolio-item" href="css animation effect.html" alt="CSS Animation Effect">
-                    <h3 class="en-content">Animation 1</h3>
-                    <h3 class="hu-content" style="display:none;">Animáció 1</h3>
-                </a>
-                <a class="portfolio-item" href="loading animation.html" alt="Loading Animation">
-                    <h3 class="en-content">Animation 2</h3>
-                    <h3 class="hu-content" style="display:none;">Animáció 2</h3>
-                </a>
-            </div>
-        </div>
-
-        <!-- SEO Articles Category -->
-        <div id="seo" class="category" style="display:none;">
-            <h2 class="en-content">SEO Articles</h2>
-            <h2 class="hu-content" style="display:none;">SEO Cikkek</h2>
-            <div class="portfolio-links">
-                <a class="portfolio-item" href="" alt="SEO Article 1">
-                    <h3 class="en-content">SEO Article 1</h3>
-                    <h3 class="hu-content" style="display:none;">SEO Cikk 1</h3>
-                </a>
-                <a class="portfolio-item" href="pajzsmirigy es a fogyas.html" alt="SEO Article 2">
-                    <h3 class="en-content">SEO Article 2</h3>
-                    <h3 class="hu-content" style="display:none;">SEO Cikk 2</h3>
-                </a>
-            </div>
-        </div>
+    <section id="templates">
+        <h2 id="templates-title">Weboldal sablonok</h2>
+        <p id="templates-desc">Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.</p>
+        <a href="https://vstyledesign.com/sablonok" target="_blank" id="templates-link-text">Nézd meg a sablonokat itt!</a>
     </section>
 
+    <section id="seo-articles">
+        <h2 id="seo-title">SEO Cikkek</h2>
+        <p id="seo-desc">Ismerd meg a legjobb SEO praktikákat és tippjeimet, hogy sikeresebbé tedd weboldaladat.</p>
+        <a href="https://vstyledesign.com/seo-cikkek" target="_blank" id="seo-link-text">Olvasd el a SEO cikkeket!</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN. Minden jog fenntartva.</p>
+    </footer>
+
     <script>
-        // Language Switcher Functionality
-        const enBtn = document.getElementById('en-btn');
-        const huBtn = document.getElementById('hu-btn');
-        const allEnContent = document.querySelectorAll('.en-content');
-        const allHuContent = document.querySelectorAll('.hu-content');
+        let currentLanguage = 'hu';  // Kezdő nyelv: magyar
 
-        enBtn.addEventListener('click', function() {
-            allEnContent.forEach(el => el.style.display = 'block');
-            allHuContent.forEach(el => el.style.display = 'none');
-        });
-
-        huBtn.addEventListener('click', function() {
-            allEnContent.forEach(el => el.style.display = 'none');
-            allHuContent.forEach(el => el.style.display = 'block');
-        });
-
-        // Category Switcher Functionality
-        function openCategory(evt, categoryName) {
-            let i, categoryContent, tablinks;
-            categoryContent = document.getElementsByClassName("category");
-            for (i = 0; i < categoryContent.length; i++) {
-                categoryContent[i].style.display = "none";
+        function changeLanguage() {
+            if (currentLanguage === 'hu') {
+                currentLanguage = 'en';
+                document.querySelector('.language-selector').textContent = 'Magyar';
+                document.getElementById('page-title').textContent = 'LENKE VARO PR VSTYLEDESIGN Portfolio';
+                document.getElementById('templates-link').textContent = 'Website Templates';
+                document.getElementById('seo-articles-link').textContent = 'SEO Articles';
+                document.getElementById('templates-title').textContent = 'Website Templates';
+                document.getElementById('templates-desc').textContent = 'Explore my responsive and SEO-optimized website templates that will help your business grow.';
+                document.getElementById('templates-link-text').textContent = 'View templates here!';
+                document.getElementById('seo-title').textContent = 'SEO Articles';
+                document.getElementById('seo-desc').textContent = 'Learn the best SEO practices and tips to make your website more successful.';
+                document.getElementById('seo-link-text').textContent = 'Read SEO articles!';
+            } else {
+                currentLanguage = 'hu';
+                document.querySelector('.language-selector').textContent = 'English';
+                document.getElementById('page-title').textContent = 'LENKE VARO PR VSTYLEDESIGN Portfolio';
+                document.getElementById('templates-link').textContent = 'Weboldal sablonok';
+                document.getElementById('seo-articles-link').textContent = 'SEO cikkek';
+                document.getElementById('templates-title').textContent = 'Weboldal sablonok';
+                document.getElementById('templates-desc').textContent = 'Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.';
+                document.getElementById('templates-link-text').textContent = 'Nézd meg a sablonokat itt!';
+                document.getElementById('seo-title').textContent = 'SEO Cikkek';
+                document.getElementById('seo-desc').textContent = 'Ismerd meg a legjobb SEO praktikákat és tippjeimet, hogy sikeresebbé tedd weboldaladat.';
+                document.getElementById('seo-link-text').textContent = 'Olvasd el a SEO cikkeket!';
             }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(categoryName).style.display = "block";
-            evt.currentTarget.className += " active";
         }
-
-        // Set default category to "websites"
-        document.getElementsByClassName("tablink")[0].click();
     </script>
-
 </body>
 </html>
+         
+
+        
