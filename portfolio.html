@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LENKE VARO PR VSTYLEDESIGN - Weboldal sablonok és SEO cikkek készítése vállalkozások számára.">
+    <meta name="keywords" content="weboldal sablonok, SEO, reszponzív design, SEO cikkek, vállalkozás weboldal">
+    <title>LENKE VARO PR VSTYLEDESIGN | Portfolio</title>
+    <style>
+        /* Reszponzív dizájn */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Reszponzív */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                margin: 10px;
+            }
+        }
+
+        /* Nyelvváltó stílus */
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector" onclick="changeLanguage()">Magyar</div>
+
+    <header>
+        <h1 id="page-title">LENKE VARO PR VSTYLEDESIGN Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#templates" id="templates-link">Weboldal sablonok</a></li>
+                <li><a href="#seo-articles" id="seo-articles-link">SEO cikkek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="templates">
+        <h2 id="templates-title">Weboldal sablonok</h2>
+        <p id="templates-desc">Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.</p>
+        <a href="https://vstyledesign.com/sablonok" target="_blank" id="templates-link-text">Nézd meg a sablonokat itt!</a>
+    </section>
+
+    <section id="seo-articles">
+        <h2 id="seo-title">SEO Cikkek</h2>
+        <p id="seo-desc">Ismerd meg a legjobb SEO praktikákat és tippjeimet, hogy sikeresebbé tedd weboldaladat.</p>
+        <a href="https://vstyledesign.com/seo-cikkek" target="_blank" id="seo-link-text">Olvasd el a SEO cikkeket!</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        let currentLanguage = 'hu';  // Kezdő nyelv: magyar
+
+        function changeLanguage() {
+            if (currentLanguage === 'hu') {
+                currentLanguage = 'en';
+                document.querySelector('.language-selector').textContent = 'Magyar';
+                document.getElementById('page-title').textContent = 'LENKE VARO PR VSTYLEDESIGN Portfolio';
+                document.getElementById('templates-link').textContent = 'Website Templates';
+                document.getElementById('seo-articles-link').textContent = 'SEO Articles';
+                document.getElementById('templates-title').textContent = 'Website Templates';
+                document.getElementById('templates-desc').textContent = 'Explore my responsive and SEO-optimized website templates that will help your business grow.';
+                document.getElementById('templates-link-text').textContent = 'View templates here!';
+                document.getElementById('seo-title').textContent = 'SEO Articles';
+                document.getElementById('seo-desc').textContent = 'Learn the best SEO practices and tips to make your website more successful.';
+                document.getElementById('seo-link-text').textContent = 'Read SEO articles!';
+            } else {
+                currentLanguage = 'hu';
+                document.querySelector('.language-selector').textContent = 'English';
+                document.getElementById('page-title').textContent = 'LENKE VARO PR VSTYLEDESIGN Portfolio';
+                document.getElementById('templates-link').textContent = 'Weboldal sablonok';
+                document.getElementById('seo-articles-link').textContent = 'SEO cikkek';
+                document.getElementById('templates-title').textContent = 'Weboldal sablonok';
+                document.getElementById('templates-desc').textContent = 'Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.';
+                document.getElementById('templates-link-text').textContent = 'Nézd meg a sablonokat itt!';
+                document.getElementById('seo-title').textContent = 'SEO Cikkek';
+                document.getElementById('seo-desc').textContent = 'Ismerd meg a legjobb SEO praktikákat és tippjeimet, hogy sikeresebbé tedd weboldaladat.';
+                document.getElementById('seo-link-text').textContent = 'Olvasd el a SEO cikkeket!';
+            }
+        }
+    </script>
+</body>
+</html>
+         
+
+        
