@@ -1,25 +1,39 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LENKE VARO PR VSTYLEDESIGN - Weboldal sablonok és SEO cikkek készítése vállalkozások számára.">
     <meta name="keywords" content="weboldal sablonok, SEO, reszponzív design, SEO cikkek, vállalkozás weboldal">
+    <meta property="og:title" content="LENKE VARO PR VSTYLEDESIGN Portfolio">
+    <meta property="og:description" content="Weboldal sablonok és SEO cikkek készítése vállalkozások számára.">
+    <meta property="og:image" content="image-url.jpg">
     <title>LENKE VARO PR VSTYLEDESIGN | Portfolio</title>
     <style>
-        /* Reszponzív dizájn */
+        /* Alap stílusok */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden;
         }
 
         header {
             background-color: #333;
             color: white;
-            padding: 10px 0;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
         }
 
         nav ul {
@@ -35,20 +49,44 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
         }
 
         section {
-            padding: 20px;
+            padding: 100px 20px;
             margin: 20px;
             background-color: white;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
 
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             background-color: #333;
             color: white;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-selector:hover {
+            background-color: #ffd700;
         }
 
         /* Reszponzív */
@@ -56,23 +94,43 @@
             nav ul li {
                 display: block;
                 margin: 10px 0;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 1.5em;
             }
 
             section {
                 margin: 10px;
+                padding: 80px 10px;
             }
         }
 
-        /* Nyelvváltó stílus */
-        .language-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
+        /* Animáció */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Linkek és gombok */
+        .cta-button {
+            display: inline-block;
+            background-color: #ffd700;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #ff8c00;
         }
     </style>
 </head>
@@ -92,13 +150,13 @@
     <section id="templates">
         <h2 id="templates-title">Weboldal sablonok</h2>
         <p id="templates-desc">Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.</p>
-        <a href="https://vstyledesign.com/sablonok" target="_blank" id="templates-link-text">Nézd meg a sablonokat itt!</a>
+        <a href="https://vstyledesign.com/sablonok" target="_blank" class="cta-button" id="templates-link-text">Nézd meg a sablonokat itt!</a>
     </section>
 
     <section id="seo-articles">
         <h2 id="seo-title">SEO Cikkek</h2>
         <p id="seo-desc">Ismerd meg a legjobb SEO praktikákat és tippjeimet, hogy sikeresebbé tedd weboldaladat.</p>
-        <a href="https://vstyledesign.com/seo-cikkek" target="_blank" id="seo-link-text">Olvasd el a SEO cikkeket!</a>
+        <a href="https://vstyledesign.com/seo-cikkek" target="_blank" class="cta-button" id="seo-link-text">Olvasd el a SEO cikkeket!</a>
     </section>
 
     <footer>
@@ -138,6 +196,14 @@
     </script>
 </body>
 </html>
-         
 
-        
+       
+
+      
+       
+          
+
+
+     
+          
+ 
