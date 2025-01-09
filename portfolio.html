@@ -12,12 +12,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #ff5733, #ff8c00); /* Színes háttér */
+            color: #fff;
             overflow-x: hidden; /* Megakadályozza a vízszintes görgetést */
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 20px;
             text-align: center;
@@ -47,20 +48,20 @@
         }
 
         section {
-            padding: 40px;
-            margin: 40px 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transform: translateY(20px);
+            padding: 50px;
+            margin: 50px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             opacity: 0;
+            transform: translateY(30px);
             transition: all 1s ease-in-out;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             margin-top: 40px;
         }
@@ -77,7 +78,7 @@
             }
         }
 
-        /* Animációk */
+        /* Animáció */
         .show {
             opacity: 1;
             transform: translateY(0);
@@ -90,7 +91,7 @@
             right: 20px;
             background-color: #333;
             color: white;
-            padding: 8px 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
