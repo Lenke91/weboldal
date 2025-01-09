@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LENKE VARO PR VSTYLEDESIGN - Weboldal sablonok és SEO cikkek készítése vállalkozások számára.">
     <meta name="keywords" content="weboldal sablonok, SEO, reszponzív design, SEO cikkek, vállalkozás weboldal">
-    <meta property="og:title" content="LENKE VARO PR VSTYLEDESIGN Portfolio">
-    <meta property="og:description" content="Weboldal sablonok és SEO cikkek készítése vállalkozások számára.">
-    <meta property="og:image" content="image-url.jpg">
     <title>LENKE VARO PR VSTYLEDESIGN | Portfolio</title>
     <style>
         /* Alap stílusok */
@@ -16,34 +13,21 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            overflow-x: hidden;
-            background-image: url('background-image.jpg'); /* Szép háttérkép */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            overflow-x: hidden; /* Megakadályozza a vízszintes görgetést */
         }
 
         header {
-            background-color: rgba(51, 51, 51, 0.9); /* Félátlátszó háttér */
+            background-color: #333;
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-            animation: fadeIn 1s ease-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         nav ul li {
@@ -59,17 +43,18 @@
         }
 
         nav ul li a:hover {
-            color: #ffd700;
+            color: #ff5733;
         }
 
         section {
-            padding: 100px 20px;
-            margin: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Áttetsző háttér */
+            padding: 40px;
+            margin: 40px 20px;
+            background-color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-out;
-            backdrop-filter: blur(5px); /* Szép háttér-blur */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 1s ease-in-out;
         }
 
         footer {
@@ -77,92 +62,51 @@
             padding: 20px;
             background-color: #333;
             color: white;
+            margin-top: 40px;
         }
 
-        .language-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #333;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .language-selector:hover {
-            background-color: #ffd700;
-        }
-
-        /* Reszponzív */
+        /* Reszponzív dizájn */
         @media (max-width: 768px) {
             nav ul li {
                 display: block;
                 margin: 10px 0;
-                text-align: center;
             }
-
-            header h1 {
-                font-size: 1.5em;
-            }
-
             section {
-                margin: 10px;
-                padding: 80px 10px;
+                margin: 20px;
+                padding: 30px;
             }
         }
 
-        /* Animáció */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        /* Animációk */
+        .show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* Linkek és gombok */
-        .cta-button {
-            display: inline-block;
-            background-color: #ffd700;
-            padding: 10px 20px;
-            color: black;
-            text-decoration: none;
+        /* Nyelvváltó gomb */
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        .cta-button:hover {
-            background-color: #ff8c00;
-            transform: scale(1.1); /* Gomb méretének animációja */
+        .language-selector:hover {
+            background-color: #ff5733;
         }
-
-        /* Parallax hatás */
-        .parallax {
-            background: url('parallax-image.jpg') no-repeat fixed;
-            background-size: cover;
-            height: 300px;
-            margin: 20px 0;
-            animation: scrollEffect 1s ease-out;
-        }
-
-        @keyframes scrollEffect {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 50% 50%;
-            }
-        }
-
     </style>
 </head>
 <body>
+
+    <!-- Nyelvváltó -->
     <div class="language-selector" onclick="changeLanguage()">Magyar</div>
 
+    <!-- Fejléc -->
     <header>
         <h1 id="page-title">LENKE VARO PR VSTYLEDESIGN Portfolio</h1>
         <nav>
@@ -173,27 +117,38 @@
         </nav>
     </header>
 
-    <section id="templates">
+    <!-- Weboldal sablonok -->
+    <section id="templates" class="animált">
         <h2 id="templates-title">Weboldal sablonok</h2>
         <p id="templates-desc">Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.</p>
-        <a href="https://vstyledesign.com/sablonok" target="_blank" class="cta-button" id="templates-link-text">Nézd meg a sablonokat itt!</a>
+        <a href="https://vstyledesign.com/sablonok" target="_blank" id="templates-link-text">Nézd meg a sablonokat itt!</a>
     </section>
 
-    <div class="parallax"></div>
-
-    <section id="seo-articles">
+    <!-- SEO Cikkek -->
+    <section id="seo-articles" class="animált">
         <h2 id="seo-title">SEO Cikkek</h2>
         <p id="seo-desc">Ismerd meg a legjobb SEO praktikákat és tippjeimet, hogy sikeresebbé tedd weboldaladat.</p>
-        <a href="https://vstyledesign.com/seo-cikkek" target="_blank" class="cta-button" id="seo-link-text">Olvasd el a SEO cikkeket!</a>
+        <a href="https://vstyledesign.com/seo-cikkek" target="_blank" id="seo-link-text">Olvasd el a SEO cikkeket!</a>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN. Minden jog fenntartva.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         let currentLanguage = 'hu';  // Kezdő nyelv: magyar
 
+        // Animációk megjelenítése betöltés után
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.animált');
+            elements.forEach((el) => {
+                el.classList.add('show');
+            });
+        });
+
+        // Nyelvváltó funkció
         function changeLanguage() {
             if (currentLanguage === 'hu') {
                 currentLanguage = 'en';
