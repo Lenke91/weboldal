@@ -36,18 +36,14 @@
         }
 
         .navbar a {
-            margin: 0 3px; /* Csökkentett távolság */
-            padding: 5px 8px; /* Kisebb belső térköz */
+            margin: 0 3px;
+            padding: 5px 8px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
         }
 
-        .navbar a:hover {
-            color: #007bff;
-        }
-
-        .navbar a.active {
+        .navbar a:hover, .navbar a.active {
             color: #007bff;
         }
 
@@ -62,35 +58,6 @@
             margin: 120px auto 20px;
             opacity: 0;
             animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .language-switcher {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            text-decoration: none;
-            font-size: 16px;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .active-lang {
-            color: #007bff;
         }
 
         footer {
@@ -115,68 +82,9 @@
             color: #007bff;
         }
 
-        /* Reszponzív dizájn */
-        @media (max-width: 1024px) {
-            .navbar a {
-                margin: 0 2px; /* Laptop esetén minimalizált térköz */
-                padding: 5px 6px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .content-container {
-                margin-top: 100px;
-                padding: 15px;
-                width: 100%;
-            }
-
-            .lang-btn {
-                font-size: 14px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            footer {
-                padding: 10px;
-            }
-
-            .social-icons a {
-                font-size: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar {
-                padding: 10px;
-            }
-
-            .content-container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            .social-icons a {
-                font-size: 18px;
-            }
-        }
-
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -206,6 +114,7 @@
             <a href="https://www.instagram.com/lenkevarro/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@lenkev33" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
         </div>
+        <button onclick="window.location.href='mailto:info@vlenke33@gmail.com?subject=Kapcsolatfelvétel'">Küldj üzenetet</button>
     </footer>
 
     <script>
@@ -223,10 +132,6 @@
         function switchLanguage(lang) {
             document.getElementById('welcome-heading').textContent = translations[lang].heading;
             document.getElementById('welcome-text').textContent = translations[lang].text;
-
-            document.getElementById('en-btn').classList.remove('active-lang');
-            document.getElementById('hu-btn').classList.remove('active-lang');
-            document.getElementById(`${lang}-btn`).classList.add('active-lang');
         }
 
         document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
@@ -235,11 +140,15 @@
 </body>
 </html>
 
-          
-       
-          
+  
+      
+  
         
-     
+   
+    
+      
+
+      
 
             
         
