@@ -60,6 +60,36 @@
             animation: fadeIn 1s ease-in-out forwards;
         }
 
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .language-switcher {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .active-lang {
+            color: #007bff;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -71,6 +101,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
+            margin-bottom: 10px;
         }
 
         .social-icons a {
@@ -82,16 +113,35 @@
             color: #007bff;
         }
 
+        .contact-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
         <a href="index.html" class="active">Home</a>
-        <a href="about me.html">About Me</a>
+        <a href="about.html">About Me</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
     </nav>
@@ -102,19 +152,19 @@
             As a beginner entrepreneur, I specialize in creating animated, SEO-optimized website templates and writing SEO content. My goal is to offer tailored web solutions that not only boost your business's online presence but also help drive growth.
         </p>
         <div class="language-switcher">
-            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a>
-            <a href="#" id="hu-btn" class="lang-btn">HU</a>
+            <span id="en-btn" class="lang-btn active-lang">EN</span>
+            <span id="hu-btn" class="lang-btn">HU</span>
         </div>
     </div>
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.facebook.com/lenke.varo.1" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/lenkevarro/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@lenkev33" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/lenke.varo.1" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
-        <button onclick="window.location.href='mailto:info@vlenke33@gmail.com?subject=Kapcsolatfelvétel'">Küldj üzenetet</button>
+        <button class="contact-btn" onclick="window.location.href='mailto:info@vlenke33@gmail.com?subject=Kapcsolatfelvétel'">Küldj üzenetet</button>
     </footer>
 
     <script>
@@ -132,6 +182,10 @@
         function switchLanguage(lang) {
             document.getElementById('welcome-heading').textContent = translations[lang].heading;
             document.getElementById('welcome-text').textContent = translations[lang].text;
+
+            document.getElementById('en-btn').classList.remove('active-lang');
+            document.getElementById('hu-btn').classList.remove('active-lang');
+            document.getElementById(`${lang}-btn`).classList.add('active-lang');
         }
 
         document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
@@ -140,9 +194,10 @@
 </body>
 </html>
 
-  
-      
-  
+       
+   
+
+
         
    
     
