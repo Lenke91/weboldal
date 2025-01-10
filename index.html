@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern, professional website design tailored to help your business grow. Explore VStyleDesign by Lenke Varró for custom web solutions.">
-    <meta name="keywords" content="web design, professional websites, business growth, custom solutions, Lenke Varró, VStyleDesign">
-    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:url" content="https://vstyledesign.com">
-    <title>VStyleDesign - LENKE VARO PR</title>
+    <meta name="description" content="Modern, professzionális weboldal dizájn, amely segíti vállalkozásod növekedését. Fedezd fel a VStyleDesign by Lenke Varró személyre szabott webes megoldásait.">
+    <meta name="keywords" content="web design, professzionális weboldal, üzleti növekedés, személyre szabott megoldások, Lenke Varró, VStyleDesign">
+    <meta name="author" content="Lenke Varró - VStyleDesign">
+    <title>VStyleDesign - Lenke Varró</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
@@ -66,30 +65,6 @@
             color: #333;
         }
 
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .language-switcher {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            text-decoration: none;
-            font-size: 16px;
-            color: #333;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .active-lang {
-            color: #007bff;
-        }
-
         footer {
             background-color: #333;
             color: white;
@@ -101,7 +76,6 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 10px;
         }
 
         .social-icons a {
@@ -114,47 +88,37 @@
         }
 
         .contact-btn {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #007bff, #00c6ff);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 30px;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
         }
 
         .contact-btn:hover {
-            background-color: #0056b3;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            background: linear-gradient(45deg, #0056b3, #0099cc);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
-
     <nav class="navbar">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="#" class="active">Főoldal</a>
+        <a href="#">Rólam</a>
+        <a href="#">Szolgáltatások</a>
+        <a href="#">Portfólió</a>
     </nav>
 
-    <div class="content-container" id="content-container">
-        <h1 id="welcome-heading">Welcome to LENKE VARO PR VStyleDesign!</h1>
-        <p id="welcome-text">
-            As a beginner entrepreneur, I specialize in creating animated, SEO-optimized website templates and writing SEO content. My goal is to offer tailored web solutions that not only boost your business's online presence but also help drive growth.
-        </p>
-        <div class="language-switcher">
-            <span id="en-btn" class="lang-btn active-lang">EN</span>
-            <span id="hu-btn" class="lang-btn">HU</span>
-        </div>
+    <div class="content-container">
+        <h1>Üdvözöllek a VStyleDesign oldalán!</h1>
+        <p>Személyre szabott, animált és SEO-optimalizált weboldal sablonokat készítek vállalkozások számára.</p>
     </div>
 
     <footer>
@@ -164,44 +128,23 @@
             <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
-        <button class="contact-btn" onclick="window.location.href='mailto:info@vlenke33@gmail.com?subject=Kapcsolatfelvétel'">Küldj üzenetet</button>
+        <button class="contact-btn" onclick="window.location.href='mailto:info@vlenke33@gmail.com?subject=Kapcsolatfelvétel'">📩 Küldj üzenetet</button>
     </footer>
 
     <script>
-        const translations = {
-            en: {
-                heading: "Welcome to LENKE VARO PR VStyleDesign!",
-                text: "As a beginner entrepreneur, I specialize in creating animated, SEO-optimized website templates and writing SEO content. My goal is to offer tailored web solutions that not only boost your business's online presence but also help drive growth."
-            },
-            hu: {
-                heading: "Üdvözöllek a LENKE VARO PR VStyleDesign weboldalán!",
-                text: "Kezdő vállalkozóként animált, SEO-optimalizált weboldal sablonok készítésével és SEO tartalom írásával foglalkozom. Célom, hogy olyan weboldal megoldásokat kínáljak, amelyek nemcsak növelik a vállalkozásod online jelenlétét, hanem segítik annak növekedését is."
-            }
-        };
-
-        function switchLanguage(lang) {
-            document.getElementById('welcome-heading').textContent = translations[lang].heading;
-            document.getElementById('welcome-text').textContent = translations[lang].text;
-
-            document.getElementById('en-btn').classList.remove('active-lang');
-            document.getElementById('hu-btn').classList.remove('active-lang');
-            document.getElementById(`${lang}-btn`).classList.add('active-lang');
-        }
-
-        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
-        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
+        window.addEventListener('load', function() {
+            document.querySelector('.content-container').style.opacity = '1';
+        });
     </script>
 </body>
 </html>
 
-       
-   
-
-
-        
-   
     
-      
+
+    
+
+     
+    
 
       
 
