@@ -201,9 +201,19 @@
 
     <section class="hero-section">
         <div class="content">
-            <h1 class="hero-title">Welcome to VStyleDesign</h1>
-            <p class="hero-text">I create animated, SEO-optimized, responsive website templates that help your business grow.</p>
-            <button class="cta-btn">Get Started</button>
+            <!-- English Content -->
+            <div class="en-content">
+                <h1 class="hero-title">Welcome to VStyleDesign</h1>
+                <p class="hero-text">I create animated, SEO-optimized, responsive website templates that help your business grow.</p>
+                <button class="cta-btn">Get Started</button>
+            </div>
+
+            <!-- Hungarian Content -->
+            <div class="hu-content" style="display:none;">
+                <h1 class="hero-title">Üdvözlöm a VStyleDesign-nál</h1>
+                <p class="hero-text">Animált, SEO-optimalizált, reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásának növekedésében.</p>
+                <button class="cta-btn">Kezdje el most</button>
+            </div>
         </div>
     </section>
 
@@ -224,7 +234,7 @@
         });
 
         function switchLanguage(lang) {
-            const contentElements = document.querySelectorAll('.about-content');
+            const contentElements = document.querySelectorAll('.en-content, .hu-content');
             contentElements.forEach(element => element.style.display = 'none');
             document.querySelector(`.${lang}-content`).style.display = 'block';
 
@@ -244,24 +254,3 @@
 
 </body>
 </html>
-
-          
-
-     
-     
-   
-
-            
-        
-  
-      
-
-       
-          
-             
-
-  
-
-   
-
-    
