@@ -12,171 +12,65 @@
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
     <title>Home - Web Developer & Entrepreneur</title>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            margin: 0;
-            background: linear-gradient(120deg, #84fab0, #8fd3f4);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            color: #333;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: rgba(255, 255, 255, 0.7);
-            z-index: 100;
-        }
-
-        .navbar .menu-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #333;
-            transition: 0.3s ease;
-        }
-
-        .navbar a:hover {
-            color: #007bff;
-        }
-
-        .lang-btn {
-            text-decoration: none;
-            font-size: 16px;
-            color: #333;
-            margin: 0 5px;
-        }
-
-        .active-lang {
-            color: #007bff;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-        }
-
-        .hero-section .content {
-            color: #fff;
-            max-width: 600px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .hero-section p {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        /* Social Media Icons */
-        .social-media {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .social-media a {
-            text-decoration: none;
-            font-size: 24px;
-            color: #333;
-            transition: 0.3s ease;
-        }
-
-        .social-media a:hover {
-            color: #007bff;
-        }
-
-        .social-media img {
-            width: 30px;
-            height: 30px;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #007bff;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <div class="navbar">
-        <ul class="menu-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-        </ul>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">VSTYLEDESIGN</a>
+        </div>
+        <nav class="navbar-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
         <div class="language-switcher">
             <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
             <a href="#" id="hu-btn" class="lang-btn">HU</a>
         </div>
-    </div>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="content">
+    <section id="home" class="hero-section">
+        <div class="hero-content">
             <h1>Welcome to My Website</h1>
             <p>
-                I create animated, SEO-optimized, and responsive website templates that help your business grow online. Explore my work and get in touch!
+                I create animated, SEO-optimized, and responsive website templates that help your business grow online.
             </p>
             <div class="social-media">
-                <a href="https://www.facebook.com/lenke.varo.1/" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/lenkevarro/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer dedicated to creating high-quality websites and providing SEO services.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Services</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>SEO Optimization</li>
+            <li>Animated Templates</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio</h2>
+        <p>Check out my previous projects and work samples.</p>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -186,7 +80,7 @@
 
     <!-- JavaScript -->
     <script>
-        // Function to switch between languages
+        // Language switch functionality
         document.getElementById('en-btn').addEventListener('click', () => {
             switchLanguage('en');
         });
@@ -195,16 +89,21 @@
             switchLanguage('hu');
         });
 
-        // Function to switch the content based on selected language
+        // Switch language content
         function switchLanguage(lang) {
-            const contents = document.querySelectorAll('.hero-section .content');
-            contents.forEach(content => content.style.display = 'none');
-            document.querySelector(`.${lang}-content`).style.display = 'block';
-
-            const buttons = document.querySelectorAll('.lang-btn');
-            buttons.forEach(button => button.classList.remove('active-lang'));
-            document.getElementById(`${lang}-btn`).classList.add('active-lang');
+            if (lang === 'en') {
+                document.querySelectorAll('.hero-content, .about-section, .services-section, .portfolio-section').forEach(el => el.style.display = 'block');
+            } else {
+                document.querySelectorAll('.hero-content, .about-section, .services-section, .portfolio-section').forEach(el => el.style.display = 'none');
+            }
         }
     </script>
 </body>
 </html>
+
+         
+      
+
+        
+
+   
