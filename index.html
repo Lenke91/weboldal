@@ -1,152 +1,255 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern, professzionális weboldal dizájn, amely segíti vállalkozásod növekedését. Fedezd fel a VStyleDesign by Lenke Varró személyre szabott webes megoldásait.">
-    <meta name="keywords" content="web design, professzionális weboldal, üzleti növekedés, személyre szabott megoldások, Lenke Varró, VStyleDesign">
-    <meta name="author" content="Lenke Varró - VStyleDesign">
-    <title>VStyleDesign - Lenke Varró</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Welcome to my website. I create animated, SEO-optimized, responsive website templates and write SEO articles to help your business grow.">
+    <meta name="keywords" content="web developer, SEO, animated website templates, responsive design, SEO articles, professional web design">
+    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    <meta property="og:title" content="Home - Web Developer & Entrepreneur">
+    <meta property="og:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth.">
+    <meta property="og:image" content="Me.jpg">
+    <meta property="og:url" content="https://www.vstyledesign.com">
+    <meta property="og:type" content="website">
+    <title>Home - Web Developer & Entrepreneur</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            margin: 0;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            color: #333;
         }
 
+        /* Navbar */
         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            background: #fff;
-            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar .menu-links {
+            list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            gap: 20px;
         }
 
         .navbar a {
-            margin: 0 3px;
-            padding: 5px 8px;
             text-decoration: none;
             color: #333;
-            font-weight: bold;
+            transition: 0.3s ease;
         }
 
-        .navbar a:hover, .navbar a.active {
+        .navbar a:hover {
             color: #007bff;
         }
 
-        .content-container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-            margin: 120px auto 20px;
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards;
+        #menu-btn {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
         }
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
+        .lang-btn {
+            text-decoration: none;
+            font-size: 16px;
             color: #333;
+            margin: 0 5px;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .active-lang {
+            color: #007bff;
         }
 
-        .social-icons {
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
             display: flex;
             justify-content: center;
-            gap: 15px;
+            align-items: center;
+            text-align: center;
+            width: 100%;
         }
 
-        .social-icons a {
-            color: white;
-            font-size: 24px;
+        .hero-section .content {
+            color: #fff;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            text-align: center;
         }
 
-        .social-icons a:hover {
-            color: #007bff;
-        }
-
-        .contact-btn {
-            background: linear-gradient(45deg, #007bff, #00c6ff);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 18px;
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-            transition: all 0.3s ease-in-out;
+        }
+
+        .hero-section p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .hero-section .cta-btn {
+            padding: 12px 30px;
+            background: #fff;
+            color: #333;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .hero-section .cta-btn:hover {
+            background: #007bff;
+            color: #fff;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            display: flex;
+            gap: 20px;
             margin-top: 20px;
         }
 
-        .contact-btn:hover {
-            background: linear-gradient(45deg, #0056b3, #0099cc);
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
-            transform: translateY(-3px);
+        .social-media a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #333;
+            transition: 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #007bff;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .navbar .menu-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                height: 100%;
+                padding-top: 60px;
+                transition: left 0.3s ease;
+            }
+
+            .navbar.show-menu .menu-links {
+                left: 0;
+            }
+
+            #menu-btn {
+                display: block;
+                color: #fff;
+            }
+
+            .hero-section {
+                height: auto;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#" class="active">Főoldal</a>
-        <a href="#">Rólam</a>
-        <a href="#">Szolgáltatások</a>
-        <a href="#">Portfólió</a>
-    </nav>
 
-    <div class="content-container">
-        <h1>Üdvözöllek a VStyleDesign oldalán!</h1>
-        <p>Személyre szabott, animált és SEO-optimalizált weboldal sablonokat készítek vállalkozások számára.</p>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">VStyleDesign</a>
+            <ul class="menu-links">
+                <li><a href="#" id="en-btn" class="lang-btn active-lang">EN</a></li>
+                <li><a href="#" id="hu-btn" class="lang-btn">HU</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about me.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="mailto:your-vlenke33@gmail.com">Send Message</a></li>
+            </ul>
+            <span id="menu-btn" class="material-icons">menu</span>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1 class="hero-title">Welcome to VStyleDesign</h1>
+            <p class="hero-text">I create animated, SEO-optimized, responsive website templates that help your business grow.</p>
+            <button class="cta-btn">Get Started</button>
+        </div>
+    </section>
+
+    <div class="social-media">
+        <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">📘</a>
+        <a href="https://www.instagram.com/lenkevarro/" target="_blank">📷</a>
+        <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">🔗</a>
     </div>
 
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/lenke.varo.1" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/lenke-varro-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@lenkev33" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <button class="contact-btn" onclick="window.location.href='mailto:info@vlenke33@gmail.com?subject=Kapcsolatfelvétel'">📩 Küldj üzenetet</button>
-    </footer>
-
     <script>
-        window.addEventListener('load', function() {
-            document.querySelector('.content-container').style.opacity = '1';
+        // Language switch functionality
+        document.getElementById('en-btn').addEventListener('click', function() {
+            switchLanguage('en');
+        });
+
+        document.getElementById('hu-btn').addEventListener('click', function() {
+            switchLanguage('hu');
+        });
+
+        function switchLanguage(lang) {
+            const contentElements = document.querySelectorAll('.about-content');
+            contentElements.forEach(element => element.style.display = 'none');
+            document.querySelector(`.${lang}-content`).style.display = 'block';
+
+            const langButtons = document.querySelectorAll('.lang-btn');
+            langButtons.forEach(button => button.classList.remove('active-lang'));
+            document.getElementById(`${lang}-btn`).classList.add('active-lang');
+        }
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.querySelector('.navbar');
+
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('show-menu');
         });
     </script>
+
 </body>
 </html>
 
-    
-
-    
+          
 
      
-    
-
-      
+     
+   
 
             
         
