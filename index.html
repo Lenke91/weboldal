@@ -175,10 +175,10 @@
     <!-- Navbar -->
     <div class="navbar">
         <ul class="menu-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about me.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#" id="home-link-en" class="nav-link">Home</a></li>
+            <li><a href="#" id="about-link-en" class="nav-link">About</a></li>
+            <li><a href="#" id="services-link-en" class="nav-link">Services</a></li>
+            <li><a href="#" id="portfolio-link-en" class="nav-link">Portfolio</a></li>
         </ul>
         <div class="language-switcher">
             <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
@@ -194,11 +194,7 @@
             <p>
                 I create animated, SEO-optimized, and responsive website templates that help your business grow online. Explore my work and get in touch!
             </p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">FB</a>
-                <a href="https://www.instagram.com/lenkevarro/" target="_blank">IG</a>
-                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LI</a>
-            </div>
+          
         </div>
         
         <div class="content hu-content" style="display: none;">
@@ -206,16 +202,17 @@
             <p>
                 Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek a vállalkozásod online növekedésében. Fedezd fel a munkáimat és vedd fel velem a kapcsolatot!
             </p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">FB</a>
-                <a href="https://www.instagram.com/lenkevarro/" target="_blank">IG</a>
-                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LI</a>
-            </div>
+          
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/lenke.varo.1/" target="_blank"><img src="facebook-icon.png" alt="Facebook" width="30"></a>
+            <a href="https://www.instagram.com/lenkevarro/" target="_blank"><img src="instagram-icon.png" alt="Instagram" width="30"></a>
+            <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" width="30"></a>
+        </div>
         <p>&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
         <a href="mailto:your-vlenke33@gmail.com">Send Message</a>
     </footer>
@@ -240,6 +237,20 @@
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(button => button.classList.remove('active-lang'));
             document.getElementById(`${lang}-btn`).classList.add('active-lang');
+
+            // Update navbar links based on language
+            const links = document.querySelectorAll('.nav-link');
+            if (lang === 'en') {
+                document.getElementById('home-link-en').innerText = 'Home';
+                document.getElementById('about-link-en').innerText = 'About';
+                document.getElementById('services-link-en').innerText = 'Services';
+                document.getElementById('portfolio-link-en').innerText = 'Portfolio';
+            } else {
+                document.getElementById('home-link-en').innerText = 'Kezdőlap';
+                document.getElementById('about-link-en').innerText = 'Rólam';
+                document.getElementById('services-link-en').innerText = 'Szolgáltatások';
+                document.getElementById('portfolio-link-en').innerText = 'Portfólió';
+            }
         }
 
         // Hamburger menu for mobile
@@ -249,15 +260,3 @@
     </script>
 </body>
 </html>
-
-    
-            
-  
-
-   
-
-  
-          
- 
-        
-       
