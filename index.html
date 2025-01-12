@@ -12,7 +12,6 @@
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
     <title>Home - Web Developer & Entrepreneur</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* General Styles */
         * {
@@ -114,13 +113,18 @@
 
         .social-media a {
             text-decoration: none;
-            font-size: 30px;
+            font-size: 24px;
             color: #333;
             transition: 0.3s ease;
         }
 
         .social-media a:hover {
             color: #007bff;
+        }
+
+        .social-media img {
+            width: 30px;
+            height: 30px;
         }
 
         /* Footer */
@@ -141,14 +145,6 @@
             color: #007bff;
         }
 
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .navbar .menu-links {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-        }
     </style>
 </head>
 <body>
@@ -156,10 +152,10 @@
     <!-- Navbar -->
     <div class="navbar">
         <ul class="menu-links">
-            <li><a href="index.html" class="nav-link" data-content="home">Home</a></li>
-            <li><a href="about me.html" class="nav-link" data-content="about">About</a></li>
-            <li><a href="services.html" class="nav-link" data-content="services">Services</a></li>
-            <li><a href="portfolio.html" class="nav-link" data-content="portfolio">Portfolio</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
         <div class="language-switcher">
             <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
@@ -170,12 +166,14 @@
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="content">
-            <h1 class="home">Welcome to My Website</h1>
-            <p class="home">I create animated, SEO-optimized, and responsive website templates that help your business grow online. Explore my work and get in touch!</p>
+            <h1>Welcome to My Website</h1>
+            <p>
+                I create animated, SEO-optimized, and responsive website templates that help your business grow online. Explore my work and get in touch!
+            </p>
             <div class="social-media">
-                <a href="https://www.facebook.com/lenke.varo.1/" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/lenkevarro/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/lenke.varo.1/" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/lenkevarro/" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
             </div>
         </div>
     </div>
@@ -201,28 +199,11 @@
         function switchLanguage(lang) {
             const contents = document.querySelectorAll('.hero-section .content');
             contents.forEach(content => content.style.display = 'none');
-            document.querySelectorAll(`.${lang}`).forEach(item => item.style.display = 'block');
+            document.querySelector(`.${lang}-content`).style.display = 'block';
 
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(button => button.classList.remove('active-lang'));
             document.getElementById(`${lang}-btn`).classList.add('active-lang');
-        }
-
-        // Show corresponding content when clicking nav links
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const contentId = event.target.getAttribute('data-content');
-                switchContent(contentId);
-            });
-        });
-
-        function switchContent(contentId) {
-            const sections = document.querySelectorAll('.hero-section .content');
-            sections.forEach(section => section.style.display = 'none');
-            const content = document.querySelector(`.${contentId}`);
-            if (content) content.style.display = 'block';
         }
     </script>
 </body>
