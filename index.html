@@ -26,8 +26,8 @@
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
             color: #333;
         }
 
@@ -44,11 +44,6 @@
             left: 0;
             background: rgba(255, 255, 255, 0.7);
             z-index: 100;
-        }
-
-        .navbar .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
         }
 
         .navbar .menu-links {
@@ -114,26 +109,11 @@
             font-size: 1.2rem;
         }
 
-        .hero-section .cta-btn {
-            padding: 12px 30px;
-            background: #fff;
-            color: #333;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: 0.3s ease;
-        }
-
-        .hero-section .cta-btn:hover {
-            background: #007bff;
-            color: #fff;
-        }
-
         /* Social Media Icons */
         .social-media {
             display: flex;
             gap: 20px;
+            justify-content: center;
             margin-top: 20px;
         }
 
@@ -148,6 +128,24 @@
             color: #007bff;
         }
 
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #007bff;
+        }
+
         /* Media Queries */
         @media screen and (max-width: 768px) {
             .navbar .menu-links {
@@ -155,102 +153,89 @@
                 top: 0;
                 left: -100%;
                 flex-direction: column;
-                background: rgba(0, 0, 0, 0.9);
+                background: rgba(0, 0, 0, 0.7);
                 width: 100%;
                 height: 100%;
-                padding-top: 60px;
-                transition: left 0.3s ease;
+                align-items: center;
+                justify-content: center;
             }
 
-            .navbar.show-menu .menu-links {
+            .navbar.active .menu-links {
                 left: 0;
             }
 
             #menu-btn {
                 display: block;
-                color: #fff;
-            }
-
-            .hero-section {
-                height: auto;
-            }
-
-            .hero-section h1 {
-                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">VStyleDesign</a>
-            <ul class="menu-links">
-                <li><a href="#" id="en-btn" class="lang-btn active-lang">EN</a></li>
-                <li><a href="#" id="hu-btn" class="lang-btn">HU</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about me.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="mailto:your-vlenke33@gmail.com">Send Message</a></li>
-            </ul>
-            <span id="menu-btn" class="material-icons">menu</span>
-        </nav>
-    </header>
-
-    <section class="hero-section">
-        <div class="content">
-            <!-- English Content -->
-            <div class="en-content">
-                <h1 class="hero-title">Welcome to VStyleDesign</h1>
-                <p class="hero-text">I create animated, SEO-optimized, responsive website templates that help your business grow.</p>
-                <button class="cta-btn">Get Started</button>
-            </div>
-
-            <!-- Hungarian Content -->
-            <div class="hu-content" style="display:none;">
-                <h1 class="hero-title">Üdvözlöm a VStyleDesign-nál</h1>
-                <p class="hero-text">Animált, SEO-optimalizált, reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásának növekedésében.</p>
-                <button class="cta-btn">Kezdje el most</button>
-            </div>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about me.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        <div class="language-switcher">
+            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
+            <a href="#" id="hu-btn" class="lang-btn">HU</a>
         </div>
-    </section>
-
-    <div class="social-media">
-        <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">📘</a>
-        <a href="https://www.instagram.com/lenkevarro/" target="_blank">📷</a>
-        <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">🔗</a>
+        <span id="menu-btn">&#9776;</span>
     </div>
 
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="content">
+            <h1>Welcome to My Website</h1>
+            <p>
+                I create animated, SEO-optimized, and responsive website templates that help your business grow online. Explore my work and get in touch!
+            </p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">FB</a>
+                <a href="https://www.instagram.com/lenkevarro/" target="_blank">IG</a>
+                <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LI</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
+       <a href="mailto:your-vlenke33@gmail.com">Send Message</a>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-        // Language switch functionality
-        document.getElementById('en-btn').addEventListener('click', function() {
+        // Function to switch between languages
+        document.getElementById('en-btn').addEventListener('click', () => {
             switchLanguage('en');
         });
 
-        document.getElementById('hu-btn').addEventListener('click', function() {
+        document.getElementById('hu-btn').addEventListener('click', () => {
             switchLanguage('hu');
         });
 
+        // Function to switch the content based on selected language
         function switchLanguage(lang) {
-            const contentElements = document.querySelectorAll('.en-content, .hu-content');
-            contentElements.forEach(element => element.style.display = 'none');
+            const contents = document.querySelectorAll('.hero-section .content');
+            contents.forEach(content => content.style.display = 'none');
             document.querySelector(`.${lang}-content`).style.display = 'block';
 
-            const langButtons = document.querySelectorAll('.lang-btn');
-            langButtons.forEach(button => button.classList.remove('active-lang'));
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(button => button.classList.remove('active-lang'));
             document.getElementById(`${lang}-btn`).classList.add('active-lang');
         }
 
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const navbar = document.querySelector('.navbar');
-
-        menuBtn.addEventListener('click', () => {
-            navbar.classList.toggle('show-menu');
+        // Hamburger menu for mobile
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.querySelector('.navbar').classList.toggle('active');
         });
     </script>
-
 </body>
 </html>
+
+
+       
