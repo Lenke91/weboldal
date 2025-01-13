@@ -1,217 +1,179 @@
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LENKE VARO PR VSTYLEDESIGN - Weboldal sablonok készítése vállalkozások számára.">
-    <meta name="keywords" content="weboldal sablonok, reszponzív design, SEO, vállalkozás weboldal">
-    
-    <meta property="og:title" content="LENKE VARO PR VSTYLEDESIGN | Portfolio">
-    <meta property="og:description" content="Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, hogy sikeresebbé tedd vállalkozásodat.">
-    <meta property="og:image" content="https://vstyledesign.com/assets/img/preview.jpg">
-    <meta property="og:url" content="https://www.vstyledesign.com/portfolio">
-    
-    <meta name="twitter:title" content="LENKE VARO PR VSTYLEDESIGN | Portfolio">
-    <meta name="twitter:description" content="Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, hogy sikeresebbé tedd vállalkozásodat.">
-    <meta name="twitter:image" content="https://vstyledesign.com/assets/img/preview.jpg">
+    <meta name="description" content="Portfolio of LENKE VARO PR VSTYLEDESIGN showcasing web design services.">
+    <meta name="keywords" content="web design, portfolio, animated templates, SEO, digital marketing">
+    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    <meta property="og:title" content="Portfolio - LENKE VARO PR VSTYLEDESIGN">
+    <meta property="og:description" content="Explore the portfolio showcasing web design services by LENKE VARO PR VSTYLEDESIGN.">
+    <meta property="og:image" content="path_to_image.jpg">
+    <meta property="og:url" content="https://vstyledesign.com/portfolio">
     <meta name="twitter:card" content="summary_large_image">
-
+    <meta name="twitter:title" content="Portfolio - LENKE VARO PR VSTYLEDESIGN">
+    <meta name="twitter:description" content="Explore the portfolio of web design services.">
+    <meta name="twitter:image" content="path_to_image.jpg">
     <meta name="robots" content="index, follow">
     <title>Portfolio</title>
     <style>
-        /* Alap stílusok */
+        /* Alap beállítások */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow: hidden;
+            min-height: 100vh;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
-            color: #333; /* Sötétebb szövegszín a jobb olvashatóságért */
-            overflow-x: hidden;
+            animation: gradient-animation 6s infinite alternate;
         }
 
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 30px 0;
+        /* Animált háttér */
+        @keyframes gradient-animation {
+            0% {
+                background: linear-gradient(120deg, #ff9a76, #ffc371);
+            }
+
+            100% {
+                background: linear-gradient(120deg, #ff6a00, #ffd700);
+            }
+        }
+
+        /* Nyelvváltó */
+        .language-switcher {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 999;
+        }
+
+        .lang-btn {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+
+        /* Portfolio tartalma */
+        .portfolio-container {
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-bottom: 2px solid #ffffff;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
         }
 
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-            text-transform: uppercase;
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        nav ul {
+        h1 {
+            font-size: 4vw;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .portfolio-list {
             list-style: none;
             padding: 0;
-            text-align: center;
-            margin-top: 20px;
         }
 
-        nav ul li {
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            letter-spacing: 1px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ff5733;
-            transform: scale(1.1);
-        }
-
-        section {
-            padding: 60px;
-            margin: 60px 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s ease-in-out;
-        }
-
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        section a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #2575fc;
-            color: white;
-            text-decoration: none;
+        .portfolio-list li {
+            font-size: 20px;
+            padding: 10px 0;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        section a:hover {
-            background-color: #1c63c4;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            margin-top: 40px;
-            font-size: 16px;
+        .portfolio-list li:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.4);
         }
 
         /* Reszponzív dizájn */
         @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
+            .portfolio-container {
+                width: 90%;
+                padding: 15px;
             }
-            section {
-                margin: 20px;
-                padding: 40px;
+
+            .portfolio-list li {
+                font-size: 18px;
             }
         }
 
-        /* Animációk */
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        @media (max-width: 480px) {
+            .portfolio-container {
+                width: 100%;
+                padding: 10px;
+            }
 
-        .language-selector {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
+            .portfolio-list li {
+                font-size: 16px;
+            }
 
-        .language-selector:hover {
-            background-color: #ff5733;
+            h1 {
+                font-size: 5vw;
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="language-switcher">
+        <a href="#" id="en-btn" class="lang-btn">EN</a> |
+        <a href="#" id="hu-btn" class="lang-btn">HU</a>
+    </div>
 
-    <!-- Nyelvváltó -->
-    <div class="language-selector" onclick="changeLanguage()">Magyar</div>
-
-    <!-- Fejléc -->
-    <header>
-        <h1 id="page-title">Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#templates" id="templates-link">Weboldal sablonok</a></li>
+    <div class="portfolio-container">
+        <!-- Angol tartalom -->
+        <div class="content en-content">
+            <h1>PORTFOLIO</h1>
+            <ul class="portfolio-list">
+                <li>Animated Website Templates</li>
             </ul>
-        </nav>
-    </header>
+        </div>
 
-    <!-- Weboldal sablonok -->
-    <section id="templates" class="animált">
-        <h2 id="templates-title">Weboldal sablonok</h2>
-        <p id="templates-desc">Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.</p>
-        <a href="https://vstyledesign.com/sablonok" target="_blank" id="templates-link-text">Nézd meg a sablonokat itt!</a>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN. Minden jog fenntartva.</p>
-    </footer>
+        <!-- Magyar tartalom -->
+        <div class="content hu-content" style="display: none;">
+            <h1>PORTFÓLIÓ</h1>
+            <ul class="portfolio-list">
+                <li>Animált Weboldal Sablonok</li>
+            </ul>
+        </div>
+    </div>
 
     <script>
-        let currentLanguage = 'hu';  // Kezdő nyelv: magyar
-
-        // Animációk megjelenítése betöltés után
-        document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.animált');
-            elements.forEach((el) => {
-                el.classList.add('show');
-            });
+        // Nyelvváltás funkciók
+        document.getElementById('en-btn').addEventListener('click', () => {
+            document.querySelector('.hu-content').style.display = 'none';
+            document.querySelector('.en-content').style.display = 'block';
         });
 
-        // Nyelvváltó funkció
-        function changeLanguage() {
-            if (currentLanguage === 'hu') {
-                currentLanguage = 'en';
-                document.querySelector('.language-selector').textContent = 'Magyar';
-                document.getElementById('page-title').textContent = 'Portfolio';
-                document.getElementById('templates-link').textContent = 'Website Templates';
-                document.getElementById('templates-title').textContent = 'Website Templates';
-                document.getElementById('templates-desc').textContent = 'Explore my responsive and SEO-optimized website templates that will help your business grow.';
-                document.getElementById('templates-link-text').textContent = 'View templates here!';
-            } else {
-                currentLanguage = 'hu';
-                document.querySelector('.language-selector').textContent = 'English';
-                document.getElementById('page-title').textContent = 'Portfolio';
-                document.getElementById('templates-link').textContent = 'Weboldal sablonok';
-                document.getElementById('templates-title').textContent = 'Weboldal sablonok';
-                document.getElementById('templates-desc').textContent = 'Fedezd fel a reszponzív és SEO-optimalizált weboldal sablonjaimat, amelyek segítenek a vállalkozásod növekedésében.';
-                document.getElementById('templates-link-text').textContent = 'Nézd meg a sablonokat itt!';
-            }
-        }
+        document.getElementById('hu-btn').addEventListener('click', () => {
+            document.querySelector('.en-content').style.display = 'none';
+            document.querySelector('.hu-content').style.display = 'block';
+        });
     </script>
-
 </body>
+
 </html>
