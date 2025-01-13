@@ -46,12 +46,19 @@
         .navbar-links a {
             color: white;
             text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #ff9c42; /* Hover szín */
         }
 
         .language-switcher a {
             color: white;
             text-decoration: none;
             margin-left: 1rem;
+            font-size: 1rem;
         }
 
         .hero-section {
@@ -73,13 +80,6 @@
             animation: slideUp 2s ease-in-out;
         }
 
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1rem; /* kisebb ikonok */
-        }
-
         .send-message-btn {
             display: inline-block;
             background-color: #007BFF;
@@ -89,6 +89,29 @@
             font-size: 1rem;
             text-decoration: none;
             margin-top: 2rem;
+        }
+
+        .send-message-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.5rem; /* Növeltem a méretet a szépen látható ikonokhoz */
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ff9c42;
         }
 
         @keyframes fadeIn {
