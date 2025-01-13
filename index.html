@@ -8,22 +8,185 @@
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:title" content="Home - Web Developer & Entrepreneur">
     <meta property="og:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth.">
-    <meta property="og:image" content="Me.jpg"> <!-- Kép eltávolítva innen -->
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home - Web Developer & Entrepreneur">
     <meta name="twitter:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth.">
-    <meta name="twitter:image" content="Me.jpg"> <!-- Kép eltávolítva innen -->
     <meta name="twitter:url" content="https://www.vstyledesign.com">
     <title>Home - Web Developer & Entrepreneur</title>
     <style>
-        /* Kód változatlan marad */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-links ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar-links li {
+            margin: 0 1rem;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .language-switcher a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-top: 80px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        .send-message-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            padding: 1rem;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            margin-top: auto;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .navbar-links ul {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 1rem;
+            }
+
+            .language-switcher {
+                margin-top: 1rem;
+                order: 2;
+            }
+
+            .social-icons {
+                margin-top: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem; /* Smaller size for mobile */
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .send-message-btn {
+                font-size: 1rem;
+                padding: 0.5rem 1.2rem;
+            }
+
+            .footer .social-icons {
+                margin-bottom: 1rem;
+            }
+
+            .footer p {
+                margin-top: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- A navbar és hero szekció változatlan -->
+    <header class="navbar">
+        <nav class="navbar-links">
+            <ul>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="about me.html" class="about-link">About</a></li>
+                <li><a href="services.html" class="services-link">Services</a></li>
+                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
+            <a href="#" id="hu-btn" class="lang-btn">HU</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!</p>
+            <a href="mailto:your-vlenke33@gmail.com" class="send-message-btn">Send Message</a>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="social-icons">
             <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">Facebook</a>
@@ -34,7 +197,54 @@
     </footer>
 
     <script>
-        /* Kód változatlan marad */
+        const enText = {
+            "home": "Home",
+            "about": "About",
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "welcome": "Welcome to My Website",
+            "description": "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!",
+            "sendMessage": "Send Message",
+            "rights": "© 2025 VSTYLEDESIGN. All rights reserved."
+        };
+
+        const huText = {
+            "home": "Kezdőlap",
+            "about": "Rólam",
+            "services": "Szolgáltatások",
+            "portfolio": "Portfólió",
+            "welcome": "Üdvözöllek a weboldalamon",
+            "description": "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!",
+            "sendMessage": "Üzenet küldése",
+            "rights": "© 2025 VSTYLEDESIGN. Minden jog fenntartva."
+        };
+
+        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
+
+        function switchLanguage(lang) {
+            let text = lang === 'en' ? enText : huText;
+
+            // Navbar items
+            document.querySelector('.home-link').textContent = text.home;
+            document.querySelector('.about-link').textContent = text.about;
+            document.querySelector('.services-link').textContent = text.services;
+            document.querySelector('.portfolio-link').textContent = text.portfolio;
+
+            // Hero section
+            document.querySelector('.hero-content h1').textContent = text.welcome;
+            document.querySelector('.hero-content p').textContent = text.description;
+            document.querySelector('.send-message-btn').textContent = text.sendMessage;
+
+            // Footer
+            document.querySelector('.footer p').textContent = text.rights;
+
+            // Language button active state
+            document.getElementById('en-btn').classList.toggle('active-lang', lang === 'en');
+            document.getElementById('hu-btn').classList.toggle('active-lang', lang === 'hu');
+        }
     </script>
 </body>
 </html>
+
+   
