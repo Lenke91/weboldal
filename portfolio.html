@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the portfolio of animated website templates by LENKE VARO PR VSTYLEDESIGN.">
-    <meta name="keywords" content="animated website templates, portfolio, web design, digital marketing">
+    <meta name="description" content="Explore the portfolio of LENKE VARO PR VSTYLEDESIGN, featuring modern and responsive website templates.">
+    <meta name="keywords" content="portfolio, website templates, web design, responsive design">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:title" content="Portfolio - LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:description" content="Discover stunning animated website templates for your business.">
+    <meta property="og:description" content="Check out the latest responsive and SEO-friendly website templates by LENKE VARO PR VSTYLEDESIGN.">
     <meta property="og:image" content="path_to_image.jpg">
     <meta property="og:url" content="https://vstyledesign.com/portfolio">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio - LENKE VARO PR VSTYLEDESIGN">
-    <meta name="twitter:description" content="Explore creative and animated website templates.">
+    <meta name="twitter:description" content="Explore our modern and responsive website templates.">
     <meta name="twitter:image" content="path_to_image.jpg">
     <meta name="robots" content="index, follow">
     <title>Portfolio</title>
@@ -23,111 +23,105 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
         }
 
         h1 {
-            margin-top: 40px;
-            font-size: 4vw;
-            color: #fff;
-        }
-
-        .language-switcher {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-        }
-
-        .lang-btn {
-            text-decoration: none;
-            font-size: 18px;
-            color: #fff;
-            margin: 0 5px;
-            font-weight: bold;
+            font-size: 3em;
         }
 
         .portfolio-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
-            padding: 40px;
-            width: 90%;
+            padding: 20px;
         }
 
-        .portfolio-item {
-            background: rgba(255, 255, 255, 0.2);
+        .template-item {
+            background: #fff;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            text-align: center;
         }
 
-        .portfolio-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .portfolio-item img {
+        .template-item img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
 
-        .portfolio-item h3 {
-            text-align: center;
-            padding: 10px 0;
+        .template-item a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .template-item a:hover {
+            background-color: #84fab0;
             color: #fff;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 6vw;
+            .template-item {
+                width: 90%;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="language-switcher">
-        <a href="#" id="en-btn" class="lang-btn">EN</a> |
-        <a href="#" id="hu-btn" class="lang-btn">HU</a>
-    </div>
-
-    <h1 id="page-title">PORTFOLIO</h1>
+    <header>
+        <h1 id="page-title">Portfolio</h1>
+        <div class="language-switcher">
+            <a href="#" id="en-btn">EN</a> |
+            <a href="#" id="hu-btn">HU</a>
+        </div>
+    </header>
 
     <div class="portfolio-container">
-        <div class="portfolio-item">
-            <img src="path_to_template1.jpg" alt="Template 1">
-            <h3>Animated Template 1</h3>
+        <div class="template-item">
+            <img src="template1.jpg" alt="Template 1">
+            <a href="#">Template 1 - Business Website</a>
         </div>
-        <div class="portfolio-item">
-            <img src="path_to_template2.jpg" alt="Template 2">
-            <h3>Animated Template 2</h3>
+        <div class="template-item">
+            <img src="template2.jpg" alt="Template 2">
+            <a href="#">Template 2 - Personal Blog</a>
         </div>
-        <div class="portfolio-item">
-            <img src="path_to_template3.jpg" alt="Template 3">
-            <h3>Animated Template 3</h3>
+        <div class="template-item">
+            <img src="template3.jpg" alt="Template 3">
+            <a href="#">Template 3 - Portfolio</a>
+        </div>
+        <div class="template-item">
+            <img src="template4.jpg" alt="Template 4">
+            <a href="#">Template 4 - E-commerce</a>
+        </div>
+        <div class="template-item">
+            <img src="template5.jpg" alt="Template 5">
+            <a href="#">Template 5 - Landing Page</a>
+        </div>
+        <div class="template-item">
+            <img src="template6.jpg" alt="Template 6">
+            <a href="#">Template 6 - Event Website</a>
         </div>
     </div>
 
     <script>
-        document.getElementById('en-btn').addEventListener('click', () => {
-            document.getElementById('page-title').textContent = 'PORTFOLIO';
-            document.querySelectorAll('.portfolio-item h3')[0].textContent = 'Animated Template 1';
-            document.querySelectorAll('.portfolio-item h3')[1].textContent = 'Animated Template 2';
-            document.querySelectorAll('.portfolio-item h3')[2].textContent = 'Animated Template 3';
+        document.getElementById('en-btn').addEventListener('click', function () {
+            document.getElementById('page-title').textContent = 'Portfolio';
         });
 
-        document.getElementById('hu-btn').addEventListener('click', () => {
-            document.getElementById('page-title').textContent = 'PORTFÓLIÓ';
-            document.querySelectorAll('.portfolio-item h3')[0].textContent = 'Animált Sablon 1';
-            document.querySelectorAll('.portfolio-item h3')[1].textContent = 'Animált Sablon 2';
-            document.querySelectorAll('.portfolio-item h3')[2].textContent = 'Animált Sablon 3';
+        document.getElementById('hu-btn').addEventListener('click', function () {
+            document.getElementById('page-title').textContent = 'Portfólió';
         });
     </script>
 </body>
