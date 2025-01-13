@@ -75,17 +75,20 @@
             padding: 5rem 1rem;
             margin-top: 80px;
             animation: fadeIn 2s ease-in-out;
+            position: relative; /* Added to avoid overlap with navbar */
         }
 
         .hero-content h1 {
             font-size: 2.5rem;
             color: #333;
+            z-index: 1; /* Ensures it appears above other content */
         }
 
         .hero-content p {
             font-size: 1.2rem;
             color: #666;
             margin-top: 1rem;
+            z-index: 1;
         }
 
         .send-message-btn {
@@ -141,7 +144,8 @@
             }
 
             .hero-content h1 {
-                font-size: 1.8rem; /* Smaller size for mobile */
+                font-size: 1.8rem;
+                z-index: 1;
             }
 
             .hero-content p {
@@ -243,8 +247,9 @@
             document.getElementById('en-btn').classList.toggle('active-lang', lang === 'en');
             document.getElementById('hu-btn').classList.toggle('active-lang', lang === 'hu');
         }
+
+        // Set default language (English)
+        switchLanguage('en');
     </script>
 </body>
 </html>
-
-   
