@@ -145,11 +145,13 @@
 
             .hero-content p {
                 font-size: 1rem;
+                margin-top: 1.5rem; /* Növelt távolság mobil nézetben */
             }
 
             .send-message-btn {
                 font-size: 1rem;
                 padding: 0.5rem 1.2rem;
+                margin-top: 2rem;  /* Növelt távolság a gombhoz */
             }
 
             .footer .social-icons {
@@ -239,13 +241,9 @@
             document.querySelector('.footer p').textContent = text.rights;
 
             // Language button active state
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
-            document.getElementById(`${lang}-btn`).classList.add('active-lang');
+            document.getElementById('en-btn').classList.toggle('active-lang', lang === 'en');
+            document.getElementById('hu-btn').classList.toggle('active-lang', lang === 'hu');
         }
     </script>
 </body>
 </html>
-
-     
-
-  
