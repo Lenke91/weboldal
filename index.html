@@ -30,7 +30,6 @@
             flex-direction: column;
         }
 
-        /* Navbar Style */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -71,7 +70,7 @@
         .hero-section {
             text-align: center;
             padding: 5rem 1rem;
-            margin-top: 80px; /* Ensure it's below navbar */
+            margin-top: 80px;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -108,7 +107,7 @@
             text-align: center;
             background-color: #333;
             color: white;
-            margin-top: auto; /* Ensures footer sticks to the bottom */
+            margin-top: auto;
         }
 
         @keyframes fadeIn {
@@ -116,7 +115,6 @@
             100% { opacity: 1; }
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -132,7 +130,7 @@
 
             .language-switcher {
                 margin-top: 1rem;
-                order: 2; /* Ensure it's below the navbar links */
+                order: 2;
             }
 
             .social-icons {
@@ -154,7 +152,7 @@
         <nav class="navbar-links">
             <ul>
                 <li><a href="index.html" class="home-link">Home</a></li>
-                <li><a href="about me.html" class="about-link">About</a></li>
+                <li><a href="about%20me.html" class="about-link">About</a></li>
                 <li><a href="services.html" class="services-link">Services</a></li>
                 <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
             </ul>
@@ -224,7 +222,17 @@
 
             // Footer
             document.querySelector('.footer p').textContent = text.rights;
+
+            // Language button active state
+            document.getElementById('en-btn').classList.toggle('active-lang', lang === 'en');
+            document.getElementById('hu-btn').classList.toggle('active-lang', lang === 'hu');
         }
     </script>
 </body>
 </html>
+
+      
+        
+ 
+          
+         
