@@ -73,6 +73,13 @@
             animation: slideUp 2s ease-in-out;
         }
 
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem; /* kisebb ikonok */
+        }
+
         .send-message-btn {
             display: inline-block;
             background-color: #007BFF;
@@ -106,10 +113,10 @@
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
-                <li><a href="index.html" class="home-link">Home</a></li>
-                <li><a href="about me.html" class="about-link">About</a></li>
-                <li><a href="services.html" class="services-link">Services</a></li>
-                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
+                <li><a href="#" class="home-link">Home</a></li>
+                <li><a href="#" class="about-link">About</a></li>
+                <li><a href="#" class="services-link">Services</a></li>
+                <li><a href="#" class="portfolio-link">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
@@ -120,8 +127,8 @@
 
     <section id="home" class="hero-section">
         <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!</p>
+            <h1 id="hero-title">Welcome to My Website</h1>
+            <p id="hero-text">I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!</p>
             <a href="mailto:your-vlenke33@gmail.com" class="send-message-btn">Send Message</a>
         </div>
     </section>
@@ -136,25 +143,37 @@
     </footer>
 
     <script>
+        // Nyelvváltás funkció
         document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
         document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 
         function switchLanguage(lang) {
             if (lang === 'en') {
                 document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!";
-                document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
+                document.getElementById('hero-title').textContent = "Welcome to My Website";
+                document.querySelector('.home-link').textContent = "Home";
+                document.querySelector('.about-link').textContent = "About";
+                document.querySelector('.services-link').textContent = "Services";
+                document.querySelector('.portfolio-link').textContent = "Portfolio";
+                document.querySelector('.send-message-btn').textContent = "Send Message";
+                document.querySelector('.social-icons a:nth-child(1)').textContent = "Facebook";
+                document.querySelector('.social-icons a:nth-child(2)').textContent = "Instagram";
+                document.querySelector('.social-icons a:nth-child(3)').textContent = "LinkedIn";
+                document.getElementById('rights-reserved').textContent = "© 2025 VSTYLEDESIGN. All rights reserved.";
             } else if (lang === 'hu') {
                 document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!";
-                document.querySelector('.hero-content h1').textContent = "Üdvözlöm a Weboldalamon";
+                document.getElementById('hero-title').textContent = "Üdvözöllek a weboldalamon!";
+                document.querySelector('.home-link').textContent = "Kezdőlap";
+                document.querySelector('.about-link').textContent = "Rólam";
+                document.querySelector('.services-link').textContent = "Szolgáltatások";
+                document.querySelector('.portfolio-link').textContent = "Portfólió";
+                document.querySelector('.send-message-btn').textContent = "Üzenet küldése";
+                document.querySelector('.social-icons a:nth-child(1)').textContent = "Facebook";
+                document.querySelector('.social-icons a:nth-child(2)').textContent = "Instagram";
+                document.querySelector('.social-icons a:nth-child(3)').textContent = "LinkedIn";
+                document.getElementById('rights-reserved').textContent = "© 2025 VSTYLEDESIGN. Minden jog fenntartva.";
             }
         }
     </script>
 </body>
 </html>
-
-
-
-          
-        
-
-
