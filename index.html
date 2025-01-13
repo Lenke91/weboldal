@@ -80,7 +80,7 @@
         }
 
         .hero-content h1 {
-            font-size: 3rem; /* Alapértelmezett nagy méret */
+            font-size: 3rem;
             color: #333;
         }
 
@@ -138,20 +138,21 @@
                 order: 2;
             }
 
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
             .hero-content h1 {
-                font-size: 2rem; /* Csökkentett méret mobil nézetben */
-                color: #333;
+                font-size: 2rem;
             }
 
             .hero-content p {
                 font-size: 1rem;
-                margin-top: 1.5rem; /* Növelt távolság mobil nézetben */
             }
 
             .send-message-btn {
                 font-size: 1rem;
                 padding: 0.5rem 1.2rem;
-                margin-top: 2rem;  /* Növelt távolság a gombhoz */
             }
 
             .footer .social-icons {
@@ -240,10 +241,14 @@
             // Footer
             document.querySelector('.footer p').textContent = text.rights;
 
-            // Language button active state
+            // Language switcher
             document.getElementById('en-btn').classList.toggle('active-lang', lang === 'en');
             document.getElementById('hu-btn').classList.toggle('active-lang', lang === 'hu');
         }
     </script>
 </body>
 </html>
+
+  
+
+    
