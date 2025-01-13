@@ -154,7 +154,7 @@
         <nav class="navbar-links">
             <ul>
                 <li><a href="index.html" class="home-link">Home</a></li>
-                <li><a href="about%20me.html" class="about-link">About</a></li>
+                <li><a href="about me.html" class="about-link">About</a></li>
                 <li><a href="services.html" class="services-link">Services</a></li>
                 <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
             </ul>
@@ -183,33 +183,48 @@
     </footer>
 
     <script>
+        const enText = {
+            "home": "Home",
+            "about": "About",
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "welcome": "Welcome to My Website",
+            "description": "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!",
+            "sendMessage": "Send Message",
+            "rights": "© 2025 VSTYLEDESIGN. All rights reserved."
+        };
+
+        const huText = {
+            "home": "Kezdőlap",
+            "about": "Rólam",
+            "services": "Szolgáltatások",
+            "portfolio": "Portfólió",
+            "welcome": "Üdvözöllek a weboldalamon",
+            "description": "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!",
+            "sendMessage": "Üzenet küldése",
+            "rights": "© 2025 VSTYLEDESIGN. Minden jog fenntartva."
+        };
+
         document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
         document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 
         function switchLanguage(lang) {
-            if (lang === 'en') {
-                document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
-                document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!";
-                document.querySelector('.send-message-btn').textContent = "Send Message";
-                document.querySelector('.footer p').textContent = "© 2025 VSTYLEDESIGN. All rights reserved.";
-            } else if (lang === 'hu') {
-                document.querySelector('.hero-content h1').textContent = "Üdvözöllek a weboldalamon";
-                document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!";
-                document.querySelector('.send-message-btn').textContent = "Üzenet küldése";
-                document.querySelector('.footer p').textContent = "© 2025 VSTYLEDESIGN. Minden jog fenntartva.";
-            }
+            let text = lang === 'en' ? enText : huText;
+
+            // Navbar items
+            document.querySelector('.home-link').textContent = text.home;
+            document.querySelector('.about-link').textContent = text.about;
+            document.querySelector('.services-link').textContent = text.services;
+            document.querySelector('.portfolio-link').textContent = text.portfolio;
+
+            // Hero section
+            document.querySelector('.hero-content h1').textContent = text.welcome;
+            document.querySelector('.hero-content p').textContent = text.description;
+            document.querySelector('.send-message-btn').textContent = text.sendMessage;
+
+            // Footer
+            document.querySelector('.footer p').textContent = text.rights;
         }
     </script>
 </body>
 </html>
-
-
-   
-      
-         
-           
-
-     
-      
-    
-  
