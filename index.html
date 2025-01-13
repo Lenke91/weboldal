@@ -24,6 +24,9 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .navbar {
@@ -80,6 +83,7 @@
             text-align: center;
             padding: 4rem 1rem;
             animation: fadeIn 2s ease-in-out;
+            flex: 1;  /* Allow this section to take up available space */
         }
 
         .hero-content h1 {
@@ -156,16 +160,26 @@
                 padding: 0.5rem 1rem;
             }
         }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
-                <li><a href="index.html" class="home-link">Home</a></li>
-                <li><a href="about me.html" class="about-link">About</a></li>
-                <li><a href="services.html" class="services-link">Services</a></li>
-                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
+                <li><a href="#" class="home-link">Home</a></li>
+                <li><a href="#" class="about-link">About</a></li>
+                <li><a href="#" class="services-link">Services</a></li>
+                <li><a href="#" class="portfolio-link">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
@@ -228,7 +242,15 @@
 </html>
 
 
+       
+    
+          
       
+         
+          
+
+
+ 
  
       
   
