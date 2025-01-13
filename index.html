@@ -11,7 +11,7 @@
     <meta property="og:image" content="Me.jpg">
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
-<meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">
     <title>Home - Web Developer & Entrepreneur</title>
     <style>
         * {
@@ -69,6 +69,7 @@
         .hero-content p {
             font-size: 1.2rem;
             color: #666;
+            margin-top: 1rem;
             animation: slideUp 2s ease-in-out;
         }
 
@@ -77,11 +78,6 @@
             margin: 0 10px;
             text-decoration: none;
             font-size: 1.5rem;
-        }
-
-        .social-icons {
-            margin-top: 2rem;
-            text-align: center;
         }
 
         .send-message-btn {
@@ -105,30 +101,15 @@
             100% { transform: translateY(0); opacity: 1; }
         }
 
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
         @media (max-width: 768px) {
-            .navbar-links ul {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .navbar-links li {
-                margin: 1rem 0;
+            .send-message-btn {
+                width: 80%;
+                padding: 0.8rem 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
@@ -144,18 +125,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
-            <p>
-                I create animated, SEO-optimized, and responsive website templates that help your business grow online.
-            </p>
+            <p>I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!</p>
             <a href="mailto:your-vlenke33@gmail.com" class="send-message-btn">Send Message</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="social-icons">
             <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">Facebook</a>
@@ -165,47 +142,17 @@
         <p id="rights-reserved">&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Language switch functionality
-        document.getElementById('en-btn').addEventListener('click', () => {
-            switchLanguage('en');
-        });
+        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 
-        document.getElementById('hu-btn').addEventListener('click', () => {
-            switchLanguage('hu');
-        });
-
-        // Switch language content
         function switchLanguage(lang) {
             if (lang === 'en') {
-                document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that help your business grow online.";
-                document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
-                document.querySelector('.home-link').textContent = "Home";
-                document.querySelector('.about-link').textContent = "About";
-                document.querySelector('.services-link').textContent = "Services";
-                document.querySelector('.portfolio-link').textContent = "Portfolio";
-                document.querySelector('.send-message-btn').textContent = "Send Message";
-                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. All rights reserved.";
+                document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!";
             } else if (lang === 'hu') {
-                document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online növekedésében.";
-                document.querySelector('.hero-content h1').textContent = "Üdvözöllek a Weboldalamon";
-                document.querySelector('.home-link').textContent = "Kezdőlap";
-                document.querySelector('.about-link').textContent = "Rólam";
-                document.querySelector('.services-link').textContent = "Szolgáltatások";
-                document.querySelector('.portfolio-link').textContent = "Portfólió";
-                document.querySelector('.send-message-btn').textContent = "Üzenet Küldése";
-                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva.";
+                document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!";
             }
         }
     </script>
 </body>
 </html>
-
-
-      
-      
-         
-         
-   
- 
