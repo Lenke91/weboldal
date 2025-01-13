@@ -8,12 +8,14 @@
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:title" content="Home - Web Developer & Entrepreneur">
     <meta property="og:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth.">
+    <meta property="og:image" content="Me.jpg">
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home - Web Developer & Entrepreneur">
     <meta name="twitter:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth.">
+    <meta name="twitter:image" content="Me.jpg">
     <meta name="twitter:url" content="https://www.vstyledesign.com">
     <title>Home - Web Developer & Entrepreneur</title>
     <style>
@@ -75,22 +77,17 @@
             padding: 5rem 1rem;
             margin-top: 80px;
             animation: fadeIn 2s ease-in-out;
-            position: relative;
-            z-index: 2;
         }
 
         .hero-content h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #333;
-            z-index: 2;
-            visibility: visible;
         }
 
         .hero-content p {
             font-size: 1.2rem;
             color: #666;
             margin-top: 1rem;
-            z-index: 1;
         }
 
         .send-message-btn {
@@ -101,7 +98,6 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            z-index: 2;
         }
 
         .social-icons a {
@@ -124,7 +120,6 @@
             100% { opacity: 1; }
         }
 
-        /* Mobil nézetekhez */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -144,8 +139,8 @@
             }
 
             .hero-content h1 {
-                font-size: 2rem; /* Mobil nézetre kisebb betűméret */
-                visibility: visible !important;
+                font-size: 2rem; /* A cím méretének csökkentése mobil nézetben */
+                color: #333;
             }
 
             .hero-content p {
@@ -201,19 +196,56 @@
     </footer>
 
     <script>
-        // JS for language switch
-        document.getElementById('en-btn').addEventListener('click', function() {
-            alert('Switching to English');
-            // Add logic to change page language
-        });
+        const enText = {
+            "home": "Home",
+            "about": "About",
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "welcome": "Welcome to My Website",
+            "description": "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!",
+            "sendMessage": "Send Message",
+            "rights": "© 2025 VSTYLEDESIGN. All rights reserved."
+        };
 
-        document.getElementById('hu-btn').addEventListener('click', function() {
-            alert('Switching to Hungarian');
-            // Add logic to change page language
-        });
+        const huText = {
+            "home": "Kezdőlap",
+            "about": "Rólam",
+            "services": "Szolgáltatások",
+            "portfolio": "Portfólió",
+            "welcome": "Üdvözöllek a weboldalamon",
+            "description": "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!",
+            "sendMessage": "Üzenet küldése",
+            "rights": "© 2025 VSTYLEDESIGN. Minden jog fenntartva."
+        };
+
+        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
+
+        function switchLanguage(lang) {
+            let text = lang === 'en' ? enText : huText;
+
+            // Navbar items
+            document.querySelector('.home-link').textContent = text.home;
+            document.querySelector('.about-link').textContent = text.about;
+            document.querySelector('.services-link').textContent = text.services;
+            document.querySelector('.portfolio-link').textContent = text.portfolio;
+
+            // Hero section
+            document.querySelector('.hero-content h1').textContent = text.welcome;
+            document.querySelector('.hero-content p').textContent = text.description;
+            document.querySelector('.send-message-btn').textContent = text.sendMessage;
+
+            // Footer
+            document.querySelector('.footer p').textContent = text.rights;
+
+            // Language button active state
+            document.getElementById('en-btn').classList.toggle('active-lang', lang === 'en');
+            document.getElementById('hu-btn').classList.toggle('active-lang', lang === 'hu');
+        }
     </script>
 </body>
 </html>
 
-      
-      
+   
+  
+        
