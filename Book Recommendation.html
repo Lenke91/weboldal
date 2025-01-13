@@ -172,18 +172,15 @@
         }
     }
 
-    // Beállítás nyelvváltásra
     document.getElementById('hu-btn').addEventListener('click', function() {
         switchLanguage('hu');
     });
-
     document.getElementById('en-btn').addEventListener('click', function() {
         switchLanguage('en');
     });
 
-    // Alapértelmezett nyelv
     window.onload = function() {
-        switchLanguage('hu');
+        switchLanguage('hu'); // Alapértelmezett nyelv magyar
     };
 </script>
 
