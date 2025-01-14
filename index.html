@@ -29,9 +29,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            background-color: #222;
-            color: white;
+            padding: 1rem;
+            background-color: #333;
         }
 
         .navbar-links ul {
@@ -43,121 +42,167 @@
             margin: 0 1rem;
         }
 
-        .navbar-links a, .language-switcher a, .social-icons a {
+        .navbar-links a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
         }
 
-        .navbar-links a:hover, .language-switcher a:hover, .social-icons a:hover {
-            color: #00bcd4;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
+        .language-switcher a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
         }
 
         .hero-section {
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 4rem 1rem;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .hero-content h1 {
             font-size: 3rem;
             color: #333;
+            animation: slideUp 2s ease-in-out;
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            color: #555;
-            margin: 1rem 0;
+            color: #666;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+            text-align: center;
         }
 
         .send-message-btn {
+            display: inline-block;
             background-color: #007BFF;
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 5px;
+            font-size: 1rem;
             text-decoration: none;
-            transition: background-color 0.3s;
+            margin-top: 2rem;
         }
 
-        .send-message-btn:hover {
-            background-color: #0056b3;
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
 
         .footer {
-            background-color: #222;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 1rem 0;
-        }
-
-        .footer .social-icons {
-            margin-top: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
 
         @media (max-width: 768px) {
             .navbar-links ul {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar-links li {
+                margin: 1rem 0;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="about me.html" class="about-link">About</a></li>
+                <li><a href="services.html" class="services-link">Services</a></li>
+                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
-            <a href="#" id="en-btn">EN</a> |
-            <a href="#" id="hu-btn">HU</a>
+            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
+            <a href="#" id="hu-btn" class="lang-btn">HU</a>
         </div>
     </header>
 
-    <section class="hero-section">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
-            <p>I create animated, SEO-optimized, and responsive website templates that help your business grow online.</p>
+            <p>
+                I create animated, SEO-optimized, and responsive website templates that help your business grow online.
+            </p>
             <a href="mailto:your-vlenke33@gmail.com" class="send-message-btn">Send Message</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
         <div class="social-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/lenkevarro/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
         </div>
+        <p id="rights-reserved">&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        document.getElementById('en-btn').addEventListener('click', function(event) {
-            event.preventDefault();
-            alert('Switched to English');
+        // Language switch functionality
+        document.getElementById('en-btn').addEventListener('click', () => {
+            switchLanguage('en');
         });
 
-        document.getElementById('hu-btn').addEventListener('click', function(event) {
-            event.preventDefault();
-            alert('Átváltott magyarra');
+        document.getElementById('hu-btn').addEventListener('click', () => {
+            switchLanguage('hu');
         });
+
+        // Switch language content
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that help your business grow online.";
+                document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
+                document.querySelector('.home-link').textContent = "Home";
+                document.querySelector('.about-link').textContent = "About";
+                document.querySelector('.services-link').textContent = "Services";
+                document.querySelector('.portfolio-link').textContent = "Portfolio";
+                document.querySelector('.send-message-btn').textContent = "Send Message";
+                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. All rights reserved.";
+            } else if (lang === 'hu') {
+                document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online növekedésében.";
+                document.querySelector('.hero-content h1').textContent = "Üdvözöllek a Weboldalamon";
+                document.querySelector('.home-link').textContent = "Kezdőlap";
+                document.querySelector('.about-link').textContent = "Rólam";
+                document.querySelector('.services-link').textContent = "Szolgáltatások";
+                document.querySelector('.portfolio-link').textContent = "Portfólió";
+                document.querySelector('.send-message-btn').textContent = "Üzenet Küldése";
+                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva.";
+            }
+        }
     </script>
 </body>
 </html>
 
-
      
-
-     
+       
     
-           
-
-
-
+   
+     
