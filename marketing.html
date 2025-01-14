@@ -25,23 +25,23 @@
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 30px 20px;  /* Csökkentett padding */
+            padding: 30px 20px;
             position: relative;
         }
         .language-switcher {
             position: absolute;
-            top: 15px;  /* Kisebb eltolás */
+            top: 15px;
             right: 20px;
         }
         .lang-btn {
             background-color: white;
             color: #4CAF50;
-            padding: 3px 8px;  /* Kisebb gombok */
+            padding: 3px 8px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             margin-left: 5px;
-            font-size: 14px;  /* Kisebb betűméret */
+            font-size: 14px;
         }
         .lang-btn:hover {
             background-color: #388E3C;
@@ -71,6 +71,28 @@
             padding: 20px;
             background-color: #4CAF50;
             color: white;
+        }
+
+        /* Reszponzív beállítások */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 15px; /* Kisebb padding */
+            }
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+            }
+            .lang-btn {
+                padding: 3px 6px;
+                font-size: 12px; /* Kisebb gombok mobilon */
+            }
+            .container {
+                padding: 15px; /* Kisebb padding mobilon */
+                margin: 20px auto;
+            }
+            .cta-button {
+                padding: 8px 16px; /* Kisebb CTA gomb mobilon */
+            }
         }
     </style>
 </head>
@@ -130,7 +152,7 @@
     }
 
     function setCurrentYear() {
-        const currentYear = new Date().getFullYear();  // Current year based on system date
+        const currentYear = new Date().getFullYear();
         document.getElementById('current-year').innerText = currentYear;
     }
 
@@ -143,7 +165,10 @@
 </body>
 </html>
 
-    
+         
+      
+
+
   
 
 
