@@ -53,6 +53,17 @@
             margin-left: 1rem;
         }
 
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
         .hero-section {
             text-align: center;
             padding: 3rem 1rem;
@@ -102,24 +113,6 @@
             .navbar {
                 padding: 0.5rem;
             }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-content p {
-                font-size: 1rem;
-            }
-
-            .send-message-btn {
-                margin-top: 1rem;
-                padding: 0.6rem 1.2rem;
-            }
-
-            .footer {
-                padding: 0.3rem 0;
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
@@ -128,20 +121,25 @@
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
-                <li><a href="index.html" class="home-link">Home</a></li>
-                <li><a href="about me.html" class="about-link">About</a></li>
-                <li><a href="services.html" class="services-link">Services</a></li>
-                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about me.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
-            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
-            <a href="#" id="hu-btn" class="lang-btn">HU</a>
+            <a href="#" id="en-btn">EN</a> | 
+            <a href="#" id="hu-btn">HU</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <section class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
             <p>I create animated, SEO-optimized, and responsive website templates that help your business grow online.</p>
@@ -151,34 +149,22 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p id="rights-reserved">&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
+        <p>&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript for Language Switcher -->
     <script>
-        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
-        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
-
-        function switchLanguage(lang) {
-            const texts = {
-                en: {
-                    title: "Welcome to My Website",
-                    description: "I create animated, SEO-optimized, and responsive website templates that help your business grow online.",
-                    sendMessage: "Send Message",
-                    rights: "&copy; 2025 VSTYLEDESIGN. All rights reserved."
-                },
-                hu: {
-                    title: "Üdvözöllek a Weboldalamon",
-                    description: "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online növekedésében.",
-                    sendMessage: "Üzenet Küldése",
-                    rights: "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva."
-                }
-            };
-            document.querySelector('.hero-content h1').textContent = texts[lang].title;
-            document.querySelector('.hero-content p').textContent = texts[lang].description;
-            document.querySelector('.send-message-btn').textContent = texts[lang].sendMessage;
-            document.getElementById('rights-reserved').innerHTML = texts[lang].rights;
-        }
+        document.getElementById('en-btn').addEventListener('click', function() {
+            alert('Switched to English');
+        });
+        document.getElementById('hu-btn').addEventListener('click', function() {
+            alert('Átváltott magyar nyelvre');
+        });
     </script>
 </body>
 </html>
+
+     
+  
+
+
