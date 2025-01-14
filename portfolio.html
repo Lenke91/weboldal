@@ -19,7 +19,7 @@
     <title>Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
@@ -33,6 +33,23 @@
 
         h1 {
             font-size: 3em;
+            margin: 0;
+            color: #333;
+        }
+
+        .language-switcher {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .language-switcher a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+
+        .language-switcher a:hover {
+            color: #84fab0;
         }
 
         .portfolio-container {
@@ -47,9 +64,15 @@
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 280px;
             overflow: hidden;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .template-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .template-item a {
@@ -58,6 +81,8 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .template-item a:hover {
@@ -101,14 +126,13 @@
         <div class="template-item">
             <a href="https://vstyledesign.com/template6">Template 6 - Event Website</a>
         </div>
-    </div>
         <div class="template-item">
-    <a href="https://vstyledesign.com/Book Recommendation.html">Template 7 - Book Recommendation</a>
-</div>
-   <div class="template-item">
-    <a href="https://vstyledesign.com/marketing.html">Template 8- Marketing</a>
-</div>
-    
+            <a href="https://vstyledesign.com/Book%20Recommendation.html">Template 7 - Book Recommendation</a>
+        </div>
+        <div class="template-item">
+            <a href="https://vstyledesign.com/marketing.html">Template 8 - Marketing</a>
+        </div>
+    </div>
 
     <script>
         document.getElementById('en-btn').addEventListener('click', function () {
@@ -122,3 +146,9 @@
 </body>
 
 </html>
+
+         
+
+     
+
+    
