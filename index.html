@@ -29,8 +29,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.8rem;
-            background-color: #333;
+            padding: 1rem 2rem;
+            background-color: #222;
+            color: white;
         }
 
         .navbar-links ul {
@@ -42,15 +43,14 @@
             margin: 0 1rem;
         }
 
-        .navbar-links a {
+        .navbar-links a, .language-switcher a, .social-icons a {
             color: white;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .language-switcher a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1rem;
+        .navbar-links a:hover, .language-switcher a:hover, .social-icons a:hover {
+            color: #00bcd4;
         }
 
         .social-icons {
@@ -58,77 +58,61 @@
             gap: 1rem;
         }
 
-        .social-icons a {
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
         .hero-section {
             text-align: center;
-            padding: 3rem 1rem;
-            animation: fadeIn 2s ease-in-out;
+            padding: 5rem 1rem;
         }
 
         .hero-content h1 {
             font-size: 3rem;
             color: #333;
-            animation: slideUp 2s ease-in-out;
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            color: #666;
-            animation: slideUp 2s ease-in-out;
+            color: #555;
+            margin: 1rem 0;
         }
 
         .send-message-btn {
-            display: inline-block;
             background-color: #007BFF;
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 5px;
-            font-size: 1rem;
             text-decoration: none;
-            margin-top: 1.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .send-message-btn:hover {
+            background-color: #0056b3;
         }
 
         .footer {
-            background-color: #333;
+            background-color: #222;
             color: white;
             text-align: center;
-            padding: 0.5rem 0;
+            padding: 1rem 0;
         }
 
         @media (max-width: 768px) {
             .navbar-links ul {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            .navbar-links li {
-                margin: 0.5rem 0;
-            }
-
-            .navbar {
-                padding: 0.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about me.html">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
-            <a href="#" id="en-btn">EN</a> | 
+            <a href="#" id="en-btn">EN</a> |
             <a href="#" id="hu-btn">HU</a>
         </div>
         <div class="social-icons">
@@ -138,7 +122,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
@@ -147,24 +130,29 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Language Switcher -->
     <script>
-        document.getElementById('en-btn').addEventListener('click', function() {
+        document.getElementById('en-btn').addEventListener('click', function(event) {
+            event.preventDefault();
             alert('Switched to English');
         });
-        document.getElementById('hu-btn').addEventListener('click', function() {
-            alert('Átváltott magyar nyelvre');
+
+        document.getElementById('hu-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Átváltott magyarra');
         });
     </script>
 </body>
 </html>
 
-     
-  
+   
+
+ 
+       
+           
+
 
 
