@@ -14,7 +14,6 @@
     <meta name="robots" content="index, follow">
     <title>Affiliate Marketing Guide | Earn Passive Income Online</title>
     <style>
-        /* CSS Styles */
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
@@ -22,22 +21,18 @@
             margin: 0;
             padding: 0;
         }
-
         header {
             background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 60px 20px;
-            border-bottom: 3px solid #388E3C;
             position: relative;
         }
-
         .language-switcher {
             position: absolute;
             top: 20px;
             right: 20px;
         }
-
         .lang-btn {
             background-color: white;
             color: #4CAF50;
@@ -47,7 +42,6 @@
             font-weight: bold;
             margin-left: 5px;
         }
-
         .container {
             max-width: 800px;
             margin: 40px auto;
@@ -56,7 +50,6 @@
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-
         .cta-button {
             display: inline-block;
             background-color: #4CAF50;
@@ -66,53 +59,14 @@
             text-decoration: none;
             font-weight: bold;
         }
-
         .cta-button:hover {
             background-color: #388E3C;
         }
-
         footer {
             text-align: center;
             padding: 20px;
             background-color: #4CAF50;
             color: white;
-        }
-
-        .step-item {
-            margin: 20px 0;
-        }
-
-        .step-item h3 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            color: #4CAF50;
-        }
-
-        .step-item p {
-            margin-bottom: 10px;
-        }
-
-        .testimonial {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .testimonial h3 {
-            color: #4CAF50;
-            font-size: 1.3em;
-        }
-
-        .testimonial p {
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .language-switcher {
-                top: 10px;
-                right: 10px;
-            }
         }
     </style>
 </head>
@@ -131,82 +85,58 @@
 
 <div class="container">
     <section id="affiliate-marketing">
-        <h2>What is Affiliate Marketing?</h2>
-        <p>Affiliate marketing is a popular online money-making method where you earn commissions by promoting other people’s products or services. It’s a simple, yet effective way to generate passive income online.</p>
+        <h2 id="section-title">What is Affiliate Marketing?</h2>
+        <p id="section-description">Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate. It's a flexible and low-risk way to build an online business without the need for creating your own products.</p>
         <a href="#" class="cta-button">Get Started Now!</a>
-    </section>
-
-    <section id="steps-to-get-started">
-        <h2>How to Get Started with Affiliate Marketing</h2>
-        <div class="step-item">
-            <h3>1. Choose Your Niche</h3>
-            <p>Identify a specific area you're passionate about, such as health, tech, or finance. This will help you target the right audience.</p>
-        </div>
-        <div class="step-item">
-            <h3>2. Join Affiliate Programs</h3>
-            <p>Sign up for affiliate programs like Amazon Associates, ClickBank, or others that fit your niche.</p>
-        </div>
-        <div class="step-item">
-            <h3>3. Promote Products</h3>
-            <p>Start promoting products using your unique affiliate links on your website, blog, or social media.</p>
-        </div>
-        <div class="step-item">
-            <h3>4. Earn Commissions</h3>
-            <p>When someone purchases through your affiliate link, you earn a commission! The more you promote, the more you can earn.</p>
-        </div>
-    </section>
-
-    <section id="success-stories">
-        <h2>Success Stories</h2>
-        <div class="testimonial">
-            <h3>John Doe - Tech Blogger</h3>
-            <p>"Affiliate marketing has been a game-changer for me. In just a few months, I've been able to generate a steady stream of passive income by promoting products that I love!"</p>
-        </div>
-        <div class="testimonial">
-            <h3>Jane Smith - Fitness Coach</h3>
-            <p>"Starting with affiliate marketing was the best decision I ever made. It allowed me to monetize my passion for fitness and help others at the same time."</p>
-        </div>
     </section>
 </div>
 
 <footer>
-    &copy; 2024 Affiliate Marketing Practice Project. All rights reserved.
+    <p id="footer-text">&copy; <span id="current-year">2025</span> Affiliate Marketing Practice Project. All rights reserved.</p>
 </footer>
 
 <script>
-    function switchLanguage(lang) {
-        const headerText = document.getElementById('header-text');
-        const headerDescription = document.getElementById('header-description');
-        const stepItems = document.querySelectorAll('.step-item h3');
-        const successStories = document.querySelectorAll('.testimonial h3');
-
-        if (lang === 'en') {
-            headerText.innerText = 'Affiliate Marketing Guide';
-            headerDescription.innerText = 'Start earning online today with Affiliate Marketing!';
-            stepItems[0].innerText = '1. Choose Your Niche';
-            stepItems[1].innerText = '2. Join Affiliate Programs';
-            stepItems[2].innerText = '3. Promote Products';
-            stepItems[3].innerText = '4. Earn Commissions';
-            successStories[0].innerText = 'John Doe - Tech Blogger';
-            successStories[1].innerText = 'Jane Smith - Fitness Coach';
-        } else {
-            headerText.innerText = 'Affiliate Marketing Útmutató';
-            headerDescription.innerText = 'Kezdd el a pénzkeresést online az affiliate marketinggel már ma!';
-            stepItems[0].innerText = '1. Válaszd Ki A Niche-t';
-            stepItems[1].innerText = '2. Csatlakozz Affiliate Programokhoz';
-            stepItems[2].innerText = '3. Népszerűsítsd A Termékeket';
-            stepItems[3].innerText = '4. Keress Biztosítékot';
-            successStories[0].innerText = 'John Doe - Tech Blog Szerző';
-            successStories[1].innerText = 'Jane Smith - Fitness Edző';
+    const translations = {
+        en: {
+            headerText: 'Affiliate Marketing Guide',
+            headerDescription: 'Start earning online today with Affiliate Marketing!',
+            sectionTitle: 'What is Affiliate Marketing?',
+            sectionDescription: 'Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate. It\'s a flexible and low-risk way to build an online business without the need for creating your own products.',
+            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Practice Project. All rights reserved.'
+        },
+        hu: {
+            headerText: 'Affiliate Marketing Útmutató',
+            headerDescription: 'Kezdd el a pénzkeresést online az affiliate marketinggel már ma!',
+            sectionTitle: 'Mi az az Affiliate Marketing?',
+            sectionDescription: 'Az affiliate marketing egy népszerű passzív jövedelemforrás, amely lehetőséget biztosít arra, hogy más cégek termékeit vagy szolgáltatásait népszerűsítsük, és jutalékot keressünk minden egyes eladás után. Egy rugalmas és alacsony kockázatú módja az online üzlet építésének anélkül, hogy saját termékeket kellene készítenünk.',
+            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Projekt. Minden jog fenntartva.'
         }
+    };
+
+    function switchLanguage(lang) {
+        document.getElementById('header-text').innerText = translations[lang].headerText;
+        document.getElementById('header-description').innerText = translations[lang].headerDescription;
+        document.getElementById('section-title').innerText = translations[lang].sectionTitle;
+        document.getElementById('section-description').innerText = translations[lang].sectionDescription;
+        document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+        setCurrentYear(); // Update the current year dynamically
+    }
+
+    function setCurrentYear() {
+        const currentYear = new Date().getFullYear();  // Current year based on system date
+        document.getElementById('current-year').innerText = currentYear;
     }
 
     document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
     document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
+
+    setCurrentYear(); // Set the year on page load
 </script>
 
 </body>
 </html>
 
-   
+    
+
+
  
