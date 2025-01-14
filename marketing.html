@@ -87,12 +87,12 @@
     <section id="affiliate-marketing">
         <h2 id="section-title">What is Affiliate Marketing?</h2>
         <p id="section-description">Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate. It's a flexible and low-risk way to build an online business without the need for creating your own products.</p>
-        <a href="#" class="cta-button">Get Started Now!</a>
+        <a href="#" id="cta-button" class="cta-button">Get Started Now!</a>
     </section>
 </div>
 
 <footer>
-    <p id="footer-text">&copy; <span id="current-year">2025</span> Affiliate Marketing Practice Project. All rights reserved.</p>
+    <p id="footer-text">&copy; <span id="current-year"></span> Affiliate Marketing Practice Project. All rights reserved.</p>
 </footer>
 
 <script>
@@ -102,14 +102,16 @@
             headerDescription: 'Start earning online today with Affiliate Marketing!',
             sectionTitle: 'What is Affiliate Marketing?',
             sectionDescription: 'Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate. It\'s a flexible and low-risk way to build an online business without the need for creating your own products.',
-            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Practice Project. All rights reserved.'
+            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Practice Project. All rights reserved.',
+            ctaButtonText: 'Get Started Now!'
         },
         hu: {
             headerText: 'Affiliate Marketing Útmutató',
             headerDescription: 'Kezdd el a pénzkeresést online az affiliate marketinggel már ma!',
             sectionTitle: 'Mi az az Affiliate Marketing?',
             sectionDescription: 'Az affiliate marketing egy népszerű passzív jövedelemforrás, amely lehetőséget biztosít arra, hogy más cégek termékeit vagy szolgáltatásait népszerűsítsük, és jutalékot keressünk minden egyes eladás után. Egy rugalmas és alacsony kockázatú módja az online üzlet építésének anélkül, hogy saját termékeket kellene készítenünk.',
-            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Projekt. Minden jog fenntartva.'
+            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Projekt. Minden jog fenntartva.',
+            ctaButtonText: 'Kezdd el most!'
         }
     };
 
@@ -119,6 +121,7 @@
         document.getElementById('section-title').innerText = translations[lang].sectionTitle;
         document.getElementById('section-description').innerText = translations[lang].sectionDescription;
         document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+        document.getElementById('cta-button').innerText = translations[lang].ctaButtonText;
         setCurrentYear(); // Update the current year dynamically
     }
 
@@ -135,6 +138,10 @@
 
 </body>
 </html>
+
+  
+  
+
 
     
 
