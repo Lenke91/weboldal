@@ -11,12 +11,6 @@
     <meta property="og:image" content="Me.jpg">
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home - Web Developer & Entrepreneur">
-    <meta name="twitter:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth.">
-    <meta name="twitter:image" content="Me.jpg">
-    <meta name="twitter:url" content="https://www.vstyledesign.com">
     <title>Home - Web Developer & Entrepreneur</title>
     <style>
         * {
@@ -29,10 +23,6 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             overflow-x: hidden;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         .navbar {
@@ -41,10 +31,6 @@
             align-items: center;
             padding: 1rem;
             background-color: #333;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
         }
 
         .navbar-links ul {
@@ -61,58 +47,51 @@
             text-decoration: none;
         }
 
-        .language-switcher {
-            display: flex;
-            gap: 0.5rem;
-        }
-
         .language-switcher a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            margin-left: 1rem;
         }
 
         .hero-section {
             text-align: center;
-            padding: 5rem 1rem;
-            margin-top: 80px;
+            padding: 4rem 1rem;
             animation: fadeIn 2s ease-in-out;
         }
 
         .hero-content h1 {
             font-size: 3rem;
             color: #333;
+            animation: slideUp 2s ease-in-out;
         }
 
         .hero-content p {
             font-size: 1.2rem;
             color: #666;
-            margin-top: 1rem;
-        }
-
-        .send-message-btn {
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
+            animation: slideUp 2s ease-in-out;
         }
 
         .social-icons a {
             color: white;
             margin: 0 10px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
-        .footer {
-            padding: 1rem;
+        .social-icons {
+            margin-top: 2rem;
             text-align: center;
-            background-color: #333;
+        }
+
+        .send-message-btn {
+            display: inline-block;
+            background-color: #007BFF;
             color: white;
-            margin-top: auto;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-top: 2rem;
         }
 
         @keyframes fadeIn {
@@ -120,49 +99,35 @@
             100% { opacity: 1; }
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 1rem;
-            }
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
 
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
             .navbar-links ul {
                 flex-direction: column;
-                align-items: flex-start;
-                margin-top: 1rem;
+                text-align: center;
             }
 
-            .language-switcher {
-                margin-top: 1rem;
-                order: 2;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-                color: #333;
-            }
-
-            .hero-content p {
-                font-size: 1rem;
-            }
-
-            .send-message-btn {
-                font-size: 1rem;
-                padding: 0.5rem 1.2rem;
-            }
-
-            .footer .social-icons {
-                margin-bottom: 1rem;
-            }
-
-            .footer p {
-                margin-top: 1rem;
+            .navbar-links li {
+                margin: 1rem 0;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
@@ -178,87 +143,60 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
-            <p>I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!</p>
+            <p>
+                I create animated, SEO-optimized, and responsive website templates that help your business grow online.
+            </p>
             <a href="mailto:your-vlenke33@gmail.com" class="send-message-btn">Send Message</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="social-icons">
             <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">Facebook</a>
             <a href="https://www.instagram.com/lenkevarro/" target="_blank">Instagram</a>
             <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
         </div>
-        <p>&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
+        <p id="rights-reserved">&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        const enText = {
-            "home": "Home",
-            "about": "About",
-            "services": "Services",
-            "portfolio": "Portfolio",
-            "welcome": "Welcome to My Website",
-            "description": "I create animated, SEO-optimized, and responsive website templates that are easy to customize, load quickly, and work perfectly on any device. Stand out with a professional website that grows your business!",
-            "sendMessage": "Send Message",
-            "rights": "© 2025 VSTYLEDESIGN. All rights reserved."
-        };
+        // Language switch functionality
+        document.getElementById('en-btn').addEventListener('click', () => {
+            switchLanguage('en');
+        });
 
-        const huText = {
-            "home": "Kezdőlap",
-            "about": "Rólam",
-            "services": "Szolgáltatások",
-            "portfolio": "Portfólió",
-            "welcome": "Üdvözöllek a weboldalamon",
-            "description": "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek könnyen testreszabhatók, gyorsan betöltődnek, és bármilyen eszközön tökéletesen működnek. Emelkedj ki egy professzionális weboldallal, amely növeli vállalkozásod sikerét!",
-            "sendMessage": "Üzenet küldése",
-            "rights": "© 2025 VSTYLEDESIGN. Minden jog fenntartva."
-        };
+        document.getElementById('hu-btn').addEventListener('click', () => {
+            switchLanguage('hu');
+        });
 
-        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
-        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
-
+        // Switch language content
         function switchLanguage(lang) {
-            let text = lang === 'en' ? enText : huText;
-
-            // Navbar items
-            document.querySelector('.home-link').textContent = text.home;
-            document.querySelector('.about-link').textContent = text.about;
-            document.querySelector('.services-link').textContent = text.services;
-            document.querySelector('.portfolio-link').textContent = text.portfolio;
-
-            // Hero section
-            document.querySelector('.hero-content h1').textContent = text.welcome;
-            document.querySelector('.hero-content p').textContent = text.description;
-            document.querySelector('.send-message-btn').textContent = text.sendMessage;
-
-            // Footer
-            document.querySelector('.footer p').textContent = text.rights;
-
-            // Language button active state
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
-            document.getElementById(`${lang}-btn`).classList.add('active-lang');
+            if (lang === 'en') {
+                document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that help your business grow online.";
+                document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
+                document.querySelector('.home-link').textContent = "Home";
+                document.querySelector('.about-link').textContent = "About";
+                document.querySelector('.services-link').textContent = "Services";
+                document.querySelector('.portfolio-link').textContent = "Portfolio";
+                document.querySelector('.send-message-btn').textContent = "Send Message";
+                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. All rights reserved.";
+            } else if (lang === 'hu') {
+                document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online növekedésében.";
+                document.querySelector('.hero-content h1').textContent = "Üdvözöllek a Weboldalamon";
+                document.querySelector('.home-link').textContent = "Kezdőlap";
+                document.querySelector('.about-link').textContent = "Rólam";
+                document.querySelector('.services-link').textContent = "Szolgáltatások";
+                document.querySelector('.portfolio-link').textContent = "Portfólió";
+                document.querySelector('.send-message-btn').textContent = "Üzenet Küldése";
+                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva.";
+            }
         }
     </script>
 </body>
 </html>
-
-      
-        
-      
-        
-        
-          
-      
-        
-       
-        
-      
-       
-   
-   
-  
-   
