@@ -29,7 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
+            padding: 0.8rem;
             background-color: #333;
         }
 
@@ -55,7 +55,7 @@
 
         .hero-section {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 3rem 1rem;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -71,47 +71,22 @@
             animation: slideUp 2s ease-in-out;
         }
 
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-
-        .social-icons {
-            margin-top: 2rem;
-            text-align: center;
-        }
-
         .send-message-btn {
             display: inline-block;
             background-color: #007BFF;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
             font-size: 1rem;
             text-decoration: none;
-            margin-top: 2rem;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            0% { transform: translateY(30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+            margin-top: 1.5rem;
         }
 
         .footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            padding: 0.5rem 0;
         }
 
         @media (max-width: 768px) {
@@ -121,7 +96,29 @@
             }
 
             .navbar-links li {
-                margin: 1rem 0;
+                margin: 0.5rem 0;
+            }
+
+            .navbar {
+                padding: 0.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .send-message-btn {
+                margin-top: 1rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .footer {
+                padding: 0.3rem 0;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -147,55 +144,40 @@
     <section id="home" class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
-            <p>
-                I create animated, SEO-optimized, and responsive website templates that help your business grow online.
-            </p>
+            <p>I create animated, SEO-optimized, and responsive website templates that help your business grow online.</p>
             <a href="mailto:your-vlenke33@gmail.com" class="send-message-btn">Send Message</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/lenkevarro/" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
-        </div>
         <p id="rights-reserved">&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Language switch functionality
-        document.getElementById('en-btn').addEventListener('click', () => {
-            switchLanguage('en');
-        });
+        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 
-        document.getElementById('hu-btn').addEventListener('click', () => {
-            switchLanguage('hu');
-        });
-
-        // Switch language content
         function switchLanguage(lang) {
-            if (lang === 'en') {
-                document.querySelector('.hero-content p').textContent = "I create animated, SEO-optimized, and responsive website templates that help your business grow online.";
-                document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
-                document.querySelector('.home-link').textContent = "Home";
-                document.querySelector('.about-link').textContent = "About";
-                document.querySelector('.services-link').textContent = "Services";
-                document.querySelector('.portfolio-link').textContent = "Portfolio";
-                document.querySelector('.send-message-btn').textContent = "Send Message";
-                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. All rights reserved.";
-            } else if (lang === 'hu') {
-                document.querySelector('.hero-content p').textContent = "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online növekedésében.";
-                document.querySelector('.hero-content h1').textContent = "Üdvözöllek a Weboldalamon";
-                document.querySelector('.home-link').textContent = "Kezdőlap";
-                document.querySelector('.about-link').textContent = "Rólam";
-                document.querySelector('.services-link').textContent = "Szolgáltatások";
-                document.querySelector('.portfolio-link').textContent = "Portfólió";
-                document.querySelector('.send-message-btn').textContent = "Üzenet Küldése";
-                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva.";
-            }
+            const texts = {
+                en: {
+                    title: "Welcome to My Website",
+                    description: "I create animated, SEO-optimized, and responsive website templates that help your business grow online.",
+                    sendMessage: "Send Message",
+                    rights: "&copy; 2025 VSTYLEDESIGN. All rights reserved."
+                },
+                hu: {
+                    title: "Üdvözöllek a Weboldalamon",
+                    description: "Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online növekedésében.",
+                    sendMessage: "Üzenet Küldése",
+                    rights: "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva."
+                }
+            };
+            document.querySelector('.hero-content h1').textContent = texts[lang].title;
+            document.querySelector('.hero-content p').textContent = texts[lang].description;
+            document.querySelector('.send-message-btn').textContent = texts[lang].sendMessage;
+            document.getElementById('rights-reserved').innerHTML = texts[lang].rights;
         }
     </script>
 </body>
