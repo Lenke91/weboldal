@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Életvezetési tanácsadás, személyre szabott coaching ülések és stresszkezelés. SEO-optimalizált és reszponzív weboldal sablonok, animált elemekkel.">
+    <meta name="keywords" content="coaching, életvezetés, személyes fejlődés, tanácsadás, stresszkezelés, weboldal sablon, SEO, reszponzív, animáció">
+    <meta name="author" content="VstyleDesign">
+    <meta property="og:title" content="Életvezetési Tanácsadó Szolgáltatások">
+    <meta property="og:description" content="SEO-optimalizált, reszponzív és animált sablon életvezetési tanácsadók számára. Különböző szolgáltatások bemutatása, minden nyelven elérhető.">
+    <meta property="og:image" content="your-image-url.jpg">
+    <meta property="og:url" content="https://vstyledesign.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hu_HU">
+    <meta name="robots" content="index, follow">
+    <title>Életvezetési Tanácsadó Szolgáltatásai</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Alap stílusok */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(image\ for\ template\ 1.jpg);
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background-color: transparent;
+            color:black;
+            padding: 5px 0; /* Csökkentett magasság */
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding-bottom: 10px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        section {
+            padding: 30px 10% 20px;
+            margin-top:-20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px; /* Kisebb távolság a kártyák között */
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .service {
+            background-color: white;
+            padding: 12px; /* Kisebb kártyák */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0 9em;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service h3 {
+            font-size: 1.4em; /* Kisebb címek */
+            color: #1abc9c;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            font-size: 1.1em; /* Kisebb szöveg */
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: transparent;
+            color:black ;
+            text-align: center;
+            padding: 3px 0; /* Csökkentett magasság */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        /* Reszponzív design */
+        @media (max-width: 768px) {
+            section {
+                margin: 0 5%;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .services {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .service h3 {
+                font-size: 1.2em;
+            }
+
+            .service p {
+                font-size: 1em;
+            }
+        }
+
+        /* Animációk */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Nyelvváltó gombok */
+        .language-selector {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .language-selector button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .language-selector button:hover {
+            background-color: #16a085;
+        }
+
+        /* SEO-kép */
+        img {
+            max-width: 100%;
+            height: auto;
+            alt: "Weboldal Sablon Kép";
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fejléc -->
+    <header>
+        <h1 id="header-title">Szolgáltatások - Életvezetési Tanácsadó</h1>
+    </header>
+
+    <!-- Nyelvváltó -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('hu')">Magyar</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
+
+    <!-- Szolgáltatások szekció -->
+    <section>
+        <h2 id="services-title">Szolgáltatásaim</h2>
+        <div class="services">
+            <!-- Szolgáltatás 1 -->
+            <div class="service">
+                <h3 id="service1-title">Coaching Ülések</h3>
+                <p id="service1-description">Személyre szabott coaching ülések, amelyek segítenek a céljaid elérésében és a személyes fejlődésben. Minden ülés egyéni igényeidhez igazodik.</p>
+            </div>
+            <!-- Szolgáltatás 2 -->
+            <div class="service">
+                <h3 id="service2-title">Életvezetési Tanácsadás</h3>
+                <p id="service2-description">Átfogó tanácsadás, hogy megtaláld az életben való egyensúlyt, javítsd a döntéseidet, és elérd a kívánt életminőséget.</p>
+            </div>
+            <!-- Szolgáltatás 3 -->
+            <div class="service">
+                <h3 id="service3-title">Stresszkezelés és Relaxáció</h3>
+                <p id="service3-description">Segítek a stressz kezelésében és a belső harmónia megteremtésében különböző relaxációs technikák alkalmazásával.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lábléc -->
+    <footer>
+        <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const languageContent = {
+            hu: {
+                headerTitle: "Szolgáltatások - Életvezetési Tanácsadó",
+                servicesTitle: "Szolgáltatásaim",
+                service1Title: "Coaching Ülések",
+                service1Description: "Személyre szabott coaching ülések, amelyek segítenek a céljaid elérésében és a személyes fejlődésben. Minden ülés egyéni igényeidhez igazodik.",
+                service2Title: "Életvezetési Tanácsadás",
+                service2Description: "Átfogó tanácsadás, hogy megtaláld az életben való egyensúlyt, javítsd a döntéseidet, és elérd a kívánt életminőséget.",
+                service3Title: "Stresszkezelés és Relaxáció",
+                service3Description: "Segítek a stressz kezelésében és a belső harmónia megteremtésében különböző relaxációs technikák alkalmazásával.",
+                footerText: "© 2025 VstyleDesign | Minden jog fenntartva."
+            },
+            en: {
+                headerTitle: "Services - Life Coaching Advisor",
+                servicesTitle: "My Services",
+                service1Title: "Coaching Sessions",
+                service1Description: "Personalized coaching sessions that help you achieve your goals and personal growth. Each session is tailored to your individual needs.",
+                service2Title: "Life Coaching Advice",
+                service2Description: "Comprehensive advice to help you find balance in life, improve your decision-making, and achieve the quality of life you desire.",
+                service3Title: "Stress Management and Relaxation",
+                service3Description: "I help you manage stress and create inner harmony using various relaxation techniques.",
+                footerText: "© 2025 VstyleDesign | All Rights Reserved."
+            }
+        };
+
+        let language = 'hu';
+
+        function changeLanguage(lang) {
+            language = lang;
+            document.getElementById("header-title").textContent = languageContent[language].headerTitle;
+            document.getElementById("services-title").textContent = languageContent[language].servicesTitle;
+            document.getElementById("service1-title").textContent = languageContent[language].service1Title;
+            document.getElementById("service1-description").textContent = languageContent[language].service1Description;
+            document.getElementById("service2-title").textContent = languageContent[language].service2Title;
+            document.getElementById("service2-description").textContent = languageContent[language].service2Description;
+            document.getElementById("service3-title").textContent = languageContent[language].service3Title;
+            document.getElementById("service3-description").textContent = languageContent[language].service3Description;
+            document.getElementById("footer-text").textContent = languageContent[language].footerText;
+        }
+    </script>
+
+</body>
+</html>
