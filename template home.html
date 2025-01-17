@@ -97,23 +97,31 @@
             nav ul li a { font-size: 0.8rem; }
             .social-icons a { font-size: 1rem; }
         }
+        /* Kisebb méretű naptár */
+        #calendar {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="template home.html">Főoldal</a></li>
-                <li><a href="templateabout me.html">Rólam</a></li>
-                <li><a href="templateservices.html">Szolgáltatások</a></li>
-                <li><a href="template contact.html">Kapcsolat</a></li>
+                <li><a href="template home.html" class="nav-link">Főoldal</a></li>
+                <li><a href="templateabout me.html" class="nav-link">Rólam</a></li>
+                <li><a href="templateservices.html" class="nav-link">Szolgáltatások</a></li>
+                <li><a href="template contact.html" class="nav-link">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h1>Fedezd fel Önmagad!</h1>
-        <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
+        <h1 class="heading">Fedezd fel Önmagad!</h1>
+        <p class="text">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
             <a href="#" onclick="changeLanguage('hu')">HU</a> | 
             <a href="#" onclick="changeLanguage('en')">EN</a>
@@ -125,7 +133,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p class="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <div class="social-icons">
@@ -166,26 +174,42 @@
             } else {
                 return [
                     { title: 'Sample Event', start: '2025-02-15', description: 'This is a sample event.' },
-                    { title: 'Another Event', start: '2025-02-20', description: 'This is another sample event.' }
+                    { title: 'Another Event', start: '2025-02-20', description: 'This is another example event.' }
                 ];
             }
         }
 
-        // Az oldal tartalmának frissítése a nyelvváltozással
+        // Nyelv alapján az oldal szövegeit frissíti
         function updateContent() {
             if (currentLang === 'hu') {
-                document.querySelector('h1').textContent = 'Fedezd fel Önmagad!';
-                document.querySelector('p').textContent = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
+                document.querySelector('.heading').textContent = 'Fedezd fel Önmagad!';
+                document.querySelector('.text').textContent = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
+                document.querySelector('.footer-text').textContent = '© 2025 VstyleDesign | Minden jog fenntartva.';
+                document.querySelectorAll('.nav-link')[0].textContent = 'Főoldal';
+                document.querySelectorAll('.nav-link')[1].textContent = 'Rólam';
+                document.querySelectorAll('.nav-link')[2].textContent = 'Szolgáltatások';
+                document.querySelectorAll('.nav-link')[3].textContent = 'Kapcsolat';
             } else {
-                document.querySelector('h1').textContent = 'Discover Yourself!';
-                document.querySelector('p').textContent = 'We help you achieve your goals and live a balanced life.';
+                document.querySelector('.heading').textContent = 'Discover Yourself!';
+                document.querySelector('.text').textContent = 'We help you achieve your goals and live a balanced life.';
+                document.querySelector('.footer-text').textContent = '© 2025 VstyleDesign | All rights reserved.';
+                document.querySelectorAll('.nav-link')[0].textContent = 'Home';
+                document.querySelectorAll('.nav-link')[1].textContent = 'About Me';
+                document.querySelectorAll('.nav-link')[2].textContent = 'Services';
+                document.querySelectorAll('.nav-link')[3].textContent = 'Contact';
             }
         }
 
-        // Kezdeti naptár beállítás
+        // Oldal betöltésekor inicializáljuk a naptárat és a nyelvet
         $(document).ready(function() {
             initializeCalendar();
+            updateContent();
         });
     </script>
 </body>
 </html>
+
+   
+  
+
+
