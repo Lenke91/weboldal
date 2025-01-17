@@ -120,17 +120,17 @@
     <header>
         <nav>
             <ul>
-                <li><a href="template home.html">Főoldal</a></li>
-                <li><a href="templateabout me.html">Rólam</a></li>
-                <li><a href="templateservices.html">Szolgáltatások</a></li>
-                <li><a href="template contact.html">Kapcsolat</a></li>
+                <li><a href="template home.html" id="home-nav">Főoldal</a></li>
+                <li><a href="templateabout me.html" id="about-nav">Rólam</a></li>
+                <li><a href="templateservices.html" id="services-nav">Szolgáltatások</a></li>
+                <li><a href="template contact.html" id="contact-nav">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h1>Fedezd fel Önmagad!</h1>
-        <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
+        <h1 id="title">Fedezd fel Önmagad!</h1>
+        <p id="description">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
             <a href="#" onclick="setLanguage('hu')">HU</a> | 
             <a href="#" onclick="setLanguage('en')">EN</a>
@@ -143,7 +143,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <!-- Social media ikonok -->
@@ -194,15 +194,25 @@
         // Tartalom nyelvének frissítése
         function updateContentLanguage(lang) {
             if (lang === 'hu') {
-                document.querySelector('h1').innerText = 'Fedezd fel Önmagad!';
-                document.querySelector('p').innerText = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
+                document.getElementById('title').innerText = 'Fedezd fel Önmagad!';
+                document.getElementById('description').innerText = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
+                document.getElementById('footer-text').innerText = '© 2025 VstyleDesign | Minden jog fenntartva.';
+                document.getElementById('home-nav').innerText = 'Főoldal';
+                document.getElementById('about-nav').innerText = 'Rólam';
+                document.getElementById('services-nav').innerText = 'Szolgáltatások';
+                document.getElementById('contact-nav').innerText = 'Kapcsolat';
             } else if (lang === 'en') {
-                document.querySelector('h1').innerText = 'Discover Yourself!';
-                document.querySelector('p').innerText = 'We help you reach your goals and live a balanced life.';
+                document.getElementById('title').innerText = 'Discover Yourself!';
+                document.getElementById('description').innerText = 'We help you reach your goals and live a balanced life.';
+                document.getElementById('footer-text').innerText = '© 2025 VstyleDesign | All rights reserved.';
+                document.getElementById('home-nav').innerText = 'Home';
+                document.getElementById('about-nav').innerText = 'About';
+                document.getElementById('services-nav').innerText = 'Services';
+                document.getElementById('contact-nav').innerText = 'Contact';
             }
         }
 
-        // Kezdeti naptár betöltés
+        // Init naptár és tartalom betöltése
         $(document).ready(function() {
             initializeCalendar();
         });
