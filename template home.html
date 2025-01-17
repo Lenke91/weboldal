@@ -82,15 +82,15 @@
     </header>
 
     <section id="home">
-        <h1>Fedezd fel Önmagad!</h1>
-        <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
+        <h1 id="title">Fedezd fel Önmagad!</h1>
+        <p id="description">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
             <a href="#" id="hu">HU</a> | <a href="#" id="en">EN</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p id="footer">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <div class="social-icons">
@@ -100,23 +100,39 @@
     </div>
 
     <script>
-        // Nyelvváltó logika
+        // Nyelvváltó szövegek
+        const langText = {
+            hu: {
+                title: "Fedezd fel Önmagad!",
+                description: "Segítünk elérni céljaidat és kiegyensúlyozott életet élni.",
+                footer: "&copy; 2025 VstyleDesign | Minden jog fenntartva."
+            },
+            en: {
+                title: "Discover Yourself!",
+                description: "We help you achieve your goals and live a balanced life.",
+                footer: "&copy; 2025 VstyleDesign | All rights reserved."
+            }
+        };
+
+        // Funkció a nyelv váltásához
+        function changeLanguage(language) {
+            document.getElementById('title').textContent = langText[language].title;
+            document.getElementById('description').textContent = langText[language].description;
+            document.getElementById('footer').innerHTML = langText[language].footer;
+        }
+
+        // Event listeners a nyelvváltó gombokhoz
         document.getElementById('hu').addEventListener('click', function() {
-            alert('Magyar nyelvre váltottál!');
-            // A nyelvváltás implementálásához módosítani kell a tartalmat (pl. a szövegek).
-            // Ide kerülhetne például egy JavaScript nyelvi fájl betöltése.
+            changeLanguage('hu');
         });
 
         document.getElementById('en').addEventListener('click', function() {
-            alert('Switched to English!');
-            // Ugyanúgy, mint magyarra váltáskor, itt is módosíthatod a szövegeket.
+            changeLanguage('en');
         });
     </script>
 </body>
 </html>
 
-       
-   
 
  
  
