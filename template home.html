@@ -4,98 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="SEO-optimalizált, reszponzív és animált life coach weboldal sablon kezdő vállalkozóknak. Magyar és angol nyelvű, könnyen testreszabható.">
-    <meta name="keywords" content="life coach, weboldal sablon, SEO, reszponzív, animált, magyar, angol">
+    <meta name="description" content="Rólam - Life Coach weboldal sablon kezdő vállalkozóknak. Magyar és angol nyelvű, könnyen testreszabható.">
+    <meta name="keywords" content="life coach, bemutatkozás, weboldal sablon, SEO, reszponzív, animált, magyar, angol">
     <meta name="author" content="vstyledesign">
-    <meta property="og:title" content="Life Coach Weboldal Sablon">
-    <meta property="og:description" content="Inspiráló és modern weboldal sablon life coachoknak.">
+    <meta property="og:title" content="Rólam - Life Coach Weboldal Sablon">
+    <meta property="og:description" content="Tudj meg többet rólam és a life coach szolgáltatásaimról.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1601582580215-0284eb75587c">
-    <meta property="og:url" content="https://vstyledesign.com/portfolio/lifecoach-template">
-    <title>Life Coach Weboldal Sablon</title>
+    <meta property="og:url" content="https://vstyledesign.com/portfolio/lifecoach-template-about-me">
+    <title>Rólam - Life Coach Weboldal Sablon</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ca94f3;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header { background-color: transparent; padding: 1rem 0; text-align: center; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 20px; }
-        nav ul li { display: inline; }
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        .language-switcher { margin-top: 20px; font-size: 1.1rem; }
-        section {
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-        h1 {
-            font-size: 3.5rem;
-            color: #24053a;
-            margin-bottom: 20px;
-            animation: slideIn 1s ease-in-out;
-            white-space: normal;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: black;
-        }
-        footer {
-            background-color: transparent;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-            width: 100%;
-        }
-        .social-icons {
-            position: fixed;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 1000;
-        }
-        .social-icons a {
-            margin: 10px 0;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.3rem;
-        }
-        @keyframes slideIn {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(0); }
-        }
-        @media (max-width: 1024px) {
-            h1 { font-size: 3rem; }
-            p { font-size: 1rem; }
-            nav ul { flex-direction: column; gap: 10px; }
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; white-space: nowrap; }
-            p { font-size: 1rem; }
-            .language-switcher { font-size: 1rem; }
-            nav ul li a { font-size: 0.9rem; }
-            .social-icons a { font-size: 1.1rem; }
-        }
-        @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            p { font-size: 0.9rem; }
-            .language-switcher { font-size: 0.9rem; }
-            nav ul li a { font-size: 0.8rem; }
-            .social-icons a { font-size: 1rem; }
-        }
+        /* A stílusokat ide másolhatod a már meglévő sablonból */
     </style>
 </head>
 <body>
@@ -103,26 +21,18 @@
         <nav>
             <ul>
                 <li><a href="template home.html" class="nav-link">Főoldal</a></li>
-                <li><a href="templateaboutme.html" class="nav-link">Rólam</a></li> <!-- Javított link -->
+                <li><a href="templateabout-me.html" class="nav-link">Rólam</a></li>
                 <li><a href="templateservices.html" class="nav-link">Szolgáltatások</a></li>
                 <li><a href="templatecontact.html" class="nav-link">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h1 class="heading">Fedezd fel Önmagad!</h1>
-        <p class="text">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
-        <div class="language-switcher">
-            <a href="#" onclick="changeLanguage('hu')">HU</a> | 
-            <a href="#" onclick="changeLanguage('en')">EN</a>
-        </div>
-    </section>
-
-    <!-- Rólam szekció -->
-    <section id="about">
+    <section id="about-me">
         <h1>Rólam</h1>
-        <p>Itt találod a life coach történetét és küldetését. Ismerd meg a szakmai tapasztalataimat, a hozzám fordulók segítésére tett erőfeszítéseimet és elérhető szolgáltatásaimat.</p>
+        <p>Sziasztok! Én vagyok a Life Coach, aki segít a céljaid elérésében és egy kiegyensúlyozottabb élet kialakításában.</p>
+        <p>Életvezetési tanácsokat és támogatást kínálok azoknak, akik szeretnék jobbá tenni a mindennapjaikat és fejlődni a személyes és szakmai életükben.</p>
+        <p>Az én küldetésem az, hogy segítsek másoknak felismerni a lehetőségeiket és elérni az álmaikat. A coachingom során mindent megteszek annak érdekében, hogy segítsek az embereknek az önfejlesztésükben és a személyes céljaik elérésében.</p>
     </section>
 
     <footer>
@@ -134,44 +44,11 @@
         <a href="https://instagram.com" target="_blank">📷</a>
         <a href="https://tiktok.com" target="_blank">🎵</a>
     </div>
-
-    <script>
-        var currentLang = 'hu'; // Kezdő nyelv beállítása
-
-        // Nyelvváltás
-        function changeLanguage(lang) {
-            currentLang = lang;
-            updateContent(); // Az oldal tartalmának frissítése
-        }
-
-        // Nyelv alapján az oldal szövegeit frissíti
-        function updateContent() {
-            if (currentLang === 'hu') {
-                document.querySelector('.heading').textContent = 'Fedezd fel Önmagad!';
-                document.querySelector('.text').textContent = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
-                document.querySelector('.footer-text').textContent = '© 2025 VstyleDesign | Minden jog fenntartva.';
-                document.querySelectorAll('.nav-link')[0].textContent = 'Főoldal';
-                document.querySelectorAll('.nav-link')[1].textContent = 'Rólam';
-                document.querySelectorAll('.nav-link')[2].textContent = 'Szolgáltatások';
-                document.querySelectorAll('.nav-link')[3].textContent = 'Kapcsolat';
-            } else {
-                document.querySelector('.heading').textContent = 'Discover Yourself!';
-                document.querySelector('.text').textContent = 'We help you achieve your goals and live a balanced life.';
-                document.querySelector('.footer-text').textContent = '© 2025 VstyleDesign | All rights reserved.';
-                document.querySelectorAll('.nav-link')[0].textContent = 'Home';
-                document.querySelectorAll('.nav-link')[1].textContent = 'About Me';
-                document.querySelectorAll('.nav-link')[2].textContent = 'Services';
-                document.querySelectorAll('.nav-link')[3].textContent = 'Contact';
-            }
-        }
-
-        // Oldal betöltésekor frissítjük a tartalmat
-        document.addEventListener('DOMContentLoaded', function() {
-            updateContent();
-        });
-    </script>
 </body>
 </html>
+
+ 
+ 
 
      
       
