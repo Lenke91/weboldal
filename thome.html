@@ -71,10 +71,10 @@
     </div>
 
     <div class="navbar">
-        <a href="thome.html">Főoldal</a>
-        <a href="tabout.html">Rólam</a>
-        <a href="tservices.html">Szolgáltatások</a>
-        <a href="tcontact.html">Kapcsolat</a>
+        <a href="thome.html" id="nav-home">Főoldal</a>
+        <a href="tabout.html" id="nav-about">Rólam</a>
+        <a href="tservices.html" id="nav-services">Szolgáltatások</a>
+        <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
     </div>
 
     <div class="content">
@@ -88,29 +88,35 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
             if (language == "en") {
+                // Változtatások angolra
                 document.getElementById("welcome-title").textContent = "Welcome to the Life Coach Website";
                 document.getElementById("welcome-text").textContent = "I help you achieve your goals and improve your life!";
-                // Itt is változtathatod a navigációs szövegeket, ha szükséges
-                document.querySelector('.navbar a:nth-child(1)').textContent = 'Home';
-                document.querySelector('.navbar a:nth-child(2)').textContent = 'About';
-                document.querySelector('.navbar a:nth-child(3)').textContent = 'Services';
-                document.querySelector('.navbar a:nth-child(4)').textContent = 'Contact';
+                document.getElementById("nav-home").textContent = "Home";
+                document.getElementById("nav-about").textContent = "About";
+                document.getElementById("nav-services").textContent = "Services";
+                document.getElementById("nav-contact").textContent = "Contact";
+                document.getElementById("footer-text").textContent = "&copy; 2025 VstyleDesign | All rights reserved.";
             } else {
+                // Változtatások magyarra
                 document.getElementById("welcome-title").textContent = "Üdvözlünk a Life Coach Weboldalon";
                 document.getElementById("welcome-text").textContent = "Segítek elérni a céljaidat és jobban alakítani az életed!";
-                document.querySelector('.navbar a:nth-child(1)').textContent = 'Főoldal';
-                document.querySelector('.navbar a:nth-child(2)').textContent = 'Rólam';
-                document.querySelector('.navbar a:nth-child(3)').textContent = 'Szolgáltatások';
-                document.querySelector('.navbar a:nth-child(4)').textContent = 'Kapcsolat';
+                document.getElementById("nav-home").textContent = "Főoldal";
+                document.getElementById("nav-about").textContent = "Rólam";
+                document.getElementById("nav-services").textContent = "Szolgáltatások";
+                document.getElementById("nav-contact").textContent = "Kapcsolat";
+                document.getElementById("footer-text").textContent = "&copy; 2025 VstyleDesign | Minden jog fenntartva.";
             }
         }
     </script>
 </body>
 </html>
+
+    
+     
