@@ -17,14 +17,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Arial', sans-serif;
-            background-color:#9368b4;
+            background-color:#9368b4 ;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: #000;
             min-height: 100vh;
             padding-bottom: 100px;
-            overflow-x: hidden;
         }
         header {
             background-color:transparent;
@@ -32,8 +31,6 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            animation: fadeIn 2s forwards;
         }
         .language-switcher { position: absolute; top: 20px; right: 20px; }
         .language-switcher a { text-decoration: none; color: #fff; padding: 5px 10px; border-radius: 5px; background-color: rgba(0,0,0,0.5); }
@@ -45,8 +42,6 @@
             flex-direction: column;
             padding: 5rem 2rem;
             text-align: center;
-            opacity: 0;
-            animation: fadeIn 2s forwards 1s;
         }
         .glassmorphism {
             background: rgba(255, 255, 255, 0.3);
@@ -59,8 +54,7 @@
             text-align: center;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
-        h1 { font-size: 3rem; color: #350359; margin-bottom: 20px; transition: transform 0.3s ease; }
-        h1:hover { transform: scale(1.05); }
+        h1 { font-size: 3rem; color: #350359; margin-bottom: 20px; }
         p { font-size: 1.2rem; margin-bottom: 1rem; color: #222; }
         .cta-btn {
             background-color: #32cd32;
@@ -86,8 +80,6 @@
             width: 100%;
             position: fixed;
             bottom: 0;
-            opacity: 0;
-            animation: fadeIn 2s forwards 2s;
         }
         .social-icons {
             position: fixed;
@@ -95,8 +87,6 @@
             bottom: 50px;
             display: flex;
             flex-direction: column;
-            opacity: 0;
-            animation: fadeIn 2s forwards 3s;
         }
         .social-icons a {
             margin: 5px 0;
@@ -105,7 +95,12 @@
             transition: color 0.3s ease;
         }
         .social-icons a:hover { color: #32cd32; }
-        
+
+        /* Animáció */
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -134,7 +129,7 @@
             <a href="#" onclick="switchLanguage('en')">EN</a>
         </div>
     </header>
-    <section>
+    <section class="fade-in">
         <div class="glassmorphism">
             <h1 id="main-heading">Ismerj meg jobban!</h1>
             <p id="main-paragraph">Olyan life coach vagyok, aki segít abban, hogy a legjobb formádat hozd és elérd céljaidat.</p>
@@ -145,15 +140,9 @@
     <footer>
         <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
-    <div class="social-icons">
-        <a href="#" class="fab fa-facebook"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-    </div>
 </body>
 </html>
 
-     
-    
+           
   
- 
+     
