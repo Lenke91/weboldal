@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -131,8 +132,8 @@
         <h1>Fedezd fel Önmagad!</h1>
         <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
-            <a href="#">HU</a> | 
-            <a href="#">EN</a>
+            <a href="#" onclick="setLanguage('hu')">HU</a> | 
+            <a href="#" onclick="setLanguage('en')">EN</a>
         </div>
     </section>
 
@@ -154,10 +155,22 @@
 
     <!-- JS kód -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // FullCalendar inicializálása
-        $(document).ready(function() {
+        var currentLang = 'hu'; // Alapértelmezett nyelv
+
+        // Nyelv beállítása
+        function setLanguage(lang) {
+            currentLang = lang;
+            initializeCalendar();
+            updateContentLanguage(lang);
+        }
+
+        // Naptár inicializálása
+        function initializeCalendar() {
+            $('#calendar').fullCalendar('destroy'); // Előző naptár eltávolítása
             $('#calendar').fullCalendar({
+                locale: currentLang, // Nyelv beállítása
                 header: {
                     left: 'prev,next today',
                     center: 'title',
@@ -165,16 +178,40 @@
                 },
                 events: [
                     {
-                        title: 'Esemény 1',
+                        title: currentLang === 'hu' ? 'Esemény 1' : 'Event 1',
                         start: '2025-01-20'
                     },
                     {
-                        title: 'Esemény 2',
+                        title: currentLang === 'hu' ? 'Esemény 2' : 'Event 2',
                         start: '2025-01-22'
                     }
                 ]
             });
+        }
+
+        // Tartalom nyelvének frissítése
+        function updateContentLanguage(lang) {
+            if (lang === 'hu') {
+                document.querySelector('h1').innerText = 'Fedezd fel Önmagad!';
+                document.querySelector('p').innerText = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
+            } else if (lang === 'en') {
+                document.querySelector('h1').innerText = 'Discover Yourself!';
+                document.querySelector('p').innerText = 'We help you reach your goals and live a balanced life.';
+            }
+        }
+
+        // Kezdeti naptár betöltés
+        $(document).ready(function() {
+            initializeCalendar();
         });
     </script>
 </body>
 </html>
+   
+         
+   
+
+
+  
+                 
+
