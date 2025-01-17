@@ -54,11 +54,42 @@
             color: #2ecc71;
         }
 
+        /* Nyelvválasztó stílus */
         .language-selector {
             position: absolute;
             top: 10px;
             right: 10px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
+        .language-selector:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Nyelvválasztó opciók */
+        .language-selector select {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .language-selector select option {
+            background-color: #2980b9;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -95,7 +126,7 @@
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
             if (language == "en") {
-                // Változtatások angolra
+                // Angol változtatás
                 document.getElementById("welcome-title").textContent = "Welcome to the Life Coach Website";
                 document.getElementById("welcome-text").textContent = "I help you achieve your goals and improve your life!";
                 document.getElementById("nav-home").textContent = "Home";
@@ -104,7 +135,7 @@
                 document.getElementById("nav-contact").textContent = "Contact";
                 document.getElementById("footer-text").textContent = "&copy; 2025 VstyleDesign | All rights reserved.";
             } else {
-                // Változtatások magyarra
+                // Magyar változtatás
                 document.getElementById("welcome-title").textContent = "Üdvözlünk a Life Coach Weboldalon";
                 document.getElementById("welcome-text").textContent = "Segítek elérni a céljaidat és jobban alakítani az életed!";
                 document.getElementById("nav-home").textContent = "Főoldal";
@@ -118,5 +149,4 @@
 </body>
 </html>
 
-    
      
