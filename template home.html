@@ -78,6 +78,14 @@
             margin-bottom: 20px;
             animation: slideIn 1s ease-in-out;
         }
+
+        @media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Kisebb betűméret mobilra */
+        white-space: nowrap; /* Megakadályozza, hogy a szöveg több sorra törjön */
+        overflow: hidden; /* Elrejti a túlzott szöveget */
+        text-overflow: ellipsis; /* Három pontot jelenít meg, ha túl hosszú a szöveg */
+    }
         p {
             font-size: 1.3rem;
             margin-bottom: 3rem;
