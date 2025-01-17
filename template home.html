@@ -29,10 +29,9 @@
         nav ul { list-style: none; }
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { text-decoration: none; color: black; font-weight: bold; }
-        .language-switcher { position: absolute; top: 20px; right: 20px; }
         section { text-align: center; padding: 3rem 2rem; }
         h1 { font-size: 4rem; color: #24053a; margin-bottom: 20px; }
-        p { font-size: 1.2rem; margin-bottom: 4rem; margin-top: 15px; color: black; }
+        p { font-size: 1.2rem; margin-bottom: 2rem; margin-top: 15px; color: black; }
         .cta-btn, .download-btn {
             display: inline-block;
             background-color: #32cd32;
@@ -53,8 +52,9 @@
         }
         .social-icons {
             position: fixed;
-            top: 20px;
             right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -67,8 +67,10 @@
             font-size: 1.5rem;
         }
         .social-icons a:hover { color: #32cd32; }
+        .language-switcher {
+            margin-top: 1rem;
+        }
         @media (max-width: 768px) {
-            nav ul li { margin: 0 8px; }
             nav ul li a { font-size: 0.9rem; }
             h1 { font-size: 2.5rem; }
             p { font-size: 1rem; }
@@ -77,28 +79,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const translations = {
-                hu: {
-                    home: "Főoldal",
-                    about: "Rólam",
-                    services: "Szolgáltatások",
-                    contact: "Kapcsolat",
-                    heading: "Fedezd fel Önmagad!",
-                    paragraph: "Segítünk elérni céljaidat és kiegyensúlyozott életet élni.",
-                    cta: "Kapcsolatfelvétel",
-                    download: "Sablon letöltése",
-                    footer: "&copy; 2025. Life Coach Weboldal Sablon. Minden jog fenntartva."
-                },
-                en: {
-                    home: "Home",
-                    about: "About",
-                    services: "Services",
-                    contact: "Contact",
-                    heading: "Discover Yourself!",
-                    paragraph: "We help you achieve your goals and live a balanced life.",
-                    cta: "Contact Us",
-                    download: "Download Template",
-                    footer: "&copy; 2025. Life Coach Website Template. All rights reserved."
-                }
+                hu: { home: "Főoldal", about: "Rólam", services: "Szolgáltatások", contact: "Kapcsolat", heading: "Fedezd fel Önmagad!", paragraph: "Segítünk elérni céljaidat és kiegyensúlyozott életet élni.", cta: "Kapcsolatfelvétel", download: "Sablon letöltése", footer: "&copy; 2025. Life Coach Weboldal Sablon. Minden jog fenntartva." },
+                en: { home: "Home", about: "About", services: "Services", contact: "Contact", heading: "Discover Yourself!", paragraph: "We help you achieve your goals and live a balanced life.", cta: "Contact Us", download: "Download Template", footer: "&copy; 2025. Life Coach Website Template. All rights reserved." }
             };
             function switchLanguage(lang) {
                 document.getElementById("nav-home").textContent = translations[lang].home;
@@ -108,12 +90,8 @@
                 document.getElementById("main-heading").textContent = translations[lang].heading;
                 document.getElementById("main-paragraph").textContent = translations[lang].paragraph;
             }
-            document.querySelector('.language-switcher .hu').addEventListener('click', function () {
-                switchLanguage('hu');
-            });
-            document.querySelector('.language-switcher .en').addEventListener('click', function () {
-                switchLanguage('en');
-            });
+            document.querySelector('.language-switcher .hu').addEventListener('click', function () { switchLanguage('hu'); });
+            document.querySelector('.language-switcher .en').addEventListener('click', function () { switchLanguage('en'); });
         });
     </script>
 </head>
@@ -121,33 +99,34 @@
     <header>
         <nav>
             <ul>
-                <li><a href="template home.html" id="nav-home">Főoldal</a></li>
+                <li><a href="temlate home.html" id="nav-home">Főoldal</a></li>
                 <li><a href="template about me.html" id="nav-about">Rólam</a></li>
                 <li><a href="template services.html" id="nav-services">Szolgáltatások</a></li>
                 <li><a href="template contact.html" id="nav-contact">Kapcsolat</a></li>
             </ul>
         </nav>
-        <div class="language-switcher">
-            <a href="#" class="hu">HU</a> |
-            <a href="#" class="en">EN</a>
-        </div>
     </header>
     <section id="home">
         <h1 id="main-heading">Fedezd fel Önmagad!</h1>
         <p id="main-paragraph">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
+        <div class="language-switcher">
+            <a href="#" class="hu">HU</a> |
+            <a href="#" class="en">EN</a>
+        </div>
     </section>
     <footer>
         <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
     <div class="social-icons">
-        <a href="#">📘</a>
-        <a href="#">📷</a>
-        <a href="#">🎵</a>
+        <a href="https://facebook.com" class="facebook" target="_blank">📘</a>
+        <a href="https://instagram.com" class="instagram" target="_blank">📷</a>
+        <a href="https://tiktok.com" class="tiktok" target="_blank">🎵</a>
     </div>
 </body>
 </html>
 
      
-            
-            
-  
+       
+   
+          
+    
