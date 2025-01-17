@@ -12,7 +12,6 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1601582580215-0284eb75587c">
     <meta property="og:url" content="https://vstyledesign.com/portfolio/lifecoach-template">
     <title>Life Coach Weboldal Sablon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css"/>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -97,14 +96,6 @@
             nav ul li a { font-size: 0.8rem; }
             .social-icons a { font-size: 1rem; }
         }
-        /* Kisebb méretű naptár */
-        #calendar {
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            border: 1px solid #ddd;
-            background-color: white;
-        }
     </style>
 </head>
 <body>
@@ -128,10 +119,6 @@
         </div>
     </section>
 
-    <section id="calendar">
-        <div id="calendar"></div>
-    </section>
-
     <footer>
         <p class="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
@@ -142,41 +129,13 @@
         <a href="https://tiktok.com" target="_blank">🎵</a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
     <script>
         var currentLang = 'hu'; // Kezdő nyelv beállítása
 
         // Nyelvváltás
         function changeLanguage(lang) {
             currentLang = lang;
-            $('#calendar').fullCalendar('destroy'); // Törli az aktuális naptárat
-            initializeCalendar(); // Új naptár inicializálása
             updateContent(); // Az oldal tartalmának frissítése
-        }
-
-        // Naptár inicializálása
-        function initializeCalendar() {
-            $('#calendar').fullCalendar({
-                locale: currentLang,
-                events: getEvents() // Dinamikusan betölti az eseményeket a kiválasztott nyelven
-            });
-        }
-
-        // Az események a naptárhoz (különböző nyelveken)
-        function getEvents() {
-            if (currentLang === 'hu') {
-                return [
-                    { title: 'Példa esemény', start: '2025-02-15', description: 'Ez egy példa esemény.' },
-                    { title: 'Másik esemény', start: '2025-02-20', description: 'Ez egy másik példa esemény.' }
-                ];
-            } else {
-                return [
-                    { title: 'Sample Event', start: '2025-02-15', description: 'This is a sample event.' },
-                    { title: 'Another Event', start: '2025-02-20', description: 'This is another example event.' }
-                ];
-            }
         }
 
         // Nyelv alapján az oldal szövegeit frissíti
@@ -200,16 +159,11 @@
             }
         }
 
-        // Oldal betöltésekor inicializáljuk a naptárat és a nyelvet
-        $(document).ready(function() {
-            initializeCalendar();
+        // Oldal betöltésekor frissítjük a tartalmat
+        document.addEventListener('DOMContentLoaded', function() {
             updateContent();
         });
     </script>
 </body>
 </html>
-
-   
-  
-
 
