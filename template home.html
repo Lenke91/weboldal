@@ -17,45 +17,35 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #ca94f3;
+            background-size: cover;
+            background-position: center;
             color: white;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
-        header {
-            background-color: transparent;
-            padding: 0.5rem 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            padding: 8px 16px;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
+        header { background-color: transparent; padding: 1rem 0; text-align: center; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+        nav ul li a { text-decoration: none; color: black; font-weight: bold; font-size: 1.1rem; }
+        section { text-align: center; padding: 3rem 2rem; }
+        h1 { font-size: 4rem; color: #24053a; margin-bottom: 20px; }
+        p { font-size: 1.2rem; margin-bottom: 2rem; margin-top: 15px; color: black; }
+        .cta-btn, .download-btn {
+            display: inline-block;
             background-color: #32cd32;
             color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 2rem;
         }
-        section {
+        .cta-btn:hover, .download-btn:hover { background-color: #228b22; }
+        footer {
+            background-color: transparent;
             text-align: center;
-            padding: 3rem 2rem;
-        }
-        h1 { font-size: 4rem; color: #24053a; }
-        p { font-size: 1.2rem; color: black; margin-top: 15px; }
-        .language-switcher {
-            margin-top: 20px;
+            padding: 10px 0;
+            margin-top: auto;
         }
         .social-icons {
             position: fixed;
@@ -64,25 +54,62 @@
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            align-items: center;
         }
         .social-icons a {
-            font-size: 1.8rem;
-            color: white;
+            margin: 10px 0;
             text-decoration: none;
-            transition: color 0.3s;
+            color: #fff;
+            font-size: 1.5rem;
         }
-        .social-icons a:hover { color: #32cd32; }
+        .language-switcher {
+            margin-top: 20px;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const translations = {
+                hu: {
+                    home: "Főoldal",
+                    about: "Rólam",
+                    services: "Szolgáltatások",
+                    contact: "Kapcsolat",
+                    heading: "Fedezd fel Önmagad!",
+                    paragraph: "Segítünk elérni céljaidat és kiegyensúlyozott életet élni.",
+                    footer: "&copy; 2025. Life Coach Weboldal Sablon. Minden jog fenntartva."
+                },
+                en: {
+                    home: "Home",
+                    about: "About",
+                    services: "Services",
+                    contact: "Contact",
+                    heading: "Discover Yourself!",
+                    paragraph: "We help you achieve your goals and live a balanced life.",
+                    footer: "&copy; 2025. Life Coach Website Template. All rights reserved."
+                }
+            };
+            function switchLanguage(lang) {
+                document.getElementById("main-heading").textContent = translations[lang].heading;
+                document.getElementById("main-paragraph").textContent = translations[lang].paragraph;
+                document.getElementById("footer-text").innerHTML = translations[lang].footer;
+            }
+            document.querySelector('.hu').addEventListener('click', function () {
+                switchLanguage('hu');
+            });
+            document.querySelector('.en').addEventListener('click', function () {
+                switchLanguage('en');
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="template home.html" id="nav-home">Főoldal</a></li>
-                <li><a href="template about me.html" id="nav-about">Rólam</a></li>
-                <li><a href="template services.html" id="nav-services">Szolgáltatások</a></li>
-                <li><a href="template contact.html" id="nav-contact">Kapcsolat</a></li>
+                <li><a href="template home.html">Főoldal</a></li>
+                <li><a href="template about me.html">Rólam</a></li>
+                <li><a href="template services.html">Szolgáltatások</a></li>
+                <li><a href="template contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
@@ -91,7 +118,8 @@
         <h1 id="main-heading">Fedezd fel Önmagad!</h1>
         <p id="main-paragraph">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
-            <a href="#" class="hu">HU</a> | <a href="#" class="en">EN</a>
+            <a href="#" class="hu">HU</a> |
+            <a href="#" class="en">EN</a>
         </div>
     </section>
 
@@ -104,44 +132,7 @@
     <footer>
         <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const translations = {
-                hu: {
-                    home: "Főoldal",
-                    about: "Rólam",
-                    services: "Szolgáltatások",
-                    contact: "Kapcsolat",
-                    heading: "Fedezd fel Önmagad!",
-                    paragraph: "Segítünk elérni céljaidat és kiegyensúlyozott életet élni."
-                },
-                en: {
-                    home: "Home",
-                    about: "About",
-                    services: "Services",
-                    contact: "Contact",
-                    heading: "Discover Yourself!",
-                    paragraph: "We help you achieve your goals and live a balanced life."
-                }
-            };
-
-            function switchLanguage(lang) {
-                document.getElementById("nav-home").textContent = translations[lang].home;
-                document.getElementById("nav-about").textContent = translations[lang].about;
-                document.getElementById("nav-services").textContent = translations[lang].services;
-                document.getElementById("nav-contact").textContent = translations[lang].contact;
-                document.getElementById("main-heading").textContent = translations[lang].heading;
-                document.getElementById("main-paragraph").textContent = translations[lang].paragraph;
-            }
-
-            document.querySelector('.hu').addEventListener('click', function () {
-                switchLanguage('hu');
-            });
-            document.querySelector('.en').addEventListener('click', function () {
-                switchLanguage('en');
-            });
-        });
-    </script>
 </body>
 </html>
+
+        
