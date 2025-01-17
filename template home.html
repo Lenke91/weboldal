@@ -23,74 +23,32 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s ease;
         }
-        header {
-            background-color: transparent;
-            padding: 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul { 
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+        header { background-color: transparent; padding: 1rem 0; text-align: center; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 20px; }
+        nav ul li { display: inline; }
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: black;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #24053a;
-        }
-        .language-switcher {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
             font-size: 1rem;
-            font-weight: bold;
         }
-        .language-switcher a {
-            text-decoration: none;
-            color: #333;
-            cursor: pointer;
-        }
-        .language-switcher a:hover {
-            color: #24053a;
-        }
+        .language-switcher { margin-top: 20px; font-size: 1.1rem; }
         section {
             text-align: center;
-            padding: 7rem 2rem;
-            animation: fadeIn 1s ease-in-out;
+            padding: 3rem 2rem;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #24053a;
             margin-bottom: 20px;
             animation: slideIn 1s ease-in-out;
+            white-space: normal;
         }
-
-        @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Kisebb betűméret mobilra */
-        white-space: nowrap; /* Megakadályozza, hogy a szöveg több sorra törjön */
-        overflow: hidden; /* Elrejti a túlzott szöveget */
-        text-overflow: ellipsis; /* Három pontot jelenít meg, ha túl hosszú a szöveg */
-    }
         p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            color: #333;
-            animation: fadeIn 1.5s ease-in-out;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: black;
         }
         footer {
             background-color: transparent;
@@ -113,22 +71,30 @@
             margin: 10px 0;
             text-decoration: none;
             color: #fff;
-            font-size: 1.5rem;
-        }
-        @media (max-width: 768px) {
-            nav ul li a { font-size: 0.9rem; }
-            .social-icons a { font-size: 1.2rem; }
-            h1 { font-size: 2.5rem; }
-            .language-switcher { font-size: 1rem; }
-            p { font-size: 1rem; margin-bottom: 1.5rem; }
+            font-size: 1.3rem;
         }
         @keyframes slideIn {
-            0% { transform: translateY(-50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        @media (max-width: 1024px) {
+            h1 { font-size: 3rem; }
+            p { font-size: 1rem; }
+            nav ul { flex-direction: column; gap: 10px; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; white-space: nowrap; }
+            p { font-size: 1rem; }
+            .language-switcher { font-size: 1rem; }
+            nav ul li a { font-size: 0.9rem; }
+            .social-icons a { font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 0.9rem; }
+            .language-switcher { font-size: 0.9rem; }
+            nav ul li a { font-size: 0.8rem; }
+            .social-icons a { font-size: 1rem; }
         }
     </style>
 </head>
@@ -137,23 +103,24 @@
         <nav>
             <ul>
                 <li><a href="template home.html">Főoldal</a></li>
-                <li><a href="template about me.html">Rólam</a></li>
-                <li><a href="template services.html">Szolgáltatások</a></li>
+                <li><a href="templateabout me.html">Rólam</a></li>
+                <li><a href="templateservices.html">Szolgáltatások</a></li>
                 <li><a href="template contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h1 id="title">Fedezd fel Önmagad!</h1>
-        <p id="description">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
+        <h1>Fedezd fel Önmagad!</h1>
+        <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
-            <a href="#" id="hu">HU</a> | <a href="#" id="en">EN</a>
+            <a href="#">HU</a> | 
+            <a href="#">EN</a>
         </div>
     </section>
 
     <footer>
-        <p id="footer">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <div class="social-icons">
@@ -163,35 +130,8 @@
     </div>
 
     <script>
-        // Nyelvváltó szövegek
-        const langText = {
-            hu: {
-                title: "Fedezd fel Önmagad!",
-                description: "Segítünk elérni céljaidat és kiegyensúlyozott életet élni.",
-                footer: "&copy; 2025 VstyleDesign | Minden jog fenntartva."
-            },
-            en: {
-                title: "Discover Yourself!",
-                description: "We help you achieve your goals and live a balanced life.",
-                footer: "&copy; 2025 VstyleDesign | All rights reserved."
-            }
-        };
-
-        // Funkció a nyelv váltásához
-        function changeLanguage(language) {
-            document.getElementById('title').textContent = langText[language].title;
-            document.getElementById('description').textContent = langText[language].description;
-            document.getElementById('footer').innerHTML = langText[language].footer;
-        }
-
-        // Event listeners a nyelvváltó gombokhoz
-        document.getElementById('hu').addEventListener('click', function() {
-            changeLanguage('hu');
-        });
-
-        document.getElementById('en').addEventListener('click', function() {
-            changeLanguage('en');
-        });
+        // JS kódot itt tudsz hozzáadni később, ha szükséges.
+        console.log("Weboldal betöltve.");
     </script>
 </body>
 </html>
