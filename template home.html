@@ -23,20 +23,67 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            transition: all 0.3s ease;
         }
-        header { background-color: transparent; padding: 0.5rem 0; text-align: center; }
-        nav ul { list-style: none; padding: 0; margin: 0; }
-        nav ul li { display: inline; margin: 0 10px; }
+        header {
+            background-color: transparent;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul { 
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
         nav ul li a {
             text-decoration: none;
-            color: black;
+            color: #fff;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
         }
-        .language-switcher { margin-top: 30px; cursor: pointer; }
-        section { text-align: center; padding: 5rem 2rem; }
-        h1 { font-size: 3.5rem; color: #24053a; margin-bottom: 20px; }
-        p { font-size: 1.2rem; margin-bottom: 3rem; color: black; }
+        nav ul li a:hover {
+            color: #24053a;
+        }
+        .language-switcher {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .language-switcher a {
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .language-switcher a:hover {
+            color: #24053a;
+        }
+        section {
+            text-align: center;
+            padding: 7rem 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #24053a;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: #fff;
+            animation: fadeIn 1.5s ease-in-out;
+        }
         footer {
             background-color: transparent;
             text-align: center;
@@ -58,14 +105,22 @@
             margin: 10px 0;
             text-decoration: none;
             color: #fff;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
         @media (max-width: 768px) {
-            nav ul li a { font-size: 0.8rem; }
-            .social-icons a { font-size: 1rem; }
+            nav ul li a { font-size: 0.9rem; }
+            .social-icons a { font-size: 1.2rem; }
             h1 { font-size: 2.5rem; }
-            .language-switcher { font-size: 0.9rem; }
+            .language-switcher { font-size: 1rem; }
             p { font-size: 1rem; margin-bottom: 1.5rem; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -132,6 +187,12 @@
     </script>
 </body>
 </html>
+
+      
+   
+
+
+         
 
 
  
