@@ -31,12 +31,12 @@
             text-decoration: none;
             color: black;
             font-weight: bold;
-            font-size: 0.5rem;
+            font-size: 0.9rem;
         }
-        .language-switcher { margin-top: 20px; }
-        section { text-align: center; padding: 3rem 2rem; }
-        h1 { font-size: 3rem; color: #24053a; margin-bottom: 10px; }
-        p { font-size: 1.2rem; margin-bottom: 4rem; color: black; }
+        .language-switcher { margin-top: 30px; cursor: pointer; }
+        section { text-align: center; padding: 5rem 2rem; }
+        h1 { font-size: 3.5rem; color: #24053a; margin-bottom: 20px; }
+        p { font-size: 1.2rem; margin-bottom: 3rem; color: black; }
         footer {
             background-color: transparent;
             text-align: center;
@@ -63,6 +63,9 @@
         @media (max-width: 768px) {
             nav ul li a { font-size: 0.8rem; }
             .social-icons a { font-size: 1rem; }
+            h1 { font-size: 2.5rem; }
+            .language-switcher { font-size: 0.9rem; }
+            p { font-size: 1rem; margin-bottom: 1.5rem; }
         }
     </style>
 </head>
@@ -70,10 +73,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Főoldal</a></li>
-                <li><a href="#about">Rólam</a></li>
-                <li><a href="#services">Szolgáltatások</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
+                <li><a href="template home.html">Főoldal</a></li>
+                <li><a href="template about me.html">Rólam</a></li>
+                <li><a href="template services.html">Szolgáltatások</a></li>
+                <li><a href="template contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
@@ -82,8 +85,7 @@
         <h1>Fedezd fel Önmagad!</h1>
         <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
-            <a href="#">HU</a> |
-            <a href="#">EN</a>
+            <a href="#" id="hu">HU</a> | <a href="#" id="en">EN</a>
         </div>
     </section>
 
@@ -96,5 +98,25 @@
         <a href="https://instagram.com" target="_blank">📷</a>
         <a href="https://tiktok.com" target="_blank">🎵</a>
     </div>
+
+    <script>
+        // Nyelvváltó logika
+        document.getElementById('hu').addEventListener('click', function() {
+            alert('Magyar nyelvre váltottál!');
+            // A nyelvváltás implementálásához módosítani kell a tartalmat (pl. a szövegek).
+            // Ide kerülhetne például egy JavaScript nyelvi fájl betöltése.
+        });
+
+        document.getElementById('en').addEventListener('click', function() {
+            alert('Switched to English!');
+            // Ugyanúgy, mint magyarra váltáskor, itt is módosíthatod a szövegeket.
+        });
+    </script>
 </body>
 </html>
+
+       
+   
+
+ 
+ 
