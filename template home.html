@@ -29,7 +29,7 @@
         nav ul { list-style: none; }
         nav ul li { display: inline; margin: 0 15px; }
         nav ul li a { text-decoration: none; color: black; font-weight: bold; }
-        .language-switcher { position: absolute; top: 20px; right: 20px;}
+        .language-switcher { position: absolute; top: 20px; right: 20px; }
         section { text-align: center; padding: 3rem 2rem; }
         h1 { font-size: 4rem; color: #24053a; margin-bottom: 20px; }
         p { font-size: 1.2rem; margin-bottom: 4rem; margin-top: 15px; color: black; }
@@ -44,7 +44,6 @@
             margin-top: 2rem;
         }
         .cta-btn:hover, .download-btn:hover { background-color: #228b22; }
-        
         footer {
             background-color: transparent;
             text-align: center;
@@ -52,27 +51,28 @@
             margin-top: auto;
             width: 100%;
         }
-
         .social-icons {
             position: fixed;
-            right: 50px;
-            bottom: 20px;
+            top: 20px;
+            right: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             z-index: 1000;
         }
         .social-icons a {
-            margin: 20px 0;
+            margin: 10px 0;
             text-decoration: none;
             color: #fff;
             font-size: 1.5rem;
         }
         .social-icons a:hover { color: #32cd32; }
-        .social-icons .facebook { color: #3b5998; }
-        .social-icons .instagram { color: #e1306c; }
-        .social-icons .tiktok { color: #000000; }
-        .social-icons .pinterest { color: #e60023; }
+        @media (max-width: 768px) {
+            nav ul li { margin: 0 8px; }
+            nav ul li a { font-size: 0.9rem; }
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -100,29 +100,17 @@
                     footer: "&copy; 2025. Life Coach Website Template. All rights reserved."
                 }
             };
-
             function switchLanguage(lang) {
-                // Navigation menu
                 document.getElementById("nav-home").textContent = translations[lang].home;
                 document.getElementById("nav-about").textContent = translations[lang].about;
                 document.getElementById("nav-services").textContent = translations[lang].services;
                 document.getElementById("nav-contact").textContent = translations[lang].contact;
-
-                // Main content
                 document.getElementById("main-heading").textContent = translations[lang].heading;
                 document.getElementById("main-paragraph").textContent = translations[lang].paragraph;
-                document.getElementById("cta-button").textContent = translations[lang].cta;
-                document.getElementById("download-button").textContent = translations[lang].download;
-
-                // Footer
-                document.getElementById("footer-text").innerHTML = translations[lang].footer;
             }
-
-            // Switch language on click
             document.querySelector('.language-switcher .hu').addEventListener('click', function () {
                 switchLanguage('hu');
             });
-
             document.querySelector('.language-switcher .en').addEventListener('click', function () {
                 switchLanguage('en');
             });
@@ -144,20 +132,22 @@
             <a href="#" class="en">EN</a>
         </div>
     </header>
-
     <section id="home">
         <h1 id="main-heading">Fedezd fel Önmagad!</h1>
         <p id="main-paragraph">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
     </section>
-
     <footer>
         <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
-
     <div class="social-icons">
-        <a href="https://facebook.com" class="facebook" target="_blank">📘</a>
-        <a href="https://instagram.com" class="instagram" target="_blank">📷</a>
-        <a href="https://tiktok.com" class="tiktok" target="_blank">🎵</a>
+        <a href="#">📘</a>
+        <a href="#">📷</a>
+        <a href="#">🎵</a>
     </div>
 </body>
 </html>
+
+     
+            
+            
+  
