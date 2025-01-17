@@ -1,5 +1,3 @@
-
-             
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -14,7 +12,7 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1601582580215-0284eb75587c">
     <meta property="og:url" content="https://vstyledesign.com/portfolio/lifecoach-template">
     <title>Life Coach Weboldal Sablon</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css"/>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -99,122 +97,92 @@
             nav ul li a { font-size: 0.8rem; }
             .social-icons a { font-size: 1rem; }
         }
-
-        /* Naptár stílusa */
-        .calendar-container {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            background-color: #ca94f3;
-            margin-bottom: 20px;
-        }
-
-        .calendar {
-            width: 400px;
-            height: 400px;
-            background-color: white;
-            border-radius: 10px;
-            padding: 10px;
-        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="template home.html" id="home-nav">Főoldal</a></li>
-                <li><a href="templateabout me.html" id="about-nav">Rólam</a></li>
-                <li><a href="templateservices.html" id="services-nav">Szolgáltatások</a></li>
-                <li><a href="template contact.html" id="contact-nav">Kapcsolat</a></li>
+                <li><a href="template home.html">Főoldal</a></li>
+                <li><a href="templateabout me.html">Rólam</a></li>
+                <li><a href="templateservices.html">Szolgáltatások</a></li>
+                <li><a href="template contact.html">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-        <h1 id="title">Fedezd fel Önmagad!</h1>
-        <p id="description">Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
+        <h1>Fedezd fel Önmagad!</h1>
+        <p>Segítünk elérni céljaidat és kiegyensúlyozott életet élni.</p>
         <div class="language-switcher">
-            <a href="#" onclick="setLanguage('hu')">HU</a> | 
-            <a href="#" onclick="setLanguage('en')">EN</a>
+            <a href="#" onclick="changeLanguage('hu')">HU</a> | 
+            <a href="#" onclick="changeLanguage('en')">EN</a>
         </div>
     </section>
 
-    <!-- Naptár szekció -->
-    <div class="calendar-container">
-        <div id="calendar" class="calendar"></div>
-    </div>
+    <section id="calendar">
+        <div id="calendar"></div>
+    </section>
 
     <footer>
-        <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
-    <!-- Social media ikonok -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank">📘</a>
         <a href="https://instagram.com" target="_blank">📷</a>
         <a href="https://tiktok.com" target="_blank">🎵</a>
     </div>
 
-    <!-- JS kód -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
-
     <script>
-        var currentLang = 'hu'; // Alapértelmezett nyelv
+        var currentLang = 'hu'; // Kezdő nyelv beállítása
 
-        // Nyelv beállítása
-        function setLanguage(lang) {
+        // Nyelvváltás
+        function changeLanguage(lang) {
             currentLang = lang;
-            initializeCalendar();
-            updateContentLanguage(lang);
+            $('#calendar').fullCalendar('destroy'); // Törli az aktuális naptárat
+            initializeCalendar(); // Új naptár inicializálása
+            updateContent(); // Az oldal tartalmának frissítése
         }
 
         // Naptár inicializálása
         function initializeCalendar() {
-            $('#calendar').fullCalendar('destroy'); // Előző naptár eltávolítása
             $('#calendar').fullCalendar({
-                locale: currentLang, // Nyelv beállítása
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
-                },
-                events: [
-                    {
-                        title: currentLang === 'hu' ? 'Esemény 1' : 'Event 1',
-                        start: '2025-01-20'
-                    },
-                    {
-                        title: currentLang === 'hu' ? 'Esemény 2' : 'Event 2',
-                        start: '2025-01-22'
-                    }
-                ]
+                locale: currentLang,
+                events: getEvents() // Dinamikusan betölti az eseményeket a kiválasztott nyelven
             });
         }
 
-        // Tartalom nyelvének frissítése
-        function updateContentLanguage(lang) {
-            if (lang === 'hu') {
-                document.getElementById('title').innerText = 'Fedezd fel Önmagad!';
-                document.getElementById('description').innerText = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
-                document.getElementById('footer-text').innerText = '© 2025 VstyleDesign | Minden jog fenntartva.';
-                document.getElementById('home-nav').innerText = 'Főoldal';
-                document.getElementById('about-nav').innerText = 'Rólam';
-                document.getElementById('services-nav').innerText = 'Szolgáltatások';
-                document.getElementById('contact-nav').innerText = 'Kapcsolat';
+        // Az események a naptárhoz (különböző nyelveken)
+        function getEvents() {
+            if (currentLang === 'hu') {
+                return [
+                    { title: 'Példa esemény', start: '2025-02-15', description: 'Ez egy példa esemény.' },
+                    { title: 'Másik esemény', start: '2025-02-20', description: 'Ez egy másik példa esemény.' }
+                ];
             } else {
-                document.getElementById('title').innerText = 'Discover Yourself!';
-                document.getElementById('description').innerText = 'We help you achieve your goals and live a balanced life.';
-                document.getElementById('footer-text').innerText = '© 2025 VstyleDesign | All rights reserved.';
-                document.getElementById('home-nav').innerText = 'Home';
-                document.getElementById('about-nav').innerText = 'About';
-                document.getElementById('services-nav').innerText = 'Services';
-                document.getElementById('contact-nav').innerText = 'Contact';
+                return [
+                    { title: 'Sample Event', start: '2025-02-15', description: 'This is a sample event.' },
+                    { title: 'Another Event', start: '2025-02-20', description: 'This is another sample event.' }
+                ];
             }
         }
 
-        // Init naptár és tartalom betöltése
+        // Az oldal tartalmának frissítése a nyelvváltozással
+        function updateContent() {
+            if (currentLang === 'hu') {
+                document.querySelector('h1').textContent = 'Fedezd fel Önmagad!';
+                document.querySelector('p').textContent = 'Segítünk elérni céljaidat és kiegyensúlyozott életet élni.';
+            } else {
+                document.querySelector('h1').textContent = 'Discover Yourself!';
+                document.querySelector('p').textContent = 'We help you achieve your goals and live a balanced life.';
+            }
+        }
+
+        // Kezdeti naptár beállítás
         $(document).ready(function() {
             initializeCalendar();
         });
