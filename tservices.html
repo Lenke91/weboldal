@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Szolgáltatások - Life Coach weboldal sablon könnyen testreszabható és SEO-optimalizált.">
+    <meta name="keywords" content="life coach, szolgáltatások, személyes fejlődés, weboldal sablon, SEO, animációk">
+    <meta name="author" content="vstyledesign">
+    <meta property="og:title" content="Szolgáltatások - Life Coach Weboldal Sablon">
+    <meta property="og:description" content="Fedezd fel a coaching szolgáltatásaimat és kezdj el dolgozni a személyes fejlődéseden!">
+    <meta property="og:image" content="https://example.com/your-image.jpg">
+    <meta property="og:url" content="https://vstyledesign.com/services">
+    <title>Szolgáltatások - Life Coach Weboldal Sablon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #8e44ad;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+        }
+
+        .service-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-in-out forwards;
+        }
+
+        .service-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Nyelvváltó a header jobb sarkában */
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-switcher button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .language-switcher button:hover {
+            background-color: #34495e;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Animáció */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="page-title">Szolgáltatások</h1>
+
+        <!-- Nyelvváltó gombok -->
+        <div class="language-switcher">
+            <button onclick="switchLanguage('hu')">Magyar</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <div class="services-container">
+        <div class="service-box">
+            <h2 id="service1-title">Életvezetési Coaching</h2>
+            <p id="service1-description">Személyre szabott coaching, hogy megtaláld a helyes irányt az életedben és elérd a céljaidat.</p>
+        </div>
+
+        <div class="service-box">
+            <h2 id="service2-title">Karrier Coaching</h2>
+            <p id="service2-description">Segítek a karriered fejlesztésében, hogy a legjobb verzióját hozhasd ki magadból a munka világában.</p>
+        </div>
+
+        <div class="service-box">
+            <h2 id="service3-title">Személyes Fejlődés</h2>
+            <p id="service3-description">Támogatlak a személyes fejlődésedben, hogy magabiztosabbá válj és a legjobb formádat hozd.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        // Nyelvváltó funkció
+        function switchLanguage(language) {
+            if (language === 'en') {
+                document.getElementById('page-title').innerText = 'Services';
+                document.getElementById('service1-title').innerText = 'Life Coaching';
+                document.getElementById('service1-description').innerText = 'Personalized coaching to find the right direction in your life and achieve your goals.';
+                document.getElementById('service2-title').innerText = 'Career Coaching';
+                document.getElementById('service2-description').innerText = 'I help you develop your career and bring out the best version of yourself in the workplace.';
+                document.getElementById('service3-title').innerText = 'Personal Growth';
+                document.getElementById('service3-description').innerText = 'I support you in your personal growth to become more confident and bring out the best in yourself.';
+                document.getElementById('footer-text').innerText = '&copy; 2025 VstyleDesign | All rights reserved.';
+            } else {
+                document.getElementById('page-title').innerText = 'Szolgáltatások';
+                document.getElementById('service1-title').innerText = 'Életvezetési Coaching';
+                document.getElementById('service1-description').innerText = 'Személyre szabott coaching, hogy megtaláld a helyes irányt az életedben és elérd a céljaidat.';
+                document.getElementById('service2-title').innerText = 'Karrier Coaching';
+                document.getElementById('service2-description').innerText = 'Segítek a karriered fejlesztésében, hogy a legjobb verzióját hozhasd ki magadból a munka világában.';
+                document.getElementById('service3-title').innerText = 'Személyes Fejlődés';
+                document.getElementById('service3-description').innerText = 'Támogatlak a személyes fejlődésedben, hogy magabiztosabbá válj és a legjobb formádat hozd.';
+                document.getElementById('footer-text').innerText = '&copy; 2025 VstyleDesign | Minden jog fenntartva.';
+            }
+        }
+    </script>
+
+</body>
+</html>
