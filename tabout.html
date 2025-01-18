@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -27,36 +27,38 @@
             justify-content: center;
             align-items: center;
             padding: 50px;
-            text-align: left;
-            animation: fadeIn 1s ease-in-out;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .text {
             flex: 1;
             padding-left: 40px;
+            animation: slideIn 1s ease-in-out;
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-in-out;
+            font-size: 32px;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 40px;
-            animation: fadeIn 2s ease-in-out;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* Kép balra, ne látszódjon ha nincs kiválasztva */
         .profile-image-container {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background-color: #34495e; /* Szürke háttér a kép helyett */
             overflow: hidden;
             display: inline-block;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .profile-image-container img {
@@ -122,6 +124,11 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-50%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -135,7 +142,7 @@
         <!-- Szöveg jobbra -->
         <div class="text">
             <h1 id="about-title">Rólam</h1>
-            <p id="about-description">Életmódom segíti a céljaid elérését. Tapasztalataim alapján személyre szabott támogatást nyújtok, hogy boldogabb és sikeresebb életet élhess. A coaching során együtt dolgozunk a fejlődéseden.</P>
+            <p id="about-description">Életvezetési tanácsadóként segítek, hogy tisztábban lássuk a célokat és megtaláljuk a sikerhez vezető utat.</p>
             <!-- Nyelvváltó -->
             <div class="language-switcher">
                 <button onclick="switchLanguage('hu')">Magyar</button>
@@ -164,18 +171,16 @@
         function switchLanguage(language) {
             if (language === 'en') {
                 document.getElementById('about-title').innerText = 'About Me';
-                document.getElementById('about-description').innerText = 'My coaching supports you in achieving your goals. Based on my experience, I provide personalized support to help you live a happier and more successful life. During the coaching process, we work together on your personal development.';
+                document.getElementById('about-description').innerText = 'As a life coach, I help you clarify your goals and find the path to success.';
                 document.getElementById('footer-text').innerText = '&copy; 2025 VstyleDesign | All rights reserved.';
             } else {
                 document.getElementById('about-title').innerText = 'Rólam';
-                document.getElementById('about-description').innerText = 'Életmódom segíti a céljaid elérését. Tapasztalataim alapján személyre szabott támogatást nyújtok, hogy boldogabb és sikeresebb életet élhess. A coaching során együtt dolgozunk a fejlődéseden.';
+                document.getElementById('about-description').innerText = 'Életvezetési tanácsadóként segítek, hogy tisztábban lássuk a célokat és megtaláljuk a sikerhez vezető utat.';
                 document.getElementById('footer-text').innerText = '&copy; 2025 VstyleDesign | Minden jog fenntartva.';
             }
         }
     </script>
 
 </body>
-</html>
-
-    
-                 
+</html>      
+            
