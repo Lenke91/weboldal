@@ -13,15 +13,6 @@
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <title>About Me - Web Developer & Entrepreneur</title>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,6 +21,7 @@
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: #333;
@@ -79,12 +71,18 @@
             border-radius: 50%;
             margin-bottom: 20px;
         }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
 
     <div class="language-switcher">
-        <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
+        <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> |
         <a href="#" id="hu-btn" class="lang-btn">HU</a>
     </div>
 
@@ -107,8 +105,17 @@
             </p>
         </div>
     </div>
+
+    <footer>
+        <div class="en-content">
+            &copy; 2025 VStyledesign. All rights reserved.
+        </div>
+        <div class="hu-content" style="display: none;">
+            &copy; 2025 VStyledesign. Minden jog fenntartva.
+        </div>
+    </footer>
+
     <script>
-        // Function to switch between languages
         document.getElementById('en-btn').addEventListener('click', () => {
             switchLanguage('en');
         });
@@ -117,16 +124,11 @@
             switchLanguage('hu');
         });
 
-        // Function to switch the content based on selected language
         function switchLanguage(lang) {
-            // Hide all language contents
-            const contents = document.querySelectorAll('.about-content');
+            const contents = document.querySelectorAll('.about-content, footer div');
             contents.forEach(content => content.style.display = 'none');
+            document.querySelectorAll(`.${lang}-content`).forEach(content => content.style.display = 'block');
 
-            // Show the selected language content
-            document.querySelector(`.${lang}-content`).style.display = 'block';
-
-            // Update the active language button
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(button => button.classList.remove('active-lang'));
             document.getElementById(`${lang}-btn`).classList.add('active-lang');
@@ -137,3 +139,6 @@
 </html>
 
 
+
+
+          
