@@ -14,85 +14,158 @@
     <title>Life Coach Weboldal Sablon</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #E6E6FA; /* Levendula lila háttér */
+            background-color: rgb(207, 163, 248);
             min-height: 100vh;
-            position: relative;
+            padding-top: 70px; /* Navbar alatt elkerülni, hogy ráüssön a tartalom */
         }
+
         .navbar {
             background-color: transparent;
-            padding: 10px;
+            padding: 15px 20px;
             text-align: center;
-        }
-        .navbar a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #34495e;
-        }
-        .content {
-            padding: 80px 20px 20px;
-            text-align: center;
-        }
-        footer {
-            background-color:transparent;
-            color: white;
-            padding: 5px;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-        .social-icons {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: fixed;
-            bottom: 80px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
+            top: 0;
+            width: 100%;
+            z-index: 10;
         }
-        .social-icons a {
+
+        .navbar a {
             color: #34495e;
-            margin: 10px 0;
-            font-size: 24px;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: #2ecc71;
-            transform: scale(1.2);
-        }
-        .language-selector {
-            margin-top: 20px;
-            background-color: #3498db;
-            border: none;
-            color: white;
-            font-size: 16px;
             padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #2ecc71;
+        }
+
+        .language-selector {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            display: inline-block;
+            background-color: seagreen;
             border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .language-selector select {
+            border: none;
+            background-color: seagreen;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-selector select:hover {
+            background-color: seagreen;
+        }
+
+        .content {
+            padding: 50px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .cta-link {
+            background-color:seagreen;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .language-selector:hover {
-            background-color: #2980b9;
+
+        .cta-link:hover {
+            background-color:rgb(17, 84, 46);
             transform: scale(1.1);
         }
-        .language-selector select {
-            background-color: #3498db;
-            border: none;
-            color: white;
-            font-size: 16px;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
+
+        footer {
+            font-size: 14px;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color:transparent;
+            color: black;
         }
-        .language-selector select option {
-            background-color: #2980b9;
-            color: white;
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Reszponzivitás */
+        @media (max-width: 768px) {
+            .navbar a {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .cta-link {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+
+            .content h1 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .cta-link {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
@@ -102,11 +175,6 @@
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
         <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
-    </div>
-
-    <div class="content">
-        <h1 id="welcome-title">Üdvözlünk a Life Coach Weboldalon</h1>
-        <p id="welcome-text">Segítek elérni a céljaidat és jobban alakítani az életed!</p>
         <div class="language-selector">
             <select id="language-select" onchange="changeLanguage()">
                 <option value="hu">Magyar</option>
@@ -115,39 +183,59 @@
         </div>
     </div>
 
-    <div class="social-icons">
-        <a href="https://facebook.com" target="_blank">📘</a>
-        <a href="https://instagram.com" target="_blank">📷</a>
-        <a href="https://tiktok.com" target="_blank">🎵</a>
+    <div class="content">
+        <h1 id="welcome-title">Fedezd fel a Coaching Világát: Az Életed Átalakításának Első Lépése</h1>
+        <p id="welcome-text">Mint Life Coach, a célod az, hogy segíts az embereknek felfedezni rejtett képességeiket, megerősítsd őket a céljaik elérésében, és támogasd őket a személyes fejlődésük során. Az általunk készített weboldal sablon lehetőséget ad arra, hogy professzionálisan és vonzó módon jelenítsd meg szolgáltatásaidat. A sablonunk könnyen testreszabható, reszponzív és SEO-optimalizált, így bárhonnan elérhetővé válik a klienseid számára. Az animált elemek és a modern dizájn segítenek abban, hogy már az első pillanattól fogva megbízhatónak és szakértőnek érezzék a weboldalad, miközben fokozzák az élményt a látogatók számára. Kezdd el ma az online karriered építését!</p>
+        
+        <div class="cta-button">
+            <a href="buy-template.html" class="cta-link" id="cta-button">Kezd a változást ma!</a>
+        </div>
     </div>
 
     <footer>
-        <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-select").value;
+            
             if (language == "en") {
-                document.getElementById("welcome-title").textContent = "Welcome to the Life Coach Website";
-                document.getElementById("welcome-text").textContent = "I help you achieve your goals and improve your life!";
+                // Header
                 document.getElementById("nav-home").textContent = "Home";
                 document.getElementById("nav-about").textContent = "About";
                 document.getElementById("nav-services").textContent = "Services";
                 document.getElementById("nav-contact").textContent = "Contact";
-                document.getElementById("footer-text").textContent = "&copy; 2025 VstyleDesign | All rights reserved.";
+                
+                // Main content
+                document.getElementById("welcome-title").textContent = "Discover the World of Coaching: Your First Step Towards Transforming Your Life";
+                document.getElementById("welcome-text").textContent = "As a Life Coach, your goal is to help people discover their hidden potential, empower them to achieve their goals, and support them in their personal growth. The website template we’ve created gives you the opportunity to present your services in a professional and attractive way. It is easily customizable, responsive, and SEO-optimized, ensuring that it is accessible to your clients from anywhere. The animated elements and modern design will instantly convey trust and expertise, while enhancing the experience for visitors. Start building your online career today!";
+                
+                // CTA button
+                document.getElementById("cta-button").textContent = "Buy the Template Now!";
+                
+                // Footer
+                document.getElementById("footer-text").textContent = "© 2025 VstyleDesign | All rights reserved.";
             } else {
-                document.getElementById("welcome-title").textContent = "Üdvözlünk a Life Coach Weboldalon";
-                document.getElementById("welcome-text").textContent = "Segítek elérni a céljaidat és jobban alakítani az életed!";
+                // Header
                 document.getElementById("nav-home").textContent = "Főoldal";
                 document.getElementById("nav-about").textContent = "Rólam";
                 document.getElementById("nav-services").textContent = "Szolgáltatások";
                 document.getElementById("nav-contact").textContent = "Kapcsolat";
-                document.getElementById("footer-text").textContent = "&copy; 2025 VstyleDesign | Minden jog fenntartva.";
+                
+                // Main content
+                document.getElementById("welcome-title").textContent = "Fedezd fel a Coaching Világát: Az Életed Átalakításának Első Lépése";
+                document.getElementById("welcome-text").textContent = "Mint Life Coach, a célod az, hogy segíts az embereknek felfedezni rejtett képességeiket, megerősítsd őket a céljaik elérésében, és támogasd őket a személyes fejlődésük során. Az általunk készített weboldal sablon lehetőséget ad arra, hogy professzionálisan és vonzó módon jelenítsd meg szolgáltatásaidat. A sablonunk könnyen testreszabható, reszponzív és SEO-optimalizált, így bárhonnan elérhetővé válik a klienseid számára. Az animált elemek és a modern dizájn segítenek abban, hogy már az első pillanattól fogva megbízhatónak és szakértőnek érezzék a weboldalad, miközben fokozzák az élményt a látogatók számára. Kezdd el ma az online karriered építését!";
+                
+                // CTA button
+                document.getElementById("cta-button").textContent = "Vásárold meg most a sablont!";
+                
+                // Footer
+                document.getElementById("footer-text").textContent = "© 2025 VstyleDesign | Minden jog fenntartva.";
             }
         }
     </script>
 </body>
 </html>
 
-
+    
