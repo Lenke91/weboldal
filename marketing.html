@@ -13,15 +13,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="index, follow">
     <title>Affiliate Marketing Guide | Earn Passive Income Online</title>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-85RD19D4PP');
+    </script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,11 +82,9 @@
             background-color: #4CAF50;
             color: white;
         }
-
-        /* Reszponzív beállítások */
         @media (max-width: 768px) {
             header {
-                padding: 20px 15px; /* Kisebb padding */
+                padding: 20px 15px;
             }
             .language-switcher {
                 top: 10px;
@@ -93,14 +92,14 @@
             }
             .lang-btn {
                 padding: 3px 6px;
-                font-size: 12px; /* Kisebb gombok mobilon */
+                font-size: 12px;
             }
             .container {
-                padding: 15px; /* Kisebb padding mobilon */
+                padding: 15px;
                 margin: 20px auto;
             }
             .cta-button {
-                padding: 8px 16px; /* Kisebb CTA gomb mobilon */
+                padding: 8px 16px;
             }
         }
     </style>
@@ -121,31 +120,31 @@
 <div class="container">
     <section id="affiliate-marketing">
         <h2 id="section-title">What is Affiliate Marketing?</h2>
-        <p id="section-description">Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate. It's a flexible and low-risk way to build an online business without the need for creating your own products.</p>
+        <p id="section-description">Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate.</p>
         <a href="#" id="cta-button" class="cta-button">Get Started Now!</a>
     </section>
 </div>
 
 <footer>
+    <p id="rights-reserved">&copy; <span id="current-year"></span> VSTYLEDESIGN. All rights reserved.</p>
+</footer>
 
-       <p id="rights-reserved">&copy; 2025 VSTYLEDESIGN. All rights reserved.</p>
-    </footer>     
 <script>
     const translations = {
         en: {
             headerText: 'Affiliate Marketing Guide',
             headerDescription: 'Start earning online today with Affiliate Marketing!',
             sectionTitle: 'What is Affiliate Marketing?',
-            sectionDescription: 'Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate. It\'s a flexible and low-risk way to build an online business without the need for creating your own products.',
-            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Practice Project. All rights reserved.',
+            sectionDescription: 'Affiliate marketing allows you to promote products or services from other companies and earn a commission.',
+            footerText: '&copy; <span id="current-year"></span> VSTYLEDESIGN. All rights reserved.',
             ctaButtonText: 'Get Started Now!'
         },
         hu: {
             headerText: 'Affiliate Marketing Útmutató',
             headerDescription: 'Kezdd el a pénzkeresést online az affiliate marketinggel már ma!',
             sectionTitle: 'Mi az az Affiliate Marketing?',
-            sectionDescription: 'Az affiliate marketing egy népszerű passzív jövedelemforrás, amely lehetőséget biztosít arra, hogy más cégek termékeit vagy szolgáltatásait népszerűsítsük, és jutalékot keressünk minden egyes eladás után. Egy rugalmas és alacsony kockázatú módja az online üzlet építésének anélkül, hogy saját termékeket kellene készítenünk.',
-            footerText: '&copy; <span id="current-year"></span> Affiliate Marketing Projekt. Minden jog fenntartva.',
+            sectionDescription: 'Az affiliate marketing lehetőséget biztosít más cégek termékeinek népszerűsítésére, jutalékért.',
+            footerText: '&copy; <span id="current-year"></span> VSTYLEDESIGN. Minden jog fenntartva.',
             ctaButtonText: 'Kezdd el most!'
         }
     };
@@ -155,24 +154,25 @@
         document.getElementById('header-description').innerText = translations[lang].headerDescription;
         document.getElementById('section-title').innerText = translations[lang].sectionTitle;
         document.getElementById('section-description').innerText = translations[lang].sectionDescription;
-        document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+        document.getElementById('rights-reserved').innerHTML = translations[lang].footerText;
         document.getElementById('cta-button').innerText = translations[lang].ctaButtonText;
-        setCurrentYear(); // Update the current year dynamically
+        setCurrentYear();
     }
 
     function setCurrentYear() {
-        const currentYear = new Date().getFullYear();
-        document.getElementById('current-year').innerText = currentYear;
+        const year = new Date().getFullYear();
+        document.getElementById('current-year').innerText = year;
     }
 
     document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
     document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
-
-    setCurrentYear(); // Set the year on page load
+    setCurrentYear();
 </script>
 
 </body>
 </html>
+
+
 
          
       
