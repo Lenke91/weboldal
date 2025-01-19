@@ -3,108 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Weboldal sablon Life Coachok számára, reszponzív, SEO-optimalizált és testreszabható.">
-    <meta name="keywords" content="Life Coach, Coaching, Weboldal sablon, SEO, reszponzív, személyes fejlődés, animáció">
+    <meta name="description" content="Life Coach weboldal sablon - Reszponzív, SEO-optimalizált, animált, és többnyelvű.">
+    <meta name="keywords" content="Life Coach, weboldal sablon, SEO, reszponzív, animáció, többnyelvű">
     <meta name="author" content="VstyleDesign">
-    <title>Life Coach Weboldal Sablon</title>
+    <title>Life Coach Weboldal</title>
     <style>
-        /* Alap CSS */
-        body {
-            font-family: Arial, sans-serif;
+        /* Alap stílusok */
+        * {
             margin: 0;
             padding: 0;
-            background-color:blueviolet;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: Arial, sans-serif;
             color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: #4CAF50;
-            padding: 10px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
-        #site-title {
-            font-size: 24px;
+        header h1 {
+            font-size: 28px;
+            color: #2575fc;
+            animation: fadeInDown 1.5s ease;
         }
 
-        /* Navbar a bal oldalon */
         nav {
-            display: flex;
-            justify-content: flex-start;
-            gap: 12px;
-            margin-left: 15px;
+            margin: 20px 0;
+            text-align: center;
+            animation: fadeInUp 1.5s ease;
         }
 
         nav a {
-            color: black;
-            padding: 12px 20px;
+            margin: 0 15px;
             text-decoration: none;
-            text-align: center;
+            color: #fff;
+            padding: 8px 12px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #2575fc;
         }
 
-        /* Nyelvváltó gomb */
         .language-selector {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 5px 10px;
-            font-size: 14px;
+            margin-top: 15px;
+            padding: 10px;
+            background: #fff;
+            color: #2575fc;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
-        }
-
-        .language-selector option {
-            padding: 5px;
         }
 
         .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 900px;
+            animation: fadeInUp 2s ease;
         }
 
         .cta {
-            text-align: center;
-            margin: 40px 0;
+            margin: 30px 0;
         }
 
         .cta button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 25px;
+            padding: 15px 30px;
             font-size: 16px;
+            background-color: #2575fc;
+            color: white;
             border: none;
+            border-radius: 4px;
             cursor: pointer;
+            transition: transform 0.2s ease;
         }
 
         .cta button:hover {
-            background-color: #45a049;
+            transform: scale(1.05);
+            background-color: #6a11cb;
         }
 
         footer {
-            background-color:transparent;
-            color: black;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
             text-align: center;
-            padding: 5px;
-            position: center;
-            width: 100%;
-            bottom: 0;
+            animation: fadeInUp 2.5s ease;
         }
 
-        /* Reszponzív design */
+        /* Animációk */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
             nav {
+                display: flex;
                 flex-direction: column;
-                align-items: center;
             }
-            .language-selector {
-                margin-top: 10px;
+
+            nav a {
+                margin: 10px 0;
             }
         }
     </style>
@@ -119,58 +153,73 @@
     </header>
 
     <nav>
-        <a href="thome.html" id="nav-home">Home</a>
+        <a href="thome.html" id="nav-home">Főoldal</a>
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
         <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
     </nav>
 
     <div class="container">
-        <section id="welcome">
-            <h2 id="welcome-title">Fedezd fel a Coaching Világát: Az Életed Átalakításának Első Lépése</h2>
-            <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétet szeretnének építeni. A sablon segít bemutatni a coaching szolgáltatásokat, és a látogatók számára vonzó, professzionális megjelenést biztosít. Reszponzív, SEO-optimalizált, és könnyen testreszabható, így tökéletesen alkalmazkodik bármilyen eszközhöz és segít a keresőmotorokban való jobb szereplésben. Animált elemekkel és modern dizájnnal biztosíthatod, hogy az érdeklődők már az első pillanattól kezdve megbízhatónak találják a szolgáltatásodat. Kezdd el most az online jelenléted építését!</p>
-        </section>
-
+        <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
+        <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
         <div class="cta">
-            <button id="cta-button">Kezd a változást ma!</button>
+            <button id="cta-button">Kezdd el ma!</button>
         </div>
-
-        <footer>
-            <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
-        </footer>
     </div>
 
-    <script>
-        // Nyelvváltó funkció
-        document.getElementById("language-selector").addEventListener("change", function() {
-            var selectedLang = this.value;
-            changeLanguage(selectedLang);
-        });
+    <footer>
+        <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
+    </footer>
 
-        function changeLanguage(lang) {
-            if (lang === "en") {
-                // Angol szövegek
-                document.getElementById("site-title").textContent = "Life Coach Website";
-                document.getElementById("nav-about").textContent = "About";
-                document.getElementById("nav-services").textContent = "Services";
-                document.getElementById("nav-contact").textContent = "Contact";
-                document.getElementById("welcome-title").textContent = "Discover the World of Coaching: The First Step to Transforming Your Life";
-                document.getElementById("welcome-text").textContent = "This template is perfect for Life Coaches looking to build their online presence. It helps showcase coaching services and provides a professional, attractive look for visitors. Responsive, SEO-optimized, and easily customizable, this template adapts to any device and helps improve search engine rankings. Animated elements and modern design ensure that potential clients perceive your services as reliable from the first moment. Start building your online presence today!";
-                document.getElementById("cta-button").textContent = "Start the change today!";
-                document.getElementById("footer-text").textContent = "© 2025 VstyleDesign | All rights reserved.";
-            } else {
-                // Magyar szövegek
-                document.getElementById("site-title").textContent = "Life Coach Weboldal";
-                document.getElementById("nav-about").textContent = "Rólam";
-                document.getElementById("nav-services").textContent = "Szolgáltatások";
-                document.getElementById("nav-contact").textContent = "Kapcsolat";
-                document.getElementById("welcome-title").textContent = "Fedezd fel a Coaching Világát: Az Életed Átalakításának Első Lépése";
-                document.getElementById("welcome-text").textContent = "Ez a sablon ideális Life Coachok számára, akik online jelenlétet szeretnének építeni. A sablon segít bemutatni a coaching szolgáltatásokat, és a látogatók számára vonzó, professzionális megjelenést biztosít. Reszponzív, SEO-optimalizált, és könnyen testreszabható, így tökéletesen alkalmazkodik bármilyen eszközhöz és segít a keresőmotorokban való jobb szereplésben. Animált elemekkel és modern dizájnnal biztosíthatod, hogy az érdeklődők már az első pillanattól kezdve megbízhatónak találják a szolgáltatásodat. Kezdd el most az online jelenléted építését!";
-                document.getElementById("cta-button").textContent = "Kezd a változást ma!";
-                document.getElementById("footer-text").textContent = "© 2025 VstyleDesign | Minden jog fenntartva.";
+    <script>
+        // Nyelvváltás
+        const translations = {
+            en: {
+                siteTitle: "Life Coach Website",
+                navHome: "Home",
+                navAbout: "About",
+                navServices: "Services",
+                navContact: "Contact",
+                welcomeTitle: "Discover the World of Coaching",
+                welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
+                ctaButton: "Start Today!",
+                footerText: "© 2025 VstyleDesign | All rights reserved."
+            },
+            hu: {
+                siteTitle: "Life Coach Weboldal",
+                navHome: "Főoldal",
+                navAbout: "Rólam",
+                navServices: "Szolgáltatások",
+                navContact: "Kapcsolat",
+                welcomeTitle: "Fedezd fel a Coaching Világát",
+                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
+                ctaButton: "Kezdd el ma!",
+                footerText: "© 2025 VstyleDesign | Minden jog fenntartva."
             }
-        }
+        };
+
+        const languageSelector = document.getElementById("language-selector");
+        languageSelector.addEventListener("change", () => {
+            const selectedLang = languageSelector.value;
+            const content = translations[selectedLang];
+            document.getElementById("site-title").textContent = content.siteTitle;
+            document.getElementById("nav-home").textContent = content.navHome;
+            document.getElementById("nav-about").textContent = content.navAbout;
+            document.getElementById("nav-services").textContent = content.navServices;
+            document.getElementById("nav-contact").textContent = content.navContact;
+            document.getElementById("welcome-title").textContent = content.welcomeTitle;
+            document.getElementById("welcome-text").textContent = content.welcomeText;
+            document.getElementById("cta-button").textContent = content.ctaButton;
+            document.getElementById("footer-text").textContent = content.footerText;
+        });
     </script>
 </body>
 </html>
-  
+
+      
+    
+
+   
+      
+        
+
