@@ -36,9 +36,7 @@
             gap: 30px;
             flex-wrap: wrap;
             animation: fadeIn 2s ease-in-out;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
 
         .testimonial {
@@ -93,8 +91,13 @@
         }
 
         @media (max-width: 1024px) {
-            h1 {
-                font-size: 2rem;
+            .testimonial-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .testimonial {
+                width: 45%;
             }
         }
 
@@ -105,27 +108,18 @@
             }
 
             .testimonial {
-                width: 90%;
-                margin: 10px 0;
-            }
-
-            .lang-toggle {
-                font-size: 0.9rem;
-                padding: 8px 15px;
+                width: 80%;
+                margin-bottom: 20px;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.5rem;
-            }
-
-            .testimonial-container {
-                padding: 15px;
+                font-size: 1.8rem;
             }
 
             .testimonial {
-                width: 100%;
+                width: 90%;
             }
         }
 
@@ -193,3 +187,8 @@
 
 </body>
 </html>
+
+
+   
+   
+
