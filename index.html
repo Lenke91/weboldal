@@ -12,15 +12,6 @@
     <meta property="og:url" content="https://www.vstyledesign.com">
     <meta property="og:type" content="website">
     <title>Home - Web Developer & Entrepreneur</title>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
     <style>
         * {
             margin: 0;
@@ -38,7 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem;
+            padding: 0.05rem;
             background-color: #333;
         }
 
@@ -48,12 +39,13 @@
         }
 
         .navbar-links li {
-            margin: 0 2rem;
+            margin: 2rem 6rem;
         }
 
         .navbar-links a {
             color: white;
             text-decoration: none;
+            margin-bottom: 4px;
         }
 
         .language-switcher a {
@@ -98,13 +90,25 @@
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUp {
-            0% { transform: translateY(30px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .footer {
@@ -118,7 +122,7 @@
         }
 
         .footer .social-icons {
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .footer .social-icons a {
@@ -136,6 +140,10 @@
 
             .navbar-links li {
                 margin: 0 0.5rem;
+            }
+
+            .navbar-links a {
+                padding: 0.5rem 1rem;
             }
 
             .footer {
@@ -160,23 +168,23 @@
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about me.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="about me.html" class="about-link">About</a></li>
+                <li><a href="services.html" class="services-link">Services</a></li>
+                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
-            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> | 
+            <a href="#" id="en-btn" class="lang-btn active-lang">EN</a> |
             <a href="#" id="hu-btn" class="lang-btn">HU</a>
         </div>
     </header>
 
-    <section class="hero-section">
+    <section id="home" class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
             <p>
-                Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online.
+                Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. <strong>See what I've created!</strong>
             </p>
             <a href="portfolio.html" class="explore-portfolio-btn">Explore My Portfolio</a>
         </div>
@@ -188,7 +196,7 @@
             <a href="https://www.instagram.com/lenkevarro/" target="_blank">Instagram</a>
             <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
         </div>
-        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <script>
@@ -202,27 +210,26 @@
 
         function switchLanguage(lang) {
             if (lang === 'en') {
+                document.querySelector('.hero-content p').textContent = "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. See what I've created!";
                 document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
-                document.querySelector('.hero-content p').textContent = "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online.";
+                document.querySelector('.home-link').textContent = "Home";
+                document.querySelector('.about-link').textContent = "About";
+                document.querySelector('.services-link').textContent = "Services";
+                document.querySelector('.portfolio-link').textContent = "Portfolio";
+                document.querySelector('.explore-portfolio-btn').textContent = "Explore My Portfolio";
+                document.getElementById('footer-text').textContent = "© 2025 VstyleDesign. All rights reserved.";
             } else if (lang === 'hu') {
+                document.querySelector('.hero-content p').textContent = "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében. Nézd meg, amit készítettem!";
                 document.querySelector('.hero-content h1').textContent = "Üdvözöllek a Weboldalamon";
-                document.querySelector('.hero-content p').textContent = "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében.";
+                document.querySelector('.home-link').textContent = "Kezdőlap";
+                document.querySelector('.about-link').textContent = "Rólam";
+                document.querySelector('.services-link').textContent = "Szolgáltatások";
+                document.querySelector('.portfolio-link').textContent = "Portfólió";
+                document.querySelector('.explore-portfolio-btn').textContent = "Nézd meg a portfóliómat";
+                document.getElementById('footer-text').textContent = "© 2025 VstyleDesign. Minden jog fenntartva.";
             }
         }
     </script>
 </body>
 </html>
 
-
-       
-       
-
-         
- 
-
-     
-        
-        
-       
-           
-           
