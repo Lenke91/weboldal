@@ -38,7 +38,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding:0.05rem;
+            padding: 0.5rem;
             background-color: #333;
         }
 
@@ -48,13 +48,12 @@
         }
 
         .navbar-links li {
-            margin: 2rem  6rem;
+            margin: 0 2rem;
         }
 
         .navbar-links a {
             color: white;
             text-decoration: none;
-            margin-bottom:4px;
         }
 
         .language-switcher a {
@@ -119,7 +118,7 @@
         }
 
         .footer .social-icons {
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         .footer .social-icons a {
@@ -128,7 +127,6 @@
             text-decoration: none;
         }
 
-        /* Mobil nézetre vonatkozó módosítások */
         @media (max-width: 768px) {
             .navbar-links ul {
                 flex-direction: column;
@@ -138,10 +136,6 @@
 
             .navbar-links li {
                 margin: 0 0.5rem;
-            }
-
-            .navbar-links a {
-                padding: 0.5rem 1rem;
             }
 
             .footer {
@@ -163,14 +157,13 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <header class="navbar">
         <nav class="navbar-links">
             <ul>
-                <li><a href="index.html" class="home-link">Home</a></li>
-                <li><a href="about me.html" class="about-link">About</a></li>
-                <li><a href="services.html" class="services-link">Services</a></li>
-                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about me.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
         <div class="language-switcher">
@@ -179,30 +172,26 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <section class="hero-section">
         <div class="hero-content">
             <h1>Welcome to My Website</h1>
             <p>
-                Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. <strong>See what I've created!</strong>
+                Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online.
             </p>
-            <!-- Call to Action gomb -->
             <a href="portfolio.html" class="explore-portfolio-btn">Explore My Portfolio</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="social-icons">
             <a href="https://www.facebook.com/lenke.varo.1/" target="_blank">Facebook</a>
             <a href="https://www.instagram.com/lenkevarro/" target="_blank">Instagram</a>
             <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
         </div>
-        <p id="footer-text">&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
+        <p>&copy; 2025 VstyleDesign | Minden jog fenntartva.</p>
     </footer>
 
     <script>
-        // Language switch functionality
         document.getElementById('en-btn').addEventListener('click', () => {
             switchLanguage('en');
         });
@@ -211,31 +200,25 @@
             switchLanguage('hu');
         });
 
-        // Switch language content
         function switchLanguage(lang) {
             if (lang === 'en') {
-                document.querySelector('.hero-content p').textContent = "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. See what I've created!";
                 document.querySelector('.hero-content h1').textContent = "Welcome to My Website";
-                document.querySelector('.home-link').textContent = "Home";
-                document.querySelector('.about-link').textContent = "About";
-                document.querySelector('.services-link').textContent = "Services";
-                document.querySelector('.portfolio-link').textContent = "Portfolio";
-                document.querySelector('.explore-portfolio-btn').textContent = "Explore My Portfolio";
-                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. All rights reserved.";
+                document.querySelector('.hero-content p').textContent = "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online.";
             } else if (lang === 'hu') {
-                document.querySelector('.hero-content p').textContent = "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében. Nézd meg, amit készítettem!";
                 document.querySelector('.hero-content h1').textContent = "Üdvözöllek a Weboldalamon";
-                document.querySelector('.home-link').textContent = "Kezdőlap";
-                document.querySelector('.about-link').textContent = "Rólam";
-                document.querySelector('.services-link').textContent = "Szolgáltatások";
-                document.querySelector('.portfolio-link').textContent = "Portfólió";
-                document.querySelector('.explore-portfolio-btn').textContent = "Nézd meg a portfóliómat";
-                document.getElementById('rights-reserved').textContent = "&copy; 2025 VSTYLEDESIGN. Minden jog fenntartva.";
+                document.querySelector('.hero-content p').textContent = "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében.";
             }
         }
     </script>
 </body>
 </html>
+
+
+       
+       
+
+         
+ 
 
      
         
