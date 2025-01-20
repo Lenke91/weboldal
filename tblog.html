@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Life Coach blog, ahol tanácsokat találhatsz a személyes fejlődésről, életmódról és motivációról." />
+    <meta name="keywords" content="life coach, személyes fejlődés, motiváció, életmód, tanácsok, önfejlesztés, blog" />
+    <meta name="author" content="VstyleDesign" />
+    <meta property="og:title" content="Life Coach Blog" />
+    <meta property="og:description" content="Olvass hasznos tanácsokat és motiváló történeteket a Life Coach blogon." />
+    <meta property="og:image" content="https://vstyledesign.com/images/blog-thumbnail.jpg" />
+    <meta property="og:url" content="https://example.com/blog" />
+    <meta name="robots" content="index, follow" />
+    <title>Life Coach Blog</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background-color: #6a11cb;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 36px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .post {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .post:hover {
+            transform: scale(1.05);
+        }
+
+        .post h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #6a11cb;
+        }
+
+        .post p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .post .date {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: #6a11cb;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            color: #fcbce3;
+        }
+
+        footer {
+            background-color: #6a11cb;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                width: 100%;
+                margin: 20px auto;
+            }
+
+            .post h2 {
+                font-size: 22px;
+            }
+
+            .post p {
+                font-size: 14px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="blog-title">Life Coach Blog</h1>
+        <div>
+            <button onclick="switchLanguage('hu')">Magyar</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <div class="container" id="blog-container">
+        <div class="post" data-lang="hu">
+            <h2 id="post-title-1">Miért fontos a személyes fejlődés?</h2>
+            <p class="date">2025. január 20.</p>
+            <p id="post-content-1">Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet, és hogyan segítheted magad abban, hogy jobban érezd magad a bőrödben...</p>
+            <a href="#" class="read-more">Tovább olvasom...</a>
+        </div>
+
+        <div class="post" data-lang="hu">
+            <h2 id="post-title-2">Hogyan találj motivációt a nehéz napokon?</h2>
+            <p class="date">2025. január 15.</p>
+            <p id="post-content-2">Mindenki találkozik nehéz napokkal, de hogyan tartsuk meg a motivációnkat, amikor úgy érezzük, hogy már nem bírjuk tovább? Nézzük meg, hogyan találhatjuk meg a belső erőt a legnehezebb pillanatokban...</p>
+            <a href="#" class="read-more">Tovább olvasom...</a>
+        </div>
+
+        <div class="post" data-lang="hu">
+            <h2 id="post-title-3">A pozitív gondolkodás ereje</h2>
+            <p class="date">2025. január 10.</p>
+            <p id="post-content-3">A pozitív gondolkodás nem csak a mentális jólétünket javítja, hanem segíthet abban is, hogy sikeresebbek legyünk életünk minden területén. Hogyan alkalmazhatjuk a pozitív gondolkodást a mindennapi életben...</p>
+            <a href="#" class="read-more">Tovább olvasom...</a>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text">&copy; 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
+    </footer>
+
+    <script>
+        const blogPosts = document.querySelectorAll('.post');
+        
+        function switchLanguage(lang) {
+            blogPosts.forEach(post => {
+                const postLang = post.getAttribute('data-lang');
+                if (postLang !== lang) {
+                    post.style.display = 'none';
+                } else {
+                    post.style.display = 'block';
+                }
+            });
+
+            if (lang === 'en') {
+                document.title = 'Life Coach Blog';
+                document.querySelector('meta[name="description"]').setAttribute('content', 'Read useful advice and motivational stories on the Life Coach blog.');
+                document.querySelector('meta[name="keywords"]').setAttribute('content', 'life coach, personal growth, motivation, lifestyle, advice, self-development, blog');
+                // Update content to English
+                document.getElementById('blog-title').textContent = 'Life Coach Blog';
+                document.getElementById('post-title-1').textContent = 'Why Personal Growth is Important';
+                document.getElementById('post-content-1').textContent = 'Personal growth is the key to advancing in life. In this article, we’ll talk about how to become the best version of yourself and how to help yourself feel better in your own skin...';
+                document.getElementById('post-title-2').textContent = 'How to Find Motivation on Difficult Days';
+                document.getElementById('post-content-2').textContent = 'Everyone encounters tough days, but how do we keep our motivation when we feel like we can’t go on? Let’s explore how to find inner strength during the toughest moments...';
+                document.getElementById('post-title-3').textContent = 'The Power of Positive Thinking';
+                document.getElementById('post-content-3').textContent = 'Positive thinking not only improves our mental well-being, but it can also help us succeed in every area of our lives. How can we apply positive thinking in our daily lives...';
+                document.getElementById('footer-text').innerHTML = '&copy; 2025 VstyleDesign | This site is available under the MIT License.';
+            } else {
+                document.title = 'Life Coach Blog';
+                document.querySelector('meta[name="description"]').setAttribute('content', 'Life Coach blog, ahol tanácsokat találhatsz a személyes fejlődésről, életmódról és motivációról.');
+                document.querySelector('meta[name="keywords"]').setAttribute('content', 'life coach, személyes fejlődés, motiváció, életmód, tanácsok, önfejlesztés, blog');
+                // Update content to Hungarian
+                document.getElementById('blog-title').textContent = 'Life Coach Blog';
+                document.getElementById('post-title-1').textContent = 'Miért fontos a személyes fejlődés?';
+                document.getElementById('post-content-1').textContent = 'Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet, és hogyan segítheted magad abban, hogy jobban érezd magad a bőrödben...';
+                document.getElementById('post-title-2').textContent = 'Hogyan találj motivációt a nehéz napokon?';
+                document.getElementById('post-content-2').textContent = 'Mindenki találkozik nehéz napokkal, de hogyan tartsuk meg a motivációnkat, amikor úgy érezzük, hogy már nem bírjuk tovább? Nézzük meg, hogyan találhatjuk meg a belső erőt a legnehezebb pillanatokban...';
+                document.getElementById('post-title-3').textContent = 'A pozitív gondolkodás ereje';
+                document.getElementById('post-content-3').textContent = 'A pozitív gondolkodás nem csak a mentális jólétünket javítja, hanem segíthet abban is, hogy sikeresebbek legyünk életünk minden területén. Hogyan alkalmazhatjuk a pozitív gondolkodást a mindennapi életben...';
+                document.getElementById('footer-text').innerHTML = '&copy; 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.';
+            }
+        }
+    </script>
+</body>
+</html>
