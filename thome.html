@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kapcsolat oldal - Life Coach weboldal sablon, amely reszponzív, SEO-optimalizált és animált.">
-    <meta name="keywords" content="life coach, kapcsolat, weboldal sablon, SEO, animációk, reszponzív">
-    <meta name="author" content="vstyledesign">
-    <meta property="og:title" content="Kapcsolat - Life Coach Weboldal Sablon">
-    <meta property="og:description" content="Kapcsolatba léphetsz velem, ha szeretnél elkezdeni dolgozni a személyes fejlődéseden.">
-    <meta property="og:image" content="https://example.com/your-image.jpg">
-    <meta property="og:url" content="https://example.com/contact">
-    <title>Kapcsolat - Life Coach Weboldal Sablon</title>
+    <meta name="description" content="SEO-optimalizált Life Coach weboldal sablon. Reszponzív, animált, és többnyelvű. Tökéletes online jelenlét kialakításához.">
+    <meta name="keywords" content="Life Coach, weboldal sablon, SEO, reszponzív, animáció, többnyelvű, coaching, online tanácsadás">
+    <meta name="author" content="VstyleDesign">
+    <meta property="og:title" content="Life Coach Weboldal Sabon">
+    <meta property="og:description" content="SEO-optimalizált és animált Life Coach weboldal sablon. Reszponzív és könnyen testreszabható, hogy segítse a coaching üzlet növekedését.">
+    <meta property="og:image" content="link_a_képedhez.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Life Coach Weboldal Sabon">
+    <meta name="twitter:description" content="Tökéletes sablon Life Coachoknak. SEO-optimalizált, reszponzív és többnyelvű.">
+    <meta name="twitter:image" content="link_a_képedhez.jpg">
+    <title>Life Coach Weboldal Sabon</title>
     <style>
         * {
             margin: 0;
@@ -18,160 +22,229 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: #f4f4f9;
+            height: 100%;
+            margin-bottom: 60px;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #8e44ad;
-            color: #fff;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: rgba(142, 68, 173, 0.8);
-            padding: 20px 10px;
-            position: fixed;
-            width: 100%;
+            background-color: #2575fc;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
             top: 0;
-            left: 0;
-            backdrop-filter: blur(10px);
             z-index: 10;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: white;
         }
 
         header h1 {
-            font-size: 32px;
-            margin-left: 20px;
+            font-size: 28px;
+            font-weight: 700;
+            animation: fadeInDown 1.5s ease;
         }
 
-        .language-switcher {
-            margin-right: 20px;
+        nav {
+            margin: 20px 0;
+            text-align: center;
+            animation: fadeInUp 1.5s ease;
         }
 
-        .language-switcher button {
-            background-color: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 8px 16px;
-            margin: 0 5px;
-            border-radius: 5px;
-            cursor: pointer;
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
             transition: background-color 0.3s ease;
         }
 
-        .language-switcher button:hover {
-            background-color: #7a3b8c;
+        nav a:hover {
+            background-color: #f1c40f;
         }
 
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding-top: 120px;
-        }
-
-        .contact-box {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 500px;
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        .contact-box h2 {
-            color: #2c3e50;
-        }
-
-        .contact-box input, .contact-box textarea {
-            width: 100%;
+        .language-selector {
+            margin-top: 15px;
             padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .contact-box button {
-            width: 100%;
-            padding: 10px;
+            background: #fff;
+            color: #2575fc;
             border: none;
-            background-color: #8e44ad;
-            color: white;
-            font-size: 18px;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        .contact-box button:hover {
-            background-color: #7a3b8c;
+        .container {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 900px;
+            animation: fadeInUp 2s ease;
+        }
+
+        .cta {
+            margin: 30px 0;
+        }
+
+        .cta button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .cta button:hover {
+            transform: scale(1.05);
+            background-color: #6a11cb;
         }
 
         footer {
-            background-color: transparent;
+            background-color: #2575fc;
             color: white;
             padding: 10px;
             text-align: center;
+            animation: fadeInUp 2.5s ease;
             position: fixed;
-            width: 100%;
             bottom: 0;
-            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        /* Animációk */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .cta button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* SEO és reszponzív optimalizálás */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1 id="page-title">Kapcsolat</h1>
-        <div class="language-switcher">
-            <button onclick="switchLanguage('hu')">HU</button>
-            <button onclick="switchLanguage('en')">EN</button>
-        </div>
+        <h1 id="site-title">Life Coach Weboldal</h1>
+        <select id="language-selector" class="language-selector">
+            <option value="hu">Magyar</option>
+            <option value="en">English</option>
+        </select>
     </header>
 
-    <div class="contact-container">
-        <div class="contact-box">
-            <h2 id="contact-title">Lépj kapcsolatba velem!</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Neved" required>
-                <input type="email" id="email" placeholder="Email címed" required>
-                <textarea id="message" placeholder="Üzeneted" rows="4" required></textarea>
-                <button type="submit" id="submit-btn">Küldés</button>
-            </form>
+    <nav>
+        <a href="thome.html" id="nav-home">Főoldal</a>
+        <a href="tabout.html" id="nav-about">Rólam</a>
+        <a href="tservices.html" id="nav-services">Szolgáltatások</a>
+        <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
+    </nav>
+
+    <div class="container">
+        <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
+        <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
+        <div class="cta">
+            <button id="cta-button">Kezdd el ma!</button>
         </div>
     </div>
 
-    <p id="footer-text" style="color: white; text-align: center;">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+    <footer>
+        <p id="footer-text">© 2025 VstyleDesign | Minden jog fenntartva.</p>
+    </footer>
 
     <script>
-        function switchLanguage(language) {
-            if (language === 'en') {
-                document.getElementById('page-title').innerText = 'Contact';
-                document.getElementById('contact-title').innerText = 'Get in Touch!';
-                document.getElementById('name').placeholder = 'Your Name';
-                document.getElementById('email').placeholder = 'Your Email';
-                document.getElementById('message').placeholder = 'Your Message';
-                document.getElementById('submit-btn').innerText = 'Send';
-                document.getElementById('footer-text').innerHTML = '&copy; 2025 VstyleDesign | This site is licensed under the MIT License.';
-            } else {
-                document.getElementById('page-title').innerText = 'Kapcsolat';
-                document.getElementById('contact-title').innerText = 'Lépj kapcsolatba velem!';
-                document.getElementById('name').placeholder = 'Neved';
-                document.getElementById('email').placeholder = 'Email címed';
-                document.getElementById('message').placeholder = 'Üzeneted';
-                document.getElementById('submit-btn').innerText = 'Küldés';
-                document.getElementById('footer-text').innerHTML = '&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.';
+        // Nyelvváltás
+        const translations = {
+            en: {
+                siteTitle: "Life Coach Website",
+                navHome: "Home",
+                navAbout: "About",
+                navServices: "Services",
+                navContact: "Contact",
+                welcomeTitle: "Discover the World of Coaching",
+                welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
+                ctaButton: "Start Today!",
+                footerText: "© 2025 VstyleDesign | All rights reserved."
+            },
+            hu: {
+                siteTitle: "Életmódtanácsadó Weboldal",
+                navHome: "Főoldal",
+                navAbout: "Rólam",
+                navServices: "Szolgáltatások",
+                navContact: "Kapcsolat",
+                welcomeTitle: "Fedezd fel a Coaching Világát",
+                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
+                ctaButton: "Kezdd el ma!",
+                footerText: "© 2025 VstyleDesign | Minden jog fenntartva."
             }
-        }
-    </script>
+        };
 
+        const languageSelector = document.getElementById("language-selector");
+        languageSelector.addEventListener("change", () => {
+            const selectedLang = languageSelector.value;
+            const content = translations[selectedLang];
+            document.getElementById("site-title").textContent = content.siteTitle;
+            document.getElementById("nav-home").textContent = content.navHome;
+            document.getElementById("nav-about").textContent = content.navAbout;
+            document.getElementById("nav-services").textContent = content.navServices;
+            document.getElementById("nav-contact").textContent = content.navContact;
+            document.getElementById("welcome-title").textContent = content.welcomeTitle;
+            document.getElementById("welcome-text").textContent = content.welcomeText;
+            document.getElementById("cta-button").textContent = content.ctaButton;
+            document.getElementById("footer-text").textContent = content.footerText;
+        });
+    </script>
 </body>
 </html>
+
+  
+       
+
+
+   
