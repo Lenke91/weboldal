@@ -49,21 +49,13 @@
             animation: fadeInDown 1s ease-out;
         }
 
-        /* Hamburger menu for mobile */
-        .menu-toggle {
-            display: none;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-
         nav {
             margin: 20px 0;
             text-align: center;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 10px; /* Csökkentett margó */
             text-decoration: none;
             color: #fff;
             padding: 8px 12px;
@@ -164,7 +156,7 @@
             }
         }
 
-        /* Reszponzív dizájn */
+        /* Reszponzív dizájn - mobil */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 24px;
@@ -180,32 +172,11 @@
 
             nav a {
                 font-size: 14px;
-                margin: 0 8px;
+                margin: 0 5px; /* Csökkentett margó */
             }
 
             .language-selector {
                 font-size: 14px;
-            }
-
-            /* Hamburger menu */
-            .menu-toggle {
-                display: block;
-            }
-
-            nav {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                margin-top: 10px;
-            }
-
-            nav.open {
-                display: flex;
-            }
-
-            nav a {
-                margin: 10px 0;
-                background-color: transparent;
             }
         }
     </style>
@@ -217,10 +188,9 @@
             <option value="hu">Magyar</option>
             <option value="en">English</option>
         </select>
-        <span class="menu-toggle" id="menu-toggle">&#9776;</span>
     </header>
 
-    <nav id="navbar">
+    <nav>
         <a href="thome.html" id="nav-home">Főoldal</a>
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
@@ -279,9 +249,6 @@
         };
 
         const languageSelector = document.getElementById("language-selector");
-        const menuToggle = document.getElementById("menu-toggle");
-        const navbar = document.getElementById("navbar");
-
         languageSelector.addEventListener("change", () => {
             const selectedLang = languageSelector.value;
             const content = translations[selectedLang];
@@ -296,19 +263,14 @@
             document.getElementById("cta-button").textContent = content.ctaButton;
             document.getElementById("footer-text").textContent = content.footerText;
         });
-
-        // Hamburger menu toggle
-        menuToggle.addEventListener("click", () => {
-            navbar.classList.toggle("open");
-        });
     </script>
 </body>
 </html>
 
+   
 
-       
-            
-        
-      
+   
+     
+  
 
          
