@@ -25,7 +25,7 @@
         html, body {
             font-family: Arial, sans-serif;
             color: #333;
-            background: levendula;
+            background: #f4f4f9;
             height: 100%;
             margin-bottom: 60px;
         }
@@ -34,16 +34,17 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
+            color: black; /* Fekete szín a tartalomhoz */
         }
 
         header {
-            background-color:transparent;
+            background-color: transparent; /* Átlátszó háttér */
             padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 10;
-            color: white;
+            color: #2575fc;
         }
 
         header h1 {
@@ -61,7 +62,7 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: white;
+            color: #2575fc;
             padding: 8px 12px;
             background-color: rgba(0, 0, 0, 0.3);
             border-radius: 4px;
@@ -110,7 +111,7 @@
         }
 
         footer {
-            background-color: transparent;
+            background-color: transparent; /* Átlátszó háttér */
             color: white;
             padding: 10px;
             text-align: center;
@@ -183,7 +184,7 @@
         <a href="thome.html" id="nav-home">Főoldal</a>
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
-        <a href="ttestimonials.html" id="nav-services">Vélemények</a>
+        <a href="ttestimonials.html" id="nav-testimonials">Vélemények</a> <!-- Javított link -->
         <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
     </nav>
 
@@ -196,16 +197,18 @@
     </div>
 
     <footer>
-       <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
+        <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
 
     <script>
+        // Nyelvváltás
         const translations = {
             en: {
                 siteTitle: "Life Coach Website",
                 navHome: "Home",
                 navAbout: "About",
                 navServices: "Services",
+                navTestimonials: "Testimonials", // Javított kulcs
                 navContact: "Contact",
                 welcomeTitle: "Discover the World of Coaching",
                 welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
@@ -217,6 +220,7 @@
                 navHome: "Főoldal",
                 navAbout: "Rólam",
                 navServices: "Szolgáltatások",
+                navTestimonials: "Vélemények", // Javított kulcs
                 navContact: "Kapcsolat",
                 welcomeTitle: "Fedezd fel a Coaching Világát",
                 welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
@@ -233,6 +237,7 @@
             document.getElementById("nav-home").textContent = content.navHome;
             document.getElementById("nav-about").textContent = content.navAbout;
             document.getElementById("nav-services").textContent = content.navServices;
+            document.getElementById("nav-testimonials").textContent = content.navTestimonials; // Javított kulcs
             document.getElementById("nav-contact").textContent = content.navContact;
             document.getElementById("welcome-title").textContent = content.welcomeTitle;
             document.getElementById("welcome-text").textContent = content.welcomeText;
@@ -243,10 +248,11 @@
 </body>
 </html>
 
-       
-       
          
-
+    
+     
+  
+             
 
 
   
