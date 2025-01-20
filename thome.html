@@ -16,6 +16,7 @@
     <meta name="twitter:image" content="link_a_képedhez.jpg">
     <title>Life Coach Weboldal Sabon</title>
     <style>
+        /* Alap stílusok */
         * {
             margin: 0;
             padding: 0;
@@ -38,7 +39,7 @@
         }
 
         header {
-            background-color: transparent; /* Átlátszó háttér */
+            background-color: transparent;
             padding: 20px;
             text-align: center;
             position: sticky;
@@ -112,7 +113,7 @@
         }
 
         footer {
-            background-color: transparent; /* Átlátszó háttér */
+            background-color: transparent;
             color: white;
             padding: 10px;
             text-align: center;
@@ -120,6 +121,32 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Közösségi média ikonok jobb oldalon */
+        .social-media-icons {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social-media-icons a {
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 50%;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-media-icons a:hover {
+            background-color: seagreen;
         }
 
         /* Animációk */
@@ -185,13 +212,13 @@
         <a href="thome.html" id="nav-home">Főoldal</a>
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
-        <a href="ttestimonials.html" id="nav-testimonials">Vélemények</a> <!-- Javított link -->
+        <a href="ttestimonials.html" id="nav-testimonials">Vélemények</a>
         <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
     </nav>
 
     <div class="container">
         <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
-        <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
+        <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni. Ha szeretnéd növelni online jelenléted és könnyen testreszabható, SEO-optimalizált sablont keresel, akkor a legjobb helyen jársz!</p>
         <div class="cta">
             <button id="cta-button">Kezdd el ma!</button>
         </div>
@@ -201,6 +228,15 @@
         <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
 
+    <!-- Közösségi média ikonok -->
+    <div class="social-media-icons">
+        <a href="https://www.facebook.com" target="_blank">F</a>
+        <a href="https://www.instagram.com" target="_blank">I</a>
+        <a href="https://www.tiktok.com" target="_blank">T</a>
+        <a href="https://twitter.com" target="_blank">T</a>
+        <a href="https://www.linkedin.com" target="_blank">L</a>
+    </div>
+
     <script>
         // Nyelvváltás
         const translations = {
@@ -209,7 +245,7 @@
                 navHome: "Home",
                 navAbout: "About",
                 navServices: "Services",
-                navTestimonials: "Testimonials", // Javított kulcs
+                navTestimonials: "Testimonials",
                 navContact: "Contact",
                 welcomeTitle: "Discover the World of Coaching",
                 welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
@@ -221,10 +257,10 @@
                 navHome: "Főoldal",
                 navAbout: "Rólam",
                 navServices: "Szolgáltatások",
-                navTestimonials: "Vélemények", // Javított kulcs
+                navTestimonials: "Vélemények",
                 navContact: "Kapcsolat",
                 welcomeTitle: "Fedezd fel a Coaching Világát",
-                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
+                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni. Ha szeretnéd növelni online jelenléted és könnyen testreszabható, SEO-optimalizált sablont keresel, akkor a legjobb helyen jársz!",
                 ctaButton: "Kezdd el ma!",
                 footerText: "© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható."
             }
@@ -238,7 +274,7 @@
             document.getElementById("nav-home").textContent = content.navHome;
             document.getElementById("nav-about").textContent = content.navAbout;
             document.getElementById("nav-services").textContent = content.navServices;
-            document.getElementById("nav-testimonials").textContent = content.navTestimonials; // Javított kulcs
+            document.getElementById("nav-testimonials").textContent = content.navTestimonials;
             document.getElementById("nav-contact").textContent = content.navContact;
             document.getElementById("welcome-title").textContent = content.welcomeTitle;
             document.getElementById("welcome-text").textContent = content.welcomeText;
@@ -248,16 +284,3 @@
     </script>
 </body>
 </html>
-
-         
-    
-     
-  
-             
-
-
-  
-       
-
-
-   
