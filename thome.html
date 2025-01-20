@@ -21,7 +21,7 @@
         html, body {
             font-family: Arial, sans-serif;
             color: #fff;
-            background-color:blueviolet;
+            background-color: blueviolet;
             margin-bottom: 60px;
             height: 100%;
         }
@@ -49,6 +49,14 @@
             animation: fadeInDown 1s ease-out;
         }
 
+        /* Hamburger menu for mobile */
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
         nav {
             margin: 20px 0;
             text-align: center;
@@ -65,7 +73,7 @@
         }
 
         nav a:hover {
-            background-color:#fcbce3;
+            background-color: #fcbce3;
         }
 
         .language-selector {
@@ -91,7 +99,7 @@
         .cta button {
             padding: 15px 30px;
             font-size: 16px;
-            background-color:#d5a6bd;
+            background-color: #d5a6bd;
             color: white;
             border: none;
             border-radius: 4px;
@@ -102,7 +110,7 @@
 
         .cta button:hover {
             transform: scale(1.05);
-            background-color:#c27ba0;
+            background-color: #c27ba0;
         }
 
         .social-icons {
@@ -178,6 +186,27 @@
             .language-selector {
                 font-size: 14px;
             }
+
+            /* Hamburger menu */
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                margin: 10px 0;
+                background-color: transparent;
+            }
         }
     </style>
 </head>
@@ -188,9 +217,10 @@
             <option value="hu">Magyar</option>
             <option value="en">English</option>
         </select>
+        <span class="menu-toggle" id="menu-toggle">&#9776;</span>
     </header>
 
-    <nav>
+    <nav id="navbar">
         <a href="thome.html" id="nav-home">Főoldal</a>
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
@@ -249,6 +279,9 @@
         };
 
         const languageSelector = document.getElementById("language-selector");
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+
         languageSelector.addEventListener("change", () => {
             const selectedLang = languageSelector.value;
             const content = translations[selectedLang];
@@ -263,17 +296,19 @@
             document.getElementById("cta-button").textContent = content.ctaButton;
             document.getElementById("footer-text").textContent = content.footerText;
         });
+
+        // Hamburger menu toggle
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("open");
+        });
     </script>
 </body>
 </html>
 
-           
-     
-    
+
        
+            
+        
       
 
- 
-      
-           
          
