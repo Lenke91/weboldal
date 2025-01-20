@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miért fontos a mentális egészség? Olvasd el részletes blogbejegyzésünket a mentális jólét megőrzéséről és a lelki egészség fontosságáról." />
+    <meta name="keywords" content="mentális egészség, jólét, stresszkezelés, önfejlesztés, lelki egyensúly" />
+    <meta name="author" content="VstyleDesign" />
+    <meta property="og:title" content="Miért fontos a mentális egészség?" />
+    <meta property="og:description" content="Olvasd el a mentális egészség fontosságáról szóló cikkünket és tudd meg, hogyan érheted el a lelki egyensúlyt!" />
+    <meta name="robots" content="index, follow" />
+    <title>Miért fontos a mentális egészség?</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#f499da ;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background-color:#b84798 ;
+            color: white;
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p { margin-bottom: 15px; }
+        .upload-section { text-align: center; margin-top: 20px; }
+        input[type="file"] {
+            display: none;
+        }
+        .upload-btn {
+            background-color:#b84798 ;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button {
+            background-color: #b84798;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hu">Miért fontos a mentális egészség?</h1>
+        <h1 class="en" style="display: none;">Why is mental health important?</h1>
+        <button onclick="switchLanguage('hu')">Magyar</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </header>
+    <div class="container">
+        <p class="hu">A mentális egészség alapvető a teljes jóllétünkhöz. A lelki egyensúly megőrzése segít abban, hogy jobban kezeljük a stresszt és a mindennapi kihívásokat.</p>
+        <p class="hu">A pozitív gondolkodás, a tudatos pihenés és a megfelelő életmód mind hozzájárulnak ahhoz, hogy mentálisan erősebbek legyünk és kiegyensúlyozottabb életet éljünk.</p>
+        <p class="en" style="display: none;">Mental health is essential for our overall well-being. Maintaining mental balance helps us better manage stress and everyday challenges.</p>
+        <p class="en" style="display: none;">Positive thinking, conscious relaxation, and a healthy lifestyle all contribute to our mental strength and help us live a more balanced life.</p>
+        <div class="upload-section">
+            <h3 class="hu">Tölts fel egy pihentető képet!</h3>
+            <h3 class="en" style="display: none;">Upload a relaxing image!</h3>
+            <label class="upload-btn" for="fileInput" id="uploadText">Kép feltöltése</label>
+            <input type="file" id="fileInput">
+        </div>
+    </div>
+    <footer>
+        <p class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+        <p class="en" style="display: none;">&copy; 2025 VstyleDesign | This site is available under the MIT license.</p>
+    </footer>
+    <script>
+        function switchLanguage(lang) {
+            const huElements = document.querySelectorAll('.hu');
+            const enElements = document.querySelectorAll('.en');
+            const headerText = document.querySelector('header h1');
+            const uploadText = document.getElementById('uploadText');
+
+            if (lang === 'en') {
+                huElements.forEach(element => element.style.display = 'none');
+                enElements.forEach(element => element.style.display = 'block');
+                headerText.innerText = 'Why is mental health important?';
+                uploadText.innerText = 'Upload a relaxing image!';
+            } else {
+                huElements.forEach(element => element.style.display = 'block');
+                enElements.forEach(element => element.style.display = 'none');
+                headerText.innerText = 'Miért fontos a mentális egészség?';
+                uploadText.innerText = 'Kép feltöltése';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fedezd fel, hogyan segíthet a life coaching a stressz kezelésében, a mentális egészség javításában és a nyugodtabb életvitel elérésében." />
+    <meta name="keywords" content="stresszkezelés, life coaching, mentális egészség, önfejlesztés, relaxáció, stressz csökkentés" />
+    <meta name="author" content="VstyleDesign" />
+    <meta property="og:title" content="Stresszkezelés Life Coachinggal" />
+    <meta property="og:description" content="Ismerd meg a stresszkezelési technikákat, amiket life coachként alkalmazhatsz a mentális egészség javítása érdekében." />
+    <meta name="robots" content="index, follow" />
+    <title>Stresszkezelés Life Coachinggal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#f499da ;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background-color:#a43885 ;
+            color: white;
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p { margin-bottom: 15px; }
+        .upload-section { text-align: center; margin-top: 20px; }
+        input[type="file"] {
+            display: none;
+        }
+        .upload-btn {
+            background-color:#b92e92;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button {
+            background-color:#9c257b ;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hu">Stresszkezelés életmódtanácsadóval</h1>
+        <h1 class="en" style="display: none;">Stress Management with Life Coaching</h1>
+        <button onclick="switchLanguage('hu')">Magyar</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </header>
+    <div class="container">
+        <p class="hu">A stressz mindenki életében jelen van, de fontos, hogy megtanuljuk kezelni. A life coaching segíthet abban, hogy felismerjük a stressz kiváltó okait, és megtaláljuk azokat a hatékony technikákat, amelyekkel csökkenthetjük a napi feszültségeket.</p>
+        <p class="hu">A coaching során beszélhetünk olyan stresszkezelési módszerekről, mint a mindfulness, légzőgyakorlatok, relaxációs technikák, és hogyan építhetünk be ezeket a mindennapjainkba.</p>
+        <p class="en" style="display: none;">Stress is present in everyone's life, but it's important to learn how to manage it. Life coaching can help identify the causes of stress and find effective techniques to reduce daily tension.</p>
+        <p class="en" style="display: none;">Through coaching, we can discuss stress management methods such as mindfulness, breathing exercises, relaxation techniques, and how to incorporate them into our daily lives.</p>
+        <div class="upload-section">
+            <h3 class="hu">Tölts fel egy képet, amely segíthet a relaxációban!</h3>
+            <h3 class="en" style="display: none;">Upload an image that can help with relaxation!</h3>
+            <label class="upload-btn" for="fileInput" id="uploadText">Kép feltöltése</label>
+            <input type="file" id="fileInput">
+        </div>
+    </div>
+    <footer>
+        <p class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+        <p class="en" style="display: none;">&copy; 2025 VstyleDesign | This site is available under the MIT license.</p>
+    </footer>
+    <script>
+        function switchLanguage(lang) {
+            const huElements = document.querySelectorAll('.hu');
+            const enElements = document.querySelectorAll('.en');
+            const headerText = document.querySelector('header h1');
+            const uploadText = document.getElementById('uploadText');
+
+            if (lang === 'en') {
+                huElements.forEach(element => element.style.display = 'none');
+                enElements.forEach(element => element.style.display = 'block');
+                headerText.innerText = 'Stress management with life coaching';
+                uploadText.innerText = 'Upload an image that can help with relaxation!';
+            } else {
+                huElements.forEach(element => element.style.display = 'block');
+                enElements.forEach(element => element.style.display = 'none');
+                headerText.innerText = 'Stresszkezelés életmódtanácsadóval';
+                uploadText.innerText = 'Kép feltöltése';
+            }
+        }
+    </script>
+</body>
+</html>
