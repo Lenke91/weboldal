@@ -25,7 +25,7 @@
         html, body {
             font-family: Arial, sans-serif;
             color: #333;
-            background: #f4f4f9;
+            background: levendula;
             height: 100%;
             margin-bottom: 60px;
         }
@@ -37,7 +37,7 @@
         }
 
         header {
-            background-color: #2575fc;
+            background-color:transparent;
             padding: 20px;
             text-align: center;
             position: sticky;
@@ -110,7 +110,7 @@
         }
 
         footer {
-            background-color: #2575fc;
+            background-color: transparent;
             color: white;
             padding: 10px;
             text-align: center;
@@ -183,7 +183,7 @@
         <a href="thome.html" id="nav-home">Főoldal</a>
         <a href="tabout.html" id="nav-about">Rólam</a>
         <a href="tservices.html" id="nav-services">Szolgáltatások</a>
-         <a href="ttestimonials.html" id="nav-services">Vélemények</a>
+        <a href="ttestimonials.html" id="nav-services">Vélemények</a>
         <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
     </nav>
 
@@ -196,58 +196,58 @@
     </div>
 
     <footer>
-       © 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.
+       <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
 
     <script>
-  <script>
-  <script>
-    // Nyelvváltás
-    const translations = {
-        en: {
-            siteTitle: "Life Coach Website",
-            navHome: "Home",
-            navAbout: "About",
-            navServices: "Services",
-            navContact: "Contact",
-            welcomeTitle: "Discover the World of Coaching",
-            welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
-            ctaButton: "Start Today!",
-            footerText: "© 2025 VstyleDesign | This site is available under the MIT License."
-        },
-        hu: {
-            siteTitle: "Életmódtanácsadó Weboldal",
-            navHome: "Főoldal",
-            navAbout: "Rólam",
-            navServices: "Szolgáltatások",
-            navContact: "Kapcsolat",
-            welcomeTitle: "Fedezd fel a Coaching Világát",
-            welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
-            ctaButton: "Kezdd el ma!",
-            footerText: "© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható."
-        }
-    };
+        const translations = {
+            en: {
+                siteTitle: "Life Coach Website",
+                navHome: "Home",
+                navAbout: "About",
+                navServices: "Services",
+                navContact: "Contact",
+                welcomeTitle: "Discover the World of Coaching",
+                welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
+                ctaButton: "Start Today!",
+                footerText: "© 2025 VstyleDesign | This site is available under the MIT License."
+            },
+            hu: {
+                siteTitle: "Életmódtanácsadó Weboldal",
+                navHome: "Főoldal",
+                navAbout: "Rólam",
+                navServices: "Szolgáltatások",
+                navContact: "Kapcsolat",
+                welcomeTitle: "Fedezd fel a Coaching Világát",
+                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
+                ctaButton: "Kezdd el ma!",
+                footerText: "© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható."
+            }
+        };
 
-    const languageSelector = document.getElementById("language-selector");
-    languageSelector.addEventListener("change", () => {
-        const selectedLang = languageSelector.value;
-        const content = translations[selectedLang];
-        document.getElementById("site-title").textContent = content.siteTitle;
-        document.getElementById("nav-home").textContent = content.navHome;
-        document.getElementById("nav-about").textContent = content.navAbout;
-        document.getElementById("nav-services").textContent = content.navServices;
-        document.getElementById("nav-contact").textContent = content.navContact;
-        document.getElementById("welcome-title").textContent = content.welcomeTitle;
-        document.getElementById("welcome-text").textContent = content.welcomeText;
-        document.getElementById("cta-button").textContent = content.ctaButton;
-        document.getElementById("footer-text").textContent = content.footerText;
-    });
-</script>
-
-
+        const languageSelector = document.getElementById("language-selector");
+        languageSelector.addEventListener("change", () => {
+            const selectedLang = languageSelector.value;
+            const content = translations[selectedLang];
+            document.getElementById("site-title").textContent = content.siteTitle;
+            document.getElementById("nav-home").textContent = content.navHome;
+            document.getElementById("nav-about").textContent = content.navAbout;
+            document.getElementById("nav-services").textContent = content.navServices;
+            document.getElementById("nav-contact").textContent = content.navContact;
+            document.getElementById("welcome-title").textContent = content.welcomeTitle;
+            document.getElementById("welcome-text").textContent = content.welcomeText;
+            document.getElementById("cta-button").textContent = content.ctaButton;
+            document.getElementById("footer-text").textContent = content.footerText;
+        });
     </script>
 </body>
 </html>
+
+       
+       
+         
+
+
 
   
        
