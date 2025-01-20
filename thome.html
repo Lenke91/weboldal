@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SEO-optimalizált Life Coach weboldal sablon. Reszponzív, animált, és többnyelvű. Tökéletes online jelenlét kialakításához.">
-    <meta name="keywords" content="Life Coach, weboldal sablon, SEO, reszponzív, animáció, többnyelvű, coaching, online tanácsadás">
-    <meta name="author" content="VstyleDesign">
-    <meta property="og:title" content="Life Coach Weboldal Sabon">
-    <meta property="og:description" content="SEO-optimalizált és animált Life Coach weboldal sablon. Reszponzív és könnyen testreszabható, hogy segítse a coaching üzlet növekedését.">
-    <meta property="og:image" content="link_a_képedhez.jpg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Life Coach Weboldal Sabon">
-    <meta name="twitter:description" content="Tökéletes sablon Life Coachoknak. SEO-optimalizált, reszponzív és többnyelvű.">
-    <meta name="twitter:image" content="link_a_képedhez.jpg">
-    <title>Life Coach Weboldal Sabon</title>
+    <meta name="description" content="Életmódtanácsadó weboldal sablon, mely segít az online jelenlét megerősítésében. SEO-optimalizált, animált és reszponzív kialakítás." />
+    <meta property="og:title" content="Életmódtanácsadó Weboldal" />
+    <meta property="og:description" content="SEO-optimalizált, animált és reszponzív Life Coach weboldal sablon, több nyelvű támogatással." />
+    <meta property="og:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
+    <meta property="og:url" content="https://vstyledesign.com" />
+    <meta name="robots" content="index, follow" />
+    <title>Life Coach Weboldal</title>
     <style>
-        /* Alap stílusok */
         * {
             margin: 0;
             padding: 0;
@@ -26,16 +20,15 @@
         html, body {
             font-family: Arial, sans-serif;
             color: #333;
-            background: blueviolet;
-            height: 100%;
+            background-color: #6a11cb;
             margin-bottom: 60px;
+            height: 100%;
         }
 
         body {
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            color: white;
         }
 
         header {
@@ -45,41 +38,40 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            color:black;
+            color: white;
         }
 
         header h1 {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
-            animation: fadeInDown 1.5s ease;
-            color:white;
+            color: white;
+            animation: fadeInDown 1s ease-out;
         }
 
         nav {
             margin: 20px 0;
             text-align: center;
-            animation: fadeInUp 1.5s ease;
         }
 
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color:blueviolet;
+            color: #fff;
             padding: 8px 12px;
-            background-color:#a3f67e;
+            background-color: #ff7c7c;
             border-radius: 4px;
             transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color:#d8adb2;
+            background-color: #f78ca0;
         }
 
         .language-selector {
             margin-top: 15px;
             padding: 10px;
             background: #fff;
-            color:seagreen;
+            color: #6a11cb;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -89,7 +81,6 @@
             text-align: center;
             margin: 40px auto;
             max-width: 900px;
-            animation: fadeInUp 2s ease;
         }
 
         .cta {
@@ -99,17 +90,37 @@
         .cta button {
             padding: 15px 30px;
             font-size: 16px;
-            background-color: seagreen;
+            background-color: #ff7c7c;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: transform 0.2s ease;
+            animation: fadeInUp 1s ease-out;
         }
 
         .cta button:hover {
             transform: scale(1.05);
-            background-color: #6a11cb;
+            background-color: #f78ca0;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .social-icons .icon {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons .icon:hover {
+            transform: scale(1.1);
         }
 
         footer {
@@ -117,39 +128,11 @@
             color: white;
             padding: 10px;
             text-align: center;
-            animation: fadeInUp 2.5s ease;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
 
-        /* Közösségi média ikonok jobb oldalon */
-        .social-media-icons {
-            position: fixed;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .social-media-icons a {
-            margin: 10px 0;
-            text-decoration: none;
-            color: white;
-            font-size: 24px;
-            background-color: transparent;
-            border: 2px solid white;
-            border-radius: 50%;
-            padding: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .social-media-icons a:hover {
-            background-color: seagreen;
-        }
-
-        /* Animációk */
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -172,29 +155,27 @@
             }
         }
 
+        /* Reszponzív dizájn */
         @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-            }
-
-            nav a {
-                margin: 10px 0;
+            header h1 {
+                font-size: 24px;
             }
 
             .cta button {
-                padding: 12px 20px;
                 font-size: 14px;
             }
-        }
 
-        /* SEO és reszponzív optimalizálás */
-        @media (max-width: 480px) {
-            body {
-                font-size: 14px;
+            .social-icons {
+                gap: 10px;
             }
-            header h1 {
-                font-size: 24px;
+
+            nav a {
+                font-size: 14px;
+                margin: 0 8px;
+            }
+
+            .language-selector {
+                font-size: 14px;
             }
         }
     </style>
@@ -218,24 +199,24 @@
 
     <div class="container">
         <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
-        <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni. Ha szeretnéd növelni online jelenléted és könnyen testreszabható, SEO-optimalizált sablont keresel, akkor a legjobb helyen jársz!</p>
+        <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
         <div class="cta">
             <button id="cta-button">Kezdd el ma!</button>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#" target="_blank" class="icon">📘</a> <!-- Facebook -->
+            <a href="#" target="_blank" class="icon">📸</a> <!-- Instagram -->
+            <a href="#" target="_blank" class="icon">🎵</a> <!-- TikTok -->
+            <a href="#" target="_blank" class="icon">🐦</a> <!-- Twitter -->
+            <a href="#" target="_blank" class="icon">🔗</a> <!-- LinkedIn -->
         </div>
     </div>
 
     <footer>
         <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
-
-    <!-- Közösségi média ikonok -->
-    <div class="social-media-icons">
-        <a href="https://www.facebook.com" target="_blank">F</a>
-        <a href="https://www.instagram.com" target="_blank">I</a>
-        <a href="https://www.tiktok.com" target="_blank">T</a>
-        <a href="https://twitter.com" target="_blank">T</a>
-        <a href="https://www.linkedin.com" target="_blank">L</a>
-    </div>
 
     <script>
         // Nyelvváltás
@@ -260,7 +241,7 @@
                 navTestimonials: "Vélemények",
                 navContact: "Kapcsolat",
                 welcomeTitle: "Fedezd fel a Coaching Világát",
-                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni. Ha szeretnéd növelni online jelenléted és könnyen testreszabható, SEO-optimalizált sablont keresel, akkor a legjobb helyen jársz!",
+                welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
                 ctaButton: "Kezdd el ma!",
                 footerText: "© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható."
             }
@@ -284,3 +265,14 @@
     </script>
 </body>
 </html>
+
+           
+     
+    
+       
+      
+
+ 
+      
+           
+         
