@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Life Coach blog, ahol tanácsokat találhatsz a személyes fejlődésről, életmódról és motivációról." />
     <meta name="keywords" content="life coach, személyes fejlődés, motiváció, életmód, tanácsok, önfejlesztés, blog" />
-    <meta name="author" content="Varró Lenke, VstyleDesign" />
+    <meta name="author" content="VstyleDesign" />
     <meta property="og:title" content="Life Coach Blog" />
     <meta property="og:description" content="Olvass hasznos tanácsokat és motiváló történeteket a Life Coach blogon." />
-    <meta property="og:image" content="https://vstyledesign.com/images/blog-thumbnail.jpg" />
-    <meta property="og:url" content="https://vstyledesign.com/blog" />
+    <meta property="og:image" content="https://example.com/images/blog-thumbnail.jpg" />
+    <meta property="og:url" content="https://example.com/blog" />
     <meta name="robots" content="index, follow" />
     <title>Life Coach Blog</title>
-
+    
     <style>
         * {
             margin: 0;
@@ -22,13 +22,13 @@
 
         html, body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color:#dc58f4;
             color: #333;
             transition: all 0.3s ease-in-out;
         }
 
         header {
-            background-color: #6a11cb;
+            background-color:transparent;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -64,7 +64,7 @@
         .post h2 {
             font-size: 28px;
             margin-bottom: 10px;
-            color: #6a11cb;
+            color:#dc58f4 ;
         }
 
         .post p {
@@ -74,24 +74,24 @@
 
         .post .date {
             font-size: 14px;
-            color: #777;
+            color:#dc58f4 ;
             margin-top: 10px;
         }
 
         .read-more {
             text-decoration: none;
-            color: #6a11cb;
+            color:#dc58f4 ;
             font-weight: bold;
             margin-top: 20px;
             display: inline-block;
         }
 
         .read-more:hover {
-            color: #fcbce3;
+            color:#da44f6 ;
         }
 
         footer {
-            background-color: #6a11cb;
+            background-color: transparent;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -149,7 +149,7 @@
 
     <div class="container" id="blog-container">
         <!-- Hungarian posts -->
-        <div class="post" data-lang="hu">
+        <div class="post" data-lang="hu" id="post-hu">
             <h2 id="post-title-1">Miért fontos a személyes fejlődés?</h2>
             <p class="date">2025. január 20.</p>
             <p id="post-content-1">Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet, és hogyan segítheted magad abban, hogy jobban érezd magad a bőrödben...</p>
@@ -157,7 +157,7 @@
         </div>
 
         <!-- English posts -->
-        <div class="post" data-lang="en" style="display: none;">
+        <div class="post" data-lang="en" id="post-en" style="display: none;">
             <h2 id="post-title-1-en">Why Personal Growth is Important</h2>
             <p class="date">January 20, 2025</p>
             <p id="post-content-1-en">Advancement in life is the key to personal growth. In this article, we will talk about how to become the best version of yourself and how you can help yourself feel better in your own skin...</p>
@@ -177,10 +177,10 @@
         function switchLanguage(lang) {
             blogPosts.forEach(post => {
                 const postLang = post.getAttribute('data-lang');
-                if (postLang !== lang) {
-                    post.style.display = 'none';
-                } else {
+                if (postLang === lang) {
                     post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
                 }
             });
 
@@ -188,7 +188,6 @@
                 document.title = 'Life Coach Blog';
                 document.querySelector('meta[name="description"]').setAttribute('content', 'Read useful advice and motivational stories on the Life Coach blog.');
                 document.querySelector('meta[name="keywords"]').setAttribute('content', 'life coach, personal growth, motivation, lifestyle, advice, self-development, blog');
-                // Update content to English
                 document.getElementById('blog-title').textContent = 'Life Coach Blog';
                 document.getElementById('post-title-1').textContent = 'Why Personal Growth is Important';
                 document.getElementById('post-content-1').textContent = 'Advancement in life is the key to personal growth. In this article, we will talk about how to become the best version of yourself and how you can help yourself feel better in your own skin...';
@@ -197,7 +196,6 @@
                 document.title = 'Life Coach Blog';
                 document.querySelector('meta[name="description"]').setAttribute('content', 'Life Coach blog, ahol tanácsokat találhatsz a személyes fejlődésről, életmódról és motivációról.');
                 document.querySelector('meta[name="keywords"]').setAttribute('content', 'life coach, személyes fejlődés, motiváció, életmód, tanácsok, önfejlesztés, blog');
-                // Update content to Hungarian
                 document.getElementById('blog-title').textContent = 'Life Coach Blog';
                 document.getElementById('post-title-1').textContent = 'Miért fontos a személyes fejlődés?';
                 document.getElementById('post-content-1').textContent = 'Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet, és hogyan segítheted magad abban, hogy jobban érezd magad a bőrödben...';
@@ -208,6 +206,12 @@
 </body>
 </html>
 
+
+
+    
       
+     
+
+       
       
        
