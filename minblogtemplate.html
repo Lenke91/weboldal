@@ -10,7 +10,7 @@
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Személyes Blog Sablon">
+    <meta property="og:title" content="Minimalista Blog Sablon">
     <meta property="og:description" content="Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon.">
     <meta property="og:image" content="URL_to_your_image.jpg">
     <meta property="og:url" content="https://vstyledesign.com/minblogtemplate.html">
@@ -18,7 +18,7 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Personal Blog Sablon">
+    <meta name="twitter:title" content="Minimalista Blog Sablon">
     <meta name="twitter:description" content="Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon.">
     <meta name="twitter:image" content="URL_to_your_image.jpg">
     <meta name="twitter:site" content="@your_twitter_handle">
@@ -169,19 +169,19 @@
 
     <script>
         document.getElementById('lang-toggle').addEventListener('click', function() {
-            // Toggle the language based on the current document language
+            // Nyelv váltás a dokumentum nyelve alapján
             if (document.documentElement.lang === 'hu') {
-                document.documentElement.lang = 'en';  // Switch to English
-                this.textContent = 'HU';  // Button text changes to "HU"
+                document.documentElement.lang = 'en';  // Angolra váltás
+                this.textContent = 'HU';  // Gomb szövegének változtatása
                 
-                // Change all the content to English
+                // Minden szöveg angolra cserélése
                 document.querySelector('.main-heading').textContent = 'Welcome to My Blog!';
-                document.querySelector('.main-description').textContent = Personal, SEO-optimized, and easy to customize blog template.';
+                document.querySelector('.main-description').textContent = 'Healthy lifestyle and travel tips: Explore the world while feeling great!';
                 document.querySelector('.home').textContent = 'Home';
                 document.querySelector('.about').textContent = 'About';
                 document.querySelector('.contact').textContent = 'Contact';
                 
-                // Change post titles and descriptions to English
+                // Blog poszt címek és leírások angolra
                 let postTitles = document.querySelectorAll('.post-title');
                 let postDescriptions = document.querySelectorAll('.post-description');
                 
@@ -190,21 +190,21 @@
                 postDescriptions[0].textContent = 'Tips and tricks for adopting a healthy lifestyle.';
                 postDescriptions[1].textContent = 'Explore the world\'s most beautiful places and get travel advice!';
                 
-                // Change footer text to English
+                // Footer szöveg angolra
                 document.querySelector('#footer-text').innerHTML = '&copy; 2025 Personal Blog | <a href="contact.html" class="footer-link">Contact</a>';
 
             } else {
-                document.documentElement.lang = 'hu';  // Switch back to Hungarian
-                this.textContent = 'EN';  // Button text changes to "EN"
+                document.documentElement.lang = 'hu';  // Vissza magyarra
+                this.textContent = 'EN';  // Gomb szövegének változtatása
 
-                // Change all the content back to Hungarian
+                // Minden szöveg magyarra cserélése
                 document.querySelector('.main-heading').textContent = 'Üdvözöllek a Blogomon!';
-                document.querySelector('.main-description').textContent = 'Személyes blog, SEO-optimalizált és könnyen testreszabható blog sablon.';
+                document.querySelector('.main-description').textContent = 'Egészséges életmód és utazási tippek: Fedezd fel a világot, miközben jól érzed magad!';
                 document.querySelector('.home').textContent = 'Kezdőlap';
                 document.querySelector('.about').textContent = 'Rólam';
                 document.querySelector('.contact').textContent = 'Kapcsolat';
                 
-                // Change post titles and descriptions back to Hungarian
+                // Blog poszt címek és leírások magyarra
                 let postTitles = document.querySelectorAll('.post-title');
                 let postDescriptions = document.querySelectorAll('.post-description');
                 
@@ -213,8 +213,8 @@
                 postDescriptions[0].textContent = 'Tippek és trükkök az egészséges életmód kialakításához.';
                 postDescriptions[1].textContent = 'Fedezd fel a világ legszebb helyeit és utazási tanácsokat kaphatsz!';
                 
-                // Change footer text back to Hungarian
-                document.querySelector('#footer-text').innerHTML = '&copy; 2025 Minimalista Blog | <a href="contact.html" class="footer-link">Kapcsolat</a>';
+                // Footer szöveg magyarra
+                document.querySelector('#footer-text').innerHTML = '&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.';
             }
         });
     </script>
@@ -222,7 +222,7 @@
 
 </html>
 
- 
+          
     
- 
-     
+         
+    
