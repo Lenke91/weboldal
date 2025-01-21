@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Egészséges életmód és utazási tippek. Fedezd fel a világ legszebb helyeit és érd el a legjobb egészséged.">
+    <meta name="keywords" content="egészséges életmód, utazás, tippek, egészség, életminőség, blog, világ felfedezése">
+    <meta name="author" content="VstyleDesign">
+    <meta property="og:title" content="Egészséges Életmód és Utazási Tippek">
+    <meta property="og:description" content="Fedezd fel a világ legszebb helyeit és érd el a legjobb egészséged. Blogunkban egyszerű tanácsokkal segítünk!">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <meta property="og:type" content="website">
+    <title>About Me</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #117f9a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #1d09af;
+            color: white;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-me {
+            padding: 2rem;
+            background-color: white;
+            margin: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #117f9a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="header-title">Egészséges Életmód és Utazási Tippek</h1>
+        <button class="lang-switch" onclick="switchLanguage()">Magyar / English</button>
+    </header>
+
+    <div class="content">
+        <div class="about-me">
+            <h2 id="about-me-title">Rólam</h2>
+            <p id="about-me-description">Szeretném megosztani veled a legjobb tippeket, hogy hogyan érheted el a legjobb egészséged, miközben új helyeket fedezel fel a világban. A blogomban egyszerű, mégis hatékony tanácsokat találsz, hogy mindkét területen jobban teljesíthess. Csatlakozz hozzám, és tudd meg, hogyan érheted el a legjobb életminőséget!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text" class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "header-title": "Healthy Lifestyle and Travel Tips",
+                "about-me-title": "About Me",
+                "about-me-description": "I want to share with you the best tips on how to achieve your best health while discovering new places around the world. On my blog, you'll find simple yet effective advice to perform better in both areas. Join me and find out how to achieve the best quality of life!",
+                "footer-text": "&copy; 2025 VstyleDesign | All rights reserved."
+            },
+            hu: {
+                "header-title": "Egészséges Életmód és Utazási Tippek",
+                "about-me-title": "Rólam",
+                "about-me-description": "Szeretném megosztani veled a legjobb tippeket, hogy hogyan érheted el a legjobb egészséged, miközben új helyeket fedezel fel a világban. A blogomban egyszerű, mégis hatékony tanácsokat találsz, hogy mindkét területen jobban teljesíthess. Csatlakozz hozzám, és tudd meg, hogyan érheted el a legjobb életminőséget!",
+                "footer-text": "&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható."
+            }
+        };
+
+        let currentLang = "hu";
+
+        function switchLanguage() {
+            currentLang = currentLang === "hu" ? "en" : "hu";
+            document.getElementById("header-title").textContent = translations[currentLang]["header-title"];
+            document.getElementById("about-me-title").textContent = translations[currentLang]["about-me-title"];
+            document.getElementById("about-me-description").textContent = translations[currentLang]["about-me-description"];
+            document.getElementById("footer-text").innerHTML = translations[currentLang]["footer-text"];
+        }
+    </script>
+
+</body>
+
+</html>

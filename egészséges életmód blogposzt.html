@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
+    <meta name="keywords" content="egészséges életmód, táplálkozás, testmozgás, egészség, fitness, mentális jólét, egészséges szokások">
+    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    <meta property="og:title" content="Egészséges életmód">
+    <meta property="og:description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
+    <meta property="og:image" content="path/to/your-image.jpg">
+    <meta property="og:url" content="https://vstyledesign.com/blog-posts/egeszseges-elettmod">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Egészséges életmód">
+    <meta name="twitter:description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
+    <meta name="twitter:image" content="path/to/your-image.jpg">
+    <title>Egészséges életmód | Hogyan alakíthatunk ki egészséges szokásokat?</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        #blog-posts {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            text-align: center;
+        }
+
+        .post h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .post p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .full-post-content {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .full-post-content.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .language-switcher {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .language-switcher button {
+            padding: 8px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .language-switcher button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Reszponzív dizájn */
+        @media (max-width: 1024px) {
+            #blog-posts {
+                padding: 15px;
+            }
+
+            .post h2 {
+                font-size: 2.2em;
+            }
+
+            .post p {
+                font-size: 1.1em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+
+            .language-switcher button {
+                font-size: 1em;
+                padding: 8px 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #blog-posts {
+                padding: 10px;
+            }
+
+            .post h2 {
+                font-size: 2em;
+            }
+
+            .post p {
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 10px 15px;
+            }
+
+            .language-switcher button {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #blog-posts {
+                padding: 5px;
+            }
+
+            .post h2 {
+                font-size: 1.5em;
+            }
+
+            .post p {
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 8px 12px;
+            }
+
+            .language-switcher button {
+                font-size: 0.9em;
+                padding: 7px 12px;
+            }
+        }
+
+        /* Footer stílusok */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="blog-posts">
+        <div class="post">
+            <h2 id="post-title">Egészséges életmód</h2>
+            <p id="post-description">Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot! Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.</p>
+            <a href="javascript:void(0);" class="btn" id="read-more" onclick="showFullPost()">Bővebben</a>
+            
+            <!-- Elrejtett teljes cikk tartalom -->
+            <div id="full-post" class="full-post-content">
+                <h3>Miért fontos az egészséges életmód?</h3>
+                <p>Az egészséges életmód alapja a helyes táplálkozás, a rendszeres testmozgás és a mentális jólét fenntartása. A megfelelő étkezés segít elkerülni számos betegséget, míg a testmozgás erősíti a szívet, javítja a vérkeringést és növeli az energiaszintet.</p>
+                <p>Emellett a mentális egészség is kulcsfontosságú: a stresszkezelési technikák és a meditáció segíthetnek a mindennapi kihívások kezelésében.</p>
+                <p>Miért fontos, hogy ne hagyjuk figyelmen kívül a mentális állapotunkat? A mentális egészség a fizikai egészség alapja, és a kiegyensúlyozott életmód segít elérni mindkét területen a kívánt célokat.</p>
+            </div>
+        </div>
+        
+        <!-- Nyelvi váltó gomb -->
+        <div class="language-switcher">
+            <button id="language-switch" onclick="switchLanguage()">EN</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p id="footer-text" class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+    </footer>
+
+    <script>
+        // A "Bővebben" gomb megnyomásakor jelenítse meg a teljes cikket
+        function showFullPost() {
+            var postContent = document.getElementById("full-post");
+            postContent.classList.toggle("show");
+        }
+
+        // Nyelvi váltás funkció
+        function switchLanguage() {
+            var button = document.getElementById("language-switch");
+            var footerText = document.getElementById("footer-text");
+
+            if (button.innerHTML === "EN") {
+                button.innerHTML = "HU";
+                document.getElementById("post-title").innerHTML = "Healthy Lifestyle";
+                document.getElementById("post-description").innerHTML = "Discover how to build a healthy lifestyle! Tips on healthy eating, exercise, and mental well-being.";
+                document.getElementById("full-post").innerHTML = `
+                    <h3>Why is a healthy lifestyle important?</h3>
+                    <p>A healthy lifestyle is based on proper nutrition, regular exercise, and maintaining mental well-being. A good diet can prevent many diseases, while exercise strengthens the heart, improves circulation, and boosts energy levels.</p>
+                    <p>In addition, mental health is crucial: stress management techniques and meditation can help handle daily challenges.</p>
+                    <p>Why is it important not to neglect our mental health? Mental health is the foundation of physical health, and a balanced lifestyle helps achieve goals in both areas.</p>
+                `;
+                footerText.innerHTML = "&copy; 2025 VstyleDesign | This site is licensed under the MIT license.";
+            } else {
+                button.innerHTML = "EN";
+                document.getElementById("post-title").innerHTML = "Egészséges életmód";
+                document.getElementById("post-description").innerHTML = "Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot! Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.";
+                document.getElementById("full-post").innerHTML = `
+                    <h3>Miért fontos az egészséges életmód?</h3>
+                    <p>Az egészséges életmód alapja a helyes táplálkozás, a rendszeres testmozgás és a mentális jólét fenntartása. A megfelelő étkezés segít elkerülni számos betegséget, míg a testmozgás erősíti a szívet, javítja a vérkeringést és növeli az energiaszintet.</p>
+                    <p>Emellett a mentális egészség is kulcsfontosságú: a stresszkezelési technikák és a meditáció segíthetnek a mindennapi kihívások kezelésében.</p>
+                    <p>Miért fontos, hogy ne hagyjuk figyelmen kívül a mentális állapotunkat? A mentális egészség a fizikai egészség alapja, és a kiegyensúlyozott életmód segít elérni mindkét területen a kívánt célokat.</p>
+                `;
+                footerText.innerHTML = "&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.";
+            }
+        }
+    </script>
+
+</body>
+</html>
