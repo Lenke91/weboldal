@@ -26,7 +26,7 @@
     <!-- Language Meta Tag -->
     <meta http-equiv="Content-Language" content="hu">
     
-    <title>Személyes Blog</title>
+    <title>Minimalista Blog</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -164,23 +164,24 @@
     </main>
     
     <footer>
-        <p id="footer-text" class="footer-text hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+        <p id="footer-text" class="footer-text">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
     </footer>
 
     <script>
         document.getElementById('lang-toggle').addEventListener('click', function() {
+            // Toggle the language based on the current document language
             if (document.documentElement.lang === 'hu') {
-                document.documentElement.lang = 'en';
-                this.textContent = 'HU';
+                document.documentElement.lang = 'en';  // Switch to English
+                this.textContent = 'HU';  // Button text changes to "HU"
                 
-                // Update all content to English
+                // Change all the content to English
                 document.querySelector('.main-heading').textContent = 'Welcome to My Blog!';
                 document.querySelector('.main-description').textContent = 'Minimalist, SEO-optimized, and easy to customize blog template.';
                 document.querySelector('.home').textContent = 'Home';
                 document.querySelector('.about').textContent = 'About';
                 document.querySelector('.contact').textContent = 'Contact';
                 
-                // Update post titles and descriptions
+                // Change post titles and descriptions to English
                 let postTitles = document.querySelectorAll('.post-title');
                 let postDescriptions = document.querySelectorAll('.post-description');
                 
@@ -189,21 +190,21 @@
                 postDescriptions[0].textContent = 'Tips and tricks for adopting a healthy lifestyle.';
                 postDescriptions[1].textContent = 'Explore the world\'s most beautiful places and get travel advice!';
                 
-                // Update footer text to English
+                // Change footer text to English
                 document.querySelector('#footer-text').innerHTML = '&copy; 2025 Minimalist Blog | <a href="contact.html" class="footer-link">Contact</a>';
 
             } else {
-                document.documentElement.lang = 'hu';
-                this.textContent = 'EN';
+                document.documentElement.lang = 'hu';  // Switch back to Hungarian
+                this.textContent = 'EN';  // Button text changes to "EN"
 
-                // Update all content back to Hungarian
+                // Change all the content back to Hungarian
                 document.querySelector('.main-heading').textContent = 'Üdvözöllek a Blogomon!';
                 document.querySelector('.main-description').textContent = 'Minimalista, SEO-optimalizált és könnyen testreszabható blog sablon.';
                 document.querySelector('.home').textContent = 'Kezdőlap';
                 document.querySelector('.about').textContent = 'Rólam';
                 document.querySelector('.contact').textContent = 'Kapcsolat';
                 
-                // Update post titles and descriptions back to Hungarian
+                // Change post titles and descriptions back to Hungarian
                 let postTitles = document.querySelectorAll('.post-title');
                 let postDescriptions = document.querySelectorAll('.post-description');
                 
@@ -212,7 +213,7 @@
                 postDescriptions[0].textContent = 'Tippek és trükkök az egészséges életmód kialakításához.';
                 postDescriptions[1].textContent = 'Fedezd fel a világ legszebb helyeit és utazási tanácsokat kaphatsz!';
                 
-                // Update footer text back to Hungarian
+                // Change footer text back to Hungarian
                 document.querySelector('#footer-text').innerHTML = '&copy; 2025 Minimalista Blog | <a href="contact.html" class="footer-link">Kapcsolat</a>';
             }
         });
@@ -220,3 +221,8 @@
 </body>
 
 </html>
+
+ 
+    
+ 
+     
