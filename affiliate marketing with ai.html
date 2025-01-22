@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fedezd fel, hogyan segíthet az AI és az automatizálás az affiliate marketing kampányok optimalizálásában. Hogyan használhatod a legújabb technológiákat a sikeres kampányok létrehozásához.">
+    <meta name="keywords" content="AI, automatizálás, affiliate marketing, kampányok optimalizálása, marketing technológia, személyre szabott promóciók">
+    <meta name="author" content="VstyleDesign">
+    <meta property="og:title" content="AI és automatizálás az affiliate marketingben">
+    <meta property="og:description" content="Ismerd meg, hogyan használhatod az AI-t és az automatizálást az affiliate marketing kampányok sikeres optimalizálásához.">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta property="og:url" content="https://vstyledesign.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Title -->
     <title>AI és automatizálás az affiliate marketingben</title>
+
+    <!-- Responsive Design and General Styles -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         header {
@@ -24,10 +39,33 @@
             margin: 10px;
         }
 
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+
         #language-switch {
             position: absolute;
             top: 10px;
             right: 10px;
+            background: #fff;
+            border: none;
+            padding: 10px;
         }
 
         footer {
@@ -111,31 +149,28 @@
             },
             en: {
                 "header-title": "AI and Automation in Affiliate Marketing",
-                "header-description": "Learn how AI and automation can help optimize affiliate marketing campaigns.",
+                "header-description": "Learn how AI and automation can optimize affiliate marketing campaigns.",
                 "section-title": "How AI Helps in Affiliate Marketing",
-                "section-description": "AI and automation are transforming the world of affiliate marketing. These technologies allow marketers to optimize campaigns, target audiences more precisely, and increase revenue.",
+                "section-description": "AI and automation are transforming the affiliate marketing world. These technologies enable campaign optimization, more accurate targeting, and increased revenue.",
                 "data-driven": "Data-Driven Decision Making",
                 "data-driven-desc": "AI can create detailed user profiles based on browsing habits, search behaviors, and demographic data.",
                 "dynamic-ads": "Dynamic Ads",
-                "dynamic-ads-desc": "AI technology allows for dynamic ads that adapt in real-time to user behavior, improving relevance and conversion rates.",
+                "dynamic-ads-desc": "AI technology enables dynamic ads that adapt in real time to user behavior, improving relevance and conversion rates.",
                 "automated-emails": "Automated Email Campaigns",
-                "automated-emails-desc": "AI-powered systems send personalized promotions to users based on their previous behaviors, increasing sales and enhancing the customer experience.",
+                "automated-emails-desc": "AI-powered systems send personalized promotions to users based on their past behavior, increasing sales and improving the user experience.",
                 "chatbots": "Chatbots and Self-Service Systems",
-                "chatbots-desc": "AI-powered chatbots can automate customer service, providing 24/7 availability and improving the customer experience.",
+                "chatbots-desc": "AI-powered chatbots can automate customer service, ensuring 24/7 availability and improving user experience.",
                 "challenges": "Challenges and Solutions",
-                "challenge-1": "Challenge 1: Lack of Human Connection in Automated Marketing",
-                "challenge-1-desc": "Solution: As AI systems evolve, automated communication is becoming more human-like, helping to connect with users.",
+                "challenge-1": "Challenge 1: Lack of Personal Connection in Automated Marketing",
+                "challenge-1-desc": "Solution: As AI systems evolve, automated communication becomes increasingly human-like, helping build connections with users.",
                 "challenge-2": "Challenge 2: High Costs of Technology",
-                "challenge-2-desc": "Solution: The availability and reduction of costs in technology make it possible for smaller businesses to leverage AI.",
+                "challenge-2-desc": "Solution: The accessibility of technology and lower costs make it possible for smaller businesses to leverage AI's benefits.",
                 "footer-text": "&copy; 2025 VstyleDesign | The site is available under the MIT license."
             }
         };
 
-        // Funkció a nyelvváltáshoz
-        function changeLanguage(lang) {
-            const selectedTexts = texts[lang];
-
-            // Az összes szöveg frissítése a kiválasztott nyelv szerint
+        function changeLanguage(language) {
+            const selectedTexts = texts[language];
             document.getElementById("header-title").textContent = selectedTexts["header-title"];
             document.getElementById("header-description").textContent = selectedTexts["header-description"];
             document.getElementById("section-title").textContent = selectedTexts["section-title"];
@@ -159,3 +194,7 @@
 </body>
 </html>
 
+    
+ 
+
+      
