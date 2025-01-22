@@ -53,8 +53,6 @@
             transition: background-color 0.3s ease;
         }
 
-
-
         /* Szövegek stílusai */
         section {
             padding: 20px;
@@ -170,46 +168,55 @@
                 "challenge-1-desc": "Megoldás: Ahogy az AI rendszerek fejlődnek, az automatizált kommunikáció egyre inkább emberibbé válik, segítve a felhasználókkal való kapcsolatot.",
                 "challenge-2": "Kihívás 2: A technológia magas költségei",
                 "challenge-2-desc": "Megoldás: A technológia elérhetősége és a költségek csökkentése lehetővé teszi, hogy a kisebb cégek is kihasználják az AI előnyeit.",
-                "footer-text":  "&copy;  2025 VstyleDesign | Az oldal az MIT licenc alapján használható."
+                "footer-text": "&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható."
             },
             en: {
                 "header-title": "AI and Automation in Affiliate Marketing",
                 "header-description": "Learn how AI and automation can optimize affiliate marketing campaigns.",
-                "section-title": "How AI Helps Affiliate Marketing",
-                "section-description": "AI and automation are transforming affiliate marketing. These technologies allow for campaign optimization, more accurate targeting, and revenue growth.",
+                "section-title": "How AI Helps in Affiliate Marketing",
+                "section-description": "AI and automation are revolutionizing the affiliate marketing world. These technologies enable campaign optimization, more accurate targeting, and increased revenue.",
                 "data-driven": "Data-Driven Decision Making",
                 "data-driven-desc": "AI can create detailed user profiles based on browsing habits, search behavior, and demographic data.",
                 "dynamic-ads": "Dynamic Ads",
-                "dynamic-ads-desc": "AI technology enables dynamic ads that adjust in real-time based on user behavior, improving relevance and conversion rates.",
+                "dynamic-ads-desc": "AI technology enables dynamic ads that adapt to user behavior in real-time, improving relevance and conversion rates.",
                 "automated-emails": "Automated Email Campaigns",
                 "automated-emails-desc": "AI-driven systems send personalized promotions to users based on their previous behavior, increasing sales and improving user experience.",
                 "chatbots": "Chatbots and Self-Service Systems",
-                "chatbots-desc": "AI-powered chatbots can automate customer support, providing 24/7 availability and improving user experience.",
+                "chatbots-desc": "AI-powered chatbots can automate customer service, providing 24/7 availability and enhancing the user experience.",
                 "challenges": "Challenges and Solutions",
                 "challenge-1": "Challenge 1: Lack of Personal Connection in Automated Marketing",
-                "challenge-1-desc": "Solution: As AI systems evolve, automated communication becomes more human-like, helping to build a connection with users.",
-                "challenge-2": "Challenge 2: High Technology Costs",
-                "challenge-2-desc": "Solution: With better accessibility and reduced costs, smaller companies can also take advantage of AI benefits.",
-                "footer-text":  "&copy;  2025 VstyleDesign | The site is available under the MIT license."
+                "challenge-1-desc": "Solution: As AI systems evolve, automated communication becomes more human-like, helping build stronger user connections.",
+                "challenge-2": "Challenge 2: High Costs of Technology",
+                "challenge-2-desc": "Solution: The increasing accessibility and lower costs of technology make it possible for smaller companies to take advantage of AI.",
+                "footer-text": "&copy; 2025 VstyleDesign | This site is licensed under MIT."
             }
         };
 
-        // Nyelvváltoztatás függvénye
-        function changeLanguage(language) {
-            const currentTexts = texts[language];
-            for (const key in currentTexts) {
-                document.getElementById(key).innerText = currentTexts[key];
-            }
+        // Nyelvváltás funkció
+        function changeLanguage(lang) {
+            const selectedTexts = texts[lang];
+            document.getElementById("header-title").innerText = selectedTexts["header-title"];
+            document.getElementById("header-description").innerText = selectedTexts["header-description"];
+            document.getElementById("section-title").innerText = selectedTexts["section-title"];
+            document.getElementById("section-description").innerText = selectedTexts["section-description"];
+            document.getElementById("data-driven").innerText = selectedTexts["data-driven"];
+            document.getElementById("data-driven-desc").innerText = selectedTexts["data-driven-desc"];
+            document.getElementById("dynamic-ads").innerText = selectedTexts["dynamic-ads"];
+            document.getElementById("dynamic-ads-desc").innerText = selectedTexts["dynamic-ads-desc"];
+            document.getElementById("automated-emails").innerText = selectedTexts["automated-emails"];
+            document.getElementById("automated-emails-desc").innerText = selectedTexts["automated-emails-desc"];
+            document.getElementById("chatbots").innerText = selectedTexts["chatbots"];
+            document.getElementById("chatbots-desc").innerText = selectedTexts["chatbots-desc"];
+            document.getElementById("challenges").innerText = selectedTexts["challenges"];
+            document.getElementById("challenge-1").innerText = selectedTexts["challenge-1"];
+            document.getElementById("challenge-1-desc").innerText = selectedTexts["challenge-1-desc"];
+            document.getElementById("challenge-2").innerText = selectedTexts["challenge-2"];
+            document.getElementById("challenge-2-desc").innerText = selectedTexts["challenge-2-desc"];
+            document.getElementById("footer-text").innerHTML = selectedTexts["footer-text"];
         }
     </script>
 </body>
 </html>
-
  
 
-  
- 
-
- 
-
-      
+             
