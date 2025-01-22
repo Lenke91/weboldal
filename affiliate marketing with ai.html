@@ -11,142 +11,135 @@
     <meta property="og:image" content="image_url.jpg">
     <meta property="og:url" content="https://example.com">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <title>AI és Automatizálás az Affiliatemarketingben</title>
 
+    <!-- Link a CSS fájlhoz -->
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background-color: #f4f4f4; 
-            color: #333; 
-            margin: 0; 
-            padding: 0; 
+        /* Alap stílusok */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
 
-        header { 
-            background-color: #4CAF50; 
-            color: white; 
-            text-align: center; 
-            padding: 60px 20px; 
+        /* Fejléc stílusai */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
         }
 
-        .container { 
-            max-width: 900px; 
-            margin: 40px auto; 
-            padding: 20px; 
-            background-color: white; 
-            border-radius: 8px; 
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+        /* Konténer stílusai */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        .cta-button { 
-            background-color: #4CAF50; 
-            color: white; 
-            padding: 15px 30px; 
-            text-align: center; 
-            border-radius: 5px; 
-            display: inline-block; 
-            text-decoration: none; 
-            transition: background 0.3s; 
+        /* Nyelvváltó gombok stílusai */
+        .language-switcher {
+            margin: 10px 0;
         }
 
-        .cta-button:hover { 
-            background-color: #388E3C; 
+        .lang-btn {
+            cursor: pointer;
+            font-weight: bold;
         }
 
-        .language-switcher { 
-            margin: 10px 0; 
+        /* Lábjegyzet stílusai */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
         }
 
-        .lang-btn { 
-            cursor: pointer; 
-            font-weight: bold; 
-        }
-
-        footer { 
-            text-align: center; 
-            padding: 20px; 
-            background-color: #f4f4f4; 
-            margin-top: 20px; 
-        }
-
-        .contact-section { 
-            background-color: #e0e0e0; 
-            padding: 20px; 
-            border-radius: 8px; 
-            margin-top: 20px; 
-        }
-
-        .contact-section h3 { 
-            margin-top: 0; 
-        }
-
-        .contact-info { 
-            margin: 10px 0; 
-        }
-
+        /* Media query a mobil nézethez */
         @media (max-width: 768px) {
-            header { 
-                padding: 40px 15px; 
+            header {
+                padding: 40px 15px;
             }
-            .container { 
-                padding: 15px; 
+            .container {
+                padding: 15px;
             }
         }
     </style>
+
 </head>
 <body>
 
 <header>
     <h1 id="header-title">AI és Automatizálás az Affiliatemarketingben</h1>
     <p id="header-description">Tudd meg, hogyan segíthet az AI és az automatizálás az affiliatemarketing kampányok optimalizálásában.</p>
+
+    <!-- Nyelvváltó gombok -->
     <div class="language-switcher">
         <span class="lang-btn" onclick="switchLanguage('hu')">HU</span> |
         <span class="lang-btn" onclick="switchLanguage('en')">EN</span>
     </div>
 </header>
 
-<div class="container">
-    <h2 id="section-title">Hogyan segít az AI az Affiliatemarketingben?</h2>
-    <p id="section-description">Az AI és az automatizálás jelentős mértékben átalakítja az affiliatemarketing világát. Ezek a technológiák lehetővé teszik a marketingesek számára, hogy optimalizálják a kampányokat, célzottan érjék el a közönséget és növeljék a bevételeket.</p>
+<main>
+    <div class="container">
+        <h2 id="section-title">Hogyan segít az AI az Affiliatemarketingben?</h2>
+        <p id="section-description">Az AI és az automatizálás átalakítja az affiliatemarketing világát. Ezek a technológiák lehetővé teszik a marketingesek számára, hogy optimalizálják a kampányokat, célzottan érjék el a közönséget és növeljék a bevételeket.</p>
 
-    <h3 id="data-driven">Adatalapú Döntéshozatal</h3>
-    <p id="data-driven-desc">Az AI képes részletes felhasználói profilok létrehozására, amelyeket böngészési szokások, keresési szokások és demográfiai adatok alapján épít fel. Ez segíti a marketingeseket abban, hogy jobban megértsék a közönség igényeit, így személyre szabott tartalmat kínálhatnak.</p>
+        <!-- Szekciók -->
+        <section>
+            <h3 id="data-driven">Adatalapú Döntéshozatal</h3>
+            <p id="data-driven-desc">Az AI képes részletes felhasználói profilok létrehozására, amelyeket böngészési szokások, keresési szokások és demográfiai adatok alapján épít fel.</p>
+        </section>
 
-    <h3 id="dynamic-ads">Dinamikus Hirdetések</h3>
-    <p id="dynamic-ads-desc">Az AI technológia lehetővé teszi a dinamikus hirdetések készítését, amelyek valós időben alkalmazkodnak a felhasználói viselkedéshez, javítva a relevanciát és a konverziós arányokat.</p>
+        <section>
+            <h3 id="dynamic-ads">Dinamikus Hirdetések</h3>
+            <p id="dynamic-ads-desc">Az AI technológia lehetővé teszi a dinamikus hirdetések készítését, amelyek valós időben alkalmazkodnak a felhasználói viselkedéshez, javítva a relevanciát és a konverziós arányokat.</p>
+        </section>
 
-    <h3 id="automated-emails">Automatizált E-mail Kampányok</h3>
-    <p id="automated-emails-desc">Az AI-alapú rendszerek személyre szabott promóciókat küldenek a felhasználóknak a korábbi viselkedésük alapján, így növelve az eladásokat és javítva az ügyfélélményt.</p>
+        <section>
+            <h3 id="automated-emails">Automatizált E-mail Kampányok</h3>
+            <p id="automated-emails-desc">Az AI-alapú rendszerek személyre szabott promóciókat küldenek a felhasználóknak a korábbi viselkedésük alapján, így növelve az eladásokat és javítva az ügyfélélményt.</p>
+        </section>
 
-    <h3 id="chatbots">Chatbotok és Önkiszolgáló Rendszerek</h3>
-    <p id="chatbots-desc">Az AI alapú chatbotok képesek automatizálni az ügyfélszolgálatot, 24/7 elérhetőséget biztosítva és javítva az ügyfélélményt.</p>
+        <section>
+            <h3 id="chatbots">Chatbotok és Önkiszolgáló Rendszerek</h3>
+            <p id="chatbots-desc">Az AI alapú chatbotok képesek automatizálni az ügyfélszolgálatot, 24/7 elérhetőséget biztosítva és javítva az ügyfélélményt.</p>
+        </section>
 
-    <h3 id="challenges">Kihívások és Megoldások</h3>
-    <h4 id="challenge-1">Kihívás 1: Az Automatizált Marketing Hiányzó Emberi Kapcsolata</h4>
-    <p id="challenge-1-desc">Megoldás: Ahogy az AI rendszerek fejlődnek, az automatizált kommunikáció egyre inkább emberibbé válik, segítve a felhasználókkal való kapcsolatot.</p>
+        <section>
+            <h3 id="challenges">Kihívások és Megoldások</h3>
+            <h4 id="challenge-1">Kihívás 1: Az Automatizált Marketing Hiányzó Emberi Kapcsolata</h4>
+            <p id="challenge-1-desc">Megoldás: Ahogy az AI rendszerek fejlődnek, az automatizált kommunikáció egyre inkább emberibbé válik, segítve a felhasználókkal való kapcsolatot.</p>
 
-    <h4 id="challenge-2">Kihívás 2: A Technológia Magas Költségei</h4>
-    <p id="challenge-2-desc">Megoldás: A technológia elérhetősége és a költségek csökkentése lehetővé teszi, hogy a kisebb cégek is kihasználják az AI előnyeit.</p>
+            <h4 id="challenge-2">Kihívás 2: A Technológia Magas Költségei</h4>
+            <p id="challenge-2-desc">Megoldás: A technológia elérhetősége és a költségek csökkentése lehetővé teszi, hogy a kisebb cégek is kihasználják az AI előnyeit.</p>
+        </section>
 
-    <a href="#" class="cta-button">Tudd meg többet</a>
-</div>
+    </div>
+</main>
 
 <footer>
     <p id="footer-text" class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
 </footer>
 
+<!-- JavaScript kód -->
 <script>
-    // Language switch function
+    // Nyelvváltó funkció
     function switchLanguage(lang) {
         const texts = {
             hu: {
                 "header-title": "AI és Automatizálás az Affiliatemarketingben",
                 "header-description": "Tudd meg, hogyan segíthet az AI és az automatizálás az affiliatemarketing kampányok optimalizálásában.",
                 "section-title": "Hogyan segít az AI az Affiliatemarketingben?",
-                "section-description": "Az AI és az automatizálás jelentős mértékben átalakítja az affiliatemarketing világát. Ezek a technológiák lehetővé teszik a marketingesek számára, hogy optimalizálják a kampányokat, célzottan érjék el a közönséget és növeljék a bevételeket.",
+                "section-description": "Az AI és az automatizálás átalakítja az affiliatemarketing világát. Ezek a technológiák lehetővé teszik a marketingesek számára, hogy optimalizálják a kampányokat, célzottan érjék el a közönséget és növeljék a bevételeket.",
                 "data-driven": "Adatalapú Döntéshozatal",
-                "data-driven-desc": "Az AI képes részletes felhasználói profilok létrehozására, amelyeket böngészési szokások, keresési szokások és demográfiai adatok alapján épít fel. Ez segíti a marketingeseket abban, hogy jobban megértsék a közönség igényeit, így személyre szabott tartalmat kínálhatnak.",
+                "data-driven-desc": "Az AI képes részletes felhasználói profilok létrehozására, amelyeket böngészési szokások, keresési szokások és demográfiai adatok alapján épít fel.",
                 "dynamic-ads": "Dinamikus Hirdetések",
                 "dynamic-ads-desc": "Az AI technológia lehetővé teszi a dinamikus hirdetések készítését, amelyek valós időben alkalmazkodnak a felhasználói viselkedéshez, javítva a relevanciát és a konverziós arányokat.",
                 "automated-emails": "Automatizált E-mail Kampányok",
@@ -158,38 +151,50 @@
                 "challenge-1-desc": "Megoldás: Ahogy az AI rendszerek fejlődnek, az automatizált kommunikáció egyre inkább emberibbé válik, segítve a felhasználókkal való kapcsolatot.",
                 "challenge-2": "Kihívás 2: A Technológia Magas Költségei",
                 "challenge-2-desc": "Megoldás: A technológia elérhetősége és a költségek csökkentése lehetővé teszi, hogy a kisebb cégek is kihasználják az AI előnyeit.",
-                "cta-button": "Tudd meg többet"
+                "footer-text": "&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható."
             },
             en: {
                 "header-title": "AI and Automation in Affiliate Marketing",
-                "header-description": "Learn how AI and automation can optimize affiliate marketing campaigns.",
+                "header-description": "Learn how AI and automation can optimize your affiliate marketing campaigns.",
                 "section-title": "How AI Helps in Affiliate Marketing",
-                "section-description": "AI and automation are transforming the affiliate marketing world. These technologies allow marketers to optimize campaigns, reach targeted audiences, and increase revenue.",
+                "section-description": "AI and automation are transforming the world of affiliate marketing. These technologies allow marketers to optimize campaigns, target audiences more effectively, and increase revenue.",
                 "data-driven": "Data-Driven Decision Making",
-                "data-driven-desc": "AI can create detailed user profiles based on browsing habits, search patterns, and demographic data. This helps marketers better understand their audience's needs and provide personalized content.",
+                "data-driven-desc": "AI can create detailed user profiles based on browsing habits, search behavior, and demographic data.",
                 "dynamic-ads": "Dynamic Ads",
-                "dynamic-ads-desc": "AI technology enables the creation of dynamic ads that adapt to user behavior in real-time, improving relevance and conversion rates.",
+                "dynamic-ads-desc": "AI technology enables the creation of dynamic ads that adapt in real-time to user behavior, improving relevance and conversion rates.",
                 "automated-emails": "Automated Email Campaigns",
-                "automated-emails-desc": "AI-based systems send personalized promotions to users based on their previous behavior, increasing sales and improving customer experience.",
+                "automated-emails-desc": "AI-based systems send personalized promotions to users based on their past behavior, increasing sales and improving customer experience.",
                 "chatbots": "Chatbots and Self-Service Systems",
-                "chatbots-desc": "AI-powered chatbots can automate customer service, providing 24/7 availability and improving customer experience.",
+                "chatbots-desc": "AI-powered chatbots can automate customer service, providing 24/7 availability and improving the customer experience.",
                 "challenges": "Challenges and Solutions",
                 "challenge-1": "Challenge 1: Lack of Human Connection in Automated Marketing",
-                "challenge-1-desc": "Solution: As AI systems evolve, automated communication is becoming more human-like, helping build connections with users.",
+                "challenge-1-desc": "Solution: As AI systems improve, automated communication is becoming more human-like, helping to connect with users.",
                 "challenge-2": "Challenge 2: High Costs of Technology",
-                "challenge-2-desc": "Solution: As technology becomes more accessible and costs decrease, smaller companies can take advantage of AI.",
-                "cta-button": "Learn More"
+                "challenge-2-desc": "Solution: As technology becomes more accessible and costs decrease, even smaller companies can take advantage of AI's benefits.",
+                "footer-text": "&copy; 2025 VstyleDesign | The site is available under the MIT License."
             }
         };
 
-        // Apply text changes based on selected language
-        const languageTexts = texts[lang];
-        for (let key in languageTexts) {
-            const element = document.getElementById(key);
-            if (element) {
-                element.innerHTML = languageTexts[key];
-            }
-        }
+        const selectedTexts = texts[lang];
+
+        // Frissítjük az oldal tartalmát
+        document.getElementById("header-title").textContent = selectedTexts["header-title"];
+        document.getElementById("header-description").textContent = selectedTexts["header-description"];
+        document.getElementById("section-title").textContent = selectedTexts["section-title"];
+        document.getElementById("section-description").textContent = selectedTexts["section-description"];
+        document.getElementById("data-driven").textContent = selectedTexts["data-driven"];
+        document.getElementById("data-driven-desc").textContent = selectedTexts["data-driven-desc"];
+        document.getElementById("dynamic-ads").textContent = selectedTexts["dynamic-ads"];
+        document.getElementById("dynamic-ads-desc").textContent = selectedTexts["dynamic-ads-desc"];
+        document.getElementById("automated-emails").textContent = selectedTexts["automated-emails"];
+        document.getElementById("automated-emails-desc").textContent = selectedTexts["automated-emails-desc"];
+        document.getElementById("chatbots").textContent = selectedTexts["chatbots"];
+        document.getElementById("chatbots-desc").textContent = selectedTexts["chatbots-desc"];
+        document.getElementById("challenge-1").textContent = selectedTexts["challenge-1"];
+        document.getElementById("challenge-1-desc").textContent = selectedTexts["challenge-1-desc"];
+        document.getElementById("challenge-2").textContent = selectedTexts["challenge-2"];
+        document.getElementById("challenge-2-desc").textContent = selectedTexts["challenge-2-desc"];
+        document.getElementById("footer-text").textContent = selectedTexts["footer-text"];
     }
 </script>
 
@@ -197,7 +202,6 @@
 </html>
 
       
-       
+      
+  
 
- 
- 
