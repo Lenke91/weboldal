@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -8,18 +8,8 @@
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta name="robots" content="index, follow">
     <title id="page-title">Könyvajánló - Üzleti és pénzügyi fejlődés</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
     <link rel="canonical" href="https://www.vstyledesign.com/konyvajanlo">
     <style>
-        /* Alap stílusok */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -31,12 +21,11 @@
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             position: relative;
         }
         h1, p {
             margin: 0;
-            padding: 0;
         }
         .container {
             max-width: 900px;
@@ -49,19 +38,18 @@
         .book-item {
             padding: 20px;
             border-bottom: 1px solid #ddd;
-            opacity: 0; /* Initially hidden */
-            transform: translateY(20px); /* Start off-screen */
+            opacity: 0;
+            transform: translateY(20px);
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            display: none; /* Hide by default */
+            display: none;
         }
         .book-item.show {
             opacity: 1;
             transform: translateY(0);
-            display: block; /* Show when animated */
+            display: block;
         }
         h2 {
             color: #4CAF50;
-            margin-bottom: 10px;
         }
         footer {
             text-align: center;
@@ -73,18 +61,15 @@
             position: absolute;
             top: 10px;
             right: 20px;
-            font-size: 16px;
         }
         .lang-switch a {
             color: white;
             text-decoration: none;
             margin: 0 5px;
         }
-
-        /* Reszponzív beállítások */
         @media (max-width: 768px) {
             header {
-                padding: 40px 15px;
+                padding: 30px 15px;
             }
             .container {
                 margin: 20px;
@@ -96,14 +81,7 @@
             p {
                 font-size: 1rem;
             }
-            .book-item {
-                padding: 15px;
-            }
-            .lang-switch {
-                font-size: 14px;
-            }
         }
-
         @media (max-width: 480px) {
             h1 {
                 font-size: 1.2rem;
@@ -117,9 +95,6 @@
             footer {
                 padding: 15px;
             }
-            .book-item {
-                padding: 10px;
-            }
         }
     </style>
 </head>
@@ -127,89 +102,61 @@
 
 <header>
     <h1 id="header-text">Könyvajánló - Üzleti és pénzügyi fejlődés</h1>
-    <p id="header-description">Fedezd fel azokat a könyveket, amelyek segítenek a pénzügyi tudatosság fejlesztésében, gazdagságépítésben és sikeres üzleti gondolkodásmód kialakításában.</p>
+    <p id="header-description">Fedezd fel azokat a könyveket, amelyek segítenek a pénzügyi tudatosság fejlesztésében és sikeres üzleti gondolkodásmód kialakításában.</p>
     <div class="lang-switch">
         <a href="#" id="hu-btn">HU</a> | <a href="#" id="en-btn">EN</a>
     </div>
 </header>
 
 <div class="container">
-    <!-- Hungarian Content -->
     <div class="book-list hu-content">
         <div class="book-item">
             <h2>Gondolkodj és Gazdagodj</h2>
-            <p>Fedezd fel Napoleon Hill "Gondolkodj és Gazdagodj" című klasszikus könyvét, amely segít megérteni a gazdagságépítés mentális alapjait és a sikerhez vezető gondolkodásmódot.</p>
+            <p>Napoleon Hill klasszikus könyve a sikerhez vezető gondolkodásmódról.</p>
         </div>
         <div class="book-item">
             <h2>Gazdag Papa, Szegény Papa</h2>
-            <p>Ismerd meg Robert Kiyosaki "Gazdag Papa, Szegény Papa" című könyvét, amely a pénzügyi tudatosság alapjait tanítja, és segít elindulni a pénzügyi függetlenség felé.</p>
-        </div>
-        <div class="book-item">
-            <h2>A Pénz pszichológiája</h2>
-            <p>Morgan Housel "A Pénz pszichológiája" című könyvében felfedezheted a pénzhez való viszonyunkat és a pénzügyi döntések mögötti pszichológiai tényezőket, amelyek segíthetnek jobb pénzügyi döntéseket hozni.</p>
-        </div>
-        <div class="book-item">
-            <h2>A 4 órás munkahét</h2>
-            <p>Tim Ferriss "A 4 órás munkahét" című könyve bemutatja, hogyan építhetsz automatizált rendszereket, hogy szabadságot nyerj és passzív jövedelmet szerezz.</p>
-        </div>
-        <div class="book-item">
-            <h2>Nulláról Egyre</h2>
-            <p>Peter Thiel "Nulláról Egyre" című könyvében felfedezheted, hogyan építhetsz olyan sikeres startupot, amely valódi innovációval és növekedéssel változtatja meg a világot.</p>
+            <p>Robert Kiyosaki könyve a pénzügyi tudatosság alapjairól.</p>
         </div>
     </div>
 
-    <!-- English Content (Initially hidden) -->
     <div class="book-list en-content" style="display: none;">
         <div class="book-item">
             <h2>Think and Grow Rich</h2>
-            <p>Discover Napoleon Hill's classic book "Think and Grow Rich," which helps you understand the mental foundations of wealth-building and the mindset required for success.</p>
+            <p>Napoleon Hill's classic book about the mindset required for success.</p>
         </div>
         <div class="book-item">
             <h2>Rich Dad Poor Dad</h2>
-            <p>Explore Robert Kiyosaki's "Rich Dad Poor Dad," a guide to financial education that helps you on your journey to financial independence.</p>
-        </div>
-        <div class="book-item">
-            <h2>The Psychology of Money</h2>
-            <p>In "The Psychology of Money," Morgan Housel delves into the psychological factors behind money decisions and how you can make better financial choices.</p>
-        </div>
-        <div class="book-item">
-            <h2>The 4-Hour Workweek</h2>
-            <p>Tim Ferriss' "The 4-Hour Workweek" offers a blueprint for building automated systems to achieve freedom and generate passive income.</p>
-        </div>
-        <div class="book-item">
-            <h2>Zero to One</h2>
-            <p>In "Zero to One," Peter Thiel teaches you how to build successful startups that bring innovation and growth to the world.</p>
+            <p>Robert Kiyosaki's book on the fundamentals of financial awareness.</p>
         </div>
     </div>
 </div>
 
 <footer>
-  <p id="footer-text" class="hu"> &copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.<a href="https://www.libri.hu" target="_blank">Vásárolj itt</a></p>
+  <p id="footer-text">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
 </footer>
 
 <script>
-    // Nyelvváltás és animáció
     function switchLanguage(lang) {
         const bookItems = document.querySelectorAll('.book-item');
-        
-        bookItems.forEach(item => item.classList.remove('show')); // Először elrejtjük az összes elemet
+        bookItems.forEach(item => item.classList.remove('show'));
 
         if (lang === 'en') {
             document.querySelector('.hu-content').style.display = 'none';
             document.querySelector('.en-content').style.display = 'block';
             document.querySelectorAll('.en-content .book-item').forEach(item => item.classList.add('show'));
             document.getElementById('header-text').innerText = 'Book Recommendations - Business and Financial Growth';
-            document.getElementById('header-description').innerText = 'Discover powerful books to boost your mindset and financial growth.';
+            document.getElementById('header-description').innerText = 'Discover books that help develop financial awareness and a successful business mindset.';
             document.getElementById('page-title').innerText = 'Book Recommendations - Business and Financial Growth';
-            document.getElementById('footer-text').innerText = 'Book Recommendations &copy; 2024. All rights reserved.';
+            document.getElementById('footer-text').innerText = '&copy; 2025 VstyleDesign | This page is licensed under MIT.';
         } else {
             document.querySelector('.en-content').style.display = 'none';
             document.querySelector('.hu-content').style.display = 'block';
             document.querySelectorAll('.hu-content .book-item').forEach(item => item.classList.add('show'));
             document.getElementById('header-text').innerText = 'Könyvajánló - Üzleti és pénzügyi fejlődés';
-            document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek segítenek a pénzügyi tudatosság fejlesztésében, gazdagságépítésben és sikeres üzleti gondolkodásmód kialakításában.';
+            document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek segítenek a pénzügyi tudatosság fejlesztésében és sikeres üzleti gondolkodásmód kialakításában.';
             document.getElementById('page-title').innerText = 'Könyvajánló - Üzleti és pénzügyi fejlődés';
-            document.getElementById('footer-text').innerText = 'Könyvajánló &copy; 2024. Minden jog fenntartva.';
+            document.getElementById('footer-text').innerText = '&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.';
         }
     }
 
@@ -221,9 +168,13 @@
     });
 
     window.onload = function() {
-        switchLanguage('hu'); // Alapértelmezett nyelv magyar
+        switchLanguage('hu');
     };
 </script>
 
 </body>
 </html>
+ 
+   
+       
+  
