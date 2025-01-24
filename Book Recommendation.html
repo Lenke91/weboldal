@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -38,21 +38,18 @@
         .book-item {
             padding: 20px;
             border-bottom: 1px solid #ddd;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            display: none;
         }
-        .book-item h2 {
+        .book-item.show {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+        h2 {
             color: #4CAF50;
-        }
-        .buy-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .buy-link:hover {
-            background-color: #45a049;
         }
         footer {
             text-align: center;
@@ -69,6 +66,20 @@
             color: white;
             text-decoration: none;
             margin: 0 5px;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 15px;
+            }
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -87,22 +98,22 @@
         <div class="book-item">
             <h2>Gondolkodj és Gazdagodj</h2>
             <p>Napoleon Hill klasszikus könyve a sikerhez vezető gondolkodásmódról.</p>
-            <a href="https://www.libri.hu/konyv/gondolkodj-es-gazdagodj.html" target="_blank" class="buy-link">Megvásárolom</a>
         </div>
         <div class="book-item">
             <h2>Gazdag Papa, Szegény Papa</h2>
             <p>Robert Kiyosaki könyve a pénzügyi tudatosság alapjairól.</p>
-            <a href="https://www.libri.hu/konyv/gazdag-papa-szegeny-papa.html" target="_blank" class="buy-link">Megvásárolom</a>
         </div>
         <div class="book-item">
-            <h2>A pénz pszichológiája</h2>
-            <p>Morgan Housel könyve a pénzzel kapcsolatos viselkedésről és döntésekről.</p>
-            <a href="https://www.libri.hu/konyv/a-penz-pszichologiaja.html" target="_blank" class="buy-link">Megvásárolom</a>
+            <h2>Pénz Pszichológiája</h2>
+            <p>Morgan Housel könyve, amely a pénzügyi döntések mögött rejlő emberi viselkedést vizsgálja.</p>
         </div>
         <div class="book-item">
-            <h2>A 4 órás munkahét</h2>
-            <p>Tim Ferriss könyve a hatékony munkavégzésről és életmódról.</p>
-            <a href="https://www.libri.hu/konyv/a-4-oras-munkahet.html" target="_blank" class="buy-link">Megvásárolom</a>
+            <h2>4 órás munkahét</h2>
+            <p>Timothy Ferriss könyve arról, hogyan építsünk automatizált, szabad életmódot biztosító vállalkozást.</p>
+        </div>
+        <div class="book-item">
+            <h2>Milliomos Szokások</h2>
+            <p>Dean Graziosi könyve arról, hogyan alakíthatunk ki sikeres szokásokat a gazdagság eléréséhez.</p>
         </div>
     </div>
 
@@ -110,22 +121,22 @@
         <div class="book-item">
             <h2>Think and Grow Rich</h2>
             <p>Napoleon Hill's classic book about the mindset required for success.</p>
-            <a href="https://www.libri.hu/konyv/think-and-grow-rich.html" target="_blank" class="buy-link">Buy Now</a>
         </div>
         <div class="book-item">
             <h2>Rich Dad Poor Dad</h2>
             <p>Robert Kiyosaki's book on the fundamentals of financial awareness.</p>
-            <a href="https://www.libri.hu/konyv/rich-dad-poor-dad.html" target="_blank" class="buy-link">Buy Now</a>
         </div>
         <div class="book-item">
             <h2>The Psychology of Money</h2>
-            <p>Morgan Housel's book about the behavior and decision-making around money.</p>
-            <a href="https://www.libri.hu/konyv/the-psychology-of-money.html" target="_blank" class="buy-link">Buy Now</a>
+            <p>Morgan Housel's book that explores the human behavior behind financial decisions.</p>
         </div>
         <div class="book-item">
             <h2>The 4-Hour Workweek</h2>
-            <p>Tim Ferriss' book on efficient work and lifestyle design.</p>
-            <a href="https://www.libri.hu/konyv/the-4-hour-workweek.html" target="_blank" class="buy-link">Buy Now</a>
+            <p>Timothy Ferriss' book on building an automated business for a free lifestyle.</p>
+        </div>
+        <div class="book-item">
+            <h2>Millionaire Success Habits</h2>
+            <p>Dean Graziosi's book on how to develop habits that lead to wealth.</p>
         </div>
     </div>
 </div>
@@ -136,28 +147,36 @@
 
 <script>
     function switchLanguage(lang) {
+        const bookItems = document.querySelectorAll('.book-item');
+        bookItems.forEach(item => item.classList.remove('show'));
+
         if (lang === 'en') {
             document.querySelector('.hu-content').style.display = 'none';
             document.querySelector('.en-content').style.display = 'block';
+            document.querySelectorAll('.en-content .book-item').forEach(item => item.classList.add('show'));
             document.getElementById('header-text').innerText = 'Book Recommendations - Business and Financial Growth';
             document.getElementById('header-description').innerText = 'Discover books that help develop financial awareness and a successful business mindset.';
             document.getElementById('footer-text').innerText = '© 2025 VstyleDesign | This page is licensed under MIT.';
         } else {
             document.querySelector('.en-content').style.display = 'none';
             document.querySelector('.hu-content').style.display = 'block';
+            document.querySelectorAll('.hu-content .book-item').forEach(item => item.classList.add('show'));
             document.getElementById('header-text').innerText = 'Könyvajánló - Üzleti és pénzügyi fejlődés';
-            document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek segítenek a pénzügyi tudatosság fejlesztésében és sikeres üzleti gondolkodásmód kialakításában.';
             document.getElementById('footer-text').innerText = '© 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.';
         }
     }
 
-    document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
-    document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
-    window.onload = () => switchLanguage('hu');
+    document.getElementById('hu-btn').addEventListener('click', function() {
+        switchLanguage('hu');
+    });
+    document.getElementById('en-btn').addEventListener('click', function() {
+        switchLanguage('en');
+    });
+
+    window.onload = function() {
+        switchLanguage('hu');
+    };
 </script>
 
 </body>
-</html>
-
-            
-  
+</html>   
