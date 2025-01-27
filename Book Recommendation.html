@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fedezd fel a legjobb üzleti könyveket, amelyek segítenek fejleszteni a gondolkodásodat és segítik a pénzügyi növekedést.">
     <meta name="keywords" content="könyvajánló, üzleti könyvek, pénzügyi növekedés, személyes fejlődés, gazdagságépítés">
-    <meta name="keywords" content="üzleti könyvek, pénzügyi növekedés, személyes fejlődés, gazdagságépítés">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta name="robots" content="index, follow">
     <title id="page-title">Könyvajánló</title>
@@ -144,7 +143,10 @@
 </div>
 
 <footer>
-    <p id="footer-text">Könyvajánló &copy; 2024. Minden jog fenntartva.</p>
+    <p id="footer-text" style="color: white; text-align: center;">
+        <span id="footer-text-hu">Könyvajánló &copy; 2024. Minden jog fenntartva. Az oldal az MIT licenc alapján használható.</span>
+        <span id="footer-text-en" style="display:none;">Book Recommendation &copy; 2024. All rights reserved. This site is licensed under the MIT License.</span>
+    </p>
 </footer>
 
 <script>
@@ -161,7 +163,8 @@
             document.getElementById('header-text').innerText = 'Book Recommendations';
             document.getElementById('header-description').innerText = 'Discover powerful books to boost your mindset and entrepreneurial journey.';
             document.getElementById('page-title').innerText = 'Book Recommendations';
-            document.getElementById('footer-text').innerText = 'Book Recommendations &copy; 2024. All rights reserved.';
+            document.getElementById('footer-text-hu').style.display = 'none';
+            document.getElementById('footer-text-en').style.display = 'inline';
         } else {
             document.querySelector('.en-content').style.display = 'none';
             document.querySelector('.hu-content').style.display = 'block';
@@ -169,7 +172,8 @@
             document.getElementById('header-text').innerText = 'Könyvajánló';
             document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.';
             document.getElementById('page-title').innerText = 'Könyvajánló';
-            document.getElementById('footer-text').innerText = 'Könyvajánló &copy; 2024. Minden jog fenntartva.';
+            document.getElementById('footer-text-hu').style.display = 'inline';
+            document.getElementById('footer-text-en').style.display = 'none';
         }
     }
 
@@ -179,3 +183,7 @@
 
 </body>
 </html>
+
+     
+    
+  
