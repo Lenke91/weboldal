@@ -14,7 +14,6 @@
     <meta name="twitter:title" content="Utazási Tippek">
     <meta name="twitter:description" content="Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz!">
     <meta name="twitter:image" content="path/to/your-image.jpg">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -54,7 +53,7 @@
 
         .post p {
             font-size: 1.2em;
-            color: #fff;
+            color: #333;
             margin-bottom: 20px;
         }
 
@@ -79,16 +78,6 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none; /* Initially hidden */
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-        }
-
-        .full-post-content.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .language-switcher {
@@ -184,7 +173,7 @@
 
         /* Footer stílusok */
         footer {
-            background-color:#33c4ff  ;
+            background-color:#33c4ff;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -208,14 +197,17 @@
         <div class="post">
             <h2 id="post-title">Utazási tippek</h2>
             <p id="post-description">Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz!</p>
-            <a href="javascript:void(0);" class="btn" id="read-more" onclick="showFullPost()">Bővebben</a>
             
-            <!-- Elrejtett teljes cikk tartalom -->
+            <!-- Teljes cikk tartalom -->
             <div id="full-post" class="full-post-content">
                 <h3>Miért fontos a jó útiterv?</h3>
-                <p>A jól megtervezett útiterv nemcsak az utazás élményét fokozza, hanem időt és pénzt is spórolhat. Az alábbiakban néhány tippet adunk...</p>
-                <p>Hosszú és rövid távú utazások esetén egyaránt hasznos, ha átgondolod a következő pontokat...</p>
-                <p>Az utazási élményedre hatással van, hogyan készülődsz fel. Egyes fontos dolgok, amiket sosem szabad elfelejteni...</p>
+                <p>A jól megtervezett útiterv nemcsak az utazás élményét fokozza, hanem időt és pénzt is spórolhat. Az alábbiakban néhány tippet adunk a legjobb előkészületekhez:</p>
+                <ul>
+                    <li><strong>Állíts fel prioritásokat:</strong> Döntsd el, mi a legfontosabb a célállomás választásakor.</li>
+                    <li><strong>Ne hagyd az utolsó pillanatra:</strong> Készülj fel időben, hogy elkerüld a stresszt.</li>
+                    <li><strong>Használj útiterv-tervező alkalmazásokat:</strong> Az ilyen applikációk segítenek a legjobb útvonalak kiválasztásában.</li>
+                </ul>
+                <p>Ne felejtsd el, hogy a legnagyobb kalandok mindig a legjobban megtervezett utak során kezdődnek!</p>
             </div>
         </div>
         
@@ -231,21 +223,6 @@
     </footer>
 
     <script>
-        // A "Bővebben" gomb megnyomásakor jelenítse meg a teljes cikket
-        function showFullPost() {
-            var postContent = document.getElementById("full-post");
-            if (postContent.style.display === "none" || postContent.style.display === "") {
-                postContent.style.display = "block";
-                // Animációs effektus alkalmazása
-                setTimeout(function() {
-                    postContent.classList.add("show");
-                }, 10); // Kis késleltetés az animáció indításához
-            } else {
-                postContent.style.display = "none";
-                postContent.classList.remove("show");
-            }
-        }
-
         // Nyelvi váltás funkció
         function switchLanguage() {
             var button = document.getElementById("language-switch");
@@ -257,9 +234,13 @@
                 document.getElementById("post-description").innerHTML = "Discover the world's most beautiful places and get useful travel tips!";
                 document.getElementById("full-post").innerHTML = ` 
                     <h3>Why is a good itinerary important?</h3>
-                    <p>A well-planned itinerary not only enhances the travel experience but can also save time and money. Here are some tips...</p>
-                    <p>Whether you're planning for short or long trips, it's helpful to think through the following points...</p>
-                    <p>Your travel experience is influenced by how well you prepare. Some important things you should never forget...</p>
+                    <p>A well-planned itinerary not only enhances the travel experience but can also save time and money. Here are some tips:</p>
+                    <ul>
+                        <li><strong>Set priorities:</strong> Decide what's most important when choosing a destination.</li>
+                        <li><strong>Don't leave it to the last minute:</strong> Prepare early to avoid stress.</li>
+                        <li><strong>Use itinerary planning apps:</strong> These apps help you choose the best routes.</li>
+                    </ul>
+                    <p>Remember, the greatest adventures always start with the best-planned trips!</p>
                 `;
                 footerText.innerHTML = "&copy; 2025 VstyleDesign | This site is licensed under the MIT license.";
             } else {
@@ -268,15 +249,17 @@
                 document.getElementById("post-description").innerHTML = "Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz!";
                 document.getElementById("full-post").innerHTML = ` 
                     <h3>Miért fontos a jó útiterv?</h3>
-                    <p>A jól megtervezett útiterv nemcsak az utazás élményét fokozza, hanem időt és pénzt is spórolhat. Az alábbiakban néhány tippet adunk...</p>
-                    <p>Hosszú és rövid távú utazások esetén egyaránt hasznos, ha átgondolod a következő pontokat...</p>
-                    <p>Az utazási élményedre hatással van, hogyan készülődsz fel. Egyes fontos dolgok, amiket sosem szabad elfelejteni...</p>
+                    <p>A jól megtervezett útiterv nemcsak az utazás élményét fokozza, hanem időt és pénzt is spórolhat. Az alábbiakban néhány tippet adunk a legjobb előkészületekhez:</p>
+                    <ul>
+                        <li><strong>Állíts fel prioritásokat:</strong> Döntsd el, mi a legfontosabb a célállomás választásakor.</li>
+                        <li><strong>Ne hagyd az utolsó pillanatra:</strong> Készülj fel időben, hogy elkerüld a stresszt.</li>
+                        <li><strong>Használj útiterv-tervező alkalmazásokat:</strong> Az ilyen applikációk segítenek a legjobb útvonalak kiválasztásában.</li>
+                    </ul>
+                    <p>Ne felejtsd el, hogy a legnagyobb kalandok mindig a legjobban megtervezett utak során kezdődnek!</p>
                 `;
                 footerText.innerHTML = "&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.";
             }
         }
     </script>
-
 </body>
 </html>
-
