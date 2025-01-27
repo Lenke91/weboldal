@@ -36,14 +36,12 @@
             padding: 20px;
             background: #fff;
             margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .read-more {
             color: #50b3a2;
             cursor: pointer;
             text-decoration: underline;
-        }
-        .hidden {
-            display: none;
         }
         footer {
             text-align: center;
@@ -51,6 +49,14 @@
             background: #50b3a2;
             color: #fff;
             margin-top: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 768px) {
             .container {
@@ -66,34 +72,40 @@
     <div class="container">
         <div class="content">
             <h2>Miért fontos az egészséges életmód?</h2>
-            <p>Az egészséges életmód segít megőrizni a testi és mentális jólétet...</p>
-            <p id="full-post" class="hidden">Ez magában foglalja a helyes táplálkozást, a rendszeres mozgást és a mentális egyensúly fenntartását.</p>
-            <span class="read-more" id="read-more" onclick="showFullPost()">Tovább olvasom...</span>
+            <p>Az egészséges életmód segít megőrizni a testi és mentális jólétet. Egy kiegyensúlyozott étrend és rendszeres mozgás hozzájárulnak a hosszú távú egészséghez. A megfelelő táplálkozás, mint a vitaminok és ásványi anyagok gazdag bevitele, erősíti az immunrendszert és segít a stressz kezelésében.</p>
+            <p>Ez magában foglalja a helyes táplálkozást, a rendszeres mozgást és a mentális egyensúly fenntartását. A mentális egészség nemcsak a szellem frissességét jelenti, hanem a stresszkezelési technikák alkalmazását is, mint a meditáció vagy a jógázás. A mindennapi aktivitás, mint a séta, futás vagy úszás, mind hozzájárulnak a fizikai és mentális jólét fenntartásához. Fontos, hogy mindenki megtalálja azt a mozgásformát, amely számára a leginkább élvezetes és fenntartható.</p>
         </div>
     </div>
     <footer>
-        &copy; 2025 LENKE VARO PR VSTYLEDESIGN | <a href="#" onclick="changeLanguage('en')">English</a> | <a href="#" onclick="changeLanguage('hu')">Magyar</a>
+        &copy; 2025 LENKE VARO PR VSTYLEDESIGN | 
+        <a href="#" onclick="changeLanguage('en')">English</a> | 
+        <a href="#" onclick="changeLanguage('hu')">Magyar</a>
     </footer>
-    <script>
-        function showFullPost() {
-            document.getElementById('full-post').classList.remove('hidden');
-            document.getElementById('read-more').style.display = 'none';
-        }
 
+    <script>
         function changeLanguage(lang) {
-            if (lang === 'en') {
-                document.querySelector('h1').innerText = 'Healthy Lifestyle';
-                document.querySelector('h2').innerText = 'Why is a healthy lifestyle important?';
-                document.querySelector('.content p').innerText = 'A healthy lifestyle helps maintain physical and mental well-being...';
-                document.getElementById('full-post').innerText = 'This includes proper nutrition, regular exercise, and maintaining mental balance.';
-                document.querySelector('.read-more').innerText = 'Read more...';
-            } else {
-                document.querySelector('h1').innerText = 'Egészséges életmód';
-                document.querySelector('h2').innerText = 'Miért fontos az egészséges életmód?';
-                document.querySelector('.content p').innerText = 'Az egészséges életmód segít megőrizni a testi és mentális jólétet...';
-                document.getElementById('full-post').innerText = 'Ez magában foglalja a helyes táplálkozást, a rendszeres mozgást és a mentális egyensúly fenntartását.';
-                document.querySelector('.read-more').innerText = 'Tovább olvasom...';
-            }
+            const langContent = {
+                'hu': {
+                    title: 'Egészséges életmód tippek | VstyleDesign',
+                    header: 'Egészséges életmód',
+                    subheader: 'Miért fontos az egészséges életmód?',
+                    paragraph1: 'Az egészséges életmód segít megőrizni a testi és mentális jólétet. Egy kiegyensúlyozott étrend és rendszeres mozgás hozzájárulnak a hosszú távú egészséghez. A megfelelő táplálkozás, mint a vitaminok és ásványi anyagok gazdag bevitele, erősíti az immunrendszert és segít a stressz kezelésében.',
+                    paragraph2: 'Ez magában foglalja a helyes táplálkozást, a rendszeres mozgást és a mentális egyensúly fenntartását. A mentális egészség nemcsak a szellem frissességét jelenti, hanem a stresszkezelési technikák alkalmazását is, mint a meditáció vagy a jógázás. A mindennapi aktivitás, mint a séta, futás vagy úszás, mind hozzájárulnak a fizikai és mentális jólét fenntartásához. Fontos, hogy mindenki megtalálja azt a mozgásformát, amely számára a leginkább élvezetes és fenntartható.'
+                },
+                'en': {
+                    title: 'Healthy Lifestyle Tips | VstyleDesign',
+                    header: 'Healthy Lifestyle',
+                    subheader: 'Why is a healthy lifestyle important?',
+                    paragraph1: 'A healthy lifestyle helps maintain physical and mental well-being. A balanced diet and regular exercise contribute to long-term health. Proper nutrition, such as rich intake of vitamins and minerals, strengthens the immune system and helps manage stress.',
+                    paragraph2: 'This includes proper nutrition, regular exercise, and maintaining mental balance. Mental health not only means mental clarity but also applying stress management techniques, such as meditation or yoga. Daily activities, like walking, running, or swimming, all contribute to maintaining physical and mental well-being. It is important for everyone to find the form of exercise that is most enjoyable and sustainable for them.'
+                }
+            };
+            
+            document.querySelector('title').innerText = langContent[lang].title;
+            document.querySelector('h1').innerText = langContent[lang].header;
+            document.querySelector('h2').innerText = langContent[lang].subheader;
+            document.querySelector('.content p:nth-of-type(1)').innerText = langContent[lang].paragraph1;
+            document.querySelector('.content p:nth-of-type(2)').innerText = langContent[lang].paragraph2;
         }
     </script>
 </body>
