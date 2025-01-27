@@ -3,262 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
-    <meta name="keywords" content="egészséges életmód, táplálkozás, testmozgás, egészség, fitness, mentális jólét, egészséges szokások">
-    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:title" content="Egészséges életmód">
-    <meta property="og:description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
+    <meta name="description" content="Fedezd fel az egészséges életmód alapjait a megfelelő táplálkozás, mozgás és mentális jólét révén.">
+    <meta property="og:title" content="Egészséges életmód tippek">
+    <meta property="og:description" content="Fedezd fel az egészséges életmód alapjait.">
     <meta property="og:image" content="path/to/your-image.jpg">
-    <meta property="og:url" content="https://vstyledesign.com/blog-posts/egeszseges-elettmod">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Egészséges életmód">
-    <meta name="twitter:description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
+    <meta name="twitter:title" content="Egészséges életmód tippek">
+    <meta name="twitter:description" content="Fedezd fel az egészséges életmód alapjait.">
     <meta name="twitter:image" content="path/to/your-image.jpg">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
-    <title>Egészséges életmód | Hogyan alakíthatunk ki egészséges szokásokat?</title>
+    <title>Egészséges életmód tippek | VstyleDesign</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background: #f4f4f4;
             color: #333;
         }
-
-        #blog-posts {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-
-        .post {
-            text-align: center;
-        }
-
-        .post h2 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .post p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #007BFF;
+        header {
+            background: #50b3a2;
             color: #fff;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .full-post-content {
-            margin-top: 20px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-        }
-
-        .full-post-content.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .language-switcher {
+            padding: 20px 0;
             text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
             margin-top: 20px;
         }
-
-        .language-switcher button {
-            padding: 8px 20px;
-            font-size: 1.1em;
+        .read-more {
+            color: #50b3a2;
             cursor: pointer;
-            border-radius: 5px;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .language-switcher button:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 1024px) {
-            #blog-posts {
-                padding: 15px;
-            }
-
-            .post h2 {
-                font-size: 2.2em;
-            }
-
-            .post p {
-                font-size: 1.1em;
-            }
-
-            .btn {
-                padding: 10px 20px;
-            }
-
-            .language-switcher button {
-                font-size: 1em;
-                padding: 8px 18px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            #blog-posts {
-                padding: 10px;
-            }
-
-            .post h2 {
-                font-size: 2em;
-            }
-
-            .post p {
-                font-size: 1em;
-            }
-
-            .btn {
-                padding: 10px 15px;
-            }
-
-            .language-switcher button {
-                font-size: 1em;
-                padding: 8px 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #blog-posts {
-                padding: 5px;
-            }
-
-            .post h2 {
-                font-size: 1.5em;
-            }
-
-            .post p {
-                font-size: 1em;
-            }
-
-            .btn {
-                padding: 8px 12px;
-            }
-
-            .language-switcher button {
-                font-size: 0.9em;
-                padding: 7px 12px;
-            }
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.1em;
-        }
-
-        footer a:hover {
             text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #50b3a2;
+            color: #fff;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
 <body>
-
-    <section id="blog-posts">
-        <div class="post">
-            <h2 id="post-title">Egészséges életmód</h2>
-            <p id="post-description">Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot! Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.</p>
-            <a href="javascript:void(0);" class="btn" id="read-more" onclick="showFullPost()">Bővebben</a>
-            
-            <div id="full-post" class="full-post-content">
-                <h3>Miért fontos az egészséges életmód?</h3>
-                <p>Az egészséges életmód alapja a helyes táplálkozás, a rendszeres testmozgás és a mentális jólét fenntartása. A megfelelő étkezés segít elkerülni számos betegséget, míg a testmozgás erősíti a szívet, javítja a vérkeringést és növeli az energiaszintet.</p>
-                <p>Emellett a mentális egészség is kulcsfontosságú: a stresszkezelési technikák és a meditáció segíthetnek a mindennapi kihívások kezelésében.</p>
-                <p>Miért fontos, hogy ne hagyjuk figyelmen kívül a mentális állapotunkat? A mentális egészség a fizikai egészség alapja, és a kiegyensúlyozott életmód segít elérni mindkét területen a kívánt célokat.</p>
-            </div>
+    <header>
+        <h1>Egészséges életmód</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Miért fontos az egészséges életmód?</h2>
+            <p>Az egészséges életmód segít megőrizni a testi és mentális jólétet...</p>
+            <p id="full-post" class="hidden">Ez magában foglalja a helyes táplálkozást, a rendszeres mozgást és a mentális egyensúly fenntartását.</p>
+            <span class="read-more" id="read-more" onclick="showFullPost()">Tovább olvasom...</span>
         </div>
-        
-        <div class="language-switcher">
-            <button id="language-switch" onclick="switchLanguage()">EN</button>
-        </div>
-    </section>
-
+    </div>
     <footer>
-        <p id="footer-text" class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+        &copy; 2025 LENKE VARO PR VSTYLEDESIGN | <a href="#" onclick="changeLanguage('en')">English</a> | <a href="#" onclick="changeLanguage('hu')">Magyar</a>
     </footer>
-
     <script>
-        let isEnglish = false;
-
         function showFullPost() {
-            var postContent = document.getElementById("full-post");
-            postContent.classList.toggle("show");
+            document.getElementById('full-post').classList.remove('hidden');
+            document.getElementById('read-more').style.display = 'none';
         }
 
-        function switchLanguage() {
-            isEnglish = !isEnglish;
-            var button = document.getElementById("language-switch");
-            if (isEnglish) {
-                button.innerHTML = "HU";
-                document.getElementById("post-title").innerHTML = "Healthy Lifestyle";
-                document.getElementById("post-description").innerHTML = "Discover how to adopt a healthy lifestyle! Tips on healthy eating, exercise, and mental well-being.";
-                document.getElementById("full-post").innerHTML = `
-                    <h3>Why is a healthy lifestyle important?</h3>
-                    <p>A healthy lifestyle is based on proper nutrition, regular exercise, and maintaining mental well-being. Proper nutrition helps prevent many diseases, while exercise strengthens the heart, improves circulation, and boosts energy levels.</p>
-                    <p>Mental health is also crucial: stress management techniques and meditation can help manage everyday challenges.</p>
-                    <p>Why is it important to not neglect our mental state? Mental health is the foundation of physical health, and a balanced lifestyle helps achieve goals in both areas.</p>
-                `;
-                document.getElementById("footer-text").innerHTML = `&copy; 2025 VstyleDesign | The page is available under the MIT license.`;
+        function changeLanguage(lang) {
+            if (lang === 'en') {
+                document.querySelector('h1').innerText = 'Healthy Lifestyle';
+                document.querySelector('h2').innerText = 'Why is a healthy lifestyle important?';
+                document.querySelector('.content p').innerText = 'A healthy lifestyle helps maintain physical and mental well-being...';
+                document.getElementById('full-post').innerText = 'This includes proper nutrition, regular exercise, and maintaining mental balance.';
+                document.querySelector('.read-more').innerText = 'Read more...';
             } else {
-                button.innerHTML = "EN";
-                document.getElementById("post-title").innerHTML = "Egészséges életmód";
-                document.getElementById("post-description").innerHTML = "Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot! Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.";
-                document.getElementById("full-post").innerHTML = `
-                    <h3>Miért fontos az egészséges életmód?</h3>
-                    <p>Az egészséges életmód alapja a helyes táplálkozás, a rendszeres testmozgás és a mentális jólét fenntartása. A megfelelő étkezés segít elkerülni számos betegséget, míg a testmozgás erősíti a szívet, javítja a vérkeringést és növeli az energiaszintet.</p>
-                    <p>Emellett a mentális egészség is kulcsfontosságú: a stresszkezelési technikák és a meditáció segíthetnek a mindennapi kihívások kezelésében.</p>
-                    <p>Miért fontos, hogy ne hagyjuk figyelmen kívül a mentális állapotunkat? A mentális egészség a fizikai egészség alapja, és a kiegyensúlyozott életmód segít elérni mindkét területen a kívánt célokat.</p>
-                `;
-                document.getElementById("footer-text").innerHTML = `&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.`;
+                document.querySelector('h1').innerText = 'Egészséges életmód';
+                document.querySelector('h2').innerText = 'Miért fontos az egészséges életmód?';
+                document.querySelector('.content p').innerText = 'Az egészséges életmód segít megőrizni a testi és mentális jólétet...';
+                document.getElementById('full-post').innerText = 'Ez magában foglalja a helyes táplálkozást, a rendszeres mozgást és a mentális egyensúly fenntartását.';
+                document.querySelector('.read-more').innerText = 'Tovább olvasom...';
             }
         }
     </script>
-
 </body>
 </html>
