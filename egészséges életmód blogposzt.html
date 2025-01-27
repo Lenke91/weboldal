@@ -14,7 +14,6 @@
     <meta name="twitter:title" content="Egészséges életmód">
     <meta name="twitter:description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
     <meta name="twitter:image" content="path/to/your-image.jpg">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -225,26 +224,27 @@
     </footer>
 
     <script>
+        let isEnglish = false;
+
         function showFullPost() {
             var postContent = document.getElementById("full-post");
             postContent.classList.toggle("show");
         }
 
         function switchLanguage() {
+            isEnglish = !isEnglish;
             var button = document.getElementById("language-switch");
-            var footerText = document.getElementById("footer-text");
-
-            if (button.innerHTML === "EN") {
+            if (isEnglish) {
                 button.innerHTML = "HU";
                 document.getElementById("post-title").innerHTML = "Healthy Lifestyle";
-                document.getElementById("post-description").innerHTML = "Discover how to build a healthy lifestyle! Tips on healthy eating, exercise, and mental well-being.";
+                document.getElementById("post-description").innerHTML = "Discover how to adopt a healthy lifestyle! Tips on healthy eating, exercise, and mental well-being.";
                 document.getElementById("full-post").innerHTML = `
                     <h3>Why is a healthy lifestyle important?</h3>
-                    <p>A healthy lifestyle is based on proper nutrition, regular exercise, and maintaining mental well-being. A good diet can prevent many diseases, while exercise strengthens the heart, improves circulation, and boosts energy levels.</p>
-                    <p>In addition, mental health is crucial: stress management techniques and meditation can help manage everyday challenges.</p>
+                    <p>A healthy lifestyle is based on proper nutrition, regular exercise, and maintaining mental well-being. Proper nutrition helps prevent many diseases, while exercise strengthens the heart, improves circulation, and boosts energy levels.</p>
+                    <p>Mental health is also crucial: stress management techniques and meditation can help manage everyday challenges.</p>
                     <p>Why is it important to not neglect our mental state? Mental health is the foundation of physical health, and a balanced lifestyle helps achieve goals in both areas.</p>
                 `;
-                footerText.innerHTML = `&copy; 2025 VstyleDesign | The page is available under the MIT license.`;
+                document.getElementById("footer-text").innerHTML = `&copy; 2025 VstyleDesign | The page is available under the MIT license.`;
             } else {
                 button.innerHTML = "EN";
                 document.getElementById("post-title").innerHTML = "Egészséges életmód";
@@ -255,7 +255,7 @@
                     <p>Emellett a mentális egészség is kulcsfontosságú: a stresszkezelési technikák és a meditáció segíthetnek a mindennapi kihívások kezelésében.</p>
                     <p>Miért fontos, hogy ne hagyjuk figyelmen kívül a mentális állapotunkat? A mentális egészség a fizikai egészség alapja, és a kiegyensúlyozott életmód segít elérni mindkét területen a kívánt célokat.</p>
                 `;
-                footerText.innerHTML = `&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.`;
+                document.getElementById("footer-text").innerHTML = `&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.`;
             }
         }
     </script>
