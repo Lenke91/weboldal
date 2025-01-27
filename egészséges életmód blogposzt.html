@@ -14,17 +14,15 @@
     <meta name="twitter:title" content="Egészséges életmód">
     <meta name="twitter:description" content="Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot. Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.">
     <meta name="twitter:image" content="path/to/your-image.jpg">
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
+    </script>
     <title>Egészséges életmód | Hogyan alakíthatunk ki egészséges szokásokat?</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,7 +78,7 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none; /* Initially hidden */
+            display: none;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -113,7 +111,6 @@
             background-color: #0056b3;
         }
 
-        /* Reszponzív dizájn */
         @media (max-width: 1024px) {
             #blog-posts {
                 padding: 15px;
@@ -183,7 +180,6 @@
             }
         }
 
-        /* Footer stílusok */
         footer {
             background-color: #333;
             color: #fff;
@@ -211,7 +207,6 @@
             <p id="post-description">Fedezd fel, hogyan alakíthatsz ki egy egészséges életmódot! Tippek az egészséges táplálkozásról, testmozgásról és mentális jólétről.</p>
             <a href="javascript:void(0);" class="btn" id="read-more" onclick="showFullPost()">Bővebben</a>
             
-            <!-- Elrejtett teljes cikk tartalom -->
             <div id="full-post" class="full-post-content">
                 <h3>Miért fontos az egészséges életmód?</h3>
                 <p>Az egészséges életmód alapja a helyes táplálkozás, a rendszeres testmozgás és a mentális jólét fenntartása. A megfelelő étkezés segít elkerülni számos betegséget, míg a testmozgás erősíti a szívet, javítja a vérkeringést és növeli az energiaszintet.</p>
@@ -220,25 +215,21 @@
             </div>
         </div>
         
-        <!-- Nyelvi váltó gomb -->
         <div class="language-switcher">
             <button id="language-switch" onclick="switchLanguage()">EN</button>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p id="footer-text" class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
     </footer>
 
     <script>
-        // A "Bővebben" gomb megnyomásakor jelenítse meg a teljes cikket
         function showFullPost() {
             var postContent = document.getElementById("full-post");
             postContent.classList.toggle("show");
         }
 
-        // Nyelvi váltás funkció
         function switchLanguage() {
             var button = document.getElementById("language-switch");
             var footerText = document.getElementById("footer-text");
@@ -250,10 +241,10 @@
                 document.getElementById("full-post").innerHTML = `
                     <h3>Why is a healthy lifestyle important?</h3>
                     <p>A healthy lifestyle is based on proper nutrition, regular exercise, and maintaining mental well-being. A good diet can prevent many diseases, while exercise strengthens the heart, improves circulation, and boosts energy levels.</p>
-                    <p>In addition, mental health is crucial: stress management techniques and meditation can help handle daily challenges.</p>
-                    <p>Why is it important not to neglect our mental health? Mental health is the foundation of physical health, and a balanced lifestyle helps achieve goals in both areas.</p>
+                    <p>In addition, mental health is crucial: stress management techniques and meditation can help manage everyday challenges.</p>
+                    <p>Why is it important to not neglect our mental state? Mental health is the foundation of physical health, and a balanced lifestyle helps achieve goals in both areas.</p>
                 `;
-                footerText.innerHTML = "&copy; 2025 VstyleDesign | This site is licensed under the MIT license.";
+                footerText.innerHTML = `&copy; 2025 VstyleDesign | The page is available under the MIT license.`;
             } else {
                 button.innerHTML = "EN";
                 document.getElementById("post-title").innerHTML = "Egészséges életmód";
@@ -264,7 +255,7 @@
                     <p>Emellett a mentális egészség is kulcsfontosságú: a stresszkezelési technikák és a meditáció segíthetnek a mindennapi kihívások kezelésében.</p>
                     <p>Miért fontos, hogy ne hagyjuk figyelmen kívül a mentális állapotunkat? A mentális egészség a fizikai egészség alapja, és a kiegyensúlyozott életmód segít elérni mindkét területen a kívánt célokat.</p>
                 `;
-                footerText.innerHTML = "&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.";
+                footerText.innerHTML = `&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.`;
             }
         }
     </script>
