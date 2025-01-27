@@ -25,15 +25,15 @@
     
     <!-- Language Meta Tag -->
     <meta http-equiv="Content-Language" content="hu">
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-85RD19D4PP');
-</script>
+        gtag('config', 'G-85RD19D4PP');
+    </script>
     <title>Minimalista Blog</title>
     <style>
         body {
@@ -198,6 +198,11 @@
                 postDescriptions[0].textContent = 'Tips and tricks for adopting a healthy lifestyle.';
                 postDescriptions[1].textContent = 'Explore the world\'s most beautiful places and get travel advice!';
                 
+                // Read more gombok szövege angolra
+                let readMoreButtons = document.querySelectorAll('.read-more');
+                readMoreButtons[0].textContent = 'Read More';
+                readMoreButtons[1].textContent = 'Read More';
+                
                 // Footer szöveg angolra
                 document.querySelector('#footer-text').innerHTML = '&copy; 2025 Personal Blog | <a href="contact.html" class="footer-link">Contact</a>';
 
@@ -221,6 +226,11 @@
                 postDescriptions[0].textContent = 'Tippek és trükkök az egészséges életmód kialakításához.';
                 postDescriptions[1].textContent = 'Fedezd fel a világ legszebb helyeit és utazási tanácsokat kaphatsz!';
                 
+                // Read more gombok szövege magyarra
+                let readMoreButtons = document.querySelectorAll('.read-more');
+                readMoreButtons[0].textContent = 'Bővebben';
+                readMoreButtons[1].textContent = 'Bővebben';
+                
                 // Footer szöveg magyarra
                 document.querySelector('#footer-text').innerHTML = '&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.';
             }
@@ -229,8 +239,3 @@
 </body>
 
 </html>
-
-          
-    
-         
-    
