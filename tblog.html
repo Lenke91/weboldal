@@ -87,17 +87,15 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
 
-        /* Nyelvváltó gomb */
+        /* Nyelvváltó gomb a footer jobb oldalán */
         .language-switcher {
             position: absolute;
-            top: 20px;
+            top: 50%;
             right: 20px;
-            background-color: #fff;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 5px;
+            transform: translateY(-50%);
         }
 
         .language-switcher button {
@@ -117,7 +115,6 @@
         /* Mobil reszponzivitás - nyelvváltó gomb */
         @media (max-width: 768px) {
             .language-switcher {
-                top: 10px;
                 right: 10px;
             }
 
@@ -150,11 +147,6 @@
         <h1 id="header-title">Life Coach Blog</h1>
     </header>
 
-    <!-- Nyelvváltó gomb -->
-    <div class="language-switcher">
-        <button id="switch-language">Switch to English</button>
-    </div>
-
     <div class="container" id="blog-container">
         <!-- Blog Posts -->
         <div class="post" data-index="1">
@@ -180,7 +172,11 @@
     </div>
 
     <footer id="footer">
-         <p id="footer-text">&copy; 2025  LENKE VARO PR VSTYLEDESIGN az oldal a MIT licenc feltételei szerint használható.</p>
+        <p id="footer-text">&copy; 2025 VstyleDesign az oldal a MIT licenc feltételei szerint használható.</p>
+        <!-- Nyelvváltó gomb a footer-ben -->
+        <div class="language-switcher">
+            <button id="switch-language">Switch to English</button>
+        </div>
     </footer>
 
     <script>
@@ -242,3 +238,7 @@
     </script>
 </body>
 </html>
+
+  
+
+
