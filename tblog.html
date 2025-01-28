@@ -43,8 +43,8 @@
         header {
             background-color: #ca37f7; /* Fejléc háttérszín */
             color: white;
-            padding: 18px 0;
-            text-align: left;
+            padding: 20px 0;
+            text-align: center;
             position: relative;
         }
 
@@ -56,7 +56,7 @@
         .language-switcher {
             position: absolute;
             top: 50%;
-            right: 18px; /* Jobb oldalra igazítjuk */
+            right: 20px; /* Jobb oldalra igazítjuk */
             transform: translateY(-50%); /* Középre igazítjuk vertikálisan */
         }
 
@@ -194,7 +194,7 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <p id="footer-text">&copy; 2025  LENKE VARO PR VSTYLEDESIGN az oldal a MIT licenc feltételei szerint használható.</p>
+        <p id="footer-text">&copy; 2025 VstyleDesign az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
 
     <!-- JavaScript nyelvváltó logika -->
@@ -207,12 +207,15 @@
         const postTitle1 = document.getElementById('post-title-1');
         const postDate1 = document.getElementById('post-date-1');
         const postContent1 = document.getElementById('post-content-1');
+        const readMore1 = document.getElementById('read-more-1');
         const postTitle2 = document.getElementById('post-title-2');
         const postDate2 = document.getElementById('post-date-2');
         const postContent2 = document.getElementById('post-content-2');
+        const readMore2 = document.getElementById('read-more-2');
         const postTitle3 = document.getElementById('post-title-3');
         const postDate3 = document.getElementById('post-date-3');
         const postContent3 = document.getElementById('post-content-3');
+        const readMore3 = document.getElementById('read-more-3');
         const footerText = document.getElementById('footer-text');
 
         // Angolra történő fordítás
@@ -222,12 +225,15 @@
             postTitle1.textContent = 'Why Personal Development is Important?';
             postDate1.textContent = 'January 20, 2025';
             postContent1.textContent = 'Advancement in life is key to personal development. In this article, we will discuss how you can become the best version of yourself...';
+            readMore1.textContent = 'Read More';
             postTitle2.textContent = 'Why Mental Health is Important?';
             postDate2.textContent = 'January 21, 2025';
             postContent2.textContent = 'Mental health plays a fundamental role in all of our lives. Learn more about how you can support your mental well-being...';
+            readMore2.textContent = 'Read More';
             postTitle3.textContent = 'Stress Management with a Lifestyle Coach';
             postDate3.textContent = 'January 22, 2025';
             postContent3.textContent = 'Stress is present in all of our lives, but it is important to learn how to manage it. In this article, we introduce techniques...';
+            readMore3.textContent = 'Read More';
             footerText.textContent = '© 2025 LENKE VARO PR VSTYLEDESIGN | Licensed under the MIT License.';
             switchLanguageButton.textContent = 'Váltás magyarra';
         };
@@ -239,12 +245,15 @@
             postTitle1.textContent = 'Miért fontos a személyes fejlődés?';
             postDate1.textContent = '2025. január 20.';
             postContent1.textContent = 'Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet...';
+            readMore1.textContent = 'Bővebben';
             postTitle2.textContent = 'Miért fontos a mentális egészség?';
             postDate2.textContent = '2025. január 21.';
             postContent2.textContent = 'A mentális egészség mindannyiunk életében alapvető szerepet játszik. Tudj meg többet arról, hogyan támogathatod mentális jólétedet...';
+            readMore2.textContent = 'Bővebben';
             postTitle3.textContent = 'Stresszkezelés életmódtanácsadóval';
             postDate3.textContent = '2025. január 22.';
             postContent3.textContent = 'A stressz mindannyiunk életében jelen van, de fontos megtanulni kezelni. Ebben a cikkben olyan technikákat mutatunk be...';
+            readMore3.textContent = 'Bővebben';
             footerText.textContent = '© 2025 LENKE VARO PR VSTYLEDESIGN | Engedélyezve az MIT Licenc alatt.';
             switchLanguageButton.textContent = 'Switch to English';
         };
@@ -261,8 +270,11 @@
 </body>
 </html>
 
+                
+   
+       
 
- 
+    
       
  
 
