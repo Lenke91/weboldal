@@ -26,7 +26,9 @@
             padding: 0;
             background-color: #8e44ad;
             color: white;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Az oldal teljes magasságának lefedése */
         }
 
         h1 {
@@ -37,6 +39,7 @@
 
         #testimonials {
             padding: 20px;
+            flex: 1; /* A tartalom teret kap, hogy a footer lent maradjon */
         }
 
         /* Vélemények konténer */
@@ -97,10 +100,12 @@
             margin-top: 30px;
         }
 
+        /* Footer stílusok */
         footer {
             margin-top: 40px;
             padding: 10px;
             background-color: #54043b;
+            margin-bottom: 0; /* Ne legyen hely a footer alatt */
         }
 
         footer p {
@@ -222,3 +227,7 @@
 
 </body>
 </html>
+
+   
+ 
+   
