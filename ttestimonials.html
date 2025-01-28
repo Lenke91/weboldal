@@ -9,7 +9,7 @@
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
     <meta property="og:description" content="Olvasd el, hogy mit mondanak rólunk azok, akiknek segítettünk elérni céljaikat életmódtanácsadásunkkal.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https:/example.com/ttestimonials.html">
+    <meta property="og:url" content="https:/example.com">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -90,9 +90,6 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 1rem;
-            position: absolute;
-            top: 15px;
-            right: 15px;
         }
 
         .lang-toggle:hover {
@@ -101,7 +98,6 @@
 
         nav {
             margin-top: 30px;
-            position: relative;
         }
 
         /* Footer stílusok */
@@ -110,16 +106,12 @@
             padding: 10px;
             background-color: #54043b;
             margin-bottom: 0; /* Ne legyen hely a footer alatt */
-            position: absolute;
-            bottom: 0;
-            width: 100%;
         }
 
         footer p {
             margin: 0;
             color: white;
             font-size: 1rem;
-            text-align: center;
         }
 
         /* Reszponzív design - Minden eszközhöz megfelelően */
@@ -181,7 +173,7 @@
 <body>
 
 <header>
-    <nav>
+    <nav style="display: flex; justify-content: flex-end; padding: 20px;">
         <!-- Nyelvváltó gombok -->
         <a href="#" class="lang-toggle" data-lang="hu">Magyar</a>
         <a href="#" class="lang-toggle" data-lang="en">English</a>
@@ -231,14 +223,16 @@
             document.getElementById('footer-text').innerText = document.getElementById('footer-text').getAttribute(`data-${lang}`);
         });
     });
+
+    // Az alapértelmezett nyelv beállítása magyarra
+    langToggles[0].click();
 </script>
 
 </body>
 </html>
 
-     
-     
-
+   
+  
    
       
       
