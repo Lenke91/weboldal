@@ -11,18 +11,10 @@
     <meta property="og:image" content="https://example.com/images/blog-thumbnail.jpg" />
     <meta property="og:url" content="https://example.com/blog" />
     <meta name="robots" content="index, follow" />
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title id="page-title">Life Coach Blog</title>
 
-  gtag('config', 'G-85RD19D4PP');
-</script>
-    <title>Life Coach Blog</title>
-    
     <style>
+        /* Alap stílusok */
         * {
             margin: 0;
             padding: 0;
@@ -31,22 +23,19 @@
 
         html, body {
             font-family: Arial, sans-serif;
-            background-color:#da44f6;
+            background-color: #da44f6;
             color: #333;
-            transition: all 0.3s ease-in-out;
         }
 
         header {
-            background-color:#ca37f7 ;
+            background-color: #ca37f7;
             color: white;
             padding: 20px 0;
             text-align: center;
-            transition: background-color 0.3s;
         }
 
         header h1 {
             font-size: 36px;
-            animation: fadeIn 2s ease-in-out;
         }
 
         .container {
@@ -61,19 +50,12 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 1s forwards;
-        }
-
-        .post:hover {
-            transform: scale(1.05);
         }
 
         .post h2 {
             font-size: 28px;
             margin-bottom: 10px;
-            color:#da44f6  ;
+            color: #da44f6;
         }
 
         .post p {
@@ -81,31 +63,46 @@
             line-height: 1.6;
         }
 
-        .post .date {
-            font-size: 14px;
-            color:#da44f6  ;
-            margin-top: 10px;
-        }
-
         .read-more {
             text-decoration: none;
-            color:#da44f6  ;
+            color: #da44f6;
             font-weight: bold;
             margin-top: 20px;
             display: inline-block;
         }
 
-        .read-more:hover {
-            color:#da44f6 ;
-        }
-
         footer {
-            background-color:#da44f6 ;
+            background-color: #da44f6;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
 
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .language-switcher button {
+            background-color: #da44f6;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .language-switcher button:hover {
+            background-color: #ca37f7;
+        }
+
+        /* Mobil reszponzivitás */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 28px;
@@ -123,155 +120,103 @@
             .post p {
                 font-size: 14px;
             }
-
-            .post .date {
-                font-size: 12px;
-            }
-
-            .read-more {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 24px;
-            }
-
-            .container {
-                width: 100%;
-                margin: 15px auto;
-            }
-
-            .post h2 {
-                font-size: 20px;
-            }
-
-            .post p {
-                font-size: 12px;
-            }
-
-            .read-more {
-                font-size: 12px;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 id="blog-title">Life Coach Blog</h1>
-        <div>
-            <button onclick="switchLanguage('hu')">Magyar</button>
-            <button onclick="switchLanguage('en')">English</button>
-        </div>
+        <h1 id="header-title">Life Coach Blog</h1>
     </header>
 
+    <!-- Nyelvváltó gomb -->
+    <div class="language-switcher">
+        <button id="switch-language">Switch to English</button>
+    </div>
+
     <div class="container" id="blog-container">
-        <!-- Hungarian posts -->
-        <div class="post" data-lang="hu" id="post-hu-1">
+        <!-- Blog Posts -->
+        <div class="post" data-index="1">
             <h2 id="post-title-1">Miért fontos a személyes fejlődés?</h2>
-            <p class="date">2025. január 20.</p>
-            <p id="post-content-1">Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet, és hogyan segítheted magad abban, hogy jobban érezd magad a bőrödben...</p>
-            <a href="tblogpost1.html" class="read-more">Tovább olvasom...</a>
+            <p id="post-date-1" class="date">2025. január 20.</p>
+            <p id="post-content-1">Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet...</p>
+            <a href="#" class="read-more" id="read-more-1">Bővebben</a>
         </div>
 
-        <div class="post" data-lang="hu" id="post-hu-2">
+        <div class="post" data-index="2">
             <h2 id="post-title-2">Miért fontos a mentális egészség?</h2>
-            <p class="date">2025. január 21.</p>
-            <p id="post-content-2">A mentális egészség mindannyiunk életében alapvető szerepet játszik. Tudj meg többet arról, hogyan támogathatod mentális jólétedet és hogyan építheted be a pozitív szokásokat a mindennapjaidba...</p>
-            <a href="tblogpost2.html" class="read-more">Tovább olvasom...</a>
+            <p id="post-date-2" class="date">2025. január 21.</p>
+            <p id="post-content-2">A mentális egészség mindannyiunk életében alapvető szerepet játszik. Tudj meg többet arról, hogyan támogathatod mentális jólétedet...</p>
+            <a href="#" class="read-more" id="read-more-2">Bővebben</a>
         </div>
 
-        <div class="post" data-lang="hu" id="post-hu-3">
+        <div class="post" data-index="3">
             <h2 id="post-title-3">Stresszkezelés életmódtanácsadóval</h2>
-            <p class="date">2025. január 22.</p>
-            <p id="post-content-3">A stressz mindannyiunk életében jelen van, de fontos megtanulni kezelni. Ebben a cikkben olyan technikákat mutatunk be, amelyek segítenek abban, hogy csökkentsd a mindennapi stresszt, és hogyan alkalmazd a különböző életmódbeli tanácsokat a jobb közérzet érdekében...</p>
-            <a href="tblogpost3.html" class="read-more">Tovább olvasom...</a>
-        </div>
-
-        <!-- English posts -->
-        <div class="post" data-lang="en" id="post-en-1">
-            <h2 id="post-title-1-en">Why Personal Development is Important?</h2>
-            <p class="date">January 20, 2025</p>
-            <p id="post-content-1-en">Personal development is key to progress in life. In this article, we will discuss how to become your best self and how to help yourself feel better in your own skin...</p>
-            <a href="tblogpost1.html" class="read-more">Read more...</a>
-        </div>
-
-        <div class="post" data-lang="en" id="post-en-2">
-            <h2 id="post-title-2-en">Why Mental Health is Crucial?</h2>
-            <p class="date">January 21, 2025</p>
-            <p id="post-content-2-en">Mental health plays a vital role in everyone's life. Learn more about how to support your mental well-being and how to incorporate positive habits into your daily life...</p>
-            <a href="tblogpost2.html" class="read-more">Read more...</a>
-        </div>
-
-        <div class="post" data-lang="en" id="post-en-3">
-            <h2 id="post-title-3-en">Stress Management with Life Coaching</h2>
-            <p class="date">January 22, 2025</p>
-            <p id="post-content-3-en">Stress is present in all our lives, but it is important to learn how to manage it. In this article, we present techniques that help reduce everyday stress and how to apply various lifestyle tips for better well-being...</p>
-            <a href="tblogpost3.html" class="read-more">Read more...</a>
+            <p id="post-date-3" class="date">2025. január 22.</p>
+            <p id="post-content-3">A stressz mindannyiunk életében jelen van, de fontos megtanulni kezelni. Ebben a cikkben olyan technikákat mutatunk be...</p>
+            <a href="#" class="read-more" id="read-more-3">Bővebben</a>
         </div>
     </div>
 
     <footer id="footer">
-        <p id="footer-text">© 2025 Life Coach Blog | Minden jog fenntartva.</p>
+        <p id="footer-text">© 2025 Life Coach Blog | Licensed under the MIT License.</p>
     </footer>
 
     <script>
-        function switchLanguage(language) {
-            const posts = document.querySelectorAll('.post');
-            const footerText = document.getElementById("footer-text");
+        // A nyelvváltó logika
+        let isEnglish = false;
 
-            // Cikkek megjelenítése a választott nyelv szerint
-            posts.forEach(post => {
-                if (post.getAttribute('data-lang') === language) {
-                    post.style.display = 'block';
-                } else {
-                    post.style.display = 'none';
-                }
-            });
+        const switchLanguageButton = document.getElementById('switch-language');
+        const headerTitle = document.getElementById('header-title');
+        const postTitle1 = document.getElementById('post-title-1');
+        const postDate1 = document.getElementById('post-date-1');
+        const postContent1 = document.getElementById('post-content-1');
+        const postTitle2 = document.getElementById('post-title-2');
+        const postDate2 = document.getElementById('post-date-2');
+        const postContent2 = document.getElementById('post-content-2');
+        const postTitle3 = document.getElementById('post-title-3');
+        const postDate3 = document.getElementById('post-date-3');
+        const postContent3 = document.getElementById('post-content-3');
+        const footerText = document.getElementById('footer-text');
 
-            // Footer szöveg módosítása
-            if (language === 'hu') {
-                footerText.innerText = '© 2025 Life Coach Blog | Minden jog fenntartva.';
-            } else if (language === 'en') {
-                footerText.innerText = '© 2025 Life Coach Blog | All rights reserved.';
+        const translateToEnglish = () => {
+            isEnglish = true;
+            headerTitle.textContent = 'Life Coach Blog';
+            postTitle1.textContent = 'Why Personal Development is Important?';
+            postDate1.textContent = 'January 20, 2025';
+            postContent1.textContent = 'Advancement in life is key to personal development. In this article, we will discuss how you can become the best version of yourself...';
+            postTitle2.textContent = 'Why Mental Health is Important?';
+            postDate2.textContent = 'January 21, 2025';
+            postContent2.textContent = 'Mental health plays a fundamental role in all of our lives. Learn more about how you can support your mental well-being...';
+            postTitle3.textContent = 'Stress Management with a Lifestyle Coach';
+            postDate3.textContent = 'January 22, 2025';
+            postContent3.textContent = 'Stress is present in all of our lives, but it is important to learn how to manage it. In this article, we introduce techniques...';
+            footerText.textContent = '© 2025 Life Coach Blog | Licensed under the MIT License.';
+            switchLanguageButton.textContent = 'Váltás magyarra';
+        };
+
+        const translateToHungarian = () => {
+            isEnglish = false;
+            headerTitle.textContent = 'Life Coach Blog';
+            postTitle1.textContent = 'Miért fontos a személyes fejlődés?';
+            postDate1.textContent = '2025. január 20.';
+            postContent1.textContent = 'Az életben való előrehaladás kulcsa a személyes fejlődés. A következő cikkben arról fogunk beszélni, hogy hogyan érheted el a legjobb énedet...';
+            postTitle2.textContent = 'Miért fontos a mentális egészség?';
+            postDate2.textContent = '2025. január 21.';
+            postContent2.textContent = 'A mentális egészség mindannyiunk életében alapvető szerepet játszik. Tudj meg többet arról, hogyan támogathatod mentális jólétedet...';
+            postTitle3.textContent = 'Stresszkezelés életmódtanácsadóval';
+            postDate3.textContent = '2025. január 22.';
+            postContent3.textContent = 'A stressz mindannyiunk életében jelen van, de fontos megtanulni kezelni. Ebben a cikkben olyan technikákat mutatunk be...';
+            footerText.textContent = '© 2025 Life Coach Blog | Licensed under the MIT License.';
+            switchLanguageButton.textContent = 'Switch to English';
+        };
+
+        switchLanguageButton.addEventListener('click', () => {
+            if (isEnglish) {
+                translateToHungarian();
+            } else {
+                translateToEnglish();
             }
-        }
-
-        // Alapértelmezett nyelv beállítása
-        document.addEventListener('DOMContentLoaded', function() {
-            switchLanguage('hu');
         });
     </script>
 </body>
 </html>
-
-
-    
-
-   
-
-
-      
-       
