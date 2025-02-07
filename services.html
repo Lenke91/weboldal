@@ -4,36 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the services offered, including animated website templates and SEO copywriting.">
+    <meta name="description" content="Explore the services offered, including animated website templates and SEO copywriting">
     <meta name="keywords" content="animated website templates, SEO copywriting, web design, digital marketing">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:title" content="Services - LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:description" content="Discover animated website templates and SEO copywriting services to boost your business.">
+    <meta property="og:description" content="Discover animated website templates and SEO copywriting services to boost your business">
     <meta property="og:image" content="path_to_image.jpg">
     <meta property="og:url" content="https://vstyledesign.com/services">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Services - LENKE VARO PR VSTYLEDESIGN">
-    <meta name="twitter:description" content="Discover animated website templates and SEO copywriting services.">
+    <meta name="twitter:description" content="Discover animated website templates and SEO copywriting services">
     <meta name="twitter:image" content="path_to_image.jpg">
     <meta name="robots" content="index, follow">
     <title>Services</title>
     <style>
-        /* Alap beállítások */
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
             color: darkslategray;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             animation: gradient-animation 6s infinite alternate;
         }
 
-        /* Nyelvváltó */
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
         .language-switcher {
             position: fixed;
             top: 10px;
@@ -47,11 +56,10 @@
             color: darkslategray;
             margin: 0 5px;
             font-weight: bold;
+            cursor: pointer;
         }
 
-        /* Szolgáltatások tartalma */
         .services-container {
-            text-align: center;
             max-width: 600px;
             width: 100%;
             padding: 20px;
@@ -66,127 +74,70 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        h1 {
-            font-size: 4vw;
-            margin-bottom: 20px;
-            color: darkslategray;
-        }
-
-        .services-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services-list li {
-            font-size: 20px;
-            padding: 10px 0;
-            margin: 5px 0;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .services-list li:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Reszponzív dizájn */
-        @media (max-width: 768px) {
-            .services-container {
-                width: 90%;
-                padding: 15px;
-            }
-
-            .services-list li {
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .services-container {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .services-list li {
-                font-size: 16px;
-            }
-
-            h1 {
-                font-size: 5vw;
-            }
-        }
-
-        /* Footer */
         footer {
             text-align: center;
             padding: 20px 0;
             background-color: #2c3e50;
             color: white;
             font-size: 14px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
+            width: 100%;
+            margin-top: auto;
         }
     </style>
 </head>
 
 <body>
     <div class="language-switcher">
-        <a href="#" id="en-btn" class="lang-btn">EN</a> |
-        <a href="#" id="hu-btn" class="lang-btn">HU</a>
+        <span id="en-btn" class="lang-btn">EN</span> |
+        <span id="hu-btn" class="lang-btn">HU</span>
     </div>
 
-    <div class="services-container">
-        <!-- English Content -->
-        <div class="content en-content">
-            <h1>Services</h1>
-            <ul class="services-list">
-                <li>Animated website templates that bring your website to life with smooth transitions and dynamic effects.</li>
-                <li>SEO-optimized templates that improve search engine rankings, helping your business to be found online.</li>
-                <li>Easy-to-customize templates that allow you to quickly adapt the design to fit your brand and style.</li>
-                <li>Responsive web design ensuring that your website looks great on all devices, from desktops to mobile phones.</li>
-            </ul>
-        </div>
-
-        <!-- Hungarian Content -->
-        <div class="content hu-content" style="display: none;">
-            <h1>Szolgáltatások</h1>
-            <ul class="services-list">
-                <li>Animált weboldal sablonok, amelyek életre keltik a weboldalt sima átmenetekkel és dinamikus effektekkel.</li>
-                <li>SEO-optimalizált sablonok, amelyek javítják a keresőmotoros rangsorokat, segítve a vállalkozásodat abban, hogy online könnyebben megtalálják.</li>
-                <li>Könnyen testreszabható sablonok, amelyek lehetővé teszik a dizájn gyors adaptálását, hogy illeszkedjen a márkádhoz és stílusodhoz.</li>
-                <li>Reszponzív webdizájn, biztosítva, hogy a weboldalad jól nézzen ki minden eszközön, legyen az asztali gép vagy mobiltelefon.</li>
-            </ul>
+    <div class="content-wrapper">
+        <div class="services-container">
+            <div class="content en-content">
+                <h1>Services</h1>
+                <ul class="services-list">
+                    <li>Animated website templates that bring your website to life</li>
+                    <li>SEO-optimized templates for better search rankings</li>
+                    <li>Easy-to-customize templates to fit your brand</li>
+                    <li>Responsive design for all devices</li>
+                </ul>
+            </div>
+            <div class="content hu-content" style="display: none;">
+                <h1>Szolgáltatások</h1>
+                <ul class="services-list">
+                    <li>Animált weboldal sablonok, amelyek életre keltik a weboldalt</li>
+                    <li>SEO-optimalizált sablonok a jobb keresőmotoros rangsorolás érdekében</li>
+                    <li>Könnyen testreszabható sablonok a márkádhoz illően</li>
+                    <li>Reszponzív dizájn minden eszközre</li>
+                </ul>
+            </div>
         </div>
     </div>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN. All rights reserved.</p>
-        <p>Follow us on <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a></p>
+        <div class="en-content">
+            <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN All rights reserved</p>
+        </div>
+        <div class="hu-content" style="display: none;">
+            <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN Minden jog fenntartva</p>
+        </div>
     </footer>
 
     <script>
-        // Nyelvváltás funkciók
         document.getElementById('en-btn').addEventListener('click', () => {
-            document.querySelector('.hu-content').style.display = 'none';
-            document.querySelector('.en-content').style.display = 'block';
+            document.querySelectorAll('.hu-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.en-content').forEach(el => el.style.display = 'block');
         });
 
         document.getElementById('hu-btn').addEventListener('click', () => {
-            document.querySelector('.en-content').style.display = 'none';
-            document.querySelector('.hu-content').style.display = 'block';
+            document.querySelectorAll('.en-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.hu-content').forEach(el => el.style.display = 'block');
         });
     </script>
 </body>
