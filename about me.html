@@ -12,17 +12,21 @@
     <meta property="og:url" content="https://www.vstyledesign.com/about-me">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
+    </script>
     <title>About Me - Web Developer & Entrepreneur</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -40,6 +44,7 @@
             position: fixed;
             top: 10px;
             right: 10px;
+            z-index: 999;
         }
 
         .lang-btn {
@@ -62,10 +67,11 @@
             width: 100%;
             max-width: 600px;
             text-align: center;
+            margin-top: 60px;
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 2rem;
             margin-bottom: 20px;
             color: #333;
         }
@@ -73,6 +79,7 @@
         p {
             margin-bottom: 15px;
             color: #555;
+            font-size: 1rem;
         }
 
         .about-img {
@@ -85,6 +92,58 @@
             margin-top: 20px;
             font-size: 14px;
             color: #555;
+            text-align: center;
+        }
+
+        @media (max-width: 1200px) {
+            .about-container {
+                max-width: 80%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .about-img {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-container {
+                max-width: 95%;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .about-img {
+                max-width: 100px;
+            }
         }
     </style>
 </head>
@@ -146,8 +205,3 @@
 
 </body>
 </html>
-
-
-
-
-          
