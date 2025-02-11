@@ -27,7 +27,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: linear-gradient(120deg, #84fab0, #8fd3f4);
             overflow-x: hidden;
         }
@@ -138,6 +138,20 @@
             text-decoration: none;
         }
 
+        @media (max-width: 1200px) {
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .navbar-links ul {
                 flex-direction: column;
@@ -149,7 +163,7 @@
             }
 
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .hero-content p {
@@ -157,11 +171,29 @@
             }
 
             .explore-portfolio-btn {
-                padding: 0.8rem 1.5rem;
+                padding: 1rem 1.5rem;
             }
 
             .footer {
                 padding: 0.5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .explore-portfolio-btn {
+                padding: 0.8rem 1.2rem;
+            }
+
+            .footer {
+                padding: 0.3rem 0;
             }
         }
     </style>
