@@ -11,6 +11,12 @@
     <meta property="og:image" content="https://example.com/images/blog-thumbnail.jpg" />
     <meta property="og:url" content="https://example.com/blog" />
     <meta name="robots" content="index, follow" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Life Coach Blog" />
+    <meta name="twitter:description" content="Olvass hasznos tanácsokat és motiváló történeteket a Life Coach blogon." />
+    <meta name="twitter:image" content="https://example.com/images/blog-thumbnail.jpg" />
+    <meta name="twitter:creator" content="@lenkevarro" />
+    <meta name="twitter:site" content="@lenkevarro" />
     <title id="page-title">Life Coach Blog</title>
 
     <!-- Google Analytics script (Google Tag Manager) -->
@@ -26,7 +32,6 @@
 
     <!-- CSS stílusok -->
     <style>
-        /* Alap stílusok */
         * {
             margin: 0;
             padding: 0;
@@ -34,51 +39,52 @@
         }
 
         html, body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #da44f6; /* Alap háttérszín */
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Header stílusok */
+        /* Fejléc */
         header {
-            background-color: #ca37f7; /* Fejléc háttérszín */
+            background-color: #ca37f7;
             color: white;
-            padding: 20px 0;
+            padding: 20px;
             text-align: left;
             position: relative;
         }
 
         header h1 {
-            font-size: 36px; /* Fejléc szövegének mérete */
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        /* Nyelvváltó gomb a fejléc jobb oldalán */
+        /* Nyelvváltó gomb */
         .language-switcher {
             position: absolute;
             top: 50%;
-            right: 17px; /* Jobb oldalra igazítjuk */
-            transform: translateY(-50%); /* Középre igazítjuk vertikálisan */
+            right: 10px;
+            transform: translateY(-50%);
         }
 
-        /* Nyelvváltó gomb stílusai */
         .language-switcher button {
-            background-color: #da44f6; /* Gomb színe */
+            background-color: #da44f6;
             color: white;
             border: none;
-            padding: 6px 12px; /* Kisebb padding a gombon */
-            font-size: 14px; /* Kisebb betűméret */
+            padding: 8px 15px;
+            font-size: 14px;
             cursor: pointer;
-            border-radius: 5px; /* Lekerekített sarkok */
+            border-radius: 5px;
         }
 
         .language-switcher button:hover {
-            background-color: #ca37f7; /* Hover szín, amikor rákattintanak */
+            background-color: #ca37f7;
         }
 
-        /* Tartalom (posztok) */
+        /* Blog tartalom */
         .container {
             width: 90%;
-            max-width: 1000px; /* Maximális szélesség */
+            max-width: 1000px;
             margin: 40px auto;
         }
 
@@ -86,61 +92,68 @@
             background-color: white;
             margin-bottom: 30px;
             padding: 20px;
-            border-radius: 8px; /* Lekerekített sarkok */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Árnyék a poszt körül */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .post h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 2rem;
             color: #da44f6;
         }
 
         .post p {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 1rem;
         }
 
-        /* Footer stílusai */
+        /* Footer */
         footer {
             background-color: #da44f6;
             color: white;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
         }
 
-        /* Mobil reszponzivitás */
+        /* Reszponzív beállítások */
         @media (max-width: 768px) {
-            /* Nyelvváltó gomb reszponzív beállítása */
-            .language-switcher {
-                right: 10px; /* Kisebb távolság mobil nézetben */
-            }
-
-            /* Nyelvváltó gomb kisebb mérete */
-            .language-switcher button {
-                padding: 6px 12px;
-                font-size: 14px;
-            }
-
-            /* Fejléc szöveg kisebb mérete mobil nézetben */
             header h1 {
-                font-size: 28px;
+                font-size: 2rem;
             }
 
-            /* Blog tartalom szélessége mobil nézetben */
             .container {
-                width: 100%;
+                width: 95%;
                 margin: 20px auto;
             }
 
-            /* Poszt címek kisebb mérete mobilon */
             .post h2 {
-                font-size: 22px;
+                font-size: 1.6rem;
             }
 
-            /* Poszt szöveg kisebb mérete mobilon */
             .post p {
-                font-size: 14px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                width: 100%;
+                margin: 10px auto;
+            }
+
+            .post h2 {
+                font-size: 1.4rem;
+            }
+
+            .post p {
+                font-size: 0.85rem;
+            }
+
+            .language-switcher button {
+                font-size: 12px;
+                padding: 5px 10px;
             }
         }
     </style>
@@ -163,34 +176,33 @@
         <div class="post" data-index="1">
             <h2 id="post-title-1">Miért fontos a személyes fejlődés?</h2>
             <p id="post-date-1" class="date">2025. január 20.</p>
-            <p id="post-content-1">Az életben való előrehaladás kulcsa a személyes fejlődés. Az emberek mindig keresnek módot arra, hogy jobbak legyenek, de a fejlődés nemcsak a külső sikerekről szól. A belső változások, mint a gondolkodásmód, önismeret és a hozzáállás átalakítása a legfontosabb lépés. Az önfejlesztés egy olyan folyamat, amely segít elérni a legjobb verziódat, növelve ezzel a boldogságot és a teljesítményt minden életterületen. A következő cikkben praktikus tippeket adunk, hogy hogyan érheted el a kívánt személyes fejlődést.</p>
+            <p id="post-content-1">Az életben való előrehaladás kulcsa a személyes fejlődés. Az emberek mindig keresnek módot arra, hogy jobbak legyenek, de a fejlődés nemcsak a külső sikerekről szól. A belső változások, mint a gondolkodásmód, önismeret és a hozzáállás átalakítása a legfontosabb lépés. Az önfejlesztés egy olyan folyamat, amely segít elérni a legjobb verziódat, növelve ezzel a boldogságot és a teljesítményt minden életterületen.</p>
         </div>
 
         <!-- Második blog bejegyzés -->
         <div class="post" data-index="2">
             <h2 id="post-title-2">Miért fontos a mentális egészség?</h2>
             <p id="post-date-2" class="date">2025. január 21.</p>
-            <p id="post-content-2">A mentális egészség mindannyiunk életében alapvető szerepet játszik. A mentális jólét közvetlen hatással van a fizikai egészségünkre, az érzelmi állapotunkra, és az életminőségünkre is. Az emberek gyakran elhanyagolják ezt a területet, pedig a mentális egészség fejlesztése lehetővé teszi a hatékonyabb munkát, jobb döntéseket hozunk, és jobban tudjuk kezelni az élet kihívásait. Hogyan támogathatjuk a mentális jólétünket? Milyen napi gyakorlatokat érdemes beépíteni az életünkbe? A cikkben válaszokat találhatsz ezekre a kérdésekre.</p>
+            <p id="post-content-2">A mentális egészség mindannyiunk életében alapvető szerepet játszik. A mentális jólét közvetlen hatással van a fizikai egészségünkre, az érzelmi állapotunkra, és az életminőségünkre is. Az emberek gyakran elhanyagolják ezt a területet, pedig a mentális egészség fejlesztése lehetővé teszi a hatékonyabb munkát, jobb döntéseket hozunk, és jobban tudjuk kezelni az élet kihívásait.</p>
         </div>
 
         <!-- Harmadik blog bejegyzés -->
         <div class="post" data-index="3">
             <h2 id="post-title-3">Stresszkezelés életmódtanácsadóval</h2>
             <p id="post-date-3" class="date">2025. január 22.</p>
-            <p id="post-content-3">A stressz mindannyiunk életében jelen van, de fontos megtanulni kezelni. A stresszkezelés különböző technikákat foglal magában, mint például a meditáció, légzőgyakorlatok, napi mozgás, vagy a helyes időgazdálkodás. Az életmódtanácsadók segítenek abban, hogy a stresszes helyzetekben is képesek legyünk megőrizni a belső nyugalmunkat. Ebben a cikkben részletesen bemutatjuk, hogyan segíthetnek a különböző stresszkezelő módszerek abban, hogy jobban érezzük magunkat a bőrünkben, és hatékonyabban reagáljunk a mindennapi kihívásokra.</p>
+            <p id="post-content-3">A stressz mindannyiunk életében jelen van, de fontos megtanulni kezelni. A stresszkezelés különböző technikákat foglal magában, mint például a meditáció, légzőgyakorlatok, napi mozgás, vagy a helyes időgazdálkodás. Az életmódtanácsadók segítenek abban, hogy a stresszes helyzetekben is képesek legyünk megőrizni a belső nyugalmunkat.</p>
         </div>
     </div>
 
     <!-- Footer -->
     <footer id="footer">
-        <p id="footer-text">&copy; 2025  LENKE VARO PR VSTYLEDESIGN az oldal a MIT licenc feltételei szerint használható.</p>
+        <p id="footer-text">&copy; 2025 LENKE VARO PR VSTYLEDESIGN az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
 
     <!-- JavaScript nyelvváltó logika -->
     <script>
         let isEnglish = false;
 
-        // A gombhoz való hivatkozás
         const switchLanguageButton = document.getElementById('switch-language');
         const headerTitle = document.getElementById('header-title');
         const postTitle1 = document.getElementById('post-title-1');
@@ -204,7 +216,6 @@
         const postContent3 = document.getElementById('post-content-3');
         const footerText = document.getElementById('footer-text');
 
-        // Angolra történő fordítás
         const translateToEnglish = () => {
             isEnglish = true;
             headerTitle.textContent = 'Life Coach Blog';
@@ -221,7 +232,6 @@
             switchLanguageButton.textContent = 'Váltás magyarra';
         };
 
-        // Magyarra történő fordítás
         const translateToHungarian = () => {
             isEnglish = false;
             headerTitle.textContent = 'Life Coach Blog';
@@ -238,7 +248,6 @@
             switchLanguageButton.textContent = 'Switch to English';
         };
 
-        // Nyelvváltás gomb eseménykezelője
         switchLanguageButton.addEventListener('click', () => {
             if (isEnglish) {
                 translateToHungarian();
@@ -247,13 +256,15 @@
             }
         });
     </script>
+
 </body>
 </html>
 
-        
+     
+      
+    
 
-   
-       
+    
 
     
       
