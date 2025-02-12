@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Meta tagok a SEO optimalizáláshoz -->
     <meta name="description" content="Életmódtanácsadói szolgáltatás bemutatkozó oldal. Segítek a személyes fejlődésben, a karrierépítésben és a céljaid elérésében. SEO-optimalizált sablonok, amelyek segítenek abban, hogy könnyedén elérd a céljaidat.">
     <meta name="keywords" content="életmódtanácsadó, személyes fejlődés, karrierfejlesztés, célkitűzés, motiváció, életvezetési tanácsadás, weboldal sablon, SEO-optimalizált, animált sablon">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
@@ -18,20 +19,11 @@
     <meta name="twitter:image" content="https://example.com/your-image.jpg">
     <meta name="twitter:creator" content="@lenkevarro">
     <meta name="twitter:site" content="@lenkevarro">
-       <!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
-
     <title>Életmódtanácsadó Bemutatkozó Oldal</title>
 
+    <!-- CSS stílusok -->
     <style>
+        /* Alap stílusok minden elem számára */
         * {
             margin: 0;
             padding: 0;
@@ -40,57 +32,61 @@
 
         html, body {
             font-family: Arial, sans-serif;
-            background-color: #8e44ad;
-            color: white;
-            line-height: 1.6;
+            background-color: #8e44ad; /* Háttér szín */
+            color: white; /* Alap szöveg szín */
+            line-height: 1.6; /* Sorok közötti távolság */
         }
 
+        /* Fejléc stílusai */
         header {
-            background-color: #ca37f7;
-            color: white;
-            padding: 20px;
-            text-align: left;
+            background-color: #ca37f7; /* Fejléc háttérszín */
+            color: white; /* Fejléc szöveg színe */
+            padding: 20px; /* Fel és alul padding */
+            text-align: left; /* Balra igazított szöveg */
             position: relative;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.5rem; /* Fejléc címének betűmérete */
             margin-bottom: 10px;
         }
 
+        /* Nyelvváltó gombok */
         .language-switcher {
             position: absolute;
             top: 50%;
             right: 10px;
-            transform: translateY(-50%);
+            transform: translateY(-50%); /* Függőleges középre igazítás */
         }
 
         .language-switcher button {
-            background-color: #34495e;
-            color: white;
+            background-color: #34495e; /* Gomb háttérszíne */
+            color: white; /* Gomb szövegszíne */
             border: none;
-            padding: 8px 15px;
+            padding: 8px 15px; /* Gomb mérete */
             font-size: 14px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 5px; /* Lekerekített sarkok */
         }
 
+        /* Hover állapot a nyelvváltó gomboknál */
         .language-switcher button:hover {
-            background-color: #2ecc71;
+            background-color: #2ecc71; /* Hover háttérszín */
         }
 
+        /* Tartalom stílusai */
         .content {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 50px;
             text-align: center;
-            flex-direction: column;
+            flex-direction: column; /* Függőleges elrendezés */
         }
 
         .text {
             flex: 1;
-            padding-left: 40px;
+            padding-left: 40px; /* Bal oldali padding a szövegnél */
         }
 
         h1 {
@@ -104,6 +100,7 @@
             margin-bottom: 40px;
         }
 
+        /* Footer stílusok */
         .footer {
             background-color: #ca37f7;
             color: white;
@@ -111,6 +108,7 @@
             text-align: center;
         }
 
+        /* Reszponzív beállítások a különböző eszközökre */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -159,6 +157,7 @@
         </div>
     </header>
 
+    <!-- Tartalom rész -->
     <div class="content" id="blog-container">
         <div class="text">
             <h1 id="about-title">Életmódtanácsadó Szolgáltatásaim</h1>
@@ -179,6 +178,7 @@
         <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
     </footer>
 
+    <!-- JavaScript a nyelvváltás kezelésére -->
     <script>
         const translations = {
             hu: {
@@ -197,6 +197,7 @@
             }
         };
 
+        // Nyelvváltás funkció
         function switchLanguage(language) {
             document.getElementById('header-title').innerText = translations[language].title;
             document.getElementById('about-title').innerText = translations[language].title;
@@ -206,7 +207,7 @@
             document.getElementById('footer-text').innerText = translations[language].footer;
         }
 
-        // Nyelvváltás esemény
+        // Nyelvváltás eseménykezelő
         document.getElementById('switch-language').addEventListener('click', function() {
             const currentLanguage = document.getElementById('switch-language').innerText;
             const newLanguage = currentLanguage === 'Magyar' ? 'en' : 'hu';
@@ -217,4 +218,3 @@
 
 </body>
 </html>
-
