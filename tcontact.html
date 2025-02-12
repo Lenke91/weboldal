@@ -1,4 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kapcsolat oldal - Life Coach weboldal sablon, amely reszponzív, SEO-optimalizált és animált.">
+    <meta name="keywords" content="life coach, kapcsolat, weboldal sablon, SEO, animációk, reszponzív">
+    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    <meta property="og:title" content="Kapcsolat - Life Coach Weboldal Sablon">
+    <meta property="og:description" content="Kapcsolatba léphetsz velem, ha szeretnél elkezdeni dolgozni a személyes fejlődéseden.">
+    <meta property="og:image" content="https://example.com/your-image.jpg">
+    <meta property="og:url" content="https://vstyledesign.com/contact">
+    <title>Kapcsolat - Life Coach Weboldal Sablon</title>
     <style>
         * {
             margin: 0;
@@ -113,6 +125,36 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .contact-box {
+                width: 80%;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            .language-switcher button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+            .contact-box {
+                width: 100%;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 20px;
+            }
+            .language-switcher button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -137,7 +179,7 @@
         </div>
     </div>
 
-    <p id="footer-text" style="color: white; text-align: center;">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
+    <p id="footer-text" style="color: white; text-align: center;">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.</p>
 
     <script>
         function switchLanguage(language) {
@@ -148,7 +190,7 @@
                 document.getElementById('email').placeholder = 'Your Email';
                 document.getElementById('message').placeholder = 'Your Message';
                 document.getElementById('submit-btn').innerText = 'Send';
-                document.getElementById('footer-text').innerHTML = '&copy; 2025 LENKE VARO PR VSTYLEDESIGN | This site is licensed under the MIT License.';
+                document.getElementById('footer-text').innerText = '© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.';
             } else {
                 document.getElementById('page-title').innerText = 'Kapcsolat';
                 document.getElementById('contact-title').innerText = 'Lépj kapcsolatba velem!';
@@ -156,16 +198,15 @@
                 document.getElementById('email').placeholder = 'Email címed';
                 document.getElementById('message').placeholder = 'Üzeneted';
                 document.getElementById('submit-btn').innerText = 'Küldés';
-                document.getElementById('footer-text').innerHTML = '&copy; 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.';
+                document.getElementById('footer-text').innerText = '© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.';
             }
         }
     </script>
 
 </body>
 </html>
-   
-  
+
+ 
        
-    
-  
+        
 
