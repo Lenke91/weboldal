@@ -3,62 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Miért fontos a mentális egészség? Olvasd el részletes blogbejegyzésünket a mentális jólét megőrzéséről és a lelki egészség fontosságáról." />
     <meta name="keywords" content="mentális egészség, jólét, stresszkezelés, önfejlesztés, lelki egyensúly" />
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
     <meta property="og:title" content="Miért fontos a mentális egészség?" />
     <meta property="og:description" content="Olvasd el a mentális egészség fontosságáról szóló cikkünket és tudd meg, hogyan érheted el a lelki egyensúlyt!" />
     <meta name="robots" content="index, follow" />
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
     <title>Miért fontos a mentális egészség?</title>
+
     <style>
+        /* Reset alap beállítások */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color:#f499da ;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4e1f0; /* Lágyságot adó szín */
             color: #333;
             padding: 20px;
             line-height: 1.6;
         }
+
+        /* Fejléc stílusok */
         header {
-            background-color:#b84798 ;
+            background-color: #ca37f7; /* Erőteljes szín a fejlécnek */
             color: white;
             padding: 18px;
             text-align: center;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Árnyék a fejléc alján */
         }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Nyelvváltó gombok */
+        .language-switcher {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .language-switcher button {
+            background-color: #34495e;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-switcher button:hover {
+            background-color: #2ecc71; /* Zöld hover effekt */
+        }
+
+        /* Tartalom */
         .container {
             background-color: white;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Árnyék a tartalom körül */
             max-width: 800px;
-            margin: 20px auto;
+            margin: 30px auto;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
+
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        p { margin-bottom: 15px; }
-        .upload-section { text-align: center; margin-top: 20px; }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .upload-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         input[type="file"] {
             display: none;
         }
+
         .upload-btn {
-            background-color:#b84798 ;
+            background-color: #b84798; /* Lágyságot sugárzó szín */
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
         }
+
         button {
             background-color: #b84798;
             color: white;
@@ -67,30 +110,82 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         footer {
             text-align: center;
             margin-top: 30px;
             font-size: 0.9em;
             color: #fff;
+            padding: 20px 0;
+            background-color: #ca37f7;
+            border-radius: 8px;
         }
+
+        /* Animáció */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Reszponzív beállítások */
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            .container { padding: 20px; }
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1 class="hu">Miért fontos a mentális egészség?</h1>
         <h1 class="en" style="display: none;">Why is mental health important?</h1>
-        <button onclick="switchLanguage('hu')">Magyar</button>
-        <button onclick="switchLanguage('en')">English</button>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('hu')">Magyar</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
     </header>
+
     <div class="container">
         <p class="hu">A mentális egészség alapvető a teljes jóllétünkhöz. A lelki egyensúly megőrzése segít abban, hogy jobban kezeljük a stresszt és a mindennapi kihívásokat.</p>
         <p class="hu">A pozitív gondolkodás, a tudatos pihenés és a megfelelő életmód mind hozzájárulnak ahhoz, hogy mentálisan erősebbek legyünk és kiegyensúlyozottabb életet éljünk.</p>
         <p class="en" style="display: none;">Mental health is essential for our overall well-being. Maintaining mental balance helps us better manage stress and everyday challenges.</p>
         <p class="en" style="display: none;">Positive thinking, conscious relaxation, and a healthy lifestyle all contribute to our mental strength and help us live a more balanced life.</p>
+
         <div class="upload-section">
             <h3 class="hu">Tölts fel egy pihentető képet!</h3>
             <h3 class="en" style="display: none;">Upload a relaxing image!</h3>
@@ -98,10 +193,12 @@
             <input type="file" id="fileInput">
         </div>
     </div>
+
     <footer>
-        <p class="hu">&copy; 2025 LENKE VARO PR VSTYLEDESIG | Az oldal az MIT licenc alapján használható.</p>
-        <p class="en" style="display: none;">&copy; 2025 LENKE VARO PR VSTYLEDESIG | This site is available under the MIT license.</p>
+        <p class="hu">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
+        <p class="en" style="display: none;">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT license.</p>
     </footer>
+
     <script>
         function switchLanguage(lang) {
             const huElements = document.querySelectorAll('.hu');
@@ -122,5 +219,6 @@
             }
         }
     </script>
+
 </body>
 </html>
