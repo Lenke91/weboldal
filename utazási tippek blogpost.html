@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz! Tippek, hogy hogyan tervezd meg következő kalandodat.">
     <meta name="keywords" content="utazás, utazási tippek, nyaralás, utazási tanácsok, kaland, felfedezés">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Utazási Tippek">
     <meta property="og:description" content="Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz!">
     <meta property="og:image" content="path/to/your-image.jpg">
     <meta property="og:url" content="https://vstyledesign.com/blog-posts">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Utazási Tippek">
     <meta name="twitter:description" content="Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz!">
     <meta name="twitter:image" content="path/to/your-image.jpg">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,9 +30,11 @@
         gtag('js', new Date());
         gtag('config', 'G-85RD19D4PP');
     </script>
+
     <title>Utazási Tippek | Fedezd fel a világ legszebb helyeit</title>
 
     <style>
+        /* Base Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -101,7 +112,7 @@
             background-color: #0c4ce1;
         }
 
-        /* Reszponzív dizájn */
+        /* Responsive Styles */
         @media (max-width: 1024px) {
             #blog-posts {
                 padding: 15px;
@@ -171,9 +182,9 @@
             }
         }
 
-        /* Footer stílusok */
+        /* Footer Styles */
         footer {
-            background-color:#33c4ff;
+            background-color: #33c4ff;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -191,14 +202,15 @@
         }
     </style>
 </head>
+
 <body>
 
     <section id="blog-posts">
         <div class="post">
             <h2 id="post-title">Utazási tippek</h2>
             <p id="post-description">Fedezd fel a világ legszebb helyeit és hasznos utazási tanácsokat kaphatsz!</p>
-            
-            <!-- Teljes cikk tartalom -->
+
+            <!-- Full Post Content -->
             <div id="full-post" class="full-post-content">
                 <h3>Miért fontos a jó útiterv?</h3>
                 <p>A jól megtervezett útiterv nemcsak az utazás élményét fokozza, hanem időt és pénzt is spórolhat. Az alábbiakban néhány tippet adunk a legjobb előkészületekhez:</p>
@@ -210,8 +222,8 @@
                 <p>Ne felejtsd el, hogy a legnagyobb kalandok mindig a legjobban megtervezett utak során kezdődnek!</p>
             </div>
         </div>
-        
-        <!-- Nyelvi váltó gomb -->
+
+        <!-- Language Switch Button -->
         <div class="language-switcher">
             <button id="language-switch" onclick="switchLanguage()">EN</button>
         </div>
@@ -223,7 +235,7 @@
     </footer>
 
     <script>
-        // Nyelvi váltás funkció
+        // Language Switch Function
         function switchLanguage() {
             var button = document.getElementById("language-switch");
             var footerText = document.getElementById("footer-text");
@@ -261,5 +273,6 @@
             }
         }
     </script>
+
 </body>
 </html>
