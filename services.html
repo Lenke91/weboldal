@@ -1,38 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Explore the services offered, including animated website templates and SEO copywriting">
     <meta name="keywords" content="animated website templates, SEO copywriting, web design, digital marketing">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Services - LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:description" content="Discover animated website templates and SEO copywriting services to boost your business">
     <meta property="og:image" content="path_to_image.jpg">
     <meta property="og:url" content="https://vstyledesign.com/services">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Services - LENKE VARO PR VSTYLEDESIGN">
     <meta name="twitter:description" content="Discover animated website templates and SEO copywriting services">
     <meta name="twitter:image" content="path_to_image.jpg">
-    <meta name="robots" content="index, follow">
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="twitter:site" content="@your_twitter_handle">
+    
+    <!-- Language Meta Tag -->
+    <meta http-equiv="Content-Language" content="hu">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
+    </script>
 
-  gtag('config', 'G-85RD19D4PP');
-</script>
     <title>Services</title>
     <style>
+        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Body Styling */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -43,6 +54,7 @@
             animation: gradient-animation 6s infinite alternate;
         }
 
+        /* Content Wrapper */
         .content-wrapper {
             flex: 1;
             display: flex;
@@ -52,6 +64,7 @@
             text-align: center;
         }
 
+        /* Language Switcher */
         .language-switcher {
             position: fixed;
             top: 10px;
@@ -68,6 +81,7 @@
             cursor: pointer;
         }
 
+        /* Services Container Styling */
         .services-container {
             max-width: 600px;
             width: 100%;
@@ -78,6 +92,7 @@
             animation: fadeIn 2s ease-in-out;
         }
 
+        /* Fade-in Animation */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -89,6 +104,7 @@
             }
         }
 
+        /* Footer Styling */
         footer {
             text-align: center;
             padding: 20px 0;
@@ -98,17 +114,50 @@
             width: 100%;
             margin-top: auto;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* Responsive navigation */
+            nav ul {
+                flex-direction: column;
+            }
+
+            /* Hero section */
+            #hero {
+                padding: 50px 10px;
+            }
+
+            /* Services container responsiveness */
+            .services-container {
+                width: 100%;
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .lang-btn {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Language switcher buttons -->
     <div class="language-switcher">
         <span id="en-btn" class="lang-btn">EN</span> |
         <span id="hu-btn" class="lang-btn">HU</span>
     </div>
 
+    <!-- Content Wrapper for Services Section -->
     <div class="content-wrapper">
         <div class="services-container">
+            <!-- English content -->
             <div class="content en-content">
                 <h1>Services</h1>
                 <ul class="services-list">
@@ -118,6 +167,8 @@
                     <li>Responsive design for all devices</li>
                 </ul>
             </div>
+
+            <!-- Hungarian content, initially hidden -->
             <div class="content hu-content" style="display: none;">
                 <h1>Szolgáltatások</h1>
                 <ul class="services-list">
@@ -129,6 +180,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
     <footer>
         <div class="en-content">
             <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN All rights reserved</p>
@@ -138,7 +191,9 @@
         </div>
     </footer>
 
+    <!-- Language Switch JavaScript -->
     <script>
+        // Event listeners for language change
         document.getElementById('en-btn').addEventListener('click', () => {
             document.querySelectorAll('.hu-content').forEach(el => el.style.display = 'none');
             document.querySelectorAll('.en-content').forEach(el => el.style.display = 'block');
