@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about affiliate marketing, how it works, and how to get started earning passive income online with affiliate marketing.">
-    <meta name="keywords" content="affiliate marketing, passive income, online income, earning money online, how to start affiliate marketing">
+    <meta name="keywords" content="affiliate marketing, passive income, online income, earning money online, how to start affiliate marketing, marketing strategies, earning through affiliate, affiliate business, internet marketing">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:title" content="Affiliate Marketing Guide">
     <meta property="og:description" content="Learn about affiliate marketing and start earning online today.">
@@ -12,32 +12,33 @@
     <meta property="og:url" content="https://vstyledesign.com/affiliate-marketing">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="index, follow">
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-85RD19D4PP');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
+    </script>
     <title>Affiliate Marketing Guide | Earn Passive Income Online</title>
-
+    <link rel="canonical" href="https://vstyledesign.com/affiliate-marketing">
     <style>
+        /* Alap stílusok */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            background: linear-gradient(120deg, #84fab0, #8fd3f4); /* Színes háttér */
             color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Zöld háttér szín a fejlécnek */
             color: white;
             text-align: center;
             padding: 30px 20px;
             position: relative;
         }
+
+        /* Nyelvváltó gombok stílusa */
         .language-switcher {
             position: absolute;
             top: 15px;
@@ -54,16 +55,19 @@
             font-size: 14px;
         }
         .lang-btn:hover {
-            background-color: #388E3C;
+            background-color: #388E3C; /* Gomb színének változtatása, ha rávisszük az egeret */
         }
+
+        /* A fő tartalom stílusa */
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Árnyék hozzáadása */
         }
+
         .cta-button {
             display: inline-block;
             background-color: #4CAF50;
@@ -74,17 +78,20 @@
             font-weight: bold;
         }
         .cta-button:hover {
-            background-color: #388E3C;
+            background-color: #388E3C; /* Képzés gomb színe változik */
         }
+
         footer {
             text-align: center;
             padding: 20px;
             background-color: #4CAF50;
             color: white;
         }
-        @media (max-width: 768px) {
+
+        /* Reszponzív stílusok - Alkalmazható mobil eszközökhöz */
+        @media (max-width: 1024px) {
             header {
-                padding: 20px 15px;
+                padding: 20px 15px; /* Fejléc padding csökkentése mobil nézethez */
             }
             .language-switcher {
                 top: 10px;
@@ -95,8 +102,21 @@
                 font-size: 12px;
             }
             .container {
+                margin: 20px;
                 padding: 15px;
-                margin: 20px auto;
+            }
+            .cta-button {
+                padding: 8px 16px;
+            }
+        }
+
+        /* További reszponzív beállítások - Kis képernyők (mobil nézet) */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            header {
+                padding: 15px 10px;
             }
             .cta-button {
                 padding: 8px 16px;
@@ -121,7 +141,7 @@
     <section id="affiliate-marketing">
         <h2 id="section-title">What is Affiliate Marketing?</h2>
         <p id="section-description">Affiliate marketing is a popular method for earning passive income online. It allows you to promote products or services from other companies and earn a commission for each sale or lead you generate.</p>
-        <a href="affiliate marketing with ai.html" id="cta-button" class="cta-button">Get Started Now!</a>
+        <a href="affiliate-marketing-with-ai.html" id="cta-button" class="cta-button">Get Started Now!</a>
     </section>
 </div>
 
@@ -130,6 +150,7 @@
 </footer>
 
 <script>
+    // Nyelvváltás funkció
     const translations = {
         en: {
             headerText: 'Affiliate Marketing Guide',
@@ -149,6 +170,7 @@
         }
     };
 
+    // A nyelvváltás végrehajtása
     function switchLanguage(lang) {
         document.getElementById('header-text').innerText = translations[lang].headerText;
         document.getElementById('header-description').innerText = translations[lang].headerDescription;
@@ -159,11 +181,13 @@
         setCurrentYear();
     }
 
+    // Az aktuális év beállítása
     function setCurrentYear() {
         const year = new Date().getFullYear();
         document.getElementById('current-year').innerText = year;
     }
 
+    // A nyelvváltó gombok eseményeinek kezelése
     document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
     document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
     setCurrentYear();
