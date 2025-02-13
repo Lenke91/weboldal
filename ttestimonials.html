@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
+    <!-- Meta tags for SEO, description, keywords, and social sharing -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Olvasd el a véleményeket, amelyeket életmódtanácsadónktól kaptunk.">
@@ -9,7 +10,9 @@
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
     <meta property="og:description" content="Olvasd el, hogy mit mondanak rólunk azok, akiknek segítettünk elérni céljaikat életmódtanácsadásunkkal.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https:/example.com">
+    <meta property="og:url" content="https://example.com">
+    
+    <!-- Google Analytics Tag for tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,96 +20,107 @@
         gtag('js', new Date());
         gtag('config', 'G-85RD19D4PP');
     </script>
+
+    <!-- Page Title -->
     <title>Vélemények az életmódtanácsadásról</title>
+
     <style>
-        /* Alap stílusok */
+        /* Global Styles for the page */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #8e44ad;
+            background-color: #8e44ad; /* Purple background for the page */
             color: white;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Az oldal teljes magasságának lefedése */
+            min-height: 100vh; /* Ensure the page covers the entire viewport height */
         }
 
+        /* Header section styles */
+        header {
+            background-color: #4b2d70; /* Dark purple for header */
+            padding: 20px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Title Styling */
         h1 {
-            margin-top: 50px;
-            font-size: 2.5rem;
-            animation: fadeIn 1s ease-in-out;
+            font-size: 2.5rem; /* Responsive title size */
+            margin-top: 20px;
         }
 
+        /* Testimonials Section Styling */
         #testimonials {
             padding: 20px;
-            flex: 1; /* A tartalom teret kap, hogy a footer lent maradjon */
+            flex: 1; /* Allow content area to take most of the space */
         }
 
-        /* Vélemények konténer */
+        /* Flex container for the testimonials */
         .testimonial-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 30px;
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Egyes vélemények */
+        /* Individual testimonial box styles */
         .testimonial {
-            background-color: #fff;
-            color: #8e44ad;
+            background-color: #fff; /* White background for testimonials */
+            color: #8e44ad; /* Matching text color with background */
             padding: 20px;
-            border-radius: 15px;
-            width: 250px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; /* Rounded corners for a modern feel */
+            width: 300px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
             opacity: 0;
-            transform: translateY(30px);
-            animation: fadeUp 1s forwards;
+            transform: translateY(30px); /* Initial position for animation */
+            animation: fadeUp 1s forwards; /* Animation to show the testimonials */
             transition: all 0.3s ease-in-out;
         }
 
+        /* Hover effect for the testimonial boxes */
         .testimonial:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
         }
 
+        /* Styling for the quote text */
         .quote {
             font-style: italic;
             font-size: 1.1rem;
         }
 
+        /* Styling for the author names */
         .author {
             margin-top: 15px;
             font-weight: bold;
             font-size: 1.2rem;
         }
 
-        /* Nyelvváltó gombok */
+        /* Language toggle button styles */
         .lang-toggle {
-            color: white;
             background-color: #380327;
+            color: white;
             padding: 10px 20px;
-            margin: 10px 15px;
+            margin: 10px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1rem;
         }
 
         .lang-toggle:hover {
-            background-color: #54043b;
+            background-color: #54043b; /* Darker shade on hover */
         }
 
-        nav {
-            margin-top: 30px;
-        }
-
-        /* Footer stílusok */
+        /* Footer styling */
         footer {
             padding: 10px;
-            background-color: #54043b;
+            background-color: #54043b; /* Footer background */
             text-align: center;
             width: 100%;
-            margin-top: auto; /* Footer mindig lent legyen */
+            margin-top: auto; /* Keeps footer at the bottom */
         }
 
         footer p {
@@ -115,7 +129,18 @@
             font-size: 1rem;
         }
 
-        /* Reszponzív design - Minden eszközhöz megfelelően */
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive design for different screen sizes */
         @media (max-width: 1024px) {
             .testimonial-container {
                 flex-direction: row;
@@ -123,7 +148,7 @@
             }
 
             .testimonial {
-                width: 45%;
+                width: 45%; /* Two testimonials in a row on medium screens */
             }
         }
 
@@ -134,35 +159,24 @@
             }
 
             .testimonial {
-                width: 70%;
+                width: 70%; /* More space on smaller screens */
                 margin-bottom: 20px;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.8rem; /* Smaller title font on mobile */
             }
 
             .testimonial {
-                width: 90%;
-                margin-bottom: 30px; /* Itt csökkentettem a margót */
+                width: 90%; /* Almost full width for mobile */
+                margin-bottom: 30px;
             }
 
             footer p {
                 font-size: 0.9rem;
             }
-        }
-
-        /* Animációk */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -170,25 +184,27 @@
 
 <header>
     <nav style="display: flex; justify-content: flex-end; padding: 20px;">
-        <!-- Nyelvváltó gombok -->
+        <!-- Language switcher links -->
         <a href="#" class="lang-toggle" data-lang="hu">Magyar</a>
         <a href="#" class="lang-toggle" data-lang="en">English</a>
     </nav>
-    <h1 data-hu="Vélemények  az életmódtanácsadásról" data-en="Testimonials Life Coaching">Vélemények az életmódtanácsadásról</h1>
+    <h1 data-hu="Vélemények az életmódtanácsadásról" data-en="Testimonials Life Coaching">Vélemények az életmódtanácsadásról</h1>
 </header>
 
 <main>
     <section id="testimonials">
-        <!-- Vélemények szekció -->
         <div class="testimonial-container">
+            <!-- Testimonial 1 -->
             <div class="testimonial" data-hu="A coaching segítségével hatékonyabban érem el a céljaimat." data-en="The coaching helped me achieve my goals more effectively.">
                 <p class="quote" data-hu="A coaching segítségével hatékonyabban érem el a céljaimat." data-en="The coaching helped me achieve my goals more effectively.">"A coaching segítségével hatékonyabban érem el a céljaimat."</p>
                 <p class="author" data-hu="- Kovács János" data-en="- John Kovacs">- Kovács János</p>
             </div>
+            <!-- Testimonial 2 -->
             <div class="testimonial" data-hu="Nagyon sokat tanultam a Life Coach segítségével, és egy új irányba indultam." data-en="I learned so much with the help of the Life Coach, and I started a new direction.">
                 <p class="quote" data-hu="Nagyon sokat tanultam a Life Coach segítségével, és egy új irányba indultam." data-en="I learned so much with the help of the Life Coach, and I started a new direction.">"Nagyon sokat tanultam a Life Coach segítségével, és egy új irányba indultam."</p>
                 <p class="author" data-hu="- Nagy Anna" data-en="- Anna Nagy">- Nagy Anna</p>
             </div>
+            <!-- Testimonial 3 -->
             <div class="testimonial" data-hu="A coaching folyamatos motivációt ad, hogy a legjobb formámat hozzam." data-en="The coaching provides continuous motivation to bring out my best self.">
                 <p class="quote" data-hu="A coaching folyamatos motivációt ad, hogy a legjobb formámat hozzam." data-en="The coaching provides continuous motivation to bring out my best self.">"A coaching folyamatos motivációt ad, hogy a legjobb formámat hozam."</p>
                 <p class="author" data-hu="- Szabó Gábor" data-en="- Gábor Szabó">- Szabó Gábor</p>
@@ -197,7 +213,7 @@
     </section>
 </main>
 
-<!-- Footer szekció -->
+<!-- Footer -->
 <footer id="footer">
     <p id="footer-text" data-hu="© 2025 LENKE VARO PR VSTYLEDESIGN | Ez az oldal az MIT Licensz alatt van." data-en="© 2025 VstyleDesign | This site is licensed under the MIT License."></p>
 </footer>
@@ -226,4 +242,3 @@
 
 </body>
 </html>
-
