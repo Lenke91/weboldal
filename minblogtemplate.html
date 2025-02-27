@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Minimalista blog sablon, könnyen testreszabható, SEO-optimalizált és reszponzív. Ideális kezdőknek és tapasztalt bloggereknél egyaránt.">
-    <meta name="keywords" content="minimalista, blog, sablon, reszponzív, SEO-optimalizált, személyes blog, weboldal, HTML, CSS, JavaScript, blog sablon">
+    <meta name="description" content="Egészséges életmód és utazási tippek: táplálkozás, testmozgás és kalandok a világban. SEO-optimalizált és reszponzív blog sablon.">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://vstyledesign.com/minblogtemplate.html">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Minimalista Blog Sablon">
-    <meta property="og:description" content="Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon.">
-    <meta property="og:image" content="URL_to_your_image.jpg">
+    <!-- Open Graph meta tagok -->
+    <meta property="og:title" content="Minimalista Blog Sablon - SEO-optimalizált és reszponzív">
+    <meta property="og:description" content="Fedezd fel a világ legjobb egészséges életmód és utazási tippjeit egy modern blog sablonnal.">
+    <meta property="og:image" content="https://vstyledesign.com/images/blog_preview.jpg">
     <meta property="og:url" content="https://vstyledesign.com/minblogtemplate.html">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="hu_HU">
     
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card meta tagok -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Minimalista Blog Sablon">
-    <meta name="twitter:description" content="Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon.">
-    <meta name="twitter:image" content="URL_to_your_image.jpg">
-    <meta name="twitter:site" content="@your_twitter_handle">
+    <meta name="twitter:title" content="Minimalista Blog Sablon - SEO-optimalizált és reszponzív">
+    <meta name="twitter:description" content="Egyszerű, modern blog sablon az egészséges életmód és utazás szerelmeseinek. SEO-optimalizált és reszponzív design.">
+    <meta name="twitter:image" content="https://vstyledesign.com/images/blog_preview.jpg">
+    <meta name="twitter:site" content="@vstyledesign">
     
-    <!-- Language Meta Tag -->
-    <meta http-equiv="Content-Language" content="hu">
-    
-    <title>Minimalista Blog</title>
+    <title>Minimalista Blog Sablon - SEO-optimalizált és reszponzív</title>
     <style>
+        /* Alapstílusok minden eszközön */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0fc0c0;
+            background-color: #e6f7f8;
             color: #333;
             line-height: 1.6;
         }
         header {
-            background:transparent;
-            color: #00d9ff;
+            background: #0077a8;
+            color: #fff;
             padding: 20px;
             text-align: center;
         }
@@ -53,24 +54,13 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #e4eeef;
+            color: #fff;
             text-decoration: none;
             font-size: 18px;
         }
         #hero {
             text-align: center;
             padding: 80px 20px;
-        }
-        .animate {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s forwards;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         #blog-posts {
             display: grid;
@@ -83,32 +73,41 @@
         .post {
             background: #fff;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            border-radius: 10px;
+        }
+        .post img {
+            max-width: 100%;
             border-radius: 10px;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: transparent;
-            color: blue;
-        }
-        button {
-            background: #29a7e1;
+            background: #0077a8;
             color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
+        }
+        /* Reszponzív tervezés különböző eszközökre */
+        @media (max-width: 1024px) {
+            #hero {
+                padding: 60px 15px;
+            }
         }
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
-            }
-            nav ul li {
-                margin: 10px 0;
+                align-items: center;
             }
             #hero {
-                padding: 50px 10px;
+                padding: 40px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            #hero {
+                padding: 30px 5px;
+            }
+            nav ul li {
+                margin: 5px 0;
             }
         }
     </style>
@@ -120,88 +119,37 @@
                 <li><a href="minblogtemplate.html" class="home">Kezdőlap</a></li>
                 <li><a href="minblogabout.html" class="about">Rólam</a></li>
                 <li><a href="minblogcontact.html" class="contact">Kapcsolat</a></li>
-                <li>
-                    <button id="lang-toggle">EN</button>
-                </li>
+                <li><button id="lang-toggle">EN</button></li>
             </ul>
         </nav>
     </header>
-    
     <main>
         <section id="hero">
-            <h1 class="animate main-heading">Üdvözöllek a Blogomon!</h1>
-            <p class="animate main-description">"Egészséges életmód és utazási tippek: Fedezd fel a világot, miközben jól érzed magad!"</p>
-        </section>
-        
-        <section id="blog-posts">
-            <div class="post">
-                <h2 class="post-title">Egészséges életmód</h2>
-                <p class="post-description">Tippek és trükkök az egészséges életmód kialakításához.</p>
-                <a href="egészséges életmód blogposzt.html" class="read-more">Bővebben</a>
-            </div>
-            <div class="post">
-                <h2 class="post-title">Utazási tippek</h2>
-                <p class="post-description">Fedezd fel a világ legszebb helyeit és utazási tanácsokat kaphatsz!</p>
-                <a href="utazási tippek blogpost.html" class="read-more">Bővebben</a>
-            </div>
+            <h1 class="main-heading">Üdvözöllek a Blogomon!</h1>
+            <p class="main-description">Egészséges életmód és utazási tippek.</p>
         </section>
     </main>
-    
     <footer>
-        <p id="footer-text" class="hu">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
+        <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN</p>
     </footer>
-
     <script>
+        // Nyelvváltó funkció
         document.getElementById('lang-toggle').addEventListener('click', function() {
             if (document.documentElement.lang === 'hu') {
                 document.documentElement.lang = 'en';
                 this.textContent = 'HU';
-                
-                // Update all content to English
-                document.querySelector('.main-heading').textContent = 'Welcome to My Blog!';
-                document.querySelector('.main-description').textContent = 'Minimalist, SEO-optimized, and easy to customize blog template.';
-                document.querySelector('.home').textContent = 'Home';
-                document.querySelector('.about').textContent = 'About';
-                document.querySelector('.contact').textContent = 'Contact';
-                
-                // Update post titles and descriptions
-                let postTitles = document.querySelectorAll('.post-title');
-                let postDescriptions = document.querySelectorAll('.post-description');
-                
-                postTitles[0].textContent = 'Healthy Lifestyle';
-                postTitles[1].textContent = 'Travel Tips';
-                postDescriptions[0].textContent = 'Tips and tricks for adopting a healthy lifestyle.';
-                postDescriptions[1].textContent = 'Explore the world\'s most beautiful places and get travel advice!';
-                
-                document.querySelector('.read-more').textContent = 'Read More';
-                document.querySelector('.footer-text').innerHTML = '&copy; 2025 Minimalist Blog | <a href="contact.html" class="footer-link">Contact</a>';
             } else {
                 document.documentElement.lang = 'hu';
                 this.textContent = 'EN';
-
-                // Update all content back to Hungarian
-                document.querySelector('.main-heading').textContent = 'Üdvözöllek a Blogomon!';
-                document.querySelector('.main-description').textContent = 'Minimalista, SEO-optimalizált és könnyen testreszabható blog sablon.';
-                document.querySelector('.home').textContent = 'Kezdőlap';
-                document.querySelector('.about').textContent = 'Rólam';
-                document.querySelector('.contact').textContent = 'Kapcsolat';
-                
-                // Update post titles and descriptions back to Hungarian
-                let postTitles = document.querySelectorAll('.post-title');
-                let postDescriptions = document.querySelectorAll('.post-description');
-                
-                postTitles[0].textContent = 'Egészséges életmód';
-                postTitles[1].textContent = 'Utazási tippek';
-                postDescriptions[0].textContent = 'Tippek és trükkök az egészséges életmód kialakításához.';
-                postDescriptions[1].textContent = 'Fedezd fel a világ legszebb helyeit és utazási tanácsokat kaphatsz!';
-                
-                document.querySelector('.read-more').textContent = 'Bővebben';
-                document.querySelector('.footer-text').innerHTML = '&copy; 2025 Minimalista Blog | <a href="contact.html" class="footer-link">Kapcsolat</a>';
             }
         });
     </script>
 </body>
 </html>
+
+           
+        
+       
 
   
     
