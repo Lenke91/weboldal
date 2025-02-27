@@ -18,21 +18,9 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="hu_HU">
     
-    <!-- Twitter Card meta tagok -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Minimalista Blog Sablon - SEO-optimalizált és reszponzív">
-    <meta name="twitter:description" content="Egyszerű, modern blog sablon az egészséges életmód és utazás szerelmeseinek. SEO-optimalizált és reszponzív design.">
-    <meta name="twitter:image" content="https://vstyledesign.com/images/blog_preview.jpg">
-    <meta name="twitter:site" content="@vstyledesign">
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
     <title>Minimalista Blog Sablon - SEO-optimalizált és reszponzív</title>
     <style>
-        /* Alapstílusok minden eszközön */
+        /* Alapstílusok minden eszközre */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -40,7 +28,15 @@
             background-color: #e6f7f8;
             color: #333;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+        main {
+            flex: 1;
+        }
+        
+        /* Fejléc és navigációs menü */
         header {
             background: #0077a8;
             color: #fff;
@@ -63,36 +59,17 @@
             text-decoration: none;
             font-size: 18px;
         }
-        #hero {
-            text-align: center;
-            padding: 80px 20px;
-        }
-        #blog-posts {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .post {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 10px;
-        }
-        .post img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+        
+        /* Footer mindig az oldal alján */
         footer {
             text-align: center;
             padding: 20px;
             background: #0077a8;
             color: #fff;
+            margin-top: auto;
         }
-        /* Reszponzív tervezés különböző eszközökre */
+        
+        /* Reszponzív nézetek */
         @media (max-width: 1024px) {
             #hero {
                 padding: 60px 15px;
@@ -138,23 +115,45 @@
         <p>&copy; 2025 LENKE VARO PR VSTYLEDESIGN</p>
     </footer>
     <script>
-        // Nyelvváltó funkció
+        // Nyelvváltó funkció az egész oldalra
         document.getElementById('lang-toggle').addEventListener('click', function() {
-            if (document.documentElement.lang === 'hu') {
-                document.documentElement.lang = 'en';
-                this.textContent = 'HU';
-            } else {
-                document.documentElement.lang = 'hu';
-                this.textContent = 'EN';
-            }
+            let lang = document.documentElement.lang === 'hu' ? 'en' : 'hu';
+            document.documentElement.lang = lang;
+            this.textContent = lang === 'hu' ? 'EN' : 'HU';
+            
+            // Szövegek frissítése
+            const translations = {
+                'hu': {
+                    'main-heading': 'Üdvözöllek a Blogomon!',
+                    'main-description': 'Egészséges életmód és utazási tippek.',
+                    'home': 'Kezdőlap',
+                    'about': 'Rólam',
+                    'contact': 'Kapcsolat'
+                },
+                'en': {
+                    'main-heading': 'Welcome to My Blog!',
+                    'main-description': 'Healthy lifestyle and travel tips.',
+                    'home': 'Home',
+                    'about': 'About',
+                    'contact': 'Contact'
+                }
+            };
+            
+            document.querySelector('.main-heading').textContent = translations[lang]['main-heading'];
+            document.querySelector('.main-description').textContent = translations[lang]['main-description'];
+            document.querySelector('.home').textContent = translations[lang]['home'];
+            document.querySelector('.about').textContent = translations[lang]['about'];
+            document.querySelector('.contact').textContent = translations[lang]['contact'];
         });
     </script>
 </body>
 </html>
 
-           
+   
         
-       
+
+ 
+      
 
   
     
