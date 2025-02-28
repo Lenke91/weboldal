@@ -94,6 +94,7 @@
     </style>
 </head>
 <body>
+
 <header>
     <h1 id="header-text">Könyvajánló</h1>
     <p id="header-description">Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.</p>
@@ -103,32 +104,92 @@
 </header>
 
 <div class="container">
+    <!-- Hungarian Content -->
     <div class="book-list hu-content">
-        <div class="book-item"><h2>Gondolkodj és Gazdagodj</h2><p>Napoleon Hill klasszikus útmutatója a gazdagságépítéshez.</p></div>
-        <div class="book-item"><h2>Gazdag Papa, Szegény Papa</h2><p>Robert Kiyosaki tanulságai a pénzügyi tudatosságról.</p></div>
-        <div class="book-item"><h2>A Pénz pszichológiája</h2><p>Morgan Housel mélyreható elemzése a pénz mentális oldaláról.</p></div>
+        <div class="book-item">
+            <h2>Gondolkodj és Gazdagodj</h2>
+            <p>Napoleon Hill klasszikus útmutatója a gazdagságépítéshez.</p>
+        </div>
+        <div class="book-item">
+            <h2>Gazdag Papa, Szegény Papa</h2>
+            <p>Robert Kiyosaki tanulságai a pénzügyi tudatosságról.</p>
+        </div>
+        <div class="book-item">
+            <h2>A Pénz pszichológiája</h2>
+            <p>Morgan Housel mélyreható elemzése a pénz mentális oldaláról.</p>
+        </div>
+        <div class="book-item">
+            <h2>A 4 órás munkahét</h2>
+            <p>Tim Ferriss útmutatója a szabadság eléréséhez.</p>
+        </div>
+        <div class="book-item">
+            <h2>Nulláról Egyre</h2>
+            <p>Peter Thiel startup-építési útmutatója.</p>
+        </div>
+    </div>
+
+    <!-- English Content (Initially hidden) -->
+    <div class="book-list en-content" style="display: none;">
+        <div class="book-item">
+            <h2>Think and Grow Rich</h2>
+            <p>Napoleon Hill's classic guide to wealth-building principles.</p>
+        </div>
+        <div class="book-item">
+            <h2>Rich Dad Poor Dad</h2>
+            <p>Robert Kiyosaki's insightful lessons on financial education.</p>
+        </div>
+        <div class="book-item">
+            <h2>The Psychology of Money</h2>
+            <p>Morgan Housel's exploration of money and the mindset behind wealth.</p>
+        </div>
+        <div class="book-item">
+            <h2>The 4-Hour Workweek</h2>
+            <p>Tim Ferriss' blueprint for creating freedom and automated income.</p>
+        </div>
+        <div class="book-item">
+            <h2>Zero to One</h2>
+            <p>Peter Thiel's guide to building groundbreaking startups.</p>
+        </div>
     </div>
 </div>
 
 <footer>
     <p id="footer-text">
-        <span id="footer-text-hu">&copy; LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható.</span>
-        <span id="footer-text-en" style="display:none;">&copy; LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License.</span>
+        <span id="footer-text-hu">© LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható.</span>
+        <span id="footer-text-en" style="display:none;">© LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License.</span>
     </p>
 </footer>
 
 <script>
     function switchLanguage(lang) {
-        document.querySelector('.hu-content').style.display = lang === 'hu' ? 'grid' : 'none';
-        document.querySelector('.en-content')?.style.display = lang === 'en' ? 'grid' : 'none';
-        document.getElementById('header-text').innerText = lang === 'en' ? 'Book Recommendations' : 'Könyvajánló';
-        document.getElementById('header-description').innerText = lang === 'en' ? 'Discover books to boost your mindset and business journey.' : 'Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.';
+        const huContent = document.querySelector('.hu-content');
+        const enContent = document.querySelector('.en-content');
+
+        if (lang === 'en') {
+            huContent.style.display = 'none';
+            enContent.style.display = 'block';
+            document.getElementById('header-text').innerText = 'Book Recommendations';
+            document.getElementById('header-description').innerText = 'Discover books to boost your mindset and business journey.';
+            document.getElementById('page-title').innerText = 'Book Recommendations';
+            document.getElementById('footer-text-hu').style.display = 'none';
+            document.getElementById('footer-text-en').style.display = 'inline';
+        } else {
+            enContent.style.display = 'none';
+            huContent.style.display = 'block';
+            document.getElementById('header-text').innerText = 'Könyvajánló';
+            document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.';
+            document.getElementById('page-title').innerText = 'Könyvajánló';
+            document.getElementById('footer-text-hu').style.display = 'inline';
+            document.getElementById('footer-text-en').style.display = 'none';
+        }
     }
+
     document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
     document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
 </script>
+
 </body>
 </html>
 
-  
-  
+          
+       
