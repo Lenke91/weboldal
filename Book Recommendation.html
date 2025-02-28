@@ -13,13 +13,6 @@
     <meta property="og:url" content="https://www.vstyledesign.com/konyvajanlo">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://www.vstyledesign.com/konyvajanlo">
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
     <title id="page-title">Könyvajánló</title>
     <style>
         body {
@@ -33,7 +26,7 @@
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 25px 20px;
+            padding: 50px 20px;
             position: relative;
         }
         .container {
@@ -114,8 +107,6 @@
         <div class="book-item"><h2>Gondolkodj és Gazdagodj</h2><p>Napoleon Hill klasszikus útmutatója a gazdagságépítéshez.</p></div>
         <div class="book-item"><h2>Gazdag Papa, Szegény Papa</h2><p>Robert Kiyosaki tanulságai a pénzügyi tudatosságról.</p></div>
         <div class="book-item"><h2>A Pénz pszichológiája</h2><p>Morgan Housel mélyreható elemzése a pénz mentális oldaláról.</p></div>
-        <div class="book-item"><h2>A 4 órás munkahét</h2><p>Tim Ferriss útmutatója a szabadság eléréséhez.</p></div>
-        <div class="book-item"><h2>Nulláról Egyre</h2><p>Peter Thiel startup-építési útmutatója.</p></div>
     </div>
 </div>
 
@@ -125,5 +116,19 @@
         <span id="footer-text-en" style="display:none;">&copy; LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License.</span>
     </p>
 </footer>
+
+<script>
+    function switchLanguage(lang) {
+        document.querySelector('.hu-content').style.display = lang === 'hu' ? 'grid' : 'none';
+        document.querySelector('.en-content')?.style.display = lang === 'en' ? 'grid' : 'none';
+        document.getElementById('header-text').innerText = lang === 'en' ? 'Book Recommendations' : 'Könyvajánló';
+        document.getElementById('header-description').innerText = lang === 'en' ? 'Discover books to boost your mindset and business journey.' : 'Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.';
+    }
+    document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+    document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
+</script>
 </body>
 </html>
+
+  
+  
