@@ -4,97 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Miért fontos a mentális egészség? Olvasd el részletes blogbejegyzésünket a mentális jólét megőrzéséről és a lelki egészség fontosságáról." />
-    <meta name="keywords" content="mentális egészség, jólét, stresszkezelés, önfejlesztés, lelki egyensúly" />
+
+    <!-- ✅ SEO META ADATOK -->
+    <meta name="description" content="Fedezd fel, miért fontos a mentális egészség! Tippek, tudatosság, mindfulness és lelki egyensúly elérése." />
+    <meta name="keywords" content="mentális egészség, stresszkezelés, tudatosság, mindfulness, meditáció, relaxáció, önfejlesztés, pszichológiai támogatás, egészséges életmód, lelki egyensúly" />
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-    <meta property="og:title" content="Miért fontos a mentális egészség?" />
-    <meta property="og:description" content="Olvasd el a mentális egészség fontosságáról szóló cikkünket és tudd meg, hogyan érheted el a lelki egyensúlyt!" />
     <meta name="robots" content="index, follow" />
-    <!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+    <meta name="language" content="Hungarian">
+    <meta name="theme-color" content="#2e2e2e">
+    
+    <!-- ✅ Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Miért fontos a mentális egészség?" />
+    <meta property="og:description" content="Olvasd el részletes blogbejegyzésünket a mentális egészség fontosságáról és a lelki egyensúly megőrzéséről!" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:url" content="https://vstyledesign.com/mental-health" />
+    <meta property="og:type" content="article" />
+
+    <!-- ✅ Twitter Card meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Miért fontos a mentális egészség?" />
+    <meta name="twitter:description" content="Olvasd el, hogyan érheted el a lelki egyensúlyt és csökkentheted a stresszt a mindennapokban!" />
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <meta name="twitter:site" content="@lenkevarro">
+
     <title>Miért fontos a mentális egészség?</title>
 
     <style>
-        /* Reset alap beállítások */
+        /* 🔧 Alap beállítások */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4e1f0; /* Lágyságot adó szín */
+            font-family: Arial, sans-serif;
+            background-image: url(bg\ for\ lifecoaching\ .jpg);
+            background-size: cover;
+            background-position: center;
             color: #333;
             padding: 20px;
             line-height: 1.6;
         }
 
-        /* Fejléc stílusok */
+        /* 🧠 Fejléc szakasz */
         header {
-            background-color: #ca37f7; /* Erőteljes szín a fejlécnek */
+            background: transparent;
             color: white;
-            padding: 18px;
+            padding: 20px;
             text-align: center;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Árnyék a fejléc alján */
+            animation: fadeIn 1s ease-in-out;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        /* Nyelvváltó gombok */
-        .language-switcher {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-        }
-
-        .language-switcher button {
-            background-color: #34495e;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .language-switcher button:hover {
-            background-color: #2ecc71; /* Zöld hover effekt */
-        }
-
-        /* Tartalom */
+        /* 📄 Tartalomdoboz */
         .container {
-            background-color: white;
+            background:transparent;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Árnyék a tartalom körül */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             margin: 30px auto;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
+            animation: fadeInUp 1.2s ease-in-out;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
         p {
             margin-bottom: 15px;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            color: #000;
         }
 
+        /* 📷 Kép feltöltés */
         .upload-section {
             text-align: center;
             margin-top: 20px;
@@ -105,130 +85,97 @@
         }
 
         .upload-btn {
-            background-color: #b84798; /* Lágyságot sugárzó szín */
+            background: #8e44ad;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            display: inline-block;
+            transition: background 0.3s ease;
         }
 
-        button {
-            background-color: #b84798;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+        .upload-btn:hover {
+            background: #732d91;
         }
 
+        /* 🦶 Lábléc */
         footer {
             text-align: center;
             margin-top: 30px;
             font-size: 0.9em;
-            color: #fff;
-            padding: 20px 0;
-            background-color: #ca37f7;
+            color: black;
+            background:transparent;
+            padding: 15px;
             border-radius: 8px;
         }
 
-        /* Animáció */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Reszponzív beállítások */
+        /* 📝 Reszponzív nézetek */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
+            h1 { font-size: 2rem; }
+            .container { padding: 25px; }
         }
 
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
+            h1 { font-size: 1.8em; }
+            .container { padding: 20px; }
+        }
 
-            .container {
-                padding: 10px;
-            }
+        /* ✨ Animációk */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 0.85rem;
-            }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-
+    <!-- 🔰 Fejléc nyelvváltóval -->
     <header>
-        <h1 class="hu">Miért fontos a mentális egészség?</h1>
-        <h1 class="en" style="display: none;">Why is mental health important?</h1>
-        <div class="language-switcher">
-            <button onclick="switchLanguage('hu')">Magyar</button>
-            <button onclick="switchLanguage('en')">English</button>
-        </div>
+        <h1 id="title">Miért fontos a mentális egészség?</h1>
+        <button onclick="switchLanguage('hu')">Magyar</button>
+        <button onclick="switchLanguage('en')">English</button>
     </header>
 
+    <!-- 📚 Tartalomdoboz -->
     <div class="container">
-        <p class="hu">A mentális egészség alapvető a teljes jóllétünkhöz. A lelki egyensúly megőrzése segít abban, hogy jobban kezeljük a stresszt és a mindennapi kihívásokat.</p>
-        <p class="hu">A pozitív gondolkodás, a tudatos pihenés és a megfelelő életmód mind hozzájárulnak ahhoz, hogy mentálisan erősebbek legyünk és kiegyensúlyozottabb életet éljünk.</p>
-        <p class="en" style="display: none;">Mental health is essential for our overall well-being. Maintaining mental balance helps us better manage stress and everyday challenges.</p>
-        <p class="en" style="display: none;">Positive thinking, conscious relaxation, and a healthy lifestyle all contribute to our mental strength and help us live a more balanced life.</p>
+        <p id="content">A mentális egészség kulcsfontosságú a boldog élethez. Ismerd meg, hogyan támogathatod a lelki egyensúlyt és csökkentheted a stresszt.</p>
 
+        <!-- 📷 Kép feltöltés -->
         <div class="upload-section">
-            <h3 class="hu">Tölts fel egy pihentető képet!</h3>
-            <h3 class="en" style="display: none;">Upload a relaxing image!</h3>
-            <label class="upload-btn" for="fileInput" id="uploadText">Kép feltöltése</label>
+            <h3 id="upload-title">Tölts fel egy pihentető képet!</h3>
+            <label class="upload-btn" for="fileInput">Kép feltöltése</label>
             <input type="file" id="fileInput">
         </div>
     </div>
 
+    <!-- 🔚 Lábléc -->
     <footer>
-        <p class="hu">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
-        <p class="en" style="display: none;">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT license.</p>
+        <p id="footer">&copy; 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.</p>
     </footer>
 
+    <!-- 🌐 Nyelvváltó JS -->
     <script>
         function switchLanguage(lang) {
-            const huElements = document.querySelectorAll('.hu');
-            const enElements = document.querySelectorAll('.en');
-            const headerText = document.querySelector('header h1');
-            const uploadText = document.getElementById('uploadText');
-
             if (lang === 'en') {
-                huElements.forEach(element => element.style.display = 'none');
-                enElements.forEach(element => element.style.display = 'block');
-                headerText.innerText = 'Why is mental health important?';
-                uploadText.innerText = 'Upload a relaxing image!';
+                document.getElementById('title').innerText = 'Why is mental health important?';
+                document.getElementById('content').innerText = 'Mental health is essential for a happy life. Learn how to support your well-being and reduce stress.';
+                document.getElementById('upload-title').innerText = 'Upload a relaxing image!';
+                document.getElementById('footer').innerText = '© 2025 VstyleDesign | This site is available under the MIT license.';
             } else {
-                huElements.forEach(element => element.style.display = 'block');
-                enElements.forEach(element => element.style.display = 'none');
-                headerText.innerText = 'Miért fontos a mentális egészség?';
-                uploadText.innerText = 'Kép feltöltése';
+                document.getElementById('title').innerText = 'Miért fontos a mentális egészség?';
+                document.getElementById('content').innerText = 'A mentális egészség kulcsfontosságú a boldog élethez. Ismerd meg, hogyan támogathatod a lelki egyensúlyt és csökkentheted a stresszt.';
+                document.getElementById('upload-title').innerText = 'Tölts fel egy pihentető képet!';
+                document.getElementById('footer').innerText = '© 2025 VstyleDesign | Az oldal az MIT licenc alapján használható.';
             }
         }
     </script>
-
 </body>
 </html>
+
+
+    
+     
