@@ -1,233 +1,268 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kapcsolat oldal - Life Coach weboldal sablon, amely reszponzív, SEO-optimalizált és animált.">
-    <meta name="keywords" content="life coach, kapcsolat, weboldal sablon, SEO, animációk, reszponzív">
-    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:title" content="Kapcsolat - Life Coach Weboldal Sablon">
-    <meta property="og:description" content="Kapcsolatba léphetsz velem, ha szeretnél elkezdeni dolgozni a személyes fejlődéseden.">
-    <meta property="og:image" content="https://example.com/your-image.jpg">
-    <meta property="og:url" content="https://vstyledesign.com/contact">
-    <title>Kapcsolat - Life Coach Weboldal Sablon</title>
-    <style>
-        /* Reset styles for margin, padding, and box-sizing */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- 🔍 SEO meta adatok -->
+  <meta name="description" content="Lépj kapcsolatba professzionális life coach tanácsadóval. Kérj egyéni konzultációt, ha fejlődni szeretnél személyesen vagy szakmailag!" />
+  <meta name="keywords" content="kapcsolat, life coach, életmódtanácsadó, személyes fejlődés, egyéni konzultáció, coach űrlap, coaching kapcsolat, motiváció, önfejlesztés, női vállalkozók, mentális támogatás, online coaching, coaching sablon, reszponzív kapcsolat oldal, SEO optimalizált coach oldal" />
+  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
 
-        /* General body styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #8e44ad; /* Purple background color */
-            color: #fff; /* White text color */
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        /* Header styles */
-        header {
-            background-color: rgba(142, 68, 173, 0.8); /* Transparent purple background with a blur effect */
-            padding: 20px 10px;
-            position: fixed; /* Fixed at the top of the page */
-            width: 100%; /* Full width */
-            top: 0;
-            left: 0;
-            backdrop-filter: blur(10px); /* Applying blur effect on background */
-            z-index: 10;
-            display: flex;
-            justify-content: space-between; /* Align the items to the left and right */
-            align-items: center;
-        }
-
-        /* Header title style */
-        header h1 {
-            font-size: 32px;
-            margin-left: 20px;
-        }
-
-        /* Language switcher button style */
-        .language-switcher {
-            margin-right: 20px;
-        }
-
-        /* Button style */
-        .language-switcher button {
-            background-color: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 8px 16px;
-            margin: 0 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        /* Hover effect for buttons */
-        .language-switcher button:hover {
-            background-color: #7a3b8c; /* Darker shade of purple */
-        }
-
-        /* Contact container styles */
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh; /* Full viewport height */
-            padding-top: 120px;
-        }
-
-        /* Contact box for form styling */
-        .contact-box {
-            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
-            padding: 25px;
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for 3D effect */
-            width: 90%;
-            max-width: 500px; /* Max width of the form */
-            animation: fadeInUp 1s ease forwards; /* Animation for the contact box */
-        }
-
-        /* Contact box header */
-        .contact-box h2 {
-            color: #2c3e50; /* Darker text color */
-        }
-
-        /* Input and textarea field styling */
-        .contact-box input, .contact-box textarea {
-            width: 100%; /* Full width */
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc; /* Light border */
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        /* Button styling inside contact box */
-        .contact-box button {
-            width: 100%; /* Full width */
-            padding: 10px;
-            border: none;
-            background-color: #8e44ad; /* Purple button color */
-            color: white;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Smooth transition on hover */
-        }
-
-        /* Hover effect for the submit button */
-        .contact-box button:hover {
-            background-color: #7a3b8c; /* Darker shade on hover */
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: transparent;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            backdrop-filter: blur(10px); /* Apply blur effect on footer */
-        }
-
-        /* Keyframes for fade-in animation */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); } /* Starting from opacity 0 and slightly below */
-            to { opacity: 1; transform: translateY(0); } /* Ending at full opacity */
-        }
-
-        /* Responsive Design for Tablets */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            .contact-box {
-                width: 80%;
-                padding: 20px;
-            }
-            header h1 {
-                font-size: 24px;
-            }
-            .language-switcher button {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-
-        /* Mobile responsive design */
-        @media (max-width: 480px) {
-            h1 { font-size: 2em; }
-            .contact-box {
-                width: 100%;
-                padding: 15px;
-            }
-            header h1 {
-                font-size: 20px;
-            }
-            .language-switcher button {
-                font-size: 12px;
-                padding: 5px 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Section with Language Switcher -->
-    <header>
-        <h1 id="page-title">Kapcsolat</h1>
-        <div class="language-switcher">
-            <button onclick="switchLanguage('hu')">HU</button>
-            <button onclick="switchLanguage('en')">EN</button>
-        </div>
-    </header>
-
-    <!-- Main Contact Form Section -->
-    <div class="contact-container">
-        <div class="contact-box">
-            <h2 id="contact-title">Lépj kapcsolatba velem!</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Neved" required>
-                <input type="email" id="email" placeholder="Email címed" required>
-                <textarea id="message" placeholder="Üzeneted" rows="4" required></textarea>
-                <button type="submit" id="submit-btn">Küldés</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <p id="footer-text" style="color: white; text-align: center;">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.</p>
-
+  <!-- 🔗 Open Graph (megosztás) -->
+  <meta property="og:title" content="Kapcsolat - Life Coach Weboldal Sablon" />
+  <meta property="og:description" content="Vedd fel a kapcsolatot egyéni konzultációhoz! Támogatás, fejlődés, coaching – minden egy helyen." />
+  <meta property="og:image" content="https://example.com/your-image.jpg" />
+  <meta property="og:url" content="https://vstyledesign.com/contact" />
+  <meta property="og:type" content="website" />
+<!-- Google Analytics script (Google Tag Manager) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
-        // Function to switch between languages (Hungarian/English)
-        function switchLanguage(language) {
-            if (language === 'en') {
-                document.getElementById('page-title').innerText = 'Contact';
-                document.getElementById('contact-title').innerText = 'Get in Touch!';
-                document.getElementById('name').placeholder = 'Your Name';
-                document.getElementById('email').placeholder = 'Your Email';
-                document.getElementById('message').placeholder = 'Your Message';
-                document.getElementById('submit-btn').innerText = 'Send';
-                document.getElementById('footer-text').innerText = '© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.';
-            } else {
-                document.getElementById('page-title').innerText = 'Kapcsolat';
-                document.getElementById('contact-title').innerText = 'Lépj kapcsolatba velem!';
-                document.getElementById('name').placeholder = 'Neved';
-                document.getElementById('email').placeholder = 'Email címed';
-                document.getElementById('message').placeholder = 'Üzeneted';
-                document.getElementById('submit-btn').innerText = 'Küldés';
-                document.getElementById('footer-text').innerText = '© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.';
-            }
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
         }
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
     </script>
 
+  <title>Kapcsolat | Life Coach - Egyéni Konzultáció & Coaching</title>
+
+  <style>
+    /* === Alapbeállítások === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url(bg\ for\ lifecoaching\ .jpg); /* Cseréld ki saját háttérképre */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    /* === Fejléc + nyelvváltó === */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      color: #000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-left: 20px;
+    }
+
+    .language-switcher {
+      margin-right: 20px;
+    }
+
+    .language-switcher button {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 6px 12px;
+      margin-left: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .language-switcher button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* === Kontakt űrlap konténer === */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    /* === Kisebb, átlátszó kontakt doboz === */
+    .contact-box {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .contact-box h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    label {
+      color: #fff;
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      font-size: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      background-image: url(bg\ for\ lifecoaching\ .jpg);
+      color: #2c3e50;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #8e44ad;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #7a3b8c;
+    }
+
+    /* === Lábléc === */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: black;
+      backdrop-filter: blur(10px);
+    }
+
+    /* === Animáció === */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* === Reszponzív nézetek === */
+    @media (max-width: 480px) {
+      header h1 { font-size: 20px; }
+      .language-switcher button { font-size: 12px; padding: 4px 8px; }
+      .contact-box { padding: 15px; }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      header h1 { font-size: 22px; }
+      .contact-box { max-width: 320px; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1199px) {
+      header h1 { font-size: 26px; }
+      .contact-box { max-width: 340px; }
+    }
+
+    @media (min-width: 1200px) {
+      header h1 { font-size: 28px; }
+      .contact-box { max-width: 350px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- === Fejléc + nyelvváltó gombok === -->
+  <header>
+    <h1 id="page-title">Kapcsolat</h1>
+    <div class="language-switcher">
+      <button onclick="switchLanguage('hu')">HU</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- === Kontakt űrlap === -->
+  <div class="contact-container">
+    <div class="contact-box">
+      <h2 id="contact-title">Lépj kapcsolatba velem!</h2>
+      <form id="contact-form">
+        <label for="name" id="label-name">Név</label>
+        <input type="text" id="name" placeholder="Neved" required />
+
+        <label for="email" id="label-email">Email</label>
+        <input type="email" id="email" placeholder="Email címed" required />
+
+        <label for="message" id="label-message">Üzenet</label>
+        <textarea id="message" placeholder="Írd ide az üzeneted..." rows="4" required></textarea>
+
+        <button type="submit" id="submit-btn">Küldés</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- === Lábléc === -->
+  <footer>
+    <p id="footer-text">
+      © 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.
+    </p>
+  </footer>
+
+  <!-- === Nyelvváltó script === -->
+  <script>
+    function switchLanguage(lang) {
+      if (lang === 'en') {
+        document.getElementById('page-title').innerText = 'Contact';
+        document.getElementById('contact-title').innerText = 'Get in Touch!';
+        document.getElementById('label-name').innerText = 'Name';
+        document.getElementById('label-email').innerText = 'Email';
+        document.getElementById('label-message').innerText = 'Message';
+        document.getElementById('name').placeholder = 'Your Name';
+        document.getElementById('email').placeholder = 'Your Email';
+        document.getElementById('message').placeholder = 'Your Message';
+        document.getElementById('submit-btn').innerText = 'Send';
+        document.getElementById('footer-text').innerText =
+          '© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.';
+      } else {
+        document.getElementById('page-title').innerText = 'Kapcsolat';
+        document.getElementById('contact-title').innerText = 'Lépj kapcsolatba velem!';
+        document.getElementById('label-name').innerText = 'Név';
+        document.getElementById('label-email').innerText = 'Email';
+        document.getElementById('label-message').innerText = 'Üzenet';
+        document.getElementById('name').placeholder = 'Neved';
+        document.getElementById('email').placeholder = 'Email címed';
+        document.getElementById('message').placeholder = 'Írd ide az üzeneted...';
+        document.getElementById('submit-btn').innerText = 'Küldés';
+        document.getElementById('footer-text').innerText =
+          '© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.';
+      }
+    }
+  </script>
 </body>
 </html>
+
 
  
 
