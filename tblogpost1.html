@@ -4,42 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Miért fontos a személyes fejlődés? Olvasd el részletes blogbejegyzésünket a céljaid eléréséről és az önfejlesztés fontosságáról." />
-    <meta name="keywords" content="személyes fejlődés, önfejlesztés, motiváció, életcél, önismeret, változás, siker, életvezetés" />
-    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-    <meta property="og:title" content="Miért fontos a személyes fejlődés?" />
-    <meta property="og:description" content="Olvasd el a személyes fejlődés fontosságáról szóló cikkünket és tudd meg, hogyan érheted el a céljaidat!" />
-    <meta name="robots" content="index, follow" />
-       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-85RD19D4PP');
-</script>
+    <!-- ✅ SEO META ADATOK -->
+    <meta name="description" content="Fedezd fel a személyes fejlődés erejét! Tippek és tanácsok önfejlesztéshez, motivációhoz, célkitűzéshez és lelki egyensúlyhoz." />
+    <meta name="keywords" content="személyes fejlődés, önfejlesztés, motiváció, életcél, önismeret, változás, siker, életvezetés, tudatosság, célkitűzés, coaching, produktivitás, hatékonyság, életminőség, önbizalom, belső motiváció, mentális egészség" />
+    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Hungarian">
+    <meta name="theme-color" content="#ca37f7">
+
+    <!-- 🟣 Open Graph META -->
+    <meta property="og:title" content="Miért fontos a személyes fejlődés?" />
+    <meta property="og:description" content="Olvasd el a részletes blogcikket a személyes fejlődés és önismeret fontosságáról! Tudd meg, hogyan érhetsz el hosszú távú sikereket tudatossággal." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://example.com/images/personal-growth-cover.jpg" />
+    <meta property="og:url" content="https://vstyledesign.com/blog/szemelyes-fejlodes" />
+
+    <!-- 🐦 Twitter META -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Miért fontos a személyes fejlődés?">
+    <meta name="twitter:description" content="Önfejlesztés, tudatosság, célkitűzés és motiváció egy helyen. Fedezd fel a személyes fejlődés útját!">
+    <meta name="twitter:image" content="https://example.com/images/personal-growth-twitter.jpg">
+    <meta name="twitter:creator" content="@lenkevarro">
+
     <title>Miért fontos a személyes fejlődés?</title>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* 🌐 Alap stílusok */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #da44f6;
+            background-image:url(bg\ for\ lifecoaching\ .jpg);
+            background-size: cover;
+            background-position: center;
             color: #333;
             line-height: 1.6;
             padding: 20px;
             overflow-x: hidden;
         }
 
-        /* Fejléc stílusok */
+        /* 🧠 Fejléc */
         header {
-            background-color: #ca37f7;
-            color: white;
+            background-color: transparent;
+            color: black;
             padding: 18px;
             text-align: center;
             border-radius: 8px;
+            position: relative;
         }
 
         header h1 {
@@ -47,7 +63,7 @@
             margin-bottom: 20px;
         }
 
-        /* Nyelvváltó gombok */
+        /* 🌍 Nyelvváltó */
         .language-switcher {
             position: absolute;
             top: 50%;
@@ -56,7 +72,7 @@
         }
 
         .language-switcher button {
-            background-color: #34495e;
+            background-color: #640258;
             color: white;
             border: none;
             padding: 8px 15px;
@@ -67,19 +83,19 @@
         }
 
         .language-switcher button:hover {
-            background-color: #2ecc71;
+            background-color:transparent;
         }
 
-        /* Tartalom stílusok */
+        /* 🧾 Tartalomdoboz */
         .container {
-            background-color: white;
+            background-color: transparent;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             margin: 20px auto;
-            opacity: 0; /* Kezdetben rejtve */
-            animation: fadeIn 2s forwards; /* Animáció hozzáadása */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
 
         h1 {
@@ -87,27 +103,32 @@
             margin-bottom: 20px;
         }
 
-        p { margin-bottom: 15px; }
+        p {
+            margin-bottom: 15px;
+            color: #fff;
+        }
 
+        /* 📁 Fájl feltöltés */
         .upload-section {
             text-align: center;
             margin-top: 20px;
         }
 
         input[type="file"] {
-            display: none; /* Fájl input elrejtése */
+            display: none;
         }
 
         .upload-btn {
-            background-color: #d950f4;
-            color: white;
+            background-color:transparent;
+            color: black;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
         }
 
+        /* 🖱️ Gombok */
         button {
-            background-color: #d950f4;
+            background-color: transparent;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -115,64 +136,53 @@
             cursor: pointer;
         }
 
+        /* 🔚 Lábléc */
         footer {
             text-align: center;
             margin-top: 30px;
             font-size: 0.9em;
-            color: #fff;
+            color: black;
+            background-color: transparent;
+            padding: 15px;
+            border-radius: 8px;
         }
 
-        /* Reszponzív stílusok */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
+        /* 📱 Mobil nézet */
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 0.85rem;
-            }
+            header h1 { font-size: 1.5rem; }
+            .container { padding: 10px; }
+            h1 { font-size: 1.5rem; }
+            p { font-size: 0.85rem; }
         }
 
-        /* Animáció: tartalom fokozatos megjelenítése */
+        /* 📝 Tablet nézet */
+        @media (min-width: 481px) and (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 20px; }
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; }
+        }
+
+        /* 💻 Laptop nézet */
+        @media (min-width: 769px) and (max-width: 1199px) {
+            h1 { font-size: 2.3rem; }
+        }
+
+        /* 🖥️ Asztali gép nézet */
+        @media (min-width: 1200px) {
+            h1 { font-size: 2.5rem; }
+        }
+
+        /* ✨ Animáció */
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Fejléc -->
+    <!-- 🧠 Fejléc -->
     <header>
         <h1 class="hu">Miért fontos a személyes fejlődés?</h1>
         <h1 class="en" style="display: none;">Why is personal growth important?</h1>
@@ -182,20 +192,21 @@
         </div>
     </header>
 
-    <!-- Tartalom rész -->
+    <!-- 📚 Tartalom -->
     <div class="container">
-        <!-- Magyar tartalom -->
+        <!-- Magyar -->
         <div class="hu">
             <p>A személyes fejlődés elengedhetetlen ahhoz, hogy megtaláljuk belső egyensúlyunkat és elérjük céljainkat az élet minden területén. Az önfejlesztés segít abban, hogy tudatosabb döntéseket hozzunk, és folyamatosan jobbá váljunk.</p>
             <p>Az önismeret fejlesztése lehetővé teszi, hogy felismerjük erősségeinket és fejlesztésre szoruló területeinket. A személyes fejlődés része lehet az időgazdálkodás, a hatékony kommunikáció és a stresszkezelés fejlesztése is.</p>
         </div>
 
-        <!-- Angol tartalom -->
+        <!-- Angol -->
         <div class="en" style="display: none;">
             <p>Personal growth is essential for finding our inner balance and achieving our goals in all areas of life. Self-development helps us make more conscious decisions and continuously improve.</p>
             <p>Improving self-awareness allows us to recognize our strengths and areas that need development. Personal growth can also include time management, effective communication, and stress management improvements.</p>
         </div>
 
+        <!-- 📁 Kép feltöltés -->
         <div class="upload-section">
             <h3 class="hu">Tölts fel egy inspiráló képet!</h3>
             <h3 class="en" style="display: none;">Upload an inspiring image!</h3>
@@ -204,13 +215,13 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- 🔚 Lábléc -->
     <footer>
         <p class="hu">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
         <p class="en" style="display: none;">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT license.</p>
     </footer>
 
-    <!-- Nyelvváltás JavaScript -->
+    <!-- 🔁 Nyelvváltás JavaScript -->
     <script>
         function switchLanguage(lang) {
             const huElements = document.querySelectorAll('.hu');
@@ -219,13 +230,11 @@
             const uploadText = document.getElementById('uploadText');
 
             if (lang === 'en') {
-                // Angolra váltás
                 huElements.forEach(element => element.style.display = 'none');
                 enElements.forEach(element => element.style.display = 'block');
                 headerText.innerText = 'Why is personal growth important?';
                 uploadText.innerText = 'Upload an inspiring image!';
             } else {
-                // Magyarra váltás
                 huElements.forEach(element => element.style.display = 'block');
                 enElements.forEach(element => element.style.display = 'none');
                 headerText.innerText = 'Miért fontos a személyes fejlődés?';
@@ -236,3 +245,12 @@
 
 </body>
 </html>
+
+  
+     
+
+       
+
+  
+
+              
