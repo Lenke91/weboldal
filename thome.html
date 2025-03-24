@@ -3,201 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Életmódtanácsadó weboldal sablon, mely segít az online jelenlét megerősítésében. SEO-optimalizált, animált és reszponzív kialakítás." />
+
+  <!-- ✅ SEO META TAGEK: Jobb keresőoptimalizálás érdekében -->
+  <meta name="description" content="Modern és animált életmódtanácsadó weboldal sablon. Reszponzív kialakítás mobilra, tabletre, laptopra és asztali gépre. SEO-optimalizált és többnyelvű támogatással." />
+  <meta name="keywords" content="life coach, életmódtanácsadó, coaching sablon, animált weboldal, SEO barát sablon, reszponzív design, mobilbarát weboldal, HTML CSS JS sablon, többnyelvű webdesign" />
+  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Hungarian" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="theme-color" content="#800550" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 📱 Open Graph a közösségi média megosztásokhoz -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="hu_HU" />
   <meta property="og:title" content="Életmódtanácsadó Weboldal" />
   <meta property="og:description" content="SEO-optimalizált, animált és reszponzív Life Coach weboldal sablon, több nyelvű támogatással." />
   <meta property="og:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
   <meta property="og:url" content="https://example.com" />
-  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-  <meta name="robots" content="index, follow" />
-  <title>Life Coach Weboldal</title>
+  <meta property="og:site_name" content="VSTYLEDesign" />
 
+  <!-- 🐦 Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Életmódtanácsadó Weboldal" />
+  <meta name="twitter:description" content="Life Coach weboldal sablon SEO-optimalizálással és reszponzív, többnyelvű kialakítással." />
+  <meta name="twitter:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
+  <meta name="twitter:creator" content="@vstyledesign" />
+  <!-- Google Analytics script (Google Tag Manager) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
+    </script>
+
+  <!-- 🔤 Weboldal címe -->
+  <title>Életmódtanácsadó Weboldal sablon | SEO-optimalizált, reszponzív és animált</title>
+
+  <!-- 🎨 Alap CSS stílusok és reszponzivitás -->
   <style>
-    /* ===== Alap stílusok ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* 🔧 Reset alapbeállítások minden elemre */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
 
+    /* 🧱 Alap test és háttér */
     html, body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-image: url(bg\ for\ lifecoaching\ .jpg);
       background-size: cover;
       background-position: center;
-      color: #fff;
-      height: 100%;
+      color: #333;
+      min-height: 100vh;
     }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-      margin-bottom: 60px; /* hely a láblécnek */
-    }
-
-    /* ===== Fejléc ===== */
+    /* 🔝 Fejléc szakasz */
     header {
-      background-color: transparent;
-      padding: 20px;
+      background:transparent;
+      color: #fff;
       text-align: center;
+      padding: 20px 10px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      animation: slideDown 1s ease-out;
     }
 
     header h1 {
-      font-size: 36px;
-      font-weight: 700;
-      animation: fadeInDown 1s ease-out;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
-    /* ===== Navigáció ===== */
+    .language-selector {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* 🧭 Navigációs menü */
     nav {
-      margin: 20px 0;
+      background: #f8bbd0;
       text-align: center;
+      padding: 10px 0;
     }
 
     nav a {
       margin: 0 10px;
       text-decoration: none;
-      color: #fff;
-      padding: 8px 12px;
-      background-color:transparent;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
+      color: #800550;
+      font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      background-color: #800550;
+      color: #e91e63;
     }
 
-    /* ===== Nyelvválasztó ===== */
-    .language-selector {
-      margin-top: 15px;
-      padding: 10px;
-      background: #fff;
-      color: #ef6cbd;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    /* ===== Tartalom ===== */
+    /* 📦 Fő tartalom szakasz */
     .container {
-      text-align: center;
+      max-width: 1000px;
       margin: 40px auto;
-      max-width: 900px;
       padding: 0 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    .cta {
-      margin: 30px 0;
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
     }
 
+    .container p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    /* 🎯 Cselekvésre ösztönző gomb */
     .cta button {
       padding: 15px 30px;
       font-size: 16px;
-      background-color:transparent ;
-      color: black;
+      background: #800550;
+      color: #fff;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: transform 0.2s ease;
-      animation: fadeInUp 1s ease-out;
+      transition: background 0.3s;
     }
 
     .cta button:hover {
-      transform: scale(1.05);
-      background-color:#800550 ;
+      background: #c2185b;
     }
 
-    /* ===== Közösségi ikonok ===== */
+    /* 🔗 Közösségi ikonok */
     .social-icons {
       margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      animation: fadeInUp 1s ease-out;
+      gap: 15px;
     }
 
-    .social-icons .icon {
+    .social-icons a {
       font-size: 24px;
-      color: white;
       text-decoration: none;
+      color: #800550;
       transition: transform 0.3s ease;
     }
 
-    .social-icons .icon:hover {
-      transform: scale(1.1);
+    .social-icons a:hover {
+      transform: scale(1.2);
     }
 
-    /* ===== Lábléc ===== */
+    /* ⚙️ Lábléc */
     footer {
-      background-color: transparent;
-      color: black;
-      padding: 10px;
       text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 15px;
+      background: transparent;
+      font-size: 14px;
+      color: #94067d;
     }
 
-    /* ===== Animációk ===== */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* ✨ Animációk */
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
-    /* ===== Reszponzív dizájn ===== */
-
-    /* Mobilnézet: 0–767px */
+    /* 📱 Reszponzív dizájn eszközökre */
     @media (max-width: 767px) {
       header h1 { font-size: 22px; }
-      nav a { font-size: 14px; margin: 0 5px; }
-      .cta button { font-size: 14px; padding: 10px 20px; }
-      .language-selector { font-size: 14px; }
-      .social-icons { gap: 10px; }
+      .container h2 { font-size: 20px; }
     }
 
-    /* Tablet: 768px–991px */
     @media (min-width: 768px) and (max-width: 991px) {
       header h1 { font-size: 26px; }
-      nav a { font-size: 15px; }
-      .cta button { font-size: 15px; }
     }
 
-    /* Laptop: 992px–1199px */
     @media (min-width: 992px) and (max-width: 1199px) {
       header h1 { font-size: 30px; }
-      nav a { font-size: 16px; }
-      .cta button { font-size: 16px; }
-    }
-
-    /* Asztali: 1200px+ */
-    @media (min-width: 1200px) {
-      header h1 { font-size: 36px; }
-      nav a { font-size: 18px; }
-      .cta button { font-size: 18px; padding: 18px 36px; }
     }
   </style>
 </head>
 <body>
-  <!-- Fejléc és nyelvválasztó -->
+  <!-- 🔝 Fejléc nyelvválasztóval -->
   <header>
-    <h1 id="site-title">Life Coach Weboldal</h1>
+    <h1 id="site-title">Életmódtanácsadó Weboldal</h1>
     <select id="language-selector" class="language-selector">
       <option value="hu">Magyar</option>
       <option value="en">English</option>
     </select>
   </header>
 
-  <!-- Navigációs menü -->
+  <!-- 🧭 Navigációs menü -->
   <nav>
     <a href="thome.html" id="nav-home">Főoldal</a>
     <a href="tabout.html" id="nav-about">Rólam</a>
@@ -207,33 +213,28 @@
     <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
   </nav>
 
-  <!-- Fő tartalom -->
-  <div class="container">
+  <!-- 📦 Fő tartalom -->
+  <main class="container">
     <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
     <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
-
     <div class="cta">
       <button id="cta-button">Kezdd el ma!</button>
     </div>
-
-    <!-- Közösségi média ikonok -->
     <div class="social-icons">
-      <a href="#" target="_blank" class="icon">📘</a>
-      <a href="#" target="_blank" class="icon">📸</a>
-      <a href="#" target="_blank" class="icon">🎵</a>
-      <a href="#" target="_blank" class="icon">🐦</a>
-      <a href="#" target="_blank" class="icon">🔗</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+      <a href="#">🎵</a>
+      <a href="#">🐦</a>
     </div>
-  </div>
+  </main>
 
-  <!-- Lábléc -->
+  <!-- ⚙️ Lábléc információ -->
   <footer>
     <p id="footer-text">© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható.</p>
   </footer>
 
-  <!-- JavaScript - Nyelvváltás -->
+  <!-- 💡 JavaScript: Nyelvváltás logika -->
   <script>
-    // Fordítási objektum
     const translations = {
       en: {
         siteTitle: "Life Coach Website",
@@ -263,7 +264,7 @@
       }
     };
 
-    // Eseményfigyelő a nyelvváltáshoz
+    // 🔁 Nyelv kiválasztás eseményfigyelő
     document.getElementById("language-selector").addEventListener("change", function () {
       const lang = this.value;
       const content = translations[lang];
