@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Olvasd el a véleményeket, amelyeket életmódtanácsadónktól kaptunk. Tapasztalatok, ajánlások és inspiráció azok számára, akik szeretnének fejlődni." />
-  <meta name="keywords" content="életmódtanácsadás, vélemények, life coach, coaching, tanácsadás, tapasztalatok, ügyfélvélemények, motiváció, személyes fejlődés, mentális egészség, önismeret, lelki támogatás, coaching szolgáltatás, bizalom, célkitűzés" />
+  
+  <!-- 🔍 SEO meta adatok -->
+  <meta name="description" content="Lépj kapcsolatba professzionális life coach tanácsadóval. Kérj egyéni konzultációt, ha fejlődni szeretnél személyesen vagy szakmailag!" />
+  <meta name="keywords" content="kapcsolat, life coach, életmódtanácsadó, személyes fejlődés, egyéni konzultáció, coach űrlap, coaching kapcsolat, motiváció, önfejlesztés, női vállalkozók, mentális támogatás, online coaching, coaching sablon, reszponzív kapcsolat oldal, SEO optimalizált coach oldal" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-  <meta property="og:title" content="Vélemények Életmódtanácsadás | Vélemények és tapasztalatok" />
-  <meta property="og:description" content="Olvasd el, hogy mit mondanak rólunk azok, akiknek segítettünk elérni céljaikat életmódtanácsadásunkkal." />
+
+  <!-- 🔗 Open Graph (megosztás) -->
+  <meta property="og:title" content="Kapcsolat - Life Coach Weboldal Sablon" />
+  <meta property="og:description" content="Vedd fel a kapcsolatot egyéni konzultációhoz! Támogatás, fejlődés, coaching – minden egy helyen." />
+  <meta property="og:image" content="https://example.com/your-image.jpg" />
+  <meta property="og:url" content="https://vstyledesign.com/contact" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vstyledesign.com/testimonials" />
-  <meta property="og:image" content="https://vstyledesign.com/images/testimonials-thumbnail.jpg" />
-  <meta name="robots" content="index, follow" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vélemények Életmódtanácsadásról" />
-  <meta name="twitter:description" content="Ügyfélvélemények és visszajelzések életmódtanácsadási szolgáltatásunkról. Valós tapasztalatok és ajánlások coaching folyamatainkról." />
-  <meta name="twitter:image" content="https://vstyledesign.com/images/testimonials-thumbnail.jpg" />
-  <!-- Google Analytics script (Google Tag Manager) -->
+<!-- Google Analytics script (Google Tag Manager) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -28,200 +26,244 @@
         gtag('config', 'G-85RD19D4PP');
     </script>
 
-  <title>Vélemények Életmódtanácsadásról</title>
+  <title>Kapcsolat | Life Coach - Egyéni Konzultáció & Coaching</title>
 
   <style>
-    /* === ALAP STÍLUSOK === */
-    body {
-      font-family: Arial, sans-serif;
+    /* === Alapbeállítások === */
+    * {
       margin: 0;
       padding: 0;
-      background-color:orange;
-      color: white;
-      text-align: center;
+      box-sizing: border-box;
     }
 
-    /* === FEJLÉC ÉS NAVIGÁCIÓ === */
-    header {
-      padding: 20px;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    .lang-toggle {
-      color: white;
-      background-color: #380327;
-      padding: 10px 20px;
-      margin: 5px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1rem;
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    .lang-toggle:hover {
-      background-color: #e16a09;
-    }
-
-    h1 {
-      margin-top: 30px;
-      font-size: 2.5rem;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    /* === VÉLEMÉNYEK SZEKCIÓ === */
-    #testimonials {
-      padding: 40px 20px;
-    }
-
-    .testimonial-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .testimonial {
-      background-image: url('bg for lifecoaching.jpg');
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url(ross-findon-mG28olYFgHI-unsplash.jpg); /* Cseréld ki saját háttérképre */
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      width: 280px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s forwards;
-      transition: all 0.3s ease-in-out;
     }
 
-    .testimonial:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    /* === Fejléc + nyelvváltó === */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      color: #fff;
     }
 
-    .quote {
-      font-style: italic;
-      font-size: 1.1rem;
+    header h1 {
+      font-size: 28px;
+      margin-left: 20px;
     }
 
-    .author {
-      margin-top: 15px;
-      font-weight: bold;
-      font-size: 1.2rem;
+    .language-switcher {
+      margin-right: 20px;
     }
 
-    /* === LÁBLÉC === */
-    footer {
-      margin-top: 40px;
+    .language-switcher button {
+      background: transparent;
+      border: 2px solid #d37808;
+      color: #fff;
+      padding: 6px 12px;
+      margin-left: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .language-switcher button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* === Kontakt űrlap konténer === */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    /* === Kisebb, átlátszó kontakt doboz === */
+    .contact-box {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
       padding: 20px;
-      font-size: 0.95rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .contact-box h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    label {
+      color: #fff;
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      font-size: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      background-image: url(bg\ for\ lifecoaching\ .jpg);
+      color: #cf8009;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #f0b135;
       color: white;
-      background-color: transparent;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    /* === ANIMÁCIÓK === */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    button[type="submit"]:hover {
+      background-color: #f1b32b;
     }
 
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+    /* === Lábléc === */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: black;
+      backdrop-filter: blur(10px);
     }
 
-    /* === RESZPONZÍV NÉZETEK === */
-    @media (max-width: 767px) {
-      h1 { font-size: 1.8rem; }
-      .testimonial { width: 90%; margin-bottom: 20px; }
-      .testimonial-container { flex-direction: column; align-items: center; }
-      .lang-toggle { font-size: 0.9rem; padding: 8px 16px; }
+    /* === Animáció === */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    @media (min-width: 768px) and (max-width: 991px) {
-      h1 { font-size: 2.2rem; }
-      .testimonial { width: 80%; }
+    /* === Reszponzív nézetek === */
+    @media (max-width: 480px) {
+      header h1 { font-size: 20px; }
+      .language-switcher button { font-size: 12px; padding: 4px 8px; }
+      .contact-box { padding: 15px; }
     }
 
-    @media (min-width: 992px) and (max-width: 1199px) {
-      h1 { font-size: 2.4rem; }
-      .testimonial { width: 260px; }
+    @media (min-width: 481px) and (max-width: 768px) {
+      header h1 { font-size: 22px; }
+      .contact-box { max-width: 320px; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1199px) {
+      header h1 { font-size: 26px; }
+      .contact-box { max-width: 340px; }
     }
 
     @media (min-width: 1200px) {
-      h1 { font-size: 2.8rem; }
+      header h1 { font-size: 28px; }
+      .contact-box { max-width: 350px; }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- === FEJLÉC ÉS NYELVVÁLTÓ === -->
+  <!-- === Fejléc + nyelvváltó gombok === -->
   <header>
-    <nav>
-      <a href="#" class="lang-toggle" data-lang="hu">Magyar</a>
-      <a href="#" class="lang-toggle" data-lang="en">English</a>
-    </nav>
-    <h1 data-hu="Vélemények Életmódtanácsadásról" data-en="Testimonials Life Coaching">Vélemények Életmódtanácsadásról</h1>
+    <h1 id="page-title">Kapcsolat</h1>
+    <div class="language-switcher">
+      <button onclick="switchLanguage('hu')">HU</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
   </header>
 
-  <!-- === FŐ TARTALOM: VÉLEMÉNYEK === -->
-  <main>
-    <section id="testimonials">
-      <div class="testimonial-container">
-        <div class="testimonial" data-hu="Nagyon elégedett vagyok a szolgáltatással!" data-en="I am very satisfied with the service!">
-          <p class="quote" data-hu="Nagyon elégedett vagyok a szolgáltatással!" data-en="I am very satisfied with the service!">"Nagyon elégedett vagyok a szolgáltatással!"</p>
-          <p class="author" data-hu="- Kovács Péter" data-en="- Peter Kovács">- Kovács Péter</p>
-        </div>
-        <div class="testimonial" data-hu="Kiváló munkát végeztek, ajánlom mindenkinek!" data-en="They did an excellent job, I recommend them to everyone!">
-          <p class="quote" data-hu="Kiváló munkát végeztek, ajánlom mindenkinek!" data-en="They did an excellent job, I recommend them to everyone!">"Kiváló munkát végeztek, ajánlom mindenkinek!"</p>
-          <p class="author" data-hu="- Nagy Anna" data-en="- Anna Nagy">- Nagy Anna</p>
-        </div>
-        <div class="testimonial" data-hu="A weboldalam fantasztikusan néz ki!" data-en="My website looks fantastic!">
-          <p class="quote" data-hu="A weboldalam fantasztikusan néz ki!" data-en="My website looks fantastic!">"A weboldalam fantasztikusan néz ki!"</p>
-          <p class="author" data-hu="- Szabó Gábor" data-en="- Gábor Szabó">- Szabó Gábor</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- === Kontakt űrlap === -->
+  <div class="contact-container">
+    <div class="contact-box">
+      <h2 id="contact-title">Lépj kapcsolatba velem!</h2>
+      <form id="contact-form">
+        <label for="name" id="label-name">Név</label>
+        <input type="text" id="name" placeholder="Neved" required />
 
-  <!-- === LÁBLÉC === -->
+        <label for="email" id="label-email">Email</label>
+        <input type="email" id="email" placeholder="Email címed" required />
+
+        <label for="message" id="label-message">Üzenet</label>
+        <textarea id="message" placeholder="Írd ide az üzeneted..." rows="4" required></textarea>
+
+        <button type="submit" id="submit-btn">Küldés</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- === Lábléc === -->
   <footer>
-    <p id="footer-text" data-hu="© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható." data-en="© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.">
+    <p id="footer-text">
       © 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.
     </p>
   </footer>
 
-  <!-- === JAVASCRIPT: NYELVVÁLTÁS === -->
+  <!-- === Nyelvváltó script === -->
   <script>
-    const langToggles = document.querySelectorAll('.lang-toggle');
-    const elements = document.querySelectorAll('[data-hu], [data-en]');
-
-    langToggles.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        const lang = toggle.getAttribute('data-lang');
-        elements.forEach(el => {
-          const translation = el.getAttribute(`data-${lang}`);
-          if (translation) {
-            el.innerText = translation;
-          }
-        });
-      });
-    });
+    function switchLanguage(lang) {
+      if (lang === 'en') {
+        document.getElementById('page-title').innerText = 'Contact';
+        document.getElementById('contact-title').innerText = 'Get in Touch!';
+        document.getElementById('label-name').innerText = 'Name';
+        document.getElementById('label-email').innerText = 'Email';
+        document.getElementById('label-message').innerText = 'Message';
+        document.getElementById('name').placeholder = 'Your Name';
+        document.getElementById('email').placeholder = 'Your Email';
+        document.getElementById('message').placeholder = 'Your Message';
+        document.getElementById('submit-btn').innerText = 'Send';
+        document.getElementById('footer-text').innerText =
+          '© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.';
+      } else {
+        document.getElementById('page-title').innerText = 'Kapcsolat';
+        document.getElementById('contact-title').innerText = 'Lépj kapcsolatba velem!';
+        document.getElementById('label-name').innerText = 'Név';
+        document.getElementById('label-email').innerText = 'Email';
+        document.getElementById('label-message').innerText = 'Üzenet';
+        document.getElementById('name').placeholder = 'Neved';
+        document.getElementById('email').placeholder = 'Email címed';
+        document.getElementById('message').placeholder = 'Írd ide az üzeneted...';
+        document.getElementById('submit-btn').innerText = 'Küldés';
+        document.getElementById('footer-text').innerText =
+          '© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.';
+      }
+    }
   </script>
-
 </body>
 </html>
 
- 
- 
-
+   
 
 
 
