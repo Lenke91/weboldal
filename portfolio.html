@@ -1,292 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the portfolio of LENKE VARO PR VSTYLEDESIGN, featuring modern and responsive website templates.">
-    <meta name="keywords" content="portfolio, website templates, web design, responsive design">
-    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:title" content="Portfolio with Voting - LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:description" content="Discover responsive and SEO-friendly website templates.">
-    <meta property="og:image" content="https://vstyledesign.com/portfolio-image.jpg">
-    <meta property="og:url" content="https://vstyledesign.com/portfolio">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfolio with Voting - LENKE VARO PR VSTYLEDESIGN">
-    <meta name="twitter:description" content="Discover responsive and SEO-friendly website templates.">
-    <meta name="twitter:image" content="https://vstyledesign.com/portfolio-image.jpg">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-85RD19D4PP');
-    </script>
-    <title>Portfolio with Voting</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #6e7cdb, #8fd3f4);
-            color: #333;
-            text-align: center;
-            overflow-x: hidden;
-            transition: all 0.3s ease;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        header {
-            padding: 20px 0;
-            background-color: #4a90e2;
-            color: white;
-        }
+  <!-- ✅ SEO META TAG-ek -->
+  <meta name="description" content="Fedezd fel modern, SEO-optimalizált weboldal sablonjaimat, és szavazz kedvenc portfólió sablonodra! Reszponzív megjelenés minden eszközön.">
+  <meta name="keywords" content="weboldal sablon, portfólió, responsive design, szavazás, modern design, html css js sablon, webdesign, SEO optimalizált sablon, vstyledesign, mobilbarát weboldal">
+  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Hungarian">
+  <meta name="theme-color" content="#6a11cb">
 
-        h1 {
-            font-size: 3em;
-            margin: 0;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfólió Szavazás - LENKE VARO PR VSTYLEDESIGN">
+  <meta property="og:description" content="Modern, reszponzív portfólió sablonok - szavazz a kedvencedre!">
+  <meta property="og:image" content="https://vstyledesign.com/portfolio-image.jpg">
+  <meta property="og:url" content="https://vstyledesign.com">
+  <meta property="og:type" content="website">
 
-        .language-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfólió Szavazás - LENKE VARO PR VSTYLEDESIGN">
+  <meta name="twitter:description" content="Modern, SEO-optimalizált sablonok minden eszközre. Szavazz most!">
+  <meta name="twitter:image" content="https://vstyledesign.com/portfolio-image.jpg">
+  <meta name="twitter:creator" content="@lenkevarro">
 
-        .language-switcher:hover {
-            background-color: #555;
-        }
+  <title>Portfólió Szavazás</title>
 
-        /* Portfolio Container */
-        .portfolio-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            margin-top: 20px;
-        }
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d3cce3, #e9e4f0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-        /* Template Item */
-        .template-item {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    header {
+      background-color: #6a11cb;
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
 
-        .template-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
 
-        .template-item a {
-            display: block;
-            padding: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 1.2em;
-            background-color: #f0f0f0;
-            transition: background-color 0.3s ease;
-        }
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: #6a11cb;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+    }
 
-        .template-item a:hover {
-            background-color: #84fab0;
-            color: #fff;
-        }
+    .language-switcher:hover {
+      background: #eee;
+    }
 
-        .vote-btn {
-            background: #84fab0;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s ease;
-            margin-top: 10px;
-            width: 100%;
-        }
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
 
-        .vote-btn:hover {
-            background: #68c3a3;
-            color: #fff;
-        }
+    .template-item {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      transition: 0.3s;
+    }
 
-        #vote-results {
-            margin-top: 30px;
-            font-size: 1.5em;
-            color: #444;
-        }
+    .template-item:hover {
+      transform: translateY(-5px);
+    }
 
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+    .template-item a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      font-size: 1.1em;
+      display: block;
+      margin-bottom: 10px;
+    }
 
-        #footer-text {
-            margin: 0;
-            font-size: 1.1em;
-        }
+    .vote-btn {
+      background: #6a11cb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 1em;
+    }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
+    .vote-btn:hover {
+      background: #5311b8;
+    }
 
-            .template-item {
-                width: 100%;
-                max-width: 320px;
-            }
+    .progress-bar {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 16px;
+      margin: 10px 0;
+    }
 
-            #vote-results {
-                font-size: 1.2em;
-            }
+    .progress-fill {
+      background: #6a11cb;
+      height: 100%;
+      width: 0%;
+      border-radius: 20px;
+      transition: width 0.6s ease;
+    }
 
-            footer {
-                padding: 20px 0;
-            }
+    .vote-feedback {
+      color: green;
+      font-size: 0.9em;
+      margin-top: 5px;
+      display: none;
+    }
 
-            #footer-text {
-                font-size: 1em;
-            }
-        }
+    footer {
+      background-color: #6a11cb;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2em;
-            }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8em; }
+      .template-item { width: 90%; }
+      .language-switcher { font-size: 0.75em; padding: 5px 10px; }
+    }
 
-            .template-item {
-                width: 100%;
-                max-width: 280px;
-            }
+    @media (min-width: 481px) and (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .template-item { width: 85%; }
+    }
 
-            footer {
-                padding: 15px 0;
-            }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      h1 { font-size: 2.4em; }
+      .template-item { width: 45%; }
+    }
 
-            #footer-text {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    @media (min-width: 1025px) {
+      .template-item { width: 300px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1 id="page-title">Portfolio</h1>
-    </header>
+  <header>
+    <h1 id="page-title">Portfólió</h1>
+    <div class="language-switcher" onclick="switchLanguage()">EN / HU</div>
+  </header>
 
-    <div class="language-switcher" onclick="switchLanguage()">EN/HU</div>
+  <div class="portfolio-container" id="portfolio"></div>
 
-    <div class="portfolio-container">
-        <div class="template-item">
-            <a href="https://vstyledesign.com/Book%20Recommendation.html" id="template-1-title" data-hu-title="1. sablon - Könyvajánló" data-en-title="Template 1 - Book Recommendation">Template 1 - Book Recommendation</a>
-            <button class="vote-btn" id="template-1-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
-        </div>
-      
-        <div class="template-item">
-            <a href="https://vstyledesign.com/thome.html" id="template-3-title" data-hu-title="3. sablon - Életmódtanácsadó" data-en-title="Template 3 - Lifecoach">Template 3 - Lifecoach</a>
-            <button class="vote-btn" id="template-3-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
-        </div>
-        <div class="template-item">
-            <a href="https://vstyledesign.com/minblogtemplate.html" id="template-4-title" data-hu-title="4. sablon - Személyes Blog" data-en-title="Template 4 - Personal Blog">Template 4 - Personal Blog</a>
-            <button class="vote-btn" id="template-4-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
-        </div>
-    </div>
+  <footer>
+    <p id="footer-text">© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva.</p>
+  </footer>
 
-    <div id="vote-results">
-        <h2 id="results-header">Results</h2>
-        <p id="results-content">No votes yet.</p>
-    </div>
+  <script>
+    const lang = { current: "hu" };
+    const templates = [
+      { id: 1, hu: "1. sablon - Könyvajánló", en: "Template 1 - Book Recommendation", url: "https://vstyledesign.com/Book%20Recommendation.html", votes: 0 },
+      { id: 2, hu: "2. sablon - Marketing", en: "Template 2 - Marketing", url: "https://vstyledesign.com/marketing.html", votes: 0 },
+      { id: 3, hu: "3. sablon - Életmódtanácsadó", en: "Template 3 - Lifecoach", url: "https://vstyledesign.com/thome.html", votes: 0 },
+      { id: 4, hu: "4. sablon - Személyes Blog", en: "Template 4 - Personal Blog", url: "https://vstyledesign.com/minblogtemplate.html", votes: 0 }
+    ];
 
-    <footer>
-        <p id="footer-text">
-            <span id="footer-text-hu"> &copy; 2025.Minden jog fenntartva </span>
-            <span id="footer-text-en" style="display:none;"> &copy; 2025. All rights reserved.</span>
-        </p>
-    </footer>
+    function renderTemplates() {
+      const container = document.getElementById("portfolio");
+      container.innerHTML = "";
+      templates.forEach(tpl => {
+        const item = document.createElement("div");
+        item.className = "template-item";
+        item.innerHTML = `
+          <a href="${tpl.url}" target="_blank">${tpl[lang.current]}</a>
+          <button class="vote-btn" onclick="vote(${tpl.id}, this)">
+            ${lang.current === "hu" ? "Szavazok" : "Vote"}
+          </button>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-${tpl.id}"></div>
+          </div>
+          <div>
+            <span id="count-${tpl.id}">0</span> ${lang.current === "hu" ? "szavazat" : "votes"}
+          </div>
+          <div class="vote-feedback" id="feedback-${tpl.id}">
+            ✅ ${lang.current === "hu" ? "Köszi a szavazatot!" : "Thanks for voting!"}
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const buttons = document.querySelectorAll(".vote-btn");
-            const resultsContent = document.getElementById("results-content");
+    function vote(id, btn) {
+      const tpl = templates.find(t => t.id === id);
+      tpl.votes++;
+      const totalVotes = templates.reduce((sum, t) => sum + t.votes, 0);
+      const percentage = (tpl.votes / totalVotes) * 100;
+      document.getElementById(`count-${id}`).textContent = tpl.votes;
+      document.getElementById(`progress-${id}`).style.width = percentage + "%";
+      const feedback = document.getElementById(`feedback-${id}`);
+      feedback.style.display = "block";
+      btn.disabled = true;
+      btn.textContent = lang.current === "hu" ? "Szavazva" : "Voted";
+      btn.style.background = "#ccc";
+      btn.style.cursor = "default";
+    }
 
-            let votes = JSON.parse(localStorage.getItem("votes")) || {
-                "Template 1": 0,
-                "Template 2": 0,
-                "Template 3": 0,
-                "Template 4": 0
-            };
+    function switchLanguage() {
+      lang.current = lang.current === "en" ? "hu" : "en";
+      document.getElementById("page-title").textContent =
+        lang.current === "hu" ? "Portfólió" : "Portfolio";
+      document.getElementById("footer-text").textContent =
+        lang.current === "hu"
+          ? "© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva."
+          : "© 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved.";
+      renderTemplates();
+    }
 
-            function updateResults() {
-                const resultsText = Object.keys(votes)
-                    .map(template => `${template}: ${votes[template]} votes`)
-                    .join(", ");
-                resultsContent.textContent = resultsText || "No votes yet.";
-            }
-
-            buttons.forEach(button => {
-                button.addEventListener("click", function() {
-                    const templateName = this.closest('.template-item').querySelector('a').textContent;
-                    votes[templateName]++;
-                    localStorage.setItem("votes", JSON.stringify(votes));
-                    updateResults();
-                    alert(`You voted for ${templateName}!`);
-                });
-            });
-
-            updateResults();
-        });
-
-        function switchLanguage() {
-            const isEnglish = document.documentElement.lang === "en";
-            document.documentElement.lang = isEnglish ? "hu" : "en";
-            
-            document.getElementById("page-title").textContent = isEnglish ? "Portfolio" : "Portfólió";
-            document.getElementById("results-header").textContent = isEnglish ? "Results" : "Eredmények";
-            document.getElementById("results-content").textContent = isEnglish ? "No votes yet." : "Még nincs szavazat.";
-
-            const footerText = document.getElementById(isEnglish ? "footer-text-en" : "footer-text-hu");
-            footerText.style.display = "inline";
-            document.getElementById(isEnglish ? "footer-text-hu" : "footer-text-en").style.display = "none";
-
-            document.querySelectorAll('[data-en-title]').forEach((element) => {
-                element.textContent = element.getAttribute(isEnglish ? 'data-en-title' : 'data-hu-title');
-            });
-
-            document.querySelectorAll('[data-en]').forEach((element) => {
-                element.textContent = element.getAttribute(isEnglish ? 'data-en' : 'data-hu');
-            });
-        }
-    </script>
+    renderTemplates();
+  </script>
 </body>
 </html>
 
- 
-        
-       
+    
 
 
