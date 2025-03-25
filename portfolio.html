@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- SEO META TAG-ek -->
+  <!-- ✅ SEO META TAG-ek -->
   <meta name="description" content="Fedezd fel modern, SEO-optimalizált weboldal sablonjaimat, és szavazz kedvenc portfólió sablonodra! Reszponzív megjelenés minden eszközön.">
   <meta name="keywords" content="weboldal sablon, portfólió, responsive design, szavazás, modern design, html css js sablon, webdesign, SEO optimalizált sablon, vstyledesign, mobilbarát weboldal">
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
@@ -26,16 +26,18 @@
   <meta name="twitter:description" content="Modern, SEO-optimalizált sablonok minden eszközre. Szavazz most!">
   <meta name="twitter:image" content="https://vstyledesign.com/portfolio-image.jpg">
   <meta name="twitter:creator" content="@lenkevarro">
+
   <!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-85RD19D4PP');
+  </script>
+
   <title>Portfólió Szavazás</title>
 
   <style>
@@ -180,7 +182,22 @@
     <div class="language-switcher" onclick="switchLanguage()">EN / HU</div>
   </header>
 
-  <div class="portfolio-container" id="portfolio"></div>
+  <div class="portfolio-container" id="portfolio">
+    <!-- Link in Bio sablon -->
+    <div class="template-item">
+      <a href="https://vstyledesign.com/biofresh/Link%20in%20Bio%20template.html" target="_blank">Link in Bio - BioFresh Sablon</a>
+      <button class="vote-btn" onclick="vote(1, this)">Szavazok</button>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-1"></div>
+      </div>
+      <div>
+        <span id="count-1">0</span> szavazat
+      </div>
+      <div class="vote-feedback" id="feedback-1">
+        ✅ Köszi a szavazatot!
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p id="footer-text">© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva.</p>
@@ -188,53 +205,6 @@
 
   <script>
     const lang = { current: "hu" };
-    const templates = [
-      { id: 1, hu: "1. sablon - Könyvajánló", en: "Template 1 - Book Recommendation", url: "https://vstyledesign.com/Book%20Recommendation.html", votes: 0 },
-      { id: 2, hu: "2. sablon - Marketing", en: "Template 2 - Marketing", url: "https://vstyledesign.com/marketing.html", votes: 0 },
-      { id: 3, hu: "3. sablon - Életmódtanácsadó", en: "Template 3 - Lifecoach", url: "https://vstyledesign.com/thome.html", votes: 0 },
-      { id: 4, hu: "4. sablon - Személyes Blog", en: "Template 4 - Personal Blog", url: "https://vstyledesign.com/minblogtemplate.html", votes: 0 },
-      { id: 5, hu: "5. sablon - Link in Bio", en: "Template 5 - Link in Bio", url: "https://vstyledesign.com/biofresh.html", votes: 0 }  <!-- Link in Bio sablon -->
-    ];
-
-    function renderTemplates() {
-      const container = document.getElementById("portfolio");
-      container.innerHTML = "";
-      templates.forEach(tpl => {
-        const item = document.createElement("div");
-        item.className = "template-item";
-        item.innerHTML = `
-          <a href="${tpl.url}" target="_blank">${tpl[lang.current]}</a>
-          <button class="vote-btn" onclick="vote(${tpl.id}, this)">
-            ${lang.current === "hu" ? "Szavazok" : "Vote"}
-          </button>
-          <div class="progress-bar">
-            <div class="progress-fill" id="progress-${tpl.id}"></div>
-          </div>
-          <div>
-            <span id="count-${tpl.id}">0</span> ${lang.current === "hu" ? "szavazat" : "votes"}
-          </div>
-          <div class="vote-feedback" id="feedback-${tpl.id}">
-            ✅ ${lang.current === "hu" ? "Köszi a szavazatot!" : "Thanks for voting!"}
-          </div>
-        `;
-        container.appendChild(item);
-      });
-    }
-
-    function vote(id, btn) {
-      const tpl = templates.find(t => t.id === id);
-      tpl.votes++;
-      const totalVotes = templates.reduce((sum, t) => sum + t.votes, 0);
-      const percentage = (tpl.votes / totalVotes) * 100;
-      document.getElementById(`count-${id}`).textContent = tpl.votes;
-      document.getElementById(`progress-${id}`).style.width = percentage + "%";
-      const feedback = document.getElementById(`feedback-${id}`);
-      feedback.style.display = "block";
-      btn.disabled = true;
-      btn.textContent = lang.current === "hu" ? "Szavazva" : "Voted";
-      btn.style.background = "#ccc";
-      btn.style.cursor = "default";
-    }
 
     function switchLanguage() {
       lang.current = lang.current === "en" ? "hu" : "en";
@@ -244,10 +214,31 @@
         lang.current === "hu"
           ? "© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva."
           : "© 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved.";
-      renderTemplates();
+    }
+
+    function vote(id, btn) {
+      const progress = document.getElementById(`progress-${id}`);
+      const count = document.getElementById(`count-${id}`);
+      const feedback = document.getElementById(`feedback-${id}`);
+      let votes = parseInt(count.textContent) + 1;
+      count.textContent = votes;
+      const percentage = (votes / 100) * 100; // A szavazatok számától függően
+      progress.style.width = `${percentage}%`;
+      feedback.style.display = "block";
+      btn.disabled = true;
+      btn.textContent = lang.current === "hu" ? "Szavazva" : "Voted";
+      btn.style.background = "#ccc";
     }
 
     renderTemplates();
   </script>
 </body>
 </html>
+
+
+ 
+  
+   
+
+ 
+  
