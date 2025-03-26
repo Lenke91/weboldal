@@ -24,6 +24,7 @@
     <meta name="twitter:title" content="Marketing Szolgáltatások - VStyledesign">
     <meta name="twitter:description" content="Digitális marketing kisvállalkozásoknak: SEO, webdesign, kampánytervezés.">
     <meta name="twitter:image" content="https://vstyledesign.com/images/twitter-marketing.jpg">
+
     <!-- Google Analytics script (Google Tag Manager) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
@@ -109,6 +110,7 @@
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%; /* Alapértelmezett szélesség */
         }
 
         .card:hover {
@@ -161,7 +163,7 @@
 
         /* Media Queries for responsiveness */
         @media (max-width: 1200px) {
-            .card { max-width: 40%; }
+            .card { max-width: 45%; }
         }
 
         @media (max-width: 992px) {
@@ -171,7 +173,7 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             .intro p { font-size: 1.1rem; }
-            .card { max-width: 90%; }
+            .card { max-width: 100%; padding: 1.5rem; }
         }
 
         @media (max-width: 480px) {
@@ -256,3 +258,4 @@
 </script>
 </body>
 </html>
+
