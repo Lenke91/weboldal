@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +14,18 @@
     <meta name="twitter:title" content="Portfolio with Voting - LENKE VARO PR VSTYLEDESIGN">
     <meta name="twitter:description" content="Discover responsive and SEO-friendly website templates.">
     <meta name="twitter:image" content="https://vstyledesign.com/portfolio-image.jpg">
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'G-85RD19D4PP');
     </script>
     <title>Portfolio with Voting</title>
+
     <style>
-        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -183,6 +185,7 @@
     <div class="language-switcher" onclick="switchLanguage()">EN/HU</div>
 
     <div class="portfolio-container">
+        <!-- Portfolio Templates -->
         <div class="template-item">
             <a href="https://vstyledesign.com/Book%20Recommendation.html" id="template-1-title" data-hu-title="1. sablon - Könyvajánló" data-en-title="Template 1 - Book Recommendation">Template 1 - Book Recommendation</a>
             <button class="vote-btn" id="template-1-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
@@ -198,6 +201,11 @@
         <div class="template-item">
             <a href="https://vstyledesign.com/minblogtemplate.html" id="template-4-title" data-hu-title="4. sablon - Személyes Blog" data-en-title="Template 4 - Personal Blog">Template 4 - Personal Blog</a>
             <button class="vote-btn" id="template-4-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
+        </div>
+        <!-- BioFresh Template - Link in Bio -->
+        <div class="template-item">
+            <a href="https://vstyledesign.com/biofresh.html" id="template-5-title" data-hu-title="5. sablon - Link in Bio" data-en-title="Template 5 - Link in Bio">Template 5 - Link in Bio</a>
+            <button class="vote-btn" id="template-5-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
         </div>
     </div>
 
@@ -222,7 +230,8 @@
                 "Template 1": 0,
                 "Template 2": 0,
                 "Template 3": 0,
-                "Template 4": 0
+                "Template 4": 0,
+                "Template 5": 0
             };
 
             function updateResults() {
@@ -268,11 +277,3 @@
     </script>
 </body>
 </html>
-
-
-  
-
-
- 
-  
-    
