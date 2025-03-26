@@ -6,12 +6,12 @@
     <meta name="description" content="Explore the portfolio of LENKE VARO PR VSTYLEDESIGN, featuring modern and responsive website templates.">
     <meta name="keywords" content="portfolio, website templates, web design, responsive design">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-    <meta property="og:title" content="Portfolio with Voting - LENKE VARO PR VSTYLEDESIGN">
+    <meta property="og:title" content="Portfolio - LENKE VARO PR VSTYLEDESIGN">
     <meta property="og:description" content="Discover responsive and SEO-friendly website templates.">
     <meta property="og:image" content="https://vstyledesign.com/portfolio-image.jpg">
     <meta property="og:url" content="https://vstyledesign.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfolio with Voting - LENKE VARO PR VSTYLEDESIGN">
+    <meta name="twitter:title" content="Portfolio - LENKE VARO PR VSTYLEDESIGN">
     <meta name="twitter:description" content="Discover responsive and SEO-friendly website templates.">
     <meta name="twitter:image" content="https://vstyledesign.com/portfolio-image.jpg">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
@@ -23,7 +23,7 @@
         gtag('js', new Date());
         gtag('config', 'G-85RD19D4PP');
     </script>
-    <title>Portfolio with Voting</title>
+    <title>Portfolio</title>
 
     <style>
         body {
@@ -107,29 +107,6 @@
             color: #fff;
         }
 
-        .vote-btn {
-            background: #84fab0;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s ease;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        .vote-btn:hover {
-            background: #68c3a3;
-            color: #fff;
-        }
-
-        #vote-results {
-            margin-top: 30px;
-            font-size: 1.5em;
-            color: #444;
-        }
-
         /* Footer Styles */
         footer {
             background-color: #333;
@@ -159,10 +136,6 @@
                 width: 100%;
                 max-width: 320px;
             }
-
-            #vote-results {
-                font-size: 1.2em;
-            }
         }
 
         @media (max-width: 480px) {
@@ -188,25 +161,16 @@
         <!-- Portfolio Templates -->
         <div class="template-item">
             <a href="https://vstyledesign.com/Book%20Recommendation.html" id="template-1-title" data-hu-title="1. sablon - Könyvajánló" data-en-title="Template 1 - Book Recommendation">Template 1 - Book Recommendation</a>
-            <button class="vote-btn" id="template-1-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
         </div>
         <div class="template-item">
             <a href="https://vstyledesign.com/marketing.html" id="template-2-title" data-hu-title="2. sablon - Marketing" data-en-title="Template 2 - Marketing">Template 2 - Marketing</a>
-            <button class="vote-btn" id="template-2-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
         </div>
         <div class="template-item">
             <a href="https://vstyledesign.com/thome.html" id="template-3-title" data-hu-title="3. sablon - Életmódtanácsadó" data-en-title="Template 3 - Lifecoach">Template 3 - Lifecoach</a>
-            <button class="vote-btn" id="template-3-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
         </div>
         <div class="template-item">
             <a href="https://vstyledesign.com/minblogtemplate.html" id="template-4-title" data-hu-title="4. sablon - Személyes Blog" data-en-title="Template 4 - Personal Blog">Template 4 - Personal Blog</a>
-            <button class="vote-btn" id="template-4-vote" data-hu="Szavazok" data-en="Vote">Vote</button>
         </div>
-    </div>
-
-    <div id="vote-results">
-        <h2 id="results-header">Results</h2>
-        <p id="results-content">No votes yet.</p>
     </div>
 
     <footer>
@@ -217,44 +181,11 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const buttons = document.querySelectorAll(".vote-btn");
-            const resultsContent = document.getElementById("results-content");
-
-            let votes = JSON.parse(localStorage.getItem("votes")) || {
-                "Template 1": 0,
-                "Template 2": 0,
-                "Template 3": 0,
-                "Template 4": 0
-            };
-
-            function updateResults() {
-                const resultsText = Object.keys(votes)
-                    .map(template => `${template}: ${votes[template]} votes`)
-                    .join(", ");
-                resultsContent.textContent = resultsText || "No votes yet.";
-            }
-
-            buttons.forEach(button => {
-                button.addEventListener("click", function() {
-                    const templateName = this.closest('.template-item').querySelector('a').textContent;
-                    votes[templateName]++;
-                    localStorage.setItem("votes", JSON.stringify(votes));
-                    updateResults();
-                    alert(`You voted for ${templateName}!`);
-                });
-            });
-
-            updateResults();
-        });
-
         function switchLanguage() {
             const isEnglish = document.documentElement.lang === "en";
             document.documentElement.lang = isEnglish ? "hu" : "en";
             
             document.getElementById("page-title").textContent = isEnglish ? "Portfolio" : "Portfólió";
-            document.getElementById("results-header").textContent = isEnglish ? "Results" : "Eredmények";
-            document.getElementById("results-content").textContent = isEnglish ? "No votes yet." : "Még nincs szavazat." ;
 
             const footerText = document.getElementById(isEnglish ? "footer-text-en" : "footer-text-hu");
             footerText.style.display = "inline";
@@ -263,12 +194,7 @@
             document.querySelectorAll('[data-en-title]').forEach((element) => {
                 element.textContent = element.getAttribute(isEnglish ? 'data-en-title' : 'data-hu-title');
             });
-
-            document.querySelectorAll('[data-en]').forEach((element) => {
-                element.textContent = element.getAttribute(isEnglish ? 'data-en' : 'data-hu');
-            });
         }
     </script>
 </body>
 </html>
-
