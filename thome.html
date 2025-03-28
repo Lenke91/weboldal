@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ SEO META TAGEK: Jobb keresőoptimalizálás érdekében -->
+  <!-- ✅ SEO META TAG-ek: keresőoptimalizálás érdekében -->
   <meta name="description" content="Modern és animált életmódtanácsadó weboldal sablon. Reszponzív kialakítás mobilra, tabletre, laptopra és asztali gépre. SEO-optimalizált és többnyelvű támogatással." />
   <meta name="keywords" content="life coach, életmódtanácsadó, coaching sablon, animált weboldal, SEO barát sablon, reszponzív design, mobilbarát weboldal, HTML CSS JS sablon, többnyelvű webdesign" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
@@ -15,7 +15,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <!-- 📱 Open Graph a közösségi média megosztásokhoz -->
+  <!-- 🌐 Open Graph (Facebook stb.) -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="hu_HU" />
   <meta property="og:title" content="Életmódtanácsadó Weboldal" />
@@ -31,36 +31,39 @@
   <meta name="twitter:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
   <meta name="twitter:creator" content="@vstyledesign" />
 
-  <!-- 🔤 Weboldal címe -->
-  <!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+  <!-- 📈 Google Analytics (követőkód) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
 
+  <!-- 💳 Gumroad script a vásárlási gombhoz -->
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+
+  <!-- 🌐 Cím -->
   <title>Életmódtanácsadó Weboldal sablon | SEO-optimalizált, reszponzív és animált</title>
 
-  <!-- 🎨 Alap CSS stílusok és reszponzivitás -->
+  <!-- 🎨 CSS stílusok -->
   <style>
-    /* 🔧 Reset alapbeállítások minden elemre */
+    /* Reset */
     * {margin: 0; padding: 0; box-sizing: border-box;}
 
-    /* 🧱 Alap test és háttér */
+    /* Alap beállítások */
     html, body {
       font-family: 'Segoe UI', sans-serif;
-      background-color:orange;
+      background-color: orange;
       color: #fff;
       min-height: 100vh;
     }
 
-    /* 🔝 Fejléc szakasz */
+    /* Fejléc */
     header {
-      background:transparent;
+      background: transparent;
       color: #fff;
       text-align: center;
       padding: 20px 10px;
@@ -69,12 +72,10 @@
       z-index: 100;
       animation: slideDown 1s ease-out;
     }
-
     header h1 {
       font-size: 32px;
       margin-bottom: 10px;
     }
-
     .language-selector {
       padding: 6px 10px;
       border: none;
@@ -83,13 +84,12 @@
       cursor: pointer;
     }
 
-    /* 🧭 Navigációs menü */
+    /* Navigáció */
     nav {
       background: #fff;
       text-align: center;
       padding: 10px 0;
     }
-
     nav a {
       margin: 0 10px;
       text-decoration: none;
@@ -97,12 +97,11 @@
       font-weight: bold;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #ed9b4ef3;
     }
 
-    /* 📦 Fő tartalom szakasz */
+    /* Tartalom */
     .container {
       max-width: 1000px;
       margin: 40px auto;
@@ -110,20 +109,18 @@
       text-align: center;
       animation: fadeIn 1.2s ease-in-out;
     }
-
     .container h2 {
       font-size: 28px;
       margin-bottom: 15px;
     }
-
     .container p {
       font-size: 18px;
       margin-bottom: 30px;
       color: white;
     }
 
-    /* 🎯 Cselekvésre ösztönző gomb */
-    .cta button {
+    /* Gomb */
+    .cta .gumroad-button {
       padding: 15px 30px;
       font-size: 16px;
       background: #e8a107;
@@ -132,32 +129,32 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
     }
-
-    .cta button:hover {
+    .cta .gumroad-button:hover {
       background: #e5c046;
     }
 
-    /* 🔗 Közösségi ikonok */
+    /* Közösségi ikonok */
     .social-icons {
       margin-top: 30px;
       display: flex;
       justify-content: center;
       gap: 15px;
     }
-
     .social-icons a {
       font-size: 24px;
       text-decoration: none;
       color: #f08c19;
       transition: transform 0.3s ease;
     }
-
     .social-icons a:hover {
       transform: scale(1.2);
     }
 
-    /* ⚙️ Lábléc */
+    /* Lábléc */
     footer {
       text-align: center;
       padding: 15px;
@@ -166,34 +163,31 @@
       color: #000;
     }
 
-    /* ✨ Animációk */
+    /* Animációk */
     @keyframes slideDown {
       from {transform: translateY(-50px); opacity: 0;}
       to {transform: translateY(0); opacity: 1;}
     }
-
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
 
-    /* 📱 Reszponzív dizájn eszközökre */
+    /* Reszponzivitás */
     @media (max-width: 767px) {
       header h1 { font-size: 22px; }
       .container h2 { font-size: 20px; }
     }
-
     @media (min-width: 768px) and (max-width: 991px) {
       header h1 { font-size: 26px; }
     }
-
     @media (min-width: 992px) and (max-width: 1199px) {
       header h1 { font-size: 30px; }
     }
   </style>
 </head>
 <body>
-  <!-- 🔝 Fejléc nyelvválasztóval -->
+  <!-- 🌍 Fejléc -->
   <header>
     <h1 id="site-title">Életmódtanácsadó Weboldal</h1>
     <select id="language-selector" class="language-selector">
@@ -202,7 +196,7 @@
     </select>
   </header>
 
-  <!-- 🧭 Navigációs menü -->
+  <!-- 🧭 Navigáció -->
   <nav>
     <a href="thome.html" id="nav-home">Főoldal</a>
     <a href="tabout.html" id="nav-about">Rólam</a>
@@ -212,12 +206,12 @@
     <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
   </nav>
 
-  <!-- 📦 Fő tartalom -->
+  <!-- 📦 Fő tartalom + gomb -->
   <main class="container">
     <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
     <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
     <div class="cta">
-      <button id="cta-button">Kezdd el ma!</button>
+      <a class="gumroad-button" href="https://vlenke33.gumroad.com/l/uplzuh" target="_blank">Megvásárolom most</a>
     </div>
     <div class="social-icons">
       <a href="#">📘</a>
@@ -227,12 +221,12 @@
     </div>
   </main>
 
-  <!-- ⚙️ Lábléc információ -->
+  <!-- ⚙️ Lábléc -->
   <footer>
     <p id="footer-text">© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható.</p>
   </footer>
 
-  <!-- 💡 JavaScript: Nyelvváltás logika -->
+  <!-- 🧠 Nyelvváltás logika -->
   <script>
     const translations = {
       en: {
@@ -245,8 +239,8 @@
         navContact: "Contact",
         welcomeTitle: "Discover the World of Coaching",
         welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
-        ctaButton: "Start Today!",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License."
+        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.",
+        gumroadButton: "Buy Now"
       },
       hu: {
         siteTitle: "Életmódtanácsadó Weboldal",
@@ -258,16 +252,13 @@
         navContact: "Kapcsolat",
         welcomeTitle: "Fedezd fel a Coaching Világát",
         welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
-        ctaButton: "Kezdd el ma!",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható."
+        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható.",
+        gumroadButton: "Megvásárolom most"
       }
     };
-
-    // 🔁 Nyelv kiválasztás eseményfigyelő
     document.getElementById("language-selector").addEventListener("change", function () {
       const lang = this.value;
       const content = translations[lang];
-
       document.getElementById("site-title").textContent = content.siteTitle;
       document.getElementById("nav-home").textContent = content.navHome;
       document.getElementById("nav-about").textContent = content.navAbout;
@@ -277,8 +268,8 @@
       document.getElementById("nav-contact").textContent = content.navContact;
       document.getElementById("welcome-title").textContent = content.welcomeTitle;
       document.getElementById("welcome-text").textContent = content.welcomeText;
-      document.getElementById("cta-button").textContent = content.ctaButton;
       document.getElementById("footer-text").textContent = content.footerText;
+      document.querySelector(".gumroad-button").textContent = content.gumroadButton;
     });
   </script>
 </body>
