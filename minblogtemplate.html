@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tag-ek a keresőoptimalizálás érdekében -->
     <meta name="description" content="Minimalista blog sablon, könnyen testreszabható, SEO-optimalizált és reszponzív. Ideális kezdőknek és tapasztalt bloggereknél egyaránt.">
-    <meta name="keywords" content="minimalista, blog, sablon, reszponzív, SEO-optimalizált, személyes blog, weboldal, HTML, CSS, JavaScript, blog sablon">
+    <meta name="keywords" content="minimalista, blog sablon, reszponzív weboldal sablon, SEO-optimalizált blog sablon, személyes blog sablon, HTML sablon, CSS sablon, JavaScript sablon, blog design">
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="hu">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#0fc0c0">
+    
+    <!-- Open Graph Meta Tag-ek -->
+    <meta property="og:title" content="Minimalista Blog Sablon">
+    <meta property="og:description" content="Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon.">
+    <meta property="og:image" content="URL_to_your_image.jpg">
+    <meta property="og:url" content="https://vstyledesign.com/minblogtemplate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hu_HU">
+    <meta property="og:site_name" content="VstyleDesign">
+    
+    <!-- Twitter Card Meta Tag-ek -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Minimalista Blog Sablon">
+    <meta name="twitter:description" content="Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon.">
+    <meta name="twitter:image" content="URL_to_your_image.jpg">
+    <meta name="twitter:site" content="@your_twitter_handle">
+    
+    <!-- Google Search Meta Tag-ek -->
+    <meta name="google-site-verification" content="Google_verification_code_here">
+    
+    <!-- Structured Data (Schema.org) - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Minimalista Blog Sablon",
+        "description": "Könnyen testreszabható, SEO-optimalizált, reszponzív blog sablon, amely ideális személyes blogokhoz.",
+        "url": "https://vstyledesign.com/minblogtemplate.html",
+        "author": {
+            "@type": "Organization",
+            "name": "LENKE VARO PR VSTYLEDESIGN"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "VstyleDesign"
+        }
+    }
+    </script>
+
+    <!-- Language Meta Tag -->
+    <meta http-equiv="Content-Language" content="hu">
+    
     <title>Minimalista Blog</title>
+    
     <style>
         /* Alapbeállítások és stílusok minden nézethez */
         body {
@@ -108,6 +157,9 @@
             #hero {
                 padding: 100px 20px;
             }
+            #blog-posts {
+                grid-template-columns: repeat(3, 1fr); /* Három oszlopos elrendezés */
+            }
         }
 
         /* Laptop nézetek */
@@ -116,36 +168,41 @@
                 flex-direction: row;
                 justify-content: center;
             }
+            #hero {
+                padding: 60px 15px;
+            }
+            #blog-posts {
+                grid-template-columns: repeat(2, 1fr); /* Két oszlopos elrendezés */
+            }
         }
 
         /* Tablet nézetek */
         @media (max-width: 992px) and (min-width: 768px) {
             #hero {
-                padding: 60px 15px;
+                padding: 50px 15px;
             }
-
             nav ul {
                 flex-direction: column;
+            }
+            #blog-posts {
+                grid-template-columns: repeat(1, 1fr); /* Egy oszlopos elrendezés */
             }
         }
 
         /* Mobil nézetek */
         @media (max-width: 768px) {
             #hero {
-                padding: 50px 10px;
+                padding: 40px 10px;
             }
-
             nav ul {
                 flex-direction: column;
                 text-align: center;
             }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
             footer {
                 padding: 15px;
+            }
+            nav ul li {
+                margin: 10px 0;
             }
         }
     </style>
@@ -239,12 +296,3 @@
     </script>
 </body>
 </html>
-
-     
-          
-        
-        
-             
-
-   
-             
