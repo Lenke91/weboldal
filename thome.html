@@ -116,24 +116,6 @@
       color: white;
     }
 
-    /* Gomb */
-    .cta .gumroad-button {
-      padding: 15px 30px;
-      font-size: 16px;
-      background: #e8a107;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .cta .gumroad-button:hover {
-      background: #e5c046;
-    }
-
     /* Közösségi ikonok */
     .social-icons {
       margin-top: 30px;
@@ -203,13 +185,10 @@
     <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
   </nav>
 
-  <!-- 📦 Fő tartalom + gomb -->
+  <!-- 📦 Fő tartalom -->
   <main class="container">
     <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
     <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
-    <div class="cta">
-      <a class="gumroad-button" href="#">Megvásárolom most</a>
-    </div>
     <div class="social-icons">
       <a href="#">📘</a>
       <a href="#">📸</a>
@@ -236,8 +215,7 @@
         navContact: "Contact",
         welcomeTitle: "Discover the World of Coaching",
         welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.",
-        gumroadButton: "Buy Now"
+        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License."
       },
       hu: {
         siteTitle: "Életmódtanácsadó Weboldal",
@@ -249,8 +227,7 @@
         navContact: "Kapcsolat",
         welcomeTitle: "Fedezd fel a Coaching Világát",
         welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható.",
-        gumroadButton: "Megvásárolom most"
+        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható."
       }
     };
     document.getElementById("language-selector").addEventListener("change", function () {
@@ -266,8 +243,11 @@
       document.getElementById("welcome-title").textContent = content.welcomeTitle;
       document.getElementById("welcome-text").textContent = content.welcomeText;
       document.getElementById("footer-text").textContent = content.footerText;
-      document.querySelector(".gumroad-button").textContent = content.gumroadButton;
     });
   </script>
 </body>
 </html>
+
+ 
+    
+ 
