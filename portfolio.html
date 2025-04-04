@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    
     <!-- ✅ SEO Meta Tag-ek -->
     <meta name="description" content="Fedezd fel a LENKE VARO PR VSTYLEDESIGN portfólióját, ahol könnyen testreszabható, SEO-optimalizált, reszponzív weboldal sablonokat találsz." />
-    <meta name="keywords" content="weboldal sablonok, SEO-optimalizált sablonok, reszponzív design, web design, portfolio, sablonok, webdesign" />
+    <meta name="keywords" content="weboldal sablonok, SEO-optimalizált sablonok, reszponzív design, web design, portfolio, sablonok, webdesign, animált sablonok" />
     <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Hungarian" />
@@ -25,13 +25,10 @@
     <meta name="twitter:description" content="Fedezd fel a modern, reszponzív és SEO-optimalizált weboldal sablonokat." />
     <meta name="twitter:image" content="https://vstyledesign.com/images/portfolio-image.jpg" />
     <meta name="twitter:site" content="@your_twitter_handle" />
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+
+    <!-- Canonical link -->
+    <link rel="canonical" href="https://vstyledesign.com/portfolio" />
+
     <title>Portfolio – LENKE VARO PR VSTYLEDESIGN</title>
 
     <style>
@@ -42,71 +39,89 @@
             background-color: #f5f5f5;
             text-align: center;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         h1 {
             font-size: 2.5em;
             margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .portfolio-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-            flex-wrap: wrap;
+        nav {
+            margin-bottom: 40px;
         }
 
-        .template-item {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            text-align: center;
-            padding: 20px;
-            margin: 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+        ul {
+            list-style: none;
+            padding: 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .template-item a {
+        li {
+            margin: 10px 0;
+        }
+
+        a {
             font-size: 1.2em;
             color: #333;
             text-decoration: none;
             background-color: #f0f0f0;
             padding: 10px;
             border-radius: 5px;
-            display: block;
-            margin-bottom: 10px;
+            display: inline-block;
             transition: background-color 0.3s ease;
         }
 
-        .template-item a:hover {
+        a:hover {
             background-color: #84fab0;
             color: #fff;
-        }
-
-        .template-item:hover {
-            transform: scale(1.05);
         }
 
         footer {
             background-color: #333;
             color: white;
             padding: 10px 0;
-            margin-top: 50px;
+            margin-top: auto;
             text-align: center;
         }
 
         /* Reszponzív stílusok */
-        @media (max-width: 768px) {
-            .portfolio-container {
-                flex-direction: column;
-                align-items: center;
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 2.3em;
             }
+        }
 
+        @media (max-width: 1024px) {
             h1 {
                 font-size: 2em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+        }
+
+        /* Animációk */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -117,68 +132,34 @@
     <h1>Portfolio – LENKE VARO PR VSTYLEDESIGN</h1>
 </header>
 
-<div class="portfolio-container">
-    <!-- Linkek a sablonokhoz -->
-    <div class="template-item">
-        <a href="Book recomendation/book recomendation.html" onclick="showTemplate('template1')">Template 1 - Book Recommendation</a>
-    </div>
-    <div class="template-item">
-        <a href="Ebook  Landing Template/ebook landing.html" onclick="showTemplate('template2')">Template 2 - Ebook Landing Template</a>
-    </div>
-    <div class="template-item">
-        <a href="Lifecoach webiste template/thome.html" onclick="showTemplate('template3')">Template 3 - Lifecoach</a>
-    </div>
-    <div class="template-item">
-        <a href="Link in bio website template/link in bio.html" onclick="showTemplate('template4')">Template 4 - Link in Bio Template</a>
-    </div>
-</div>
-
-<div id="template-content" style="display: none; margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
-    <h2 id="template-title"></h2>
-    <iframe id="template-frame" style="width: 100%; height: 600px; border: none;"></iframe>
-</div>
+<nav>
+    <ul>
+        <li><a href="Book recomendation/book recomendation.html">Template 1 - Book Recommendation</a></li>
+        <li><a href="Ebook  Landing Template/ebook landing.html">Template 2 - Ebook Landing Template</a></li>
+        <li><a href="Lifecoach webiste template/thome.html">Template 3 - Lifecoach</a></li>
+        <li><a href="Link in bio website template/link in bio.html">Template 4 - Link in Bio Template</a></li>
+    </ul>
+</nav>
 
 <footer>
     <p>&copy; 2024 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva</p>
 </footer>
 
 <script>
-    function showTemplate(templateId) {
-        let url = '';
-        let title = '';
-
-        switch (templateId) {
-            case 'template1':
-                title = 'Template 1 - Book Recommendation';
-                url = 'https://vlenke33.gumroad.com/l/BookRecommendation'; // link to Gumroad or any relevant page
-                break;
-            case 'template2':
-                title = 'Template 2 - Ebook Landing Template';
-                url = 'https://vlenke33.gumroad.com/l/EbookLanding'; // Update this with the correct URL
-                break;
-            case 'template3':
-                title = 'Template 3 - Lifecoach';
-                url = 'https://vlenke33.gumroad.com/l/Lifecoach';
-                break;
-            case 'template4':
-                title = 'Template 4 - Link in Bio Template';
-                url = 'https://vlenke33.gumroad.com/l/LinkInBio';
-                break;
-            default:
-                console.error('Invalid template');
-                return;
-        }
-
-        // Hide the template list
-        document.querySelector('.portfolio-container').style.display = 'none';
-
-        // Show the iframe with the selected template
-        document.getElementById('template-title').textContent = title;
-        document.getElementById('template-frame').src = url;
-        document.getElementById('template-content').style.display = 'block';
-    }
+    // Animációs JS (csak a fejléc és a navigáció megjelenését kezeli)
+    document.addEventListener('DOMContentLoaded', () => {
+        const navItems = document.querySelectorAll('nav ul li');
+        navItems.forEach((item, index) => {
+            item.style.animation = `fadeIn 1.5s ease-in-out ${index * 0.3}s forwards`;
+        });
+    });
 </script>
 
 </body>
 </html>
 
+  
+          
+        
+
+    
