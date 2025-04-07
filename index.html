@@ -1,290 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Welcome to my website. I create animated, SEO-optimized, responsive website templates and write SEO articles to help your business grow." />
-  <meta name="keywords" content="web developer, SEO, animated website templates, responsive design, SEO articles, professional web design" />
-  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-  <meta property="og:title" content="Home - Web Developer & Entrepreneur" />
-  <meta property="og:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth." />
-  <meta property="og:image" content="Me.jpg" />
-  <meta property="og:url" content="https://www.vstyledesign.com/index" />
-  <meta property="og:type" content="website" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-85RD19D4PP');
-  </script>
-  <title>Home - Web Developer & Entrepreneur</title>
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #333;
-      --subtext-color: #555;
-      --btn-bg: #007BFF;
-      --btn-hover: #0056b3;
-      --navbar-bg: #333;
-      --footer-bg: #222;
-      --link-color: white;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to my website. I create animated, SEO-optimized, responsive website templates and write SEO articles to help your business grow." />
+    <meta name="keywords" content="web developer, SEO, animated website templates, responsive design, SEO articles, professional web design" />
+    <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
+    <meta property="og:title" content="Home - Web Developer & Entrepreneur" />
+    <meta property="og:description" content="Explore my work as a web developer. I specialize in animated, SEO-optimized templates and writing SEO content for business growth." />
+    <meta property="og:image" content="Me.jpg" />
+    <meta property="og:url" content="https://www.vstyledesign.com/index" />
+    <meta property="og:type" content="website" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-85RD19D4PP');
+    </script>
+    <title>Home - Web Developer & Entrepreneur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333;
+            --subtext-color: #555;
+            --btn-bg: #007BFF;
+            --btn-hover: #0056b3;
+            --navbar-bg: #333;
+            --footer-bg: #222;
+            --link-color: white;
+        }
 
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #ffffff;
-      --subtext-color: #cccccc;
-      --btn-bg: #1e90ff;
-      --btn-hover: #4682b4;
-      --navbar-bg: #1a1a1a;
-      --footer-bg: #1a1a1a;
-      --link-color: #ffffff;
-    }
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --subtext-color: #cccccc;
+            --btn-bg: #1e90ff;
+            --btn-hover: #4682b4;
+            --navbar-bg: #1a1a1a;
+            --footer-bg: #1a1a1a;
+            --link-color: #ffffff;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      overflow-x: hidden;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      transition: background-color 0.3s, color 0.3s;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--navbar-bg);
-    }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--navbar-bg);
+        }
 
-    .navbar-links ul {
-      display: flex;
-      list-style: none;
-    }
+        .navbar-links ul {
+            display: flex;
+            list-style: none;
+        }
 
-    .navbar-links li {
-      margin: 0 1.5rem;
-    }
+        .navbar-links li {
+            margin: 0 1.5rem;
+        }
 
-    .navbar-links a,
-    .language-switcher a {
-      color: var(--link-color);
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .navbar-links a,
+        .language-switcher a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .language-switcher a {
-      margin-left: 1rem;
-    }
+        .language-switcher a {
+            margin-left: 1rem;
+        }
 
-    .theme-toggle {
-      margin-left: 1rem;
-      cursor: pointer;
-      color: var(--link-color);
-    }
+        .theme-toggle {
+            margin-left: 1rem;
+            cursor: pointer;
+            color: var(--link-color);
+        }
 
-    .hero-section {
-      text-align: center;
-      padding: 5rem 1rem;
-      animation: fadeIn 2s ease-in-out;
-    }
+        .hero-section {
+            text-align: center;
+            padding: 5rem 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-    .hero-content h1 {
-      font-size: 3rem;
-      animation: slideUp 2s ease-in-out;
-      margin-bottom: 1.5rem;
-    }
+        .hero-content h1 {
+            font-size: 3rem;
+            animation: slideUp 2s ease-in-out;
+            margin-bottom: 1.5rem;
+        }
 
-    .hero-content p {
-      font-size: 1.2rem;
-      color: var(--subtext-color);
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--subtext-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    .explore-portfolio-btn {
-      display: inline-block;
-      background-color: var(--btn-bg);
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      margin-top: 2rem;
-      transition: background-color 0.3s ease;
-    }
+        .explore-portfolio-btn {
+            display: inline-block;
+            background-color: var(--btn-bg);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
 
-    .explore-portfolio-btn:hover {
-      background-color: var(--btn-hover);
-    }
+        .explore-portfolio-btn:hover {
+            background-color: var(--btn-hover);
+        }
 
-    .footer {
-      background-color: var(--footer-bg);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: auto;
-    }
+        .footer {
+            background-color: var(--footer-bg);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: auto;
+        }
 
-    .footer .social-icons {
-      margin: 1rem 0;
-    }
+        .footer .social-icons {
+            margin: 1rem 0;
+        }
 
-    .footer .social-icons a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
+        .footer .social-icons a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-    .footer p {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
+        .footer p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .navbar-links ul {
+                flex-direction: column;
+                padding-left: 1rem;
+            }
 
-      to {
-        opacity: 1;
-      }
-    }
+            .navbar-links li {
+                margin: 0 1rem;
+            }
+        }
 
-    @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  </style>
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <nav class="navbar-links">
-      <ul>
-        <li><a href="index.html" class="home-link">Home</a></li>
-        <li><a href="about me.html" class="about-link">About</a></li>
-        <li><a href="services.html" class="services-link">Services</a></li>
-        <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
-      </ul>
-    </nav>
-    <div class="language-switcher">
-      <a href="#" onclick="switchLanguage('en')">EN</a> |
-      <a href="#" onclick="switchLanguage('hu')">HU</a> |
-      <a href="#" onclick="switchLanguage('sr')">SR</a> |
-      <a href="#" onclick="switchLanguage('tr')">TR</a>
-      <span class="theme-toggle" id="theme-toggle">🌓</span>
-    </div>
-  </header>
+    <header class="navbar">
+        <nav class="navbar-links">
+            <ul>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="about me.html" class="about-link">About</a></li>
+                <li><a href="services.html" class="services-link">Services</a></li>
+                <li><a href="portfolio.html" class="portfolio-link">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <a href="#" onclick="switchLanguage('en')">EN</a> |
+            <a href="#" onclick="switchLanguage('hu')">HU</a> |
+            <a href="#" onclick="switchLanguage('sr')">SR</a> |
+            <a href="#" onclick="switchLanguage('tr')">TR</a>
+            <span class="theme-toggle" id="theme-toggle">🌓</span>
+        </div>
+    </header>
 
-  <section id="home" class="hero-section">
-    <div class="hero-content">
-      <h1>Welcome to My Website</h1>
-      <p>
-        Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. <strong>See what I've created!</strong>
-      </p>
-      <a href="portfolio.html" class="explore-portfolio-btn">Explore My Portfolio</a>
-    </div>
-  </section>
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>
+                Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. <strong>See what I've created!</strong>
+            </p>
+            <a href="portfolio.html" class="explore-portfolio-btn">Explore My Portfolio</a>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
-      <a href="https://gumroad.com/products" target="_blank">Gumroad</a>
-      <a href="https://sellfy.com/user/products" target="_blank">Sellfy</a>
-    </div>
-    <p id="footer-text">&copy; 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved</p>
-  </footer>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
+            <a href="https://gumroad.com/products" target="_blank">Gumroad</a>
+            <a href="https://sellfy.com/user/products" target="_blank">Sellfy</a>
+        </div>
+        <p id="footer-text"> &copy; 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved</p>
+    </footer>
 
-  <script>
-    const texts = {
-      en: {
-        h1: "Welcome to My Website",
-        p: "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. See what I've created!",
-        home: "Home",
-        about: "About",
-        services: "Services",
-        portfolio: "Portfolio",
-        button: "Explore My Portfolio",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved"
-      },
-      hu: {
-        h1: "Üdvözöllek a Weboldalamon",
-        p: "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében. Nézd meg, amit készítettem!",
-        home: "Kezdőlap",
-        about: "Rólam",
-        services: "Szolgáltatások",
-        portfolio: "Portfólió",
-        button: "Nézd meg a portfóliómat",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva."
-      },
-      sr: {
-        h1: "Dobrodošli na moj sajt",
-        p: "Pogledajte moj rad – kreiram animirane, SEO-optimizovane i responzivne veb šablone koji pomažu vašem poslovanju da uspe online. Pogledaj šta sam kreirala!",
-        home: "Početna",
-        about: "O meni",
-        services: "Usluge",
-        portfolio: "Portfolio",
-        button: "Pogledaj moj portfolio",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Sva prava zadržana."
-      },
-      tr: {
-        h1: "Web Siteme Hoş Geldiniz",
-        p: "Çalışmalarımı keşfedin – animasyonlu, SEO uyumlu ve duyarlı web site şablonları oluşturuyorum. İşinizi çevrimiçi başarıya ulaştırmak için buradayım!",
-        home: "Anasayfa",
-        about: "Hakkımda",
-        services: "Hizmetler",
-        portfolio: "Portföy",
-        button: "Portföyümü Gör",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Tüm hakları saklıdır."
-      }
-    };
+    <script>
+        function switchLanguage(lang) {
+            const texts = {
+                en: {
+                    h1: "Welcome to My Website",
+                    p: "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. See what I've created!",
+                    home: "Home",
+                    about: "About",
+                    services: "Services",
+                    portfolio: "Portfolio",
+                    button: "Explore My Portfolio",
+                    footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved"
+                },
+                hu: {
+                    h1: "Üdvözöllek a Weboldalamon",
+                    p: "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében. Nézd meg, amit készítettem!",
+                    home: "Kezdőlap",
+                    about: "Rólam",
+                    services: "Szolgáltatások",
+                    portfolio: "Portfólió",
+                    button: "Nézd meg a portfóliómat",
+                    footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva."
+                },
+                sr: {
+                    h1: "Dobrodošli na moj sajt",
+                    p: "Pogledajte moj rad – kreiram animirane, SEO-optimizovane i responzivne veb šablone koji pomažu vašem poslovanju da uspe online. Pogledaj šta sam kreirala!",
+                    home: "Početna",
+                    about: "O meni",
+                    services: "Usluge",
+                    portfolio: "Portfolio",
+                    button: "Pogledaj moj portfolio",
+                    footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Sva prava zadržana."
+                },
+                tr: {
+                    h1: "Web Siteme Hoş Geldiniz",
+                    p: "Çalışmalarımı keşfedin – animasyonlu, SEO uyumlu ve duyarlı web site şablonları oluşturuyorum. İşinizi çevrimiçi başarıya ulaştırmak için buradayım!",
+                    home: "Anasayfa",
+                    about: "Hakkımda",
+                    services: "Hizmetler",
+                    portfolio: "Portföy",
+                    button: "Portföyümü Gör",
+                    footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Tüm hakları saklıdır."
+                }
+            };
+            
+            const t = texts[lang];
+            document.querySelector('.hero-content h1').textContent = t.h1;
+            document.querySelector('.hero-content p').textContent = t.p;
+            document.querySelector('.home-link').textContent = t.home;
+            document.querySelector('.about-link').textContent = t.about;
+            document.querySelector('.services-link').textContent = t.services;
+            document.querySelector('.portfolio-link').textContent = t.portfolio;
+            document.querySelector('.explore-portfolio-btn').textContent = t.button;
+            document.getElementById('footer-text').textContent = t.footer;
+        }
 
-    function switchLanguage(lang) {
-      const t = texts[lang];
-      document.querySelector('.hero-content h1').textContent = t.h1;
-      document.querySelector('.hero-content p').textContent = t.p;
-      document.querySelector('.home-link').textContent = t.home;
-      document.querySelector('.about-link').textContent = t.about;
-      document.querySelector('.services-link').textContent = t.services;
-      document.querySelector('.portfolio-link').textContent = t.portfolio;
-      document.querySelector('.explore-portfolio-btn').textContent = t.button;
-      document.getElementById('footer-text').textContent = t.footer;
-    }
-
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      const root = document.documentElement;
-      const dark = root.getAttribute('data-theme') === 'dark';
-      if (dark) {
-        root.removeAttribute('data-theme');
-      } else {
-        root.setAttribute('data-theme', 'dark');
-      }
-    });
-  </script>
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const root = document.documentElement;
+            const dark = root.getAttribute('data-theme') === 'dark';
+            if (dark) {
+                root.removeAttribute('data-theme');
+            } else {
+                root.setAttribute('data-theme', 'dark');
+            }
+        });
+    </script>
 </body>
 </html>
 
-    
+  
 
-     
-     
-        
  
+ 
+
+
