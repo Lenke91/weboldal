@@ -15,34 +15,27 @@
   <meta property="og:image" content="https://example.com/your-image.jpg" />
   <meta property="og:url" content="https://vstyledesign.com/contact" />
   <meta property="og:type" content="website" />
-<!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
 
-  <title>Kapcsolat | Life Coach - Egyéni Konzultáció & Coaching</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
+
+  <title id="title-tag">Kapcsolat | Life Coach</title>
 
   <style>
-    /* === Alapbeállítások === */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Arial', sans-serif;
-      background-color:orange; /* Cseréld ki saját háttérképre */
+      font-family: Arial, sans-serif;
+      background-color: orange;
       color: #fff;
     }
 
-    /* === Fejléc + nyelvváltó === */
     header {
       position: fixed;
       top: 0;
@@ -80,7 +73,6 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* === Kontakt űrlap konténer === */
     .contact-container {
       display: flex;
       justify-content: center;
@@ -89,7 +81,6 @@
       padding-top: 100px;
     }
 
-    /* === Kisebb, átlátszó kontakt doboz === */
     .contact-box {
       background-color: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
@@ -115,8 +106,7 @@
       font-size: 14px;
     }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       padding: 10px;
       margin: 6px 0 12px;
@@ -142,7 +132,6 @@
       background-color: #f1b32b;
     }
 
-    /* === Lábléc === */
     footer {
       position: fixed;
       bottom: 0;
@@ -154,54 +143,31 @@
       backdrop-filter: blur(10px);
     }
 
-    /* === Animáció === */
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* === Reszponzív nézetek === */
     @media (max-width: 480px) {
       header h1 { font-size: 20px; }
       .language-switcher button { font-size: 12px; padding: 4px 8px; }
       .contact-box { padding: 15px; }
-    }
-
-    @media (min-width: 481px) and (max-width: 768px) {
-      header h1 { font-size: 22px; }
-      .contact-box { max-width: 320px; }
-    }
-
-    @media (min-width: 769px) and (max-width: 1199px) {
-      header h1 { font-size: 26px; }
-      .contact-box { max-width: 340px; }
-    }
-
-    @media (min-width: 1200px) {
-      header h1 { font-size: 28px; }
-      .contact-box { max-width: 350px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- === Fejléc + nyelvváltó gombok === -->
   <header>
     <h1 id="page-title">Kapcsolat</h1>
     <div class="language-switcher">
       <button onclick="switchLanguage('hu')">HU</button>
       <button onclick="switchLanguage('en')">EN</button>
+      <button onclick="switchLanguage('sr')">SR</button>
+      <button onclick="switchLanguage('tr')">TR</button>
     </div>
   </header>
 
-  <!-- === Kontakt űrlap === -->
   <div class="contact-container">
     <div class="contact-box">
       <h2 id="contact-title">Lépj kapcsolatba velem!</h2>
@@ -220,45 +186,98 @@
     </div>
   </div>
 
-  <!-- === Lábléc === -->
   <footer>
     <p id="footer-text">
       © 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.
     </p>
   </footer>
 
-  <!-- === Nyelvváltó script === -->
   <script>
     function switchLanguage(lang) {
-      if (lang === 'en') {
-        document.getElementById('page-title').innerText = 'Contact';
-        document.getElementById('contact-title').innerText = 'Get in Touch!';
-        document.getElementById('label-name').innerText = 'Name';
-        document.getElementById('label-email').innerText = 'Email';
-        document.getElementById('label-message').innerText = 'Message';
-        document.getElementById('name').placeholder = 'Your Name';
-        document.getElementById('email').placeholder = 'Your Email';
-        document.getElementById('message').placeholder = 'Your Message';
-        document.getElementById('submit-btn').innerText = 'Send';
-        document.getElementById('footer-text').innerText =
-          '© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.';
-      } else {
-        document.getElementById('page-title').innerText = 'Kapcsolat';
-        document.getElementById('contact-title').innerText = 'Lépj kapcsolatba velem!';
-        document.getElementById('label-name').innerText = 'Név';
-        document.getElementById('label-email').innerText = 'Email';
-        document.getElementById('label-message').innerText = 'Üzenet';
-        document.getElementById('name').placeholder = 'Neved';
-        document.getElementById('email').placeholder = 'Email címed';
-        document.getElementById('message').placeholder = 'Írd ide az üzeneted...';
-        document.getElementById('submit-btn').innerText = 'Küldés';
-        document.getElementById('footer-text').innerText =
-          '© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.';
-      }
+      const translations = {
+        hu: {
+          title: "Kapcsolat | Life Coach",
+          pageTitle: "Kapcsolat",
+          contactTitle: "Lépj kapcsolatba velem!",
+          name: "Név",
+          email: "Email",
+          message: "Üzenet",
+          placeholderName: "Neved",
+          placeholderEmail: "Email címed",
+          placeholderMessage: "Írd ide az üzeneted...",
+          send: "Küldés",
+          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható."
+        },
+        en: {
+          title: "Contact | Life Coach",
+          pageTitle: "Contact",
+          contactTitle: "Get in Touch!",
+          name: "Name",
+          email: "Email",
+          message: "Message",
+          placeholderName: "Your Name",
+          placeholderEmail: "Your Email",
+          placeholderMessage: "Your Message",
+          send: "Send",
+          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License."
+        },
+        sr: {
+          title: "Kontakt | Life Coach",
+          pageTitle: "Kontakt",
+          contactTitle: "Kontaktiraj me!",
+          name: "Ime",
+          email: "Email",
+          message: "Poruka",
+          placeholderName: "Vaše ime",
+          placeholderEmail: "Vaš email",
+          placeholderMessage: "Vaša poruka...",
+          send: "Pošalji",
+          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Ova stranica je dostupna pod MIT licencom."
+        },
+        tr: {
+          title: "İletişim | Yaşam Koçu",
+          pageTitle: "İletişim",
+          contactTitle: "Benimle iletişime geçin!",
+          name: "İsim",
+          email: "E-posta",
+          message: "Mesaj",
+          placeholderName: "Adınız",
+          placeholderEmail: "E-posta adresiniz",
+          placeholderMessage: "Mesajınızı yazın...",
+          send: "Gönder",
+          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Bu site MIT lisansı ile kullanılabilir."
+        }
+      };
+
+      const t = translations[lang];
+      document.title = t.title;
+      document.getElementById('page-title').innerText = t.pageTitle;
+      document.getElementById('contact-title').innerText = t.contactTitle;
+      document.getElementById('label-name').innerText = t.name;
+      document.getElementById('label-email').innerText = t.email;
+      document.getElementById('label-message').innerText = t.message;
+      document.getElementById('name').placeholder = t.placeholderName;
+      document.getElementById('email').placeholder = t.placeholderEmail;
+      document.getElementById('message').placeholder = t.placeholderMessage;
+      document.getElementById('submit-btn').innerText = t.send;
+      document.getElementById('footer-text').innerText = t.footer;
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage('hu');
+    });
   </script>
 </body>
 </html>
+
+       
+   
+   
+  
+  
+ 
+
+
 
    
 
