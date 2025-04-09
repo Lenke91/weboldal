@@ -4,203 +4,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Olvasd el a véleményeket, amelyeket életmódtanácsadónktól kaptunk. Tapasztalatok, ajánlások és inspiráció azok számára, akik szeretnének fejlődni." />
-  <meta name="keywords" content="életmódtanácsadás, vélemények, life coach, coaching, tanácsadás, tapasztalatok, ügyfélvélemények, motiváció, személyes fejlődés, mentális egészség, önismeret, lelki támogatás, coaching szolgáltatás, bizalom, célkitűzés" />
-  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-  <meta property="og:title" content="Vélemények Életmódtanácsadás | Vélemények és tapasztalatok" />
-  <meta property="og:description" content="Olvasd el, hogy mit mondanak rólunk azok, akiknek segítettünk elérni céljaikat életmódtanácsadásunkkal." />
+
+  <!-- SEO META TAGS -->
+  <meta name="description" content="Ügyfélvélemények és tapasztalatok életmódtanácsadással kapcsolatban. Tudd meg, mit mondanak azok, akik már kipróbálták!" />
+  <meta name="keywords" content="életmódtanácsadás, life coaching, visszajelzések, tapasztalatok, mentális egészség, önfejlesztés, coaching" />
+  <meta name="author" content="Lenke Varró | vstyledesign.com" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vstyledesign.com/testimonials" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vstyledesign.com/testimonials" />
+  <meta property="og:title" content="Vélemények Életmódtanácsadásról | Tapasztalatok és visszajelzések" />
+  <meta property="og:description" content="Valós ügyfélvélemények életmódtanácsadásról. Nézd meg, mit mondanak mások a coaching folyamatról!" />
   <meta property="og:image" content="https://vstyledesign.com/images/testimonials-thumbnail.jpg" />
-  <meta name="robots" content="index, follow" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vélemények Életmódtanácsadásról" />
-  <meta name="twitter:description" content="Ügyfélvélemények és visszajelzések életmódtanácsadási szolgáltatásunkról. Valós tapasztalatok és ajánlások coaching folyamatainkról." />
-  <meta name="twitter:image" content="https://vstyledesign.com/images/testimonials-thumbnail.jpg" />
-    <!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
 
-  <title>Vélemények Életmódtanácsadásról</title>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vstyledesign.com/testimonials" />
+  <meta name="twitter:title" content="Vélemények Életmódtanácsadásról" />
+  <meta name="twitter:description" content="Valós ügyfélvélemények és visszajelzések a coaching szolgáltatásainkról." />
+  <meta name="twitter:image" content="https://vstyledesign.com/images/testimonials-thumbnail.jpg" />
+
+  <title data-hu="Vélemények Életmódtanácsadásról" data-en="Life Coaching Testimonials" data-sr="Utisci o savetovanju" data-tr="Yaşam Koçluğu Görüşleri">Vélemények Életmódtanácsadásról</title>
 
   <style>
-    /* === ALAP STÍLUSOK === */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color:orange;
+      font-family: Arial, sans-serif;
+      background-color: orange;
       color: white;
       text-align: center;
     }
-
-    /* === FEJLÉC ÉS NAVIGÁCIÓ === */
-    header {
-      padding: 20px;
-    }
-
     nav {
-      margin-top: 20px;
+      margin: 20px 0;
     }
-
     .lang-toggle {
-      color: white;
       background-color: #380327;
+      color: white;
       padding: 10px 20px;
-      margin: 5px 10px;
-      border-radius: 5px;
+      margin: 5px;
+      border-radius: 8px;
       text-decoration: none;
       font-size: 1rem;
       cursor: pointer;
-      display: inline-block;
     }
-
     .lang-toggle:hover {
       background-color: #e16a09;
     }
-
     h1 {
       margin-top: 30px;
       font-size: 2.5rem;
       animation: fadeIn 1s ease-in-out;
     }
-
-    /* === VÉLEMÉNYEK SZEKCIÓ === */
     #testimonials {
       padding: 40px 20px;
     }
-
     .testimonial-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      flex-wrap: wrap;
-      animation: fadeIn 2s ease-in-out;
     }
-
     .testimonial {
-      background-image: url('bg for lifecoaching.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
+      background-color: rgba(0, 0, 0, 0.2);
       padding: 30px;
       border-radius: 15px;
       width: 280px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s forwards;
-      transition: all 0.3s ease-in-out;
+      transition: 0.3s ease;
     }
-
     .testimonial:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     }
-
     .quote {
       font-style: italic;
       font-size: 1.1rem;
     }
-
     .author {
       margin-top: 15px;
       font-weight: bold;
-      font-size: 1.2rem;
     }
-
-    /* === LÁBLÉC === */
     footer {
       margin-top: 40px;
       padding: 20px;
       font-size: 0.95rem;
-      color: white;
-      background-color: transparent;
     }
 
-    /* === ANIMÁCIÓK === */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* === RESZPONZÍV NÉZETEK === */
     @media (max-width: 767px) {
       h1 { font-size: 1.8rem; }
-      .testimonial { width: 90%; margin-bottom: 20px; }
-      .testimonial-container { flex-direction: column; align-items: center; }
-      .lang-toggle { font-size: 0.9rem; padding: 8px 16px; }
+      .testimonial { width: 90%; }
+      .lang-toggle { font-size: 0.9rem; }
     }
-
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: 768px) and (max-width: 1199px) {
       h1 { font-size: 2.2rem; }
-      .testimonial { width: 80%; }
+      .testimonial { width: 300px; }
     }
-
-    @media (min-width: 992px) and (max-width: 1199px) {
-      h1 { font-size: 2.4rem; }
-      .testimonial { width: 260px; }
-    }
-
     @media (min-width: 1200px) {
       h1 { font-size: 2.8rem; }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#" class="lang-toggle" data-lang="hu">Magyar</a>
+    <a href="#" class="lang-toggle" data-lang="en">English</a>
+    <a href="#" class="lang-toggle" data-lang="sr">Српски</a>
+    <a href="#" class="lang-toggle" data-lang="tr">Türkçe</a>
+  </nav>
 
-  <!-- === FEJLÉC ÉS NYELVVÁLTÓ === -->
-  <header>
-    <nav>
-      <a href="#" class="lang-toggle" data-lang="hu">Magyar</a>
-      <a href="#" class="lang-toggle" data-lang="en">English</a>
-    </nav>
-    <h1 data-hu="Vélemények Életmódtanácsadásról" data-en="Testimonials Life Coaching">Vélemények Életmódtanácsadásról</h1>
-  </header>
+  <h1 data-hu="Vélemények Életmódtanácsadásról"
+      data-en="Life Coaching Testimonials"
+      data-sr="Utisci o savetovanju"
+      data-tr="Yaşam Koçluğu Görüşleri">Vélemények Életmódtanácsadásról</h1>
 
-  <!-- === FŐ TARTALOM: VÉLEMÉNYEK === -->
-  <main>
-    <section id="testimonials">
-      <div class="testimonial-container">
-        <div class="testimonial" data-hu="Nagyon elégedett vagyok a szolgáltatással!" data-en="I am very satisfied with the service!">
-          <p class="quote" data-hu="Nagyon elégedett vagyok a szolgáltatással!" data-en="I am very satisfied with the service!">"Nagyon elégedett vagyok a szolgáltatással!"</p>
-          <p class="author" data-hu="- Kovács Péter" data-en="- Peter Kovács">- Kovács Péter</p>
-        </div>
-        <div class="testimonial" data-hu="Kiváló munkát végeztek, ajánlom mindenkinek!" data-en="They did an excellent job, I recommend them to everyone!">
-          <p class="quote" data-hu="Kiváló munkát végeztek, ajánlom mindenkinek!" data-en="They did an excellent job, I recommend them to everyone!">"Kiváló munkát végeztek, ajánlom mindenkinek!"</p>
-          <p class="author" data-hu="- Nagy Anna" data-en="- Anna Nagy">- Nagy Anna</p>
-        </div>
-        <div class="testimonial" data-hu="A weboldalam fantasztikusan néz ki!" data-en="My website looks fantastic!">
-          <p class="quote" data-hu="A weboldalam fantasztikusan néz ki!" data-en="My website looks fantastic!">"A weboldalam fantasztikusan néz ki!"</p>
-          <p class="author" data-hu="- Szabó Gábor" data-en="- Gábor Szabó">- Szabó Gábor</p>
-        </div>
+  <section id="testimonials">
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p class="quote" data-hu="Lenke segítségével újra önmagamra találtam."
+                        data-en="With Lenke's help, I found myself again."
+                        data-sr="Uz pomoć Lenke, ponovo sam pronašla sebe."
+                        data-tr="Lenke'nin yardımıyla kendimi yeniden buldum.">
+          Lenke segítségével újra önmagamra találtam.
+        </p>
+        <p class="author" data-hu="– Anna K." data-en="– Anna K." data-sr="– Ana K." data-tr="– Anna K.">– Anna K.</p>
       </div>
-    </section>
-  </main>
+      <div class="testimonial">
+        <p class="quote" data-hu="A coaching során végre megértettem, mit szeretnék az élettől."
+                        data-en="During the coaching, I finally understood what I want from life."
+                        data-sr="Tokom koučinga sam konačno razumela šta želim od života."
+                        data-tr="Koçluk sırasında hayattan ne istediğimi nihayet anladım.">
+          A coaching során végre megértettem, mit szeretnék az élettől.
+        </p>
+        <p class="author" data-hu="– Péter T." data-en="– Peter T." data-sr="– Petar T." data-tr="– Peter T.">– Péter T.</p>
+      </div>
+      <div class="testimonial">
+        <p class="quote" data-hu="Nagyon empatikus és mindig figyel rám. Ajánlom mindenkinek!"
+                        data-en="She is very empathetic and always listens. Highly recommend!"
+                        data-sr="Veoma je empatična i uvek me pažljivo sluša. Topla preporuka!"
+                        data-tr="Çok empatik ve her zaman beni dikkatle dinliyor. Tavsiye ederim!">
+          Nagyon empatikus és mindig figyel rám. Ajánlom mindenkinek!
+        </p>
+        <p class="author" data-hu="– Éva M." data-en="– Eva M." data-sr="– Eva M." data-tr="– Eva M.">– Éva M.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- === LÁBLÉC === -->
-  <footer>
-    <p id="footer-text" data-hu="© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható." data-en="© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License.">
-      © 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.
-    </p>
+  <footer id="footer-text"
+          data-hu="© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc alapján használható."
+          data-en="© 2025 LENKE VARO PR VSTYLEDESIGN | This site is licensed under the MIT license."
+          data-sr="© 2025 LENKE VARO PR VSTYLEDESIGN | Ova stranica je dostupna pod MIT licencom."
+          data-tr="© 2025 LENKE VARO PR VSTYLEDESIGN | Bu site MIT lisansı ile kullanılabilir.">
+    © 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc alapján használható.
   </footer>
 
-  <!-- === JAVASCRIPT: NYELVVÁLTÁS === -->
   <script>
     const langToggles = document.querySelectorAll('.lang-toggle');
-    const elements = document.querySelectorAll('[data-hu], [data-en]');
+    const elements = document.querySelectorAll('[data-hu], [data-en], [data-sr], [data-tr]');
 
     langToggles.forEach(toggle => {
       toggle.addEventListener('click', (e) => {
@@ -214,7 +181,14 @@
         });
       });
     });
-  </script>
 
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('[data-lang="hu"]').click();
+    });
+  </script>
 </body>
 </html>
+
+   
+  
+
