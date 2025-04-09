@@ -15,13 +15,6 @@
   <meta name="twitter:title" content="BioFresh – Link in Bio sablon" />
   <meta name="twitter:description" content="Többnyelvű, SEO-optimalizált, mentazöld Link in Bio sablon." />
   <meta name="twitter:image" content="https://vstyledesign.com/images/biofresh-preview.jpg" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
   <title>BioFresh – Link in Bio</title>
 
   <style>
@@ -143,44 +136,17 @@
     }
 
     @media (max-width: 1024px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      p.bio {
-        font-size: 0.95rem;
-      }
-
-      .links a {
-        font-size: 0.95rem;
-        padding: 0.75rem;
-      }
+      h1 { font-size: 1.6rem; }
+      p.bio { font-size: 0.95rem; }
+      .links a { font-size: 0.95rem; padding: 0.75rem; }
     }
 
     @media (max-width: 600px) {
-      .container {
-        padding: 1.5rem;
-      }
-
-      h1 {
-        font-size: 1.4rem;
-      }
-
-      .avatar {
-        width: 90px;
-        height: 90px;
-      }
-
-      .links a {
-        font-size: 0.9rem;
-      }
-
-      .lang-toggle {
-        top: 8px;
-        right: 10px;
-        padding: 4px 10px;
-        font-size: 0.75rem;
-      }
+      .container { padding: 1.5rem; }
+      h1 { font-size: 1.4rem; }
+      .avatar { width: 90px; height: 90px; }
+      .links a { font-size: 0.9rem; }
+      .lang-toggle { top: 8px; right: 10px; padding: 4px 10px; font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -192,17 +158,22 @@
     <p class="bio" id="bioText">Üdv! Itt eléred az összes fontos linkemet. Kattints bátran! 🌿</p>
 
     <div class="links" id="linkContainer">
-      <a href="https://vlenke33.gumroad.com/l/BookRecommendation" target="_blank" data-hu="🌐 Weboldalam" data-en="🌐 My Website">🌐 Weboldalam</a>
-      <a href="https://www.instagram.com/lenkevarro/" target="_blank" data-hu="📸 Instagram" data-en="📸 Instagram">📸 Instagram</a>
-      <a href="https://www.tiktok.com/@lenkevarro" target="_blank" data-hu="🎥 TikTok" data-en="🎥 TikTok">🎥 TikTok</a>
-      <a href="https://vlenke33.gumroad.com/l/MyEbook" target="_blank" data-hu="📘 E-könyvem" data-en="📘 My eBook">📘 E-könyvem</a>
-      <a href="mailto:lenkevarro@example.com" target="_blank" data-hu="💌 Kapcsolat" data-en="💌 Contact me">💌 Kapcsolat</a>
+      <a href="https://vlenke33.gumroad.com/l/BookRecommendation" target="_blank"
+         data-hu="🌐 Weboldalam" data-en="🌐 My Website" data-sr="🌐 Moj sajt" data-tr="🌐 Web Sitem">🌐 Weboldalam</a>
+      <a href="https://www.instagram.com/lenkevarro/" target="_blank"
+         data-hu="📸 Instagram" data-en="📸 Instagram" data-sr="📸 Instagram" data-tr="📸 Instagram">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@lenkevarro" target="_blank"
+         data-hu="🎥 TikTok" data-en="🎥 TikTok" data-sr="🎥 TikTok" data-tr="🎥 TikTok">🎥 TikTok</a>
+      <a href="https://vlenke33.gumroad.com/l/MyEbook" target="_blank"
+         data-hu="📘 E-könyvem" data-en="📘 My eBook" data-sr="📘 Moja e-knjiga" data-tr="📘 E-kitabım">📘 E-könyvem</a>
+      <a href="mailto:lenkevarro@example.com" target="_blank"
+         data-hu="💌 Kapcsolat" data-en="💌 Contact me" data-sr="💌 Kontakt" data-tr="💌 İletişim">💌 Kapcsolat</a>
     </div>
   </div>
 
   <footer>
     <p id="footerText">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.</p>
-    <p>Gumroad | <a href="https://vlenke33.gumroad.com/l/rwegwl" target="_blank">My Gumroad</a> |  </p>
+    <p><a href="https://vlenke33.gumroad.com/l/rwegwl" target="_blank">Letöltés a Gumroadról</a></p>
   </footer>
 
   <script>
@@ -215,25 +186,46 @@
       const links = document.querySelectorAll('#linkContainer a');
       const footer = document.getElementById('footerText');
 
-      if (currentLang === 'hu') {
-        nameEl.textContent = "Violet Toth";
-        bioEl.textContent = "Hi! Here you can find all my important links. Tap to explore! 🌿";
-        toggleBtn.textContent = "HU";
-        links.forEach(link => {
-          link.textContent = link.getAttribute('data-en');
-        });
-        footer.textContent = "© LENKE VARO PR VSTYLEDESIGN 2024 – This page is licensed under the MIT License.";
-        currentLang = 'en';
-      } else {
-        nameEl.textContent = "Tóth Virág";
-        bioEl.textContent = "Üdv! Itt eléred az összes fontos linkemet. Kattints bátran! 🌿";
-        toggleBtn.textContent = "EN";
-        links.forEach(link => {
-          link.textContent = link.getAttribute('data-hu');
-        });
-        footer.textContent = "© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.";
-        currentLang = 'hu';
-      }
+      const translations = {
+        hu: {
+          name: "Tóth Virág",
+          bio: "Üdv! Itt eléred az összes fontos linkemet. Kattints bátran! 🌿",
+          footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.",
+          btn: "EN"
+        },
+        en: {
+          name: "Violet Toth",
+          bio: "Hi! Here you can find all my important links. Tap to explore! 🌿",
+          footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – This page is licensed under the MIT License.",
+          btn: "SR"
+        },
+        sr: {
+          name: "Violeta Tot",
+          bio: "Zdravo! Ovde možeš pronaći sve moje važne linkove. Klikni slobodno! 🌿",
+          footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – Ova stranica je licencirana pod MIT licencom.",
+          btn: "TR"
+        },
+        tr: {
+          name: "Violeta Toth",
+          bio: "Merhaba! Tüm önemli bağlantılarımı burada bulabilirsin. Tıklayabilirsin! 🌿",
+          footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – Bu sayfa MIT Lisansı ile lisanslanmıştır.",
+          btn: "HU"
+        }
+      };
+
+      const langOrder = ['hu', 'en', 'sr', 'tr'];
+      let nextLang = langOrder[(langOrder.indexOf(currentLang) + 1) % langOrder.length];
+
+      nameEl.textContent = translations[nextLang].name;
+      bioEl.textContent = translations[nextLang].bio;
+      footer.textContent = translations[nextLang].footer;
+      toggleBtn.textContent = translations[nextLang].btn;
+
+      links.forEach(link => {
+        link.textContent = link.getAttribute(`data-${nextLang}`);
+      });
+
+      currentLang = nextLang;
     }
   </script>
 </body>
