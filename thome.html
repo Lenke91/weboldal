@@ -4,280 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ SEO META TAG-ek: keresőoptimalizálás érdekében -->
-  <meta name="description" content="Modern és animált életmódtanácsadó weboldal sablon. Reszponzív kialakítás mobilra, tabletre, laptopra és asztali gépre. SEO-optimalizált és többnyelvű támogatással." />
-  <meta name="keywords" content="life coach, életmódtanácsadó, coaching sablon, animált weboldal, SEO barát sablon, reszponzív design, mobilbarát weboldal, HTML CSS JS sablon, többnyelvű webdesign" />
+  <!-- ✅ SEO META TAGEK -->
+  <meta name="description" content="Modern és animált Life Coach weboldal sablon, többnyelvű és reszponzív kivitelben." />
+  <meta name="keywords" content="life coach, életmódtanácsadó, coaching sablon, HTML CSS JS, animált weboldal, reszponzív design, többnyelvű weboldal" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
   <meta name="robots" content="index, follow" />
-  <meta name="language" content="Hungarian" />
-  <meta name="revisit-after" content="7 days" />
   <meta name="theme-color" content="#800550" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <!-- 🌐 Open Graph (Facebook stb.) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="hu_HU" />
-  <meta property="og:title" content="Életmódtanácsadó Weboldal" />
-  <meta property="og:description" content="SEO-optimalizált, animált és reszponzív Life Coach weboldal sablon, több nyelvű támogatással." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Életmódtanácsadó Weboldal Sablon" />
+  <meta property="og:description" content="Töltsd le SEO-optimalizált, többnyelvű és animált életmódtanácsadó sablonunkat!" />
   <meta property="og:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
   <meta property="og:url" content="https://example.com" />
-  <meta property="og:site_name" content="VSTYLEDesign" />
 
-  <!-- 🐦 Twitter Cards -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Életmódtanácsadó Weboldal" />
-  <meta name="twitter:description" content="Life Coach weboldal sablon SEO-optimalizálással és reszponzív, többnyelvű kialakítással." />
+  <meta name="twitter:title" content="Life Coach Sablon" />
+  <meta name="twitter:description" content="Reszponzív, SEO-barát Life Coach weboldal sablon." />
   <meta name="twitter:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
   <meta name="twitter:creator" content="@vstyledesign" />
 
-  <!-- 📈 Google Analytics (követőkód) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-85RD19D4PP');
-  </script>
+  <title>Life Coach Sablon – Többnyelvű és SEO-optimalizált</title>
 
-  <!-- 🌐 Cím -->
-  <title>Életmódtanácsadó Weboldal sablon | SEO-optimalizált, reszponzív és animált</title>
-
-  <!-- 🎨 CSS stílusok -->
   <style>
-    /* Reset */
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-
-    /* Alap beállítások */
-    html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: orange;
-      color: #fff;
-      min-height: 100vh;
+    body {
+      font-family: Arial, sans-serif;
+      background: orange;
+      color: white;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Fejléc */
     header {
-      background: transparent;
-      color: #fff;
       text-align: center;
-      padding: 20px 10px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      animation: slideDown 1s ease-out;
+      padding: 20px;
     }
+
     header h1 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
-    .language-selector {
-      padding: 6px 10px;
-      border: none;
-      border-radius: 4px;
+
+    select {
+      padding: 8px 12px;
       font-size: 14px;
+      border-radius: 5px;
+      border: none;
       cursor: pointer;
     }
 
-    /* Navigáció */
-    nav {
-      background: #fff;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #de8c08;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ed9b4ef3;
-    }
-
-    /* Tartalom */
-    .container {
-      max-width: 1000px;
+    main {
+      max-width: 800px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
       text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .container h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-    .container p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: white;
     }
 
-    /* Közösségi ikonok */
-    .social-icons {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .social-icons a {
-      font-size: 24px;
-      text-decoration: none;
-      color: #f08c19;
-      transition: transform 0.3s ease;
-    }
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    /* Lábléc */
     footer {
-      text-align: center;
-      padding: 15px;
       background: transparent;
+      color: white;
+      text-align: center;
+      padding: 20px;
       font-size: 14px;
-      color: #000;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
     }
 
-    /* Animációk */
-    @keyframes slideDown {
-      from {transform: translateY(-50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    /* Reszponzivitás */
-    @media (max-width: 767px) {
-      header h1 { font-size: 22px; }
-      .container h2 { font-size: 20px; }
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-      header h1 { font-size: 26px; }
-    }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      header h1 { font-size: 30px; }
+    a.download-link {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- 🌍 Fejléc -->
   <header>
-    <h1 id="site-title">Életmódtanácsadó Weboldal</h1>
-    <select id="language-selector" class="language-selector">
+    <h1 id="title">Életmódtanácsadó Weboldal</h1>
+    <select id="language-select">
       <option value="hu">Magyar</option>
       <option value="en">English</option>
-      <option value="sr">Serbian</option>
-      <option value="tr">Turkish</option>
+      <option value="sr">Српски</option>
+      <option value="tr">Türkçe</option>
     </select>
   </header>
 
-  <!-- 🧭 Navigáció -->
-  <nav>
-    <a href="thome.html" id="nav-home">Főoldal</a>
-    <a href="tabout.html" id="nav-about">Rólam</a>
-    <a href="tservices.html" id="nav-services">Szolgáltatások</a>
-    <a href="ttestimonials.html" id="nav-testimonials">Vélemények</a>
-    <a href="tblog.html" id="nav-blog">Blog</a>
-    <a href="tcontact.html" id="nav-contact">Kapcsolat</a>
-  </nav>
-
-  <!-- 📦 Fő tartalom -->
-  <main class="container">
-    <h2 id="welcome-title">Fedezd fel a Coaching Világát</h2>
-    <p id="welcome-text">Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.</p>
-    <div class="social-icons">
-      <a href="#">📘</a>
-      <a href="#">📸</a>
-      <a href="#">🎵</a>
-      <a href="#">🐦</a>
-    </div>
+  <main>
+    <h2 id="main-heading">Fedezd fel a coaching világát</h2>
+    <p id="main-text">Ez a sablon ideális Life Coachok számára, akik professzionális online jelenlétet szeretnének.</p>
   </main>
 
-  <!-- ⚙️ Lábléc -->
   <footer>
-    <p id="footer-text">© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható.</p>
+    <p id="footer-text">
+      © 2025 LENKE VARO PR VSTYLEDESIGN |
+      <a href="https://vlenke33.gumroad.com/l/vaqgrn" target="_blank" class="download-link" id="footer-link">Letölthető sablon itt</a>
+    </p>
   </footer>
 
-  <!-- 🧠 Nyelvváltás logika -->
   <script>
     const translations = {
-      en: {
-        siteTitle: "Life Coach Website",
-        navHome: "Home",
-        navAbout: "About",
-        navServices: "Services",
-        navTestimonials: "Testimonials",
-        navBlog: "Blog",
-        navContact: "Contact",
-        welcomeTitle: "Discover the World of Coaching",
-        welcomeText: "This template is perfect for Life Coaches who want to strengthen their online presence.",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT License."
-      },
       hu: {
-        siteTitle: "Életmódtanácsadó Weboldal",
-        navHome: "Főoldal",
-        navAbout: "Rólam",
-        navServices: "Szolgáltatások",
-        navTestimonials: "Vélemények",
-        navBlog: "Blog",
-        navContact: "Kapcsolat",
-        welcomeTitle: "Fedezd fel a Coaching Világát",
-        welcomeText: "Ez a sablon ideális Life Coachok számára, akik online jelenlétüket szeretnék megerősíteni.",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal a MIT licenc feltételei szerint használható."
+        title: "Életmódtanácsadó Weboldal",
+        heading: "Fedezd fel a coaching világát",
+        text: "Ez a sablon ideális Life Coachok számára, akik professzionális online jelenlétet szeretnének.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Letölthető sablon itt</a>"
+      },
+      en: {
+        title: "Life Coach Website",
+        heading: "Discover the world of coaching",
+        text: "This template is perfect for Life Coaches who want a professional online presence.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Download the template here</a>"
       },
       sr: {
-        siteTitle: "Web sa Life Coach-om",
-        navHome: "Početna",
-        navAbout: "O meni",
-        navServices: "Usluge",
-        navTestimonials: "Svedočenja",
-        navBlog: "Blog",
-        navContact: "Kontakt",
-        welcomeTitle: "Otkrijte svet koučinga",
-        welcomeText: "Ovaj šablon je savršen za Life Coach-ove koji žele da poboljšaju svoju online prisutnost.",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Ovaj sajt je dostupan pod MIT licencom."
+        title: "Sajt za Life Coach-a",
+        heading: "Otkrij svet koučinga",
+        text: "Ovaj šablon je savršen za Life Coach-eve koji žele profesionalno prisustvo na mreži.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Preuzmi šablon ovde</a>"
       },
       tr: {
-        siteTitle: "Life Coach Web Sitesi",
-        navHome: "Ana Sayfa",
-        navAbout: "Hakkımda",
-        navServices: "Hizmetler",
-        navTestimonials: "Referanslar",
-        navBlog: "Blog",
-        navContact: "İletişim",
-        welcomeTitle: "Koçluk Dünyasını Keşfedin",
-        welcomeText: "Bu şablon, çevrimiçi varlıklarını güçlendirmek isteyen Life Coach'lar için mükemmeldir.",
-        footerText: "© 2025 LENKE VARO PR VSTYLEDESIGN | Bu site MIT Lisansı altında mevcuttur."
+        title: "Yaşam Koçu Web Sitesi",
+        heading: "Koçluk dünyasını keşfedin",
+        text: "Bu şablon, profesyonel bir çevrimiçi varlık isteyen yaşam koçları için idealdir.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Şablonu buradan indir</a>"
       }
     };
-    document.getElementById("language-selector").addEventListener("change", function () {
+
+    const langSelect = document.getElementById('language-select');
+
+    langSelect.addEventListener('change', function () {
       const lang = this.value;
-      const content = translations[lang];
-      document.getElementById("site-title").textContent = content.siteTitle;
-      document.getElementById("nav-home").textContent = content.navHome;
-      document.getElementById("nav-about").textContent = content.navAbout;
-      document.getElementById("nav-services").textContent = content.navServices;
-      document.getElementById("nav-testimonials").textContent = content.navTestimonials;
-      document.getElementById("nav-blog").textContent = content.navBlog;
-      document.getElementById("nav-contact").textContent = content.navContact;
-      document.getElementById("welcome-title").textContent = content.welcomeTitle;
-      document.getElementById("welcome-text").textContent = content.welcomeText;
-      document.getElementById("footer-text").textContent = content.footerText;
+      const t = translations[lang];
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('main-heading').textContent = t.heading;
+      document.getElementById('main-text').textContent = t.text;
+      document.getElementById('footer-text').innerHTML = t.footer;
     });
   </script>
 </body>
 </html>
-
-
-
-      
-   
