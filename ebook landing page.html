@@ -13,17 +13,16 @@
   <meta property="og:description" content="Töltsd le a legújabb e-bookot négy nyelven!">
   <meta property="og:image" content="https://vstyledesign.com/images/ebook-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://vstyledesign.com/ebook">
   <meta name="twitter:title" content="Új e-book megjelent!">
   <meta name="twitter:description" content="Töltsd le az e-bookot magyarul, angolul, szerbül vagy törökül!">
   <meta name="twitter:image" content="https://vstyledesign.com/images/ebook-cover.jpg">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
   <title>E-book Landing Page | vstyledesign</title>
   <style>
     :root {
@@ -34,15 +33,9 @@
       --primary: #4CAF50;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body {
-      height: 100%;
-    }
+    html, body { height: 100%; }
 
     body {
       font-family: Arial, sans-serif;
@@ -62,9 +55,8 @@
     nav {
       display: flex;
       justify-content: center;
-      background-color:transparent;
+      background-color: transparent;
       padding: 0.5rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
 
     nav ul {
@@ -75,19 +67,18 @@
     }
 
     nav button {
-      background:rgb(179, 175, 175) ;
+      background: #ccc;
       border: none;
       cursor: pointer;
       font-weight: bold;
       padding: 0.3rem 0.6rem;
       font-size: 0.95rem;
-      color: inherit;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
 
     nav button:hover {
-      background-color:rgb(212, 203, 203);
+      background-color: #ddd;
     }
 
     main {
@@ -126,7 +117,6 @@
 
     .features ul {
       list-style: none;
-      padding: 0;
       margin-top: 1.2rem;
     }
 
@@ -148,33 +138,31 @@
       font-size: 0.85rem;
     }
 
-    /* Eszköz nézetek */
+    footer a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Reszponzív nézetek */
     @media (min-width: 1200px) {
-      /* Asztali gép */
-      body {
-        font-size: 1rem;
-      }
+      body { font-size: 1rem; }
     }
 
     @media (min-width: 1024px) and (max-width: 1199px) {
-      /* Laptop */
-      body {
-        font-size: 0.98rem;
-      }
+      body { font-size: 0.98rem; }
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-      /* Tablet */
-      body {
-        font-size: 0.95rem;
-      }
+      body { font-size: 0.95rem; }
     }
 
     @media (max-width: 767px) {
-      /* Mobil */
-      nav ul {
-        justify-content: center;
-      }
+      nav ul { justify-content: center; }
       .cta, .download-btn {
         width: 100%;
         max-width: 280px;
@@ -197,7 +185,7 @@
     <div class="hero-content">
       <h1 data-hu="Fedezd fel új e-bookunkat!" data-en="Discover our new e-book!" data-sr="Otkrij naš novi e-knjigu!" data-tr="Yeni e-kitabımızı keşfedin!">Fedezd fel új e-bookunkat!</h1>
       <p data-hu="Töltsd le most és inspirálódj!" data-en="Download now and get inspired!" data-sr="Preuzmi sada i inspiriši se!" data-tr="Hemen indir ve ilham al!">Töltsd le most és inspirálódj!</p>
-      <a href="#download" class="cta" data-hu="Letöltés" data-en="Download" data-sr="Preuzimanje" data-tr="İndir">Letöltés</a>
+      <a href="sample-ebook-digital-marketing.pdf" class="cta" data-hu="Letöltés" data-en="Download" data-sr="Preuzimanje" data-tr="İndir">Letöltés</a>
 
       <div class="features">
         <ul>
@@ -209,18 +197,19 @@
 
       <div class="download" id="download">
         <h2 data-hu="Töltsd le most!" data-en="Download now!" data-sr="Preuzmi sada!" data-tr="Hemen indir!">Töltsd le most!</h2>
-        <a href="minta-ebook-vstyledesign.pdf" class="download-btn" data-hu="Letöltés PDF" data-en="Download PDF" data-sr="Preuzmi PDF" data-tr="PDF indir">Letöltés PDF</a>
+        <a href="sample-ebook-digital-marketing.pdf" class="download-btn" data-hu="Letöltés PDF" data-en="Download PDF" data-sr="Preuzmi PDF" data-tr="PDF indir">Letöltés PDF</a>
       </div>
     </div>
   </main>
 
   <footer>
     <p id="footer-text"
-       data-hu="© LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható."
-       data-en="© LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License."
-       data-sr="© LENKE VARO PR VSTYLEDESIGN 2024 Ova stranica je licencirana pod MIT licencom."
-       data-tr="© LENKE VARO PR VSTYLEDESIGN 2024 Bu site MIT Lisansı altında lisanslanmıştır.">
-       © LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható.
+       data-hu="© LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható. | Megvásárolható itt: "
+       data-en="© LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License. | Available here: "
+       data-sr="© LENKE VARO PR VSTYLEDESIGN 2024 Ova stranica je licencirana pod MIT licencom. | Dostupno ovde: "
+       data-tr="© LENKE VARO PR VSTYLEDESIGN 2024 Bu site MIT Lisansı altında lisanslanmıştır. | Satın al: ">
+       © LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható. | Megvásárolható itt:
+    <a href="https://vlenke33.gumroad.com/l/stxav" target="_blank">Gumroad</a>
     </p>
   </footer>
 
@@ -228,9 +217,13 @@
     function switchLang(lang) {
       const elements = document.querySelectorAll('[data-hu]');
       elements.forEach(el => {
-        const translation = el.getAttribute(`data-${lang}`);
-        if (translation) el.textContent = translation;
+        const text = el.getAttribute('data-' + lang);
+        if (text) el.textContent = text;
       });
+      // Külön kell kezelni a linkes <p> esetét
+      const footer = document.getElementById('footer-text');
+      const link = `<a href="https://vlenke33.gumroad.com/l/stxav" target="_blank">Gumroad</a>`;
+      footer.innerHTML = footer.getAttribute(`data-${lang}`) + link;
     }
 
     function toggleDarkMode() {
