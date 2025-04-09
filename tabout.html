@@ -1,251 +1,165 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- ✅ SEO META TAGEK (részletes) -->
-  <meta name="description" content="Személyre szabott életmódtanácsadás – segítek a személyes fejlődésedben, karrierépítésben és a céljaid elérésében. Modern, SEO-optimalizált és reszponzív bemutatkozó oldal sablon.">
-  <meta name="keywords" content="életmódtanácsadó, coaching szolgáltatás, személyes fejlődés, karrier coaching, célkitűzés, motiváció, életvezetés, animált weboldal, SEO sablon, többnyelvű webdesign, mobilbarát weboldal">
-  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN">
-  <meta name="robots" content="index, follow">
-  <meta name="revisit-after" content="7 days">
+  <!-- SEO META -->
+  <meta name="description" content="Személyre szabott életmódtanácsadás több nyelven. Érd el céljaidat egy boldogabb életért!" />
+  <meta name="keywords" content="life coach, életmódtanácsadás, fejlődés, coaching, nyelvváltás, többnyelvű, webdesign" />
+  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f59e0b" />
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="Életmódtanácsadó Bemutatkozó Oldal">
-  <meta property="og:description" content="Személyes fejlődés és karrierfejlesztés egy helyen. Fedezd fel tanácsadói szolgáltatásaimat és érd el céljaidat!">
-  <meta property="og:image" content="https://vstyledesign.com/images/lifecoach-preview.jpg">
-  <meta property="og:url" content="https://vstyledesign.com/about">
-  <meta property="og:type" content="website">
+  <title>Life Coach - Többnyelvű oldal</title>
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Életmódtanácsadó Bemutatkozó Oldal">
-  <meta name="twitter:description" content="Life Coach weboldal sablon személyre szabott tanácsadással, SEO-optimalizálva, mobilbarát kivitelben.">
-  <meta name="twitter:image" content="https://vstyledesign.com/images/lifecoach-preview.jpg">
-  <meta name="twitter:creator" content="@lenkevarro">
-  <meta name="twitter:site" content="@lenkevarro">
-<!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
-
-  <title>Életmódtanácsadó – Személyes Fejlődés és Karrier Coaching</title>
-
-  <!-- 🎨 CSS stílusok eszközökre optimalizálva -->
   <style>
-    /* Alap stílusok minden elemhez */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Alap beállítások a teljes oldalhoz */
-    html, body {
+    body {
       font-family: Arial, sans-serif;
-      background-color:orange;
+      background: orange;
       color: white;
       line-height: 1.6;
+      padding: 20px;
       min-height: 100vh;
     }
 
-    /* Fejléc szekció */
     header {
-      background-color:transparent;
-      color: white;
+      text-align: center;
       padding: 20px;
-      text-align: left;
       position: relative;
-      animation: fadeInDown 1s ease-out;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.4rem;
     }
 
-    /* Nyelvváltó gomb a fejlécben */
     .language-switcher {
       position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
+      top: 20px;
+      right: 20px;
     }
 
     .language-switcher button {
-      background-color: #d9830a;
-      color: white;
+      background: #fff;
+      color: orange;
       border: none;
-      padding: 8px 15px;
-      font-size: 14px;
-      cursor: pointer;
+      padding: 6px 10px;
+      margin-left: 5px;
+      font-weight: bold;
       border-radius: 5px;
-      transition: background 0.3s ease;
+      cursor: pointer;
     }
 
-    .language-switcher button:hover {
-      background-color: #ea912b;
-    }
-
-    /* Tartalom szekció */
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 50px;
-      text-align: center;
-      flex-direction: column;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .text {
-      flex: 1;
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: transparent;
       padding: 20px;
-      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+      text-align: center;
     }
 
-    h2 {
-      font-size: 32px;
+    .container h2 {
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
+    .container p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
     }
 
-    /* Lábléc */
-    .footer {
-      background-color: transparent;
-      color: white;
-      padding: 20px;
+    footer {
+      margin-top: 40px;
       text-align: center;
+      font-size: 0.9rem;
     }
 
-    /* Animációk */
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-30px);}
-      to {opacity: 1; transform: translateY(0);}
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      .container p { font-size: 1rem; }
     }
 
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* ✅ Eszközspecifikus reszponzív nézetek */
-
-    /* Mobiltelefonok (max. 600px) */
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
-      .content { padding: 20px 10px; }
-      h2 { font-size: 1.4rem; }
-      p { font-size: 0.95rem; }
-    }
-
-    /* Tabletek (601px – 991px) */
-    @media (min-width: 601px) and (max-width: 991px) {
-      .content { padding: 30px; }
-      h2 { font-size: 1.8rem; }
-      p { font-size: 1rem; }
-    }
-
-    /* Laptopok (992px – 1199px) */
-    @media (min-width: 992px) and (max-width: 1199px) {
-      h2 { font-size: 2rem; }
-      p { font-size: 1.1rem; }
-    }
-
-    /* Nagy képernyők, asztali gépek (1200px+) */
-    @media (min-width: 1200px) {
-      h2 { font-size: 2.2rem; }
-      p { font-size: 1.2rem; }
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.4rem; }
+      .container { padding: 10px; }
     }
   </style>
 </head>
 <body>
-  <!-- 🔝 Fejléc -->
   <header>
-    <h1 id="header-title">Életmódtanácsadó Bemutatkozó Oldal</h1>
+    <h1 id="title">Életmódtanácsadó Bemutatkozó Oldal</h1>
     <div class="language-switcher">
-      <button id="switch-language">Magyar</button>
+      <button onclick="switchLanguage('hu')">HU</button>
+      <button onclick="switchLanguage('sr')">SR</button>
+      <button onclick="switchLanguage('en')">EN</button>
+      <button onclick="switchLanguage('tr')">TR</button>
     </div>
   </header>
 
-  <!-- 📦 Tartalom szakasz -->
-  <div class="content" id="blog-container">
-    <div class="text">
-      <h2 id="about-title">Életmódtanácsadó Szolgáltatásaim</h2>
-      <p id="about-description">Mint életmódtanácsadó, segítek megtalálni a személyes egyensúlyt, elérni a céljaidat és boldogabb, sikeresebb életet élni.</p>
-      <p id="about-description-2">Szolgáltatásaim nemcsak a személyes fejlődésre fókuszálnak, hanem segítenek a karrierépítésben, döntéshozatalban és az élet kihívásaival való megbirkózásban.</p>
-      <p id="about-description-3">Egyéni tanácsadás keretében figyelembe veszem a céljaidat és igényeidet – segítek a napi rutin optimalizálásában, életcélok meghatározásában és a boldogságod megtalálásában.</p>
-    </div>
+  <div class="container">
+    <h2 id="subtitle">Szolgáltatásaim</h2>
+    <p id="text1">Segítek elérni a céljaidat, javítani a mindennapjaidon és megtalálni az egyensúlyt az életedben.</p>
+    <p id="text2">A tanácsadás során fókuszálunk az önfejlesztésre, stresszkezelésre és tudatosságra.</p>
+    <p id="text3">Kapcsolat alapú támogatás, személyre szabva – minden lépésnél melletted leszek.</p>
   </div>
 
-  <!-- ⚙️ Lábléc -->
-  <footer class="footer">
-    <p id="footer-text">© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható.</p>
+  <footer>
+    <p id="footer-text">© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
   </footer>
 
-  <!-- 💡 JavaScript – Nyelvváltás funkció -->
   <script>
     const translations = {
       hu: {
-        title: "Életmódtanácsadó Szolgáltatásaim",
-        description: "Mint életmódtanácsadó, segítek megtalálni a személyes egyensúlyt, elérni a céljaidat és boldogabb életet élni.",
-        description2: "Szolgáltatásaim nemcsak a személyes fejlődésre fókuszálnak, hanem segítenek a karrierépítésben, döntéshozatalban és az élet kihívásaival való megbirkózásban.",
-        description3: "Egyéni tanácsadás keretében figyelembe veszem a céljaidat és igényeidet – segítek a napi rutin optimalizálásában, életcélok meghatározásában és a boldogságod megtalálásában.",
-        footer: "© 2025 VstyleDesign | Az oldal a MIT licenc feltételei szerint használható."
+        title: "Életmódtanácsadó Bemutatkozó Oldal",
+        subtitle: "Szolgáltatásaim",
+        text1: "Segítek elérni a céljaidat, javítani a mindennapjaidon és megtalálni az egyensúlyt az életedben.",
+        text2: "A tanácsadás során fókuszálunk az önfejlesztésre, stresszkezelésre és tudatosságra.",
+        text3: "Kapcsolat alapú támogatás, személyre szabva – minden lépésnél melletted leszek.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható."
+      },
+      sr: {
+        title: "Stranica Predstavljanja Life Coacha",
+        subtitle: "Moje usluge",
+        text1: "Pomažem ti da postigneš ciljeve, poboljšaš svakodnevni život i pronađeš ravnotežu.",
+        text2: "Fokus je na ličnom razvoju, upravljanju stresom i svesnosti.",
+        text3: "Podrška zasnovana na odnosu, prilagođena tvojim potrebama – tu sam za tebe na svakom koraku.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Sajt je dostupan pod MIT licencom."
       },
       en: {
-        title: "My Life Coaching Services",
-        description: "As a life coach, I help you find personal balance, achieve your goals, and live a happier, more successful life.",
-        description2: "My services focus on personal growth, career development, and navigating challenges through guided decision-making.",
-        description3: "Each session is tailored to your goals and needs — from optimizing daily routines to setting life goals and discovering happiness.",
-        footer: "© 2025 VstyleDesign | Licensed under the MIT License."
+        title: "Life Coach Introduction Page",
+        subtitle: "My Services",
+        text1: "I help you reach your goals, improve your daily life, and find balance.",
+        text2: "The coaching focuses on self-growth, stress management, and awareness.",
+        text3: "Relationship-based support tailored to your needs – I’ll be with you every step of the way.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT license."
+      },
+      tr: {
+        title: "Yaşam Koçu Tanıtım Sayfası",
+        subtitle: "Hizmetlerim",
+        text1: "Hedeflerine ulaşmana, günlük yaşamını iyileştirmene ve dengeyi bulmana yardımcı oluyorum.",
+        text2: "Danışmanlık sürecimiz öz farkındalık, stres yönetimi ve kişisel gelişime odaklanır.",
+        text3: "İlişki temelli ve sana özel destek – her adımda yanında olacağım.",
+        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Bu site MIT lisansı altında sunulmaktadır."
       }
     };
 
-    // Gomb eseménykezelő – Nyelvváltás
-    document.getElementById('switch-language').addEventListener('click', function () {
-      const currentLang = this.innerText === 'Magyar' ? 'hu' : 'en';
-      const newLang = currentLang === 'hu' ? 'en' : 'hu';
-      const t = translations[newLang];
-
-      document.getElementById('header-title').innerText = t.title;
-      document.getElementById('about-title').innerText = t.title;
-      document.getElementById('about-description').innerText = t.description;
-      document.getElementById('about-description-2').innerText = t.description2;
-      document.getElementById('about-description-3').innerText = t.description3;
-      document.getElementById('footer-text').innerText = t.footer;
-      this.innerText = newLang === 'hu' ? 'Magyar' : 'English';
-    });
+    function switchLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("text1").innerText = t.text1;
+      document.getElementById("text2").innerText = t.text2;
+      document.getElementById("text3").innerText = t.text3;
+      document.getElementById("footer-text").innerText = t.footer;
+    }
   </script>
 </body>
 </html>
-
- 
-   
-  
-
-
- 
-
-   
-      
-     
-         
-
-         
-       
-
-
-        
