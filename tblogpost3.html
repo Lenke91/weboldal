@@ -10,60 +10,51 @@
   <meta name="keywords" content="stresszkezelés, life coaching, mentális egészség, önfejlesztés, relaxáció, stressz csökkentés, coaching technikák, mindfulness, légzőgyakorlatok, nyugodt élet, személyes fejlődés, lelki egészség, női coaching" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
   <meta name="robots" content="index, follow" />
-  <meta name="language" content="Hungarian" />
-  <meta name="rating" content="general" />
-  <meta name="distribution" content="global" />
   <meta name="theme-color" content="#b92e92" />
 
-  <!-- ✅ Open Graph adatok (megosztáshoz) -->
+  <!-- ✅ Open Graph -->
   <meta property="og:title" content="Stresszkezelés Life Coachinggal" />
   <meta property="og:description" content="Ismerd meg a stresszkezelési technikákat, amiket life coachként alkalmazhatsz a mentális egészség javítása érdekében." />
   <meta property="og:image" content="https://example.com/your-image.jpg" />
   <meta property="og:url" content="https://vstyledesign.com/stresszkezeles" />
   <meta property="og:type" content="article" />
 
-  <!-- ✅ Twitter meta adatok -->
+  <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Stresszkezelés Life Coachinggal" />
   <meta name="twitter:description" content="Life Coaching a stressz kezelésére, segít a mentális jólét javításában és a nyugodtabb élet elérésében." />
   <meta name="twitter:image" content="https://example.com/your-image.jpg" />
   <meta name="twitter:creator" content="@lenkevarro" />
-  <meta name="twitter:site" content="@lenkevarro" />
-<!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
 
   <title>Stresszkezelés Life Coachinggal</title>
 
-  <!-- ✅ Belső CSS stílusok -->
   <style>
-    /* Alap stílusok minden eszközhöz */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color:orange;
+      background-color: orange;
       color: #fff;
       line-height: 1.6;
       padding: 20px;
     }
 
-    /* Fejléc szakasz nyelvváltóval */
     header {
       text-align: center;
       padding: 20px;
-      color:rgb(222, 164, 19) ;
+      color: rgb(222, 164, 19);
+      position: relative;
     }
 
     header h1 {
@@ -85,16 +76,14 @@
       font-size: 14px;
       cursor: pointer;
       margin-left: 5px;
-      transition: background-color 0.3s ease;
     }
 
     .language-switcher button:hover {
       background-color: #dea411;
     }
 
-    /* Tartalmi szakasz stílusai */
     .container {
-      background-color:transparent;
+      background-color: transparent;
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 0 12px rgb(236, 173, 64);
@@ -109,7 +98,6 @@
       margin-bottom: 18px;
     }
 
-    /* Kép feltöltő szakasz */
     .upload-section {
       text-align: center;
       margin-top: 30px;
@@ -125,132 +113,104 @@
       padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
 
     .upload-btn:hover {
       background-color: #fbb650;
     }
 
-    /* Lábléc szakasz */
     footer {
       text-align: center;
       margin-top: 40px;
-      color:rgb(192, 133, 6) ;
+      color: rgb(192, 133, 6);
       font-size: 0.9rem;
     }
 
-    /* Belépő animáció */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* 📱 Mobil nézet (max 480px) */
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-      .container {
-        padding: 15px;
-      }
-      p {
-        font-size: 0.9rem;
-      }
+      header h1 { font-size: 1.6rem; }
+      .container { padding: 15px; }
+      p { font-size: 0.9rem; }
       .language-switcher button {
         font-size: 12px;
         padding: 6px 10px;
       }
     }
-
-    /* 📝 Tablet nézet (481px - 768px) */
-    @media (min-width: 481px) and (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .container {
-        padding: 20px;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
-
-    /* 💻 Laptop nézet (769px - 1199px) */
-    @media (min-width: 769px) and (max-width: 1199px) {
-      header h1 {
-        font-size: 2.4rem;
-      }
-      .container {
-        padding: 25px;
-      }
-    }
-
-    /* 🖥️ Asztali gép nézet (1200px+) */
-    @media (min-width: 1200px) {
-      header h1 {
-        font-size: 2.8rem;
-      }
-      .container {
-        padding: 30px;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- 🔰 Fejléc nyelvváltóval -->
   <header>
-    <h1 class="hu">Stresszkezelés életmódtanácsadóval</h1>
-    <h1 class="en" style="display: none;">Stress Management with Life Coaching</h1>
+    <h1 class="lang hu">Stresszkezelés életmódtanácsadóval</h1>
+    <h1 class="lang en" style="display: none;">Stress Management with Life Coaching</h1>
+    <h1 class="lang sr" style="display: none;">Upravljanje stresom uz life coaching</h1>
+    <h1 class="lang tr" style="display: none;">Yaşam Koçluğu ile Stres Yönetimi</h1>
+
     <div class="language-switcher">
-      <button onclick="switchLanguage('hu')">Magyar</button>
-      <button onclick="switchLanguage('en')">English</button>
+      <button onclick="switchLanguage('hu')">HU</button>
+      <button onclick="switchLanguage('en')">EN</button>
+      <button onclick="switchLanguage('sr')">SR</button>
+      <button onclick="switchLanguage('tr')">TR</button>
     </div>
   </header>
 
-  <!-- 🧘‍♀️ Tartalomdoboz -->
   <div class="container">
-    <!-- 🇭🇺 Magyar szöveg -->
-    <p class="hu">A stressz mindenki életében jelen van, de fontos, hogy megtanuljuk kezelni. A life coaching segíthet abban, hogy felismerjük a stressz kiváltó okait, és megtaláljuk azokat a technikákat, amelyekkel csökkenthetjük a napi feszültségeket.</p>
-    <p class="hu">A coaching során beszélhetünk olyan stresszkezelési módszerekről, mint a mindfulness, légzőgyakorlatok, relaxációs technikák, és hogyan építhetjük be ezeket a mindennapjainkba.</p>
+    <!-- Tartalmak több nyelven -->
+    <p class="lang hu">A stressz mindenki életében jelen van, de fontos, hogy megtanuljuk kezelni. A life coaching segíthet abban, hogy felismerjük a stressz kiváltó okait, és megtaláljuk azokat a technikákat, amelyekkel csökkenthetjük a napi feszültségeket.</p>
+    <p class="lang hu">A coaching során beszélhetünk olyan stresszkezelési módszerekről, mint a mindfulness, légzőgyakorlatok, relaxációs technikák, és hogyan építhetjük be ezeket a mindennapjainkba.</p>
 
-    <!-- 🇬🇧 Angol szöveg -->
-    <p class="en" style="display: none;">Stress is present in everyone's life, but it's important to learn how to manage it. Life coaching can help identify the causes of stress and find effective techniques to reduce daily tension.</p>
-    <p class="en" style="display: none;">Through coaching, we can discuss stress management methods such as mindfulness, breathing exercises, relaxation techniques, and how to incorporate them into our daily lives.</p>
+    <p class="lang en" style="display: none;">Stress is part of everyone's life, but learning to manage it is essential. Life coaching helps identify triggers and find practical ways to reduce daily stress.</p>
+    <p class="lang en" style="display: none;">Through coaching, we explore techniques like mindfulness, breathing, relaxation, and how to integrate them into daily routines.</p>
 
-    <!-- 📷 Képfeltöltés szakasz -->
+    <p class="lang sr" style="display: none;">Stres je prisutan u životu svakoga, ali je važno naučiti kako da ga kontrolišemo. Life coaching može pomoći u prepoznavanju uzroka stresa i pronalaženju efikasnih tehnika za njegovo smanjenje.</p>
+    <p class="lang sr" style="display: none;">Tokom koučinga možemo razgovarati o metodama poput mindfulness-a, disajnih vežbi i relaksacije, kao i o tome kako ih uključiti u svakodnevni život.</p>
+
+    <p class="lang tr" style="display: none;">Stres herkesin hayatında vardır, ancak onunla başa çıkmayı öğrenmek çok önemlidir. Yaşam koçluğu, stresin nedenlerini belirlemeye ve günlük gerilimi azaltmak için teknikler bulmaya yardımcı olur.</p>
+    <p class="lang tr" style="display: none;">Koçluk sürecinde farkındalık, nefes egzersizleri ve rahatlama yöntemleri gibi stresle başa çıkma yollarını öğreniriz.</p>
+
+    <!-- Képfeltöltő -->
     <div class="upload-section">
-      <h3 class="hu">Tölts fel egy képet, amely segíthet a relaxációban!</h3>
-      <h3 class="en" style="display: none;">Upload an image that can help with relaxation!</h3>
-      <label for="fileInput" class="upload-btn" id="uploadText">Kép feltöltése</label>
+      <h3 class="lang hu">Tölts fel egy képet, amely segíthet a relaxációban!</h3>
+      <h3 class="lang en" style="display: none;">Upload an image that helps you relax!</h3>
+      <h3 class="lang sr" style="display: none;">Otpremite sliku koja vam pomaže da se opustite!</h3>
+      <h3 class="lang tr" style="display: none;">Rahatlamana yardımcı olacak bir görsel yükle!</h3>
+
+      <label for="fileInput" class="upload-btn" id="uploadLabel">Kép feltöltése</label>
       <input type="file" id="fileInput" />
     </div>
   </div>
 
-  <!-- 🔚 Lábléc -->
   <footer>
-    <p class="hu">© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
-    <p class="en" style="display: none;">© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT license.</p>
+    <p class="lang hu">© 2025 LENKE VARO PR VSTYLEDESIGN | Az oldal az MIT licenc alapján használható.</p>
+    <p class="lang en" style="display: none;">© 2025 LENKE VARO PR VSTYLEDESIGN | This site is available under the MIT license.</p>
+    <p class="lang sr" style="display: none;">© 2025 LENKE VARO PR VSTYLEDESIGN | Ova stranica je dostupna pod MIT licencom.</p>
+    <p class="lang tr" style="display: none;">© 2025 LENKE VARO PR VSTYLEDESIGN | Bu site MIT lisansı ile kullanılabilir.</p>
   </footer>
 
-  <!-- 🌐 Nyelvváltó JS -->
   <script>
     function switchLanguage(lang) {
-      const huElements = document.querySelectorAll('.hu');
-      const enElements = document.querySelectorAll('.en');
-      const uploadLabel = document.getElementById('uploadText');
+      const allLangElements = document.querySelectorAll('.lang');
+      allLangElements.forEach(el => el.style.display = 'none');
 
-      if (lang === 'en') {
-        huElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = 'block');
-        uploadLabel.innerText = 'Upload an image that can help with relaxation!';
-      } else {
-        huElements.forEach(el => el.style.display = 'block');
-        enElements.forEach(el => el.style.display = 'none');
-        uploadLabel.innerText = 'Kép feltöltése';
-      }
+      const selectedLangElements = document.querySelectorAll(`.lang.${lang}`);
+      selectedLangElements.forEach(el => el.style.display = 'block');
+
+      const uploadLabel = document.getElementById('uploadLabel');
+      const labelTexts = {
+        hu: 'Kép feltöltése',
+        en: 'Upload Image',
+        sr: 'Otpremi sliku',
+        tr: 'Görsel Yükle'
+      };
+      uploadLabel.innerText = labelTexts[lang];
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage('hu');
+    });
   </script>
 </body>
 </html>
-
