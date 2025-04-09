@@ -1,263 +1,94 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <!-- Karakterkódolás és reszponzív nézet -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO meta adatok -->
-  <title>Life Coach Blog | Személyes fejlődés és motiváció</title>
-  <meta name="description" content="Olvass hasznos tanácsokat és motiváló történeteket a Life Coach blogon: személyes fejlődés, életmód, mentális egészség.">
-  <meta name="keywords" content="life coach, személyes fejlődés, önfejlesztés, motiváció, mentális egészség, stresszkezelés, életmód, blog">
+  <meta name="description" content="Hasznos blogbejegyzések önfejlesztésről, mentális egészségről és stresszkezelésről. VSTYLEDESIGN - Life Coach Blog.">
+  <meta name="keywords" content="life coach, blog, önfejlesztés, mentális egészség, stresszkezelés, személyes fejlődés, coaching">
   <meta name="author" content="Lenke Varró - VSTYLEDESIGN">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://example.com/blog">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Life Coach Blog">
-  <meta property="og:description" content="Tanácsok és történetek a személyes fejlődésről és mentális egészségről.">
+  <meta property="og:description" content="Tudás és inspiráció a személyes fejlődéshez. Coaching támogatás nőknek.">
   <meta property="og:image" content="https://example.com/images/og-image.jpg">
   <meta property="og:url" content="https://example.com/blog">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Life Coach Blog">
-  <meta name="twitter:description" content="Hasznos tanácsok a személyes fejlődéshez és stresszkezeléshez.">
+  <meta name="twitter:description" content="Olvasd el legújabb cikkeinket a tudatosságról, motivációról és belső fejlődésről!">
   <meta name="twitter:image" content="https://example.com/images/og-image.jpg">
-  <meta name="twitter:creator" content="@lenkevarro">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<!-- Google Analytics script (Google Tag Manager) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
-
-  <!-- Beépített CSS -->
+  <title>Life Coach Blog</title>
   <style>
-    /* Alap stílusok */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color:orange;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    /* Fejléc */
-    header {
-      background: transparent;
-      color: #b87304;
-      padding: 30px 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    /* Nyelvváltó gomb */
-    .language-switcher {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .language-switcher button {
-      background-color: #f49f18;
-      border: none;
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .language-switcher button:hover {
-      background-color: #c67b0a;
-      transform: scale(1.05);
-    }
-
-    /* Tartalom konténer */
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    /* Blog bejegyzések */
-    .post {
-      background:transparent;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 0.8s ease;
-    }
-
-    .post h2 {
-      color: #fff;
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .post p.date {
-      font-size: 0.9rem;
-      color: #d58a19;
-      margin-bottom: 10px;
-    }
-
-    
-
-    footer {
-      background:transparent;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    /* Animáció */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Reszponzív nézetek */
-    @media (min-width: 1200px) {
-      .container { width: 85%; }
-      .post h2 { font-size: 2.2rem; }
-    }
-
-    @media (max-width: 1024px) {
-      header h1 { font-size: 2.2rem; }
-      .post h2 { font-size: 1.8rem; }
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 1.8rem; }
-      .post h2 { font-size: 1.5rem; }
-    }
-
+    body { font-family: Arial, sans-serif; background: orange; color: white; margin: 0; padding: 0; }
+    header, footer { text-align: center; padding: 20px; }
+    .language-switcher { margin: 10px; }
+    .post { padding: 20px; margin: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 8px; }
+    .hidden { display: none; }
     @media (max-width: 480px) {
       header h1 { font-size: 1.4rem; }
       .post h2 { font-size: 1.3rem; }
-      .language-switcher button { font-size: 12px; padding: 6px 10px; }
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      .post h2 { font-size: 1.5rem; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      header h1 { font-size: 2.2rem; }
+      .post h2 { font-size: 1.8rem; }
+    }
+    @media (min-width: 1025px) {
+      header h1 { font-size: 2.5rem; }
+      .post h2 { font-size: 2rem; }
     }
   </style>
 </head>
-
 <body>
-  <!-- Fejléc -->
   <header>
-    <h1 id="header-title">Life Coach Blog</h1>
+    <h1 id="blog-title">Life Coach Blog</h1>
     <div class="language-switcher">
-      <button id="switch-language">EN / HU</button>
+      <button onclick="switchLanguage('hu')">Magyar</button>
+      <button onclick="switchLanguage('sr')">Srpski</button>
+      <button onclick="switchLanguage('en')">English</button>
+      <button onclick="switchLanguage('tr')">Türkçe</button>
     </div>
   </header>
 
-  <!-- Tartalom -->
-  <main class="container" id="blog-container">
-    <div class="post">
-      <h2 id="post-title-1">Miért fontos a személyes fejlődés?</h2>
-      <p class="date" id="post-date-1">2025. január 20.</p>
-      <p id="post-content-1">Az önfejlesztés kulcsa annak, hogy elérjük céljainkat és boldogabb életet éljünk. A belső fejlődés segít a kihívások kezelésében és önmagunk jobb megértésében.</p>
+  <main id="posts">
+    <div class="post hu">
+      <h2>Miért fontos a személyes fejlődés?</h2>
+      <p>Az önfejlesztés kulcsa annak, hogy elérjük céljainkat és boldogabb életet éljünk.</p>
     </div>
-
-    <div class="post">
-      <h2 id="post-title-2">Miért fontos a mentális egészség?</h2>
-      <p class="date" id="post-date-2">2025. január 21.</p>
-      <p id="post-content-2">A mentális egészség közvetlen hatással van életminőségünkre. Tudd meg, hogyan javíthatod lelki egyensúlyodat mindennapi szokásokkal.</p>
+    <div class="post sr hidden">
+      <h2>Zašto je važno lično usavršavanje?</h2>
+      <p>Lični razvoj je ključ za postizanje ciljeva i srećniji život.</p>
     </div>
-
-    <div class="post">
-      <h2 id="post-title-3">Stresszkezelés életmódtanácsadóval</h2>
-      <p class="date" id="post-date-3">2025. január 22.</p>
-      <p id="post-content-3">A stressz leküzdésében segíthet a tudatosság, a mozgás és a megfelelő időbeosztás. Az életmódtanácsadás támogatást ad ezek elsajátításában.</p>
+    <div class="post en hidden">
+      <h2>Why is Personal Development Important?</h2>
+      <p>Personal development is the key to achieving goals and living a happier life.</p>
+    </div>
+    <div class="post tr hidden">
+      <h2>Kendini geliştirmenin önemi nedir?</h2>
+      <p>Kendini geliştirmek, hedeflere ulaşmak ve daha mutlu bir yaşam için anahtardır.</p>
     </div>
   </main>
 
-  <!-- Lábléc -->
   <footer>
-    <p id="footer-text">&copy; 2025 Lenke Varró – VSTYLEDESIGN | Engedélyezve az MIT Licenc alatt.</p>
+    <p class="hu">&copy; 2025 Lenke Varró – VSTYLEDESIGN | Engedélyezve az MIT Licenc alatt.</p>
+    <p class="sr hidden">&copy; 2025 Lenke Varró – VSTYLEDESIGN | Dostupno pod MIT licencom.</p>
+    <p class="en hidden">&copy; 2025 Lenke Varró – VSTYLEDESIGN | Licensed under the MIT License.</p>
+    <p class="tr hidden">&copy; 2025 Lenke Varró – VSTYLEDESIGN | MIT Lisansı altında kullanılabilir.</p>
   </footer>
 
-  <!-- JavaScript: Nyelvváltás -->
   <script>
-    let isEnglish = false;
-
-    // Elemek kijelölése
-    const switchLanguageButton = document.getElementById('switch-language');
-    const headerTitle = document.getElementById('header-title');
-    const footerText = document.getElementById('footer-text');
-
-    const postTitle1 = document.getElementById('post-title-1');
-    const postDate1 = document.getElementById('post-date-1');
-    const postContent1 = document.getElementById('post-content-1');
-
-    const postTitle2 = document.getElementById('post-title-2');
-    const postDate2 = document.getElementById('post-date-2');
-    const postContent2 = document.getElementById('post-content-2');
-
-    const postTitle3 = document.getElementById('post-title-3');
-    const postDate3 = document.getElementById('post-date-3');
-    const postContent3 = document.getElementById('post-content-3');
-
-    // Gomb esemény
-    switchLanguageButton.addEventListener('click', () => {
-      if (!isEnglish) {
-        // Angolra váltás
-        headerTitle.textContent = 'Life Coach Blog';
-        footerText.textContent = '© 2025 Lenke Varró – VSTYLEDESIGN | Licensed under the MIT License.';
-
-        postTitle1.textContent = 'Why is Personal Development Important?';
-        postDate1.textContent = 'January 20, 2025';
-        postContent1.textContent = 'Personal development is the key to achieving goals and living a happier life. Inner growth helps you manage challenges and understand yourself better.';
-
-        postTitle2.textContent = 'Why is Mental Health Important?';
-        postDate2.textContent = 'January 21, 2025';
-        postContent2.textContent = 'Mental health has a direct impact on our quality of life. Learn how to improve your mental balance with everyday habits.';
-
-        postTitle3.textContent = 'Stress Management with a Lifestyle Coach';
-        postDate3.textContent = 'January 22, 2025';
-        postContent3.textContent = 'Managing stress through awareness, movement, and time planning. A lifestyle coach can support you in learning these skills.';
-
-        switchLanguageButton.textContent = 'Váltás magyarra';
-        isEnglish = true;
-      } else {
-        // Magyarra váltás
-        headerTitle.textContent = 'Life Coach Blog';
-        footerText.textContent = '© 2025 Lenke Varró – VSTYLEDESIGN | Engedélyezve az MIT Licenc alatt.';
-
-        postTitle1.textContent = 'Miért fontos a személyes fejlődés?';
-        postDate1.textContent = '2025. január 20.';
-        postContent1.textContent = 'Az önfejlesztés kulcsa annak, hogy elérjük céljainkat és boldogabb életet éljünk. A belső fejlődés segít a kihívások kezelésében és önmagunk jobb megértésében.';
-
-        postTitle2.textContent = 'Miért fontos a mentális egészség?';
-        postDate2.textContent = '2025. január 21.';
-        postContent2.textContent = 'A mentális egészség közvetlen hatással van életminőségünkre. Tudd meg, hogyan javíthatod lelki egyensúlyodat mindennapi szokásokkal.';
-
-        postTitle3.textContent = 'Stresszkezelés életmódtanácsadóval';
-        postDate3.textContent = '2025. január 22.';
-        postContent3.textContent = 'A stressz leküzdésében segíthet a tudatosság, a mozgás és a megfelelő időbeosztás. Az életmódtanácsadás támogatást ad ezek elsajátításában.';
-
-        switchLanguageButton.textContent = 'EN / HU';
-        isEnglish = false;
-      }
-    });
+    function switchLanguage(lang) {
+      const allLangs = ['hu', 'sr', 'en', 'tr'];
+      allLangs.forEach(code => {
+        document.querySelectorAll('.' + code).forEach(el => {
+          el.classList.add('hidden');
+        });
+      });
+      document.querySelectorAll('.' + lang).forEach(el => {
+        el.classList.remove('hidden');
+      });
+    }
   </script>
 </body>
 </html>
