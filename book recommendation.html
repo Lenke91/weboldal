@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fedezd fel a legjobb üzleti könyveket, amelyek segítenek fejleszteni a gondolkodásodat és segítik a pénzügyi növekedést." />
-  <meta name="keywords" content="könyvajánló, üzleti könyvek, pénzügyi növekedés, személyes fejlődés, gazdagságépítés" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO META TAG-ek -->
+  <meta name="description" content="Ajánlott üzleti könyvek négy nyelven: magyar, szerb, angol és török. Fedezd fel a sikerhez vezető olvasmányokat." />
+  <meta name="keywords" content="könyvajánló, üzleti könyvek, pénzügyi fejlődés, gazdagság, mindset, growth, business books, book tips" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Könyvajánló" />
-  <meta property="og:description" content="Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat." />
+  <meta property="og:title" content="Könyvajánló | Book Recommendations" />
+  <meta property="og:description" content="Fedezd fel a legjobb üzleti könyveket négy nyelven. Inspiráló ötletek, sikeres gondolkodás." />
   <meta property="og:image" content="https://www.vstyledesign.com/assets/konyvajanlo-cover.jpg" />
-  <meta property="og:url" content="https://gumroad.com/l/termeked-neve" />
+  <meta property="og:url" content="https://vlenke33.gumroad.com/l/jilxj" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://gumroad.com/l/termeked-neve" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-85RD19D4PP');
-  </script>
+  <link rel="canonical" href="https://vlenke33.gumroad.com/l/jilxj" />
+
   <title id="page-title">Könyvajánló</title>
   <style>
     body {
@@ -109,9 +104,6 @@
       .book-item {
         padding: 10px;
       }
-      .lang-switch a {
-        font-size: 14px;
-      }
     }
     @media (max-width: 480px) {
       .book-list {
@@ -121,109 +113,84 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1 id="header-text">Könyvajánló</h1>
+    <p id="header-description">Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.</p>
+    <div class="lang-switch">
+      <select id="languageSelect">
+        <option value="hu">HU</option>
+        <option value="en">EN</option>
+        <option value="sr">SR</option>
+        <option value="tr">TR</option>
+      </select>
+    </div>
+  </header>
 
-<header>
-  <h1 id="header-text">Könyvajánló</h1>
-  <p id="header-description">Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.</p>
-  <div class="lang-switch">
-    <a href="#" id="hu-btn">HU</a> | <a href="#" id="en-btn">EN</a>
-  </div>
-</header>
-
-<div class="container">
-  <!-- Hungarian Content -->
-  <div class="book-list hu-content">
-    <div class="book-item">
-      <h2>Gondolkodj és Gazdagodj</h2>
-      <p>Napoleon Hill klasszikus útmutatója a gazdagságépítéshez.</p>
-    </div>
-    <div class="book-item">
-      <h2>Gazdag Papa, Szegény Papa</h2>
-      <p>Robert Kiyosaki tanulságai a pénzügyi tudatosságról.</p>
-    </div>
-    <div class="book-item">
-      <h2>A Pénz pszichológiája</h2>
-      <p>Morgan Housel mélyreható elemzése a pénz mentális oldaláról.</p>
-    </div>
-    <div class="book-item">
-      <h2>A 4 órás munkahét</h2>
-      <p>Tim Ferriss útmutatója a szabadság eléréséhez.</p>
-    </div>
-    <div class="book-item">
-      <h2>Nulláról Egyre</h2>
-      <p>Peter Thiel startup-építési útmutatója.</p>
+  <div class="container">
+    <div class="book-list" id="bookList"></div>
+    <div class="buy-button">
+      <a href="https://vlenke33.gumroad.com/l/jilxj" target="_blank" id="buyButton">💡 Megvásárolom a sablont a Gumroadról</a>
     </div>
   </div>
 
-  <!-- English Content (Initially hidden) -->
-  <div class="book-list en-content" style="display: none;">
-    <div class="book-item">
-      <h2>Think and Grow Rich</h2>
-      <p>Napoleon Hill's classic guide to wealth-building principles.</p>
-    </div>
-    <div class="book-item">
-      <h2>Rich Dad Poor Dad</h2>
-      <p>Robert Kiyosaki's insightful lessons on financial education.</p>
-    </div>
-    <div class="book-item">
-      <h2>The Psychology of Money</h2>
-      <p>Morgan Housel's exploration of money and the mindset behind wealth.</p>
-    </div>
-    <div class="book-item">
-      <h2>The 4-Hour Workweek</h2>
-      <p>Tim Ferriss' blueprint for creating freedom and automated income.</p>
-    </div>
-    <div class="book-item">
-      <h2>Zero to One</h2>
-      <p>Peter Thiel's guide to building groundbreaking startups.</p>
-    </div>
-  </div>
+  <footer>
+    <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható. | <a href="https://vlenke33.gumroad.com/l/jilxj" style="color: white; text-decoration: underline;">Gumroad link</a></p>
+  </footer>
 
-  <!-- Gumroad Button -->
-  <div class="buy-button">
-    <a href="https://gumroad.com/l/termeked-neve" target="_blank">
-      💡 Megvásárolom a sablont a Gumroadról
-    </a>
-  </div>
-</div>
+  <script>
+    const translations = {
+      hu: {
+        header: "Könyvajánló",
+        description: "Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.",
+        button: "💡 Megvásárolom a sablont a Gumroadról",
+        books: ["Gondolkodj és Gazdagodj", "Gazdag Papa, Szegény Papa", "A Pénz pszichológiája", "A 4 órás munkahét", "Nulláról Egyre"]
+      },
+      en: {
+        header: "Book Recommendations",
+        description: "Discover books to boost your mindset and business journey.",
+        button: "💡 Buy the template on Gumroad",
+        books: ["Think and Grow Rich", "Rich Dad Poor Dad", "The Psychology of Money", "The 4-Hour Workweek", "Zero to One"]
+      },
+      sr: {
+        header: "Preporuke Knjiga",
+        description: "Otkrijte knjige koje će poboljšati vaše razmišljanje i poslovni put.",
+        button: "💡 Kupite šablon na Gumroad-u",
+        books: ["Misli i obogati se", "Bogati otac, siromašni otac", "Psihologija novca", "Radna nedelja od 4 sata", "Od nule do jedan"]
+      },
+      tr: {
+        header: "Kitap Önerileri",
+        description: "Zihniyetinizi ve iş yolculuğunuzu geliştiren kitapları keşfedin.",
+        button: "💡 Şablonu Gumroad'dan Satın Al",
+        books: ["Düşün ve Zengin Ol", "Zengin Baba Yoksul Baba", "Paranın Psikolojisi", "4 Saatlik Çalışma Haftası", "Sıfırdan Bire"]
+      }
+    };
 
-<footer>
-  <p id="footer-text">
-    <span id="footer-text-hu">© LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható.</span>
-    <span id="footer-text-en" style="display:none;">© LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License.</span>
-  </p>
-</footer>
+    function switchLang(lang) {
+      const data = translations[lang];
+      document.getElementById("header-text").textContent = data.header;
+      document.getElementById("header-description").textContent = data.description;
+      document.getElementById("buyButton").textContent = data.button;
+      document.title = data.header;
 
-<script>
-  function switchLanguage(lang) {
-    const huContent = document.querySelector('.hu-content');
-    const enContent = document.querySelector('.en-content');
-
-    if (lang === 'en') {
-      huContent.style.display = 'none';
-      enContent.style.display = 'block';
-      document.getElementById('header-text').innerText = 'Book Recommendations';
-      document.getElementById('header-description').innerText = 'Discover books to boost your mindset and business journey.';
-      document.title = 'Book Recommendations';
-      document.getElementById('footer-text-hu').style.display = 'none';
-      document.getElementById('footer-text-en').style.display = 'inline';
-    } else {
-      enContent.style.display = 'none';
-      huContent.style.display = 'block';
-      document.getElementById('header-text').innerText = 'Könyvajánló';
-      document.getElementById('header-description').innerText = 'Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.';
-      document.title = 'Könyvajánló';
-      document.getElementById('footer-text-hu').style.display = 'inline';
-      document.getElementById('footer-text-en').style.display = 'none';
+      const list = document.getElementById("bookList");
+      list.innerHTML = "";
+      data.books.forEach(title => {
+        const div = document.createElement("div");
+        div.className = "book-item";
+        div.innerHTML = `<h2>${title}</h2>`;
+        list.appendChild(div);
+      });
     }
-  }
 
-  document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
-  document.getElementById('hu-btn').addEventListener('click', () => switchLanguage('hu'));
-</script>
+    document.getElementById("languageSelect").addEventListener("change", (e) => switchLang(e.target.value));
 
+    // Default load
+    switchLang("hu");
+  </script>
 </body>
 </html>
+
+
 
 
   
