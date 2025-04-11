@@ -3,144 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Coach Weboldal Sablon – Többnyelvű & Reszponzív</title>
 
-  <!-- ✅ SEO META TAGEK -->
-  <meta name="description" content="Modern és animált Life Coach weboldal sablon, többnyelvű és reszponzív kivitelben." />
-  <meta name="keywords" content="life coach, életmódtanácsadó, coaching sablon, HTML CSS JS, animált weboldal, reszponzív design, többnyelvű weboldal" />
-  <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#800550" />
+  <!-- SEO META TAGS -->
+  <meta name="description" content="Professzionális, többnyelvű, reszponzív weboldal sablon life coachok és tanácsadók számára.">
+  <meta name="keywords" content="life coach sablon, html css js, többnyelvű sablon, responsive, coaching website, vstyledesign">
+  <meta name="author" content="vstyledesign">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vlenke33.gumroad.com/l/vaqgrn" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Életmódtanácsadó Weboldal Sablon" />
-  <meta property="og:description" content="Töltsd le SEO-optimalizált, többnyelvű és animált életmódtanácsadó sablonunkat!" />
-  <meta property="og:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
-  <meta property="og:url" content="https://example.com" />
+  <meta property="og:title" content="Life Coach Website Template – Multilingual & Responsive" />
+  <meta property="og:description" content="Mobilbarát és többnyelvű sablon, tökéletes online jelenlét life coachoknak." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vlenke33.gumroad.com/l/vaqgrn" />
+  <meta property="og:image" content="https://yourdomain.com/template-preview.jpg" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Life Coach Sablon" />
-  <meta name="twitter:description" content="Reszponzív, SEO-barát Life Coach weboldal sablon." />
-  <meta name="twitter:image" content="https://vstyledesign.com/images/thumbnail.jpg" />
-  <meta name="twitter:creator" content="@vstyledesign" />
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
-  <title>Life Coach Sablon – Többnyelvű és SEO-optimalizált</title>
+  <meta name="twitter:title" content="Life Coach Website Template" />
+  <meta name="twitter:description" content="Multilingual and responsive HTML CSS JS template for coaches." />
+  <meta name="twitter:image" content="https://yourdomain.com/template-preview.jpg" />
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: orange;
-      color: white;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
     }
 
     header {
-      text-align: center;
-      padding: 20px;
+      background: transparent;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    select {
-      padding: 8px 12px;
-      font-size: 14px;
-      border-radius: 5px;
+    nav a {
+      text-decoration: none;
+      color: #9d4b03;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d35400;
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .lang-switcher button {
+      padding: 6px 12px;
       border: none;
+      border-radius: 6px;
+      background: #e67e22;
+      color: white;
       cursor: pointer;
+      font-size: 0.9rem;
     }
 
     main {
       max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+      margin: 100px auto;
+      background-color: transparent;
+      padding: 60px 30px;
       text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
 
     footer {
       background: transparent;
-      color: white;
-      text-align: center;
       padding: 20px;
-      font-size: 14px;
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: 60px;
+      border-top: 1px solid #eee;
     }
 
-    a.download-link {
-      color: #fff;
+    .download-link {
+      color: #e67e22;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .download-link:hover {
+      color: #d35400;
       text-decoration: underline;
+    }
+
+    @media (max-width: 1024px) {
+      main {
+        padding: 50px 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .lang-switcher {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1 id="title">Életmódtanácsadó Weboldal</h1>
-    <select id="language-select">
-      <option value="hu">Magyar</option>
-      <option value="en">English</option>
-      <option value="sr">Српски</option>
-      <option value="tr">Türkçe</option>
-    </select>
+    <nav id="nav-links">
+      <a href="thome.html">Főoldal</a>
+      <a href="tabout.html">Rólam</a>
+      <a href="tservices.html">Szolgáltatások</a>
+      <a href="ttestimonials.html">Vélemények</a>
+      <a href="tblog.html">Blog</a>
+      <a href="tcontact.html">Kapcsolat</a>
+    </nav>
+    <div class="lang-switcher">
+      <button onclick="switchLanguage('hu')">HU</button>
+      <button onclick="switchLanguage('en')">EN</button>
+      <button onclick="switchLanguage('sr')">SR</button>
+      <button onclick="switchLanguage('tr')">TR</button>
+    </div>
   </header>
 
   <main>
-    <h2 id="main-heading">Fedezd fel a coaching világát</h2>
-    <p id="main-text">Ez a sablon ideális Life Coachok számára, akik professzionális online jelenlétet szeretnének.</p>
+    <h1 id="main-title">Üdvözöllek!</h1>
+    <p id="main-text">Ez a sablon tökéletes választás, ha professzionális, többnyelvű online jelenlétet szeretnél.</p>
   </main>
 
   <footer>
     <p id="footer-text">
       © 2025 LENKE VARO PR VSTYLEDESIGN |
-      <a href="https://vlenke33.gumroad.com/l/vaqgrn" target="_blank" class="download-link" id="footer-link">Letölthető sablon itt</a>
+      <a href="https://vlenke33.gumroad.com/l/vaqgrn" class="download-link" target="_blank">Letölthető sablon itt</a>
     </p>
   </footer>
 
   <script>
-    const translations = {
+    const content = {
       hu: {
-        title: "Életmódtanácsadó Weboldal",
-        heading: "Fedezd fel a coaching világát",
-        text: "Ez a sablon ideális Life Coachok számára, akik professzionális online jelenlétet szeretnének.",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Letölthető sablon itt</a>"
+        nav: ["Főoldal", "Rólam", "Szolgáltatások", "Vélemények", "Blog", "Kapcsolat"],
+        title: "Üdvözöllek!",
+        text: "Ez a sablon tökéletes választás, ha professzionális, többnyelvű online jelenlétet szeretnél.",
+        footer: "Letölthető sablon itt"
       },
       en: {
-        title: "Life Coach Website",
-        heading: "Discover the world of coaching",
-        text: "This template is perfect for Life Coaches who want a professional online presence.",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Download the template here</a>"
+        nav: ["Home", "About", "Services", "Testimonials", "Blog", "Contact"],
+        title: "Welcome!",
+        text: "This template is a perfect choice for a professional and multilingual online presence.",
+        footer: "Download the template here"
       },
       sr: {
-        title: "Sajt za Life Coach-a",
-        heading: "Otkrij svet koučinga",
-        text: "Ovaj šablon je savršen za Life Coach-eve koji žele profesionalno prisustvo na mreži.",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Preuzmi šablon ovde</a>"
+        nav: ["Почетна", "О мени", "Услуге", "Препоруке", "Блог", "Контакт"],
+        title: "Добродошли!",
+        text: "Овај шаблон је савршен избор за професионално и вишејезично онлајн присуство.",
+        footer: "Преузми шаблон овде"
       },
       tr: {
-        title: "Yaşam Koçu Web Sitesi",
-        heading: "Koçluk dünyasını keşfedin",
-        text: "Bu şablon, profesyonel bir çevrimiçi varlık isteyen yaşam koçları için idealdir.",
-        footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | <a href='https://vlenke33.gumroad.com/l/vaqgrn' target='_blank' class='download-link'>Şablonu buradan indir</a>"
+        nav: ["Anasayfa", "Hakkımda", "Hizmetler", "Referanslar", "Blog", "İletişim"],
+        title: "Hoş geldiniz!",
+        text: "Bu şablon, profesyonel ve çok dilli bir çevrimiçi varlık için mükemmel bir seçimdir.",
+        footer: "Şablonu buradan indir"
       }
     };
 
-    const langSelect = document.getElementById('language-select');
-
-    langSelect.addEventListener('change', function () {
-      const lang = this.value;
-      const t = translations[lang];
-      document.getElementById('title').textContent = t.title;
-      document.getElementById('main-heading').textContent = t.heading;
-      document.getElementById('main-text').textContent = t.text;
-      document.getElementById('footer-text').innerHTML = t.footer;
-    });
+    function switchLanguage(lang) {
+      const c = content[lang];
+      document.querySelectorAll("#nav-links a").forEach((el, i) => el.textContent = c.nav[i]);
+      document.getElementById("main-title").innerText = c.title;
+      document.getElementById("main-text").innerText = c.text;
+      document.getElementById("footer-text").innerHTML = `© 2025 LENKE VARO PR VSTYLEDESIGN | <a href="https://vlenke33.gumroad.com/l/vaqgrn" class="download-link" target="_blank">${c.footer}</a>`;
+    }
   </script>
+
 </body>
 </html>
+
