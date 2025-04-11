@@ -3,208 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO alap meta tagek -->
   <meta name="description" content="Fitness weboldal sablon személyi edzők számára – Edzéstervek, szolgáltatások és kapcsolat több nyelven." />
   <meta name="keywords" content="személyi edző sablon, fitnesz weboldal, edzésterv sablon, egészséges életmód, personal trainer template, fitness website, responsive fitness template" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#111111" />
-  <link rel="canonical" href="https://vlenke33.gumroad.com/l/jhxdzx" />
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-85RD19D4PP');
-  </script>
-  <title>Fitness Weboldal Sablon</title>
 
-  <!-- Open Graph (Facebook) -->
-  <meta property="og:title" content="Fitness Weboldal Sablon" />
-  <meta property="og:description" content="Többnyelvű, mobilbarát sablon személyi edzők számára." />
+  <!-- ✅ Open Graph -->
+  <meta property="og:title" content="Fitness Weboldal Sablon – vstyledesign" />
+  <meta property="og:description" content="Többnyelvű fitness sablon személyi edzőknek. Responsive design, SEO-barát kialakítás." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vlenke33.gumroad.com/l/jhxdzx" />
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+  <meta property="og:url" content="https://vstyledesign.com" />
+  <meta property="og:image" content="fitness-wt.jpg" />
 
-  <!-- Twitter Card -->
+  <!-- ✅ Twitter meta -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fitness Weboldal Sablon" />
-  <meta name="twitter:description" content="Mobilbarát és többnyelvű sablon személyi edzőknek – gyors bemutatkozás online!" />
-  <meta name="twitter:image" content="https://yourdomain.com/preview.jpg" />
+  <meta name="twitter:description" content="Többnyelvű fitness sablon személyi edzőknek. Responsive, SEO-optimalizált." />
+  <meta name="twitter:image" content="fitness-wt.jpg" />
+
+  <meta name="theme-color" content="#111111" />
+  <title>Fitness Weboldal Sablon</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: url('fitness wt.jpg');
+      background: url('fitness wt.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
       color: #000;
     }
 
-    .wrapper {
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-      width: 90%;
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 1rem;
       text-align: center;
-      overflow-y: auto;
-      max-height: 90vh;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #e67e22;
     }
 
     nav {
-      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    nav button {
-      margin: 0.3rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 5px;
-      background: #444;
+    nav a {
       color: #fff;
-      cursor: pointer;
-      transition: background 0.3s;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      background:transparent;
+      transition: background 0.3s ease;
     }
 
-    nav button:hover {
+    nav a:hover {
       background: #666;
     }
 
-    h2 {
-      margin-top: 1.2rem;
-      font-size: 1.5rem;
+    .language-switch {
+      margin-top: 1rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.5rem 0;
+    .language-switch button {
+      margin: 0.2rem;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: #888;
+      color: white;
+      cursor: pointer;
     }
 
-    ul li::before {
-      content: "• ";
-      color: #e67e22;
+    .container {
+      background: transparent;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
     }
 
-    a {
-      color: #0000ee;
-    }
+    h1 { font-size: 2rem; margin-bottom: 1rem; }
+    p { font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6; }
 
     footer {
-      margin-top: 1rem;
-      font-size: 0.8rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      background:transparent;
+      color: white;
+    }
+
+    @media (max-width: 1024px) {
+      .container { margin: 2rem 1rem; padding: 1.5rem; }
     }
 
     @media (max-width: 768px) {
       h1 { font-size: 1.6rem; }
-      h2 { font-size: 1.3rem; }
+      nav a { padding: 0.4rem 0.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.4rem; }
+      p { font-size: 1rem; }
       .container { padding: 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <h1 id="main-title">Fitness Weboldal Sablon</h1>
-      <nav>
-        <button onclick="setLanguage('hu')">HU</button>
-        <button onclick="setLanguage('sr')">SRB</button>
-        <button onclick="setLanguage('en')">EN</button>
-        <button onclick="setLanguage('tr')">TR</button>
-      </nav>
 
-      <h2 id="intro-title">Üdvözlünk!</h2>
-      <p id="intro-text">Ez a sablon személyi edzők számára készült, hogy bemutathassák szolgáltatásaikat.</p>
-
-      <h2 id="services-title">Szolgáltatások</h2>
-      <ul id="services-list">
-        <li>Személyi edzés</li>
-        <li>Táplálkozási tanácsadás</li>
-        <li>Csoportos órák</li>
-      </ul>
-
-      <h2 id="contact-title">Kapcsolat</h2>
-      <p id="contact-text">Kérdésed van? Írj nekünk:</p>
-      <a href="mailto:youremail@example.com">youremail@example.com</a>
-
-      <footer>
-        <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.</p>
-      </footer>
+  <header>
+    <nav>
+      <a href="személyi edzés.html" id="nav-personal">Személyi edzés</a>
+      <a href="táplálkozás.html" id="nav-nutrition">Táplálkozási tanácsadás</a>
+      <a href="csoportos órák.html" id="nav-group">Csoportos órák</a>
+    </nav>
+    <div class="language-switch">
+      <button onclick="setLanguage('hu')">HU</button>
+      <button onclick="setLanguage('sr')">SRB</button>
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('tr')">TR</button>
     </div>
+  </header>
+
+  <div class="container">
+    <h1 id="main-title">Fitness Weboldal Sablon</h1>
+    <p id="intro-text">Ez a sablon személyi edzők számára készült, hogy bemutathassák szolgáltatásaikat több nyelven.</p>
   </div>
+
+  <footer>
+    <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – MIT licenc</p>
+  </footer>
 
   <script>
     const translations = {
       hu: {
         'main-title': 'Fitness Weboldal Sablon',
-        'intro-title': 'Üdvözlünk!',
-        'intro-text': 'Ez a sablon személyi edzők számára készült, hogy bemutathassák szolgáltatásaikat.',
-        'services-title': 'Szolgáltatások',
-        'contact-title': 'Kapcsolat',
-        'contact-text': 'Kérdésed van? Írj nekünk:',
-        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.'
+        'intro-text': 'Ez a sablon személyi edzők számára készült, hogy bemutathassák szolgáltatásaikat több nyelven.',
+        'nav-personal': 'Személyi edzés',
+        'nav-nutrition': 'Táplálkozási tanácsadás',
+        'nav-group': 'Csoportos órák',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – MIT licenc'
       },
       sr: {
         'main-title': 'Šablon sajta za fitnes trenere',
-        'intro-title': 'Dobrodošli!',
-        'intro-text': 'Ovaj šablon je napravljen za lične trenere da predstave svoje usluge.',
-        'services-title': 'Usluge',
-        'contact-title': 'Kontakt',
-        'contact-text': 'Imate pitanje? Pišite nam:',
-        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – Ova stranica je dostupna pod MIT licencom.'
+        'intro-text': 'Ovaj šablon je napravljen za lične trenere da predstave svoje usluge na više jezika.',
+        'nav-personal': 'Lični trening',
+        'nav-nutrition': 'Nutricionistički saveti',
+        'nav-group': 'Grupni treninzi',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – MIT licenca'
       },
       en: {
         'main-title': 'Fitness Website Template',
-        'intro-title': 'Welcome!',
-        'intro-text': 'This template is made for personal trainers to present their services.',
-        'services-title': 'Services',
-        'contact-title': 'Contact',
-        'contact-text': 'Have a question? Write us:',
-        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – This site is licensed under the MIT license.'
+        'intro-text': 'This template is made for personal trainers to present their services in multiple languages.',
+        'nav-personal': 'Personal Training',
+        'nav-nutrition': 'Nutrition Advice',
+        'nav-group': 'Group Classes',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – MIT license'
       },
       tr: {
         'main-title': 'Fitness Web Sitesi Şablonu',
-        'intro-title': 'Hoş geldiniz!',
-        'intro-text': 'Bu şablon kişisel antrenörler için hazırlanmıştır.',
-        'services-title': 'Hizmetler',
-        'contact-title': 'İletişim',
-        'contact-text': 'Sorunuz mu var? Bize yazın:',
-        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – Bu site MIT lisansı ile sunulmaktadır.'
+        'intro-text': 'Bu şablon kişisel antrenörler için çok dilli hizmet sunmak amacıyla hazırlanmıştır.',
+        'nav-personal': 'Kişisel Antrenman',
+        'nav-nutrition': 'Beslenme Tavsiyesi',
+        'nav-group': 'Grup Dersleri',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – MIT lisansı'
       }
     };
 
     function setLanguage(lang) {
-      const elements = document.querySelectorAll('[id]');
-      elements.forEach(el => {
-        if (translations[lang][el.id]) {
-          el.textContent = translations[lang][el.id];
-        }
-      });
+      for (const id in translations[lang]) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = translations[lang][id];
+      }
     }
   </script>
+
 </body>
 </html>
