@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fitness weboldal sablon személyi edzők számára – Edzéstervek, szolgáltatások és kapcsolat több nyelven." />
+  <meta name="keywords" content="személyi edző sablon, fitnesz weboldal, edzésterv sablon, egészséges életmód, personal trainer template, fitness website, responsive fitness template" />
+  <meta name="author" content="vstyledesign" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#111111" />
+  <title>Fitness Weboldal Sablon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* ⛔️ tiltja a görgetést */
+      font-family: 'Segoe UI', sans-serif;
+      background: url(fitness\ wt.jpg);
+      background-size: cover;
+      color: #000;
+    }
+
+    .wrapper {
+      height: 100vh; /* 📏 Teljes képernyő */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: transparent;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      margin-bottom: 1.5rem;
+    }
+
+    nav button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background: #666;
+    }
+
+    h2 {
+      margin-top: 1.2rem;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.5rem 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #444;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    footer {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.3rem; }
+      .container { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1 id="main-title">Fitness Weboldal Sablon</h1>
+      <nav>
+        <button onclick="setLanguage('hu')">HU</button>
+        <button onclick="setLanguage('sr')">SRB</button>
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('tr')">TR</button>
+      </nav>
+
+      <h2 id="intro-title">Üdvözlünk!</h2>
+      <p id="intro-text">Ez a sablon személyi edzők számára készült, hogy bemutathassák szolgáltatásaikat.</p>
+
+      <h2 id="services-title">Szolgáltatások</h2>
+      <ul id="services-list">
+        <li>Személyi edzés</li>
+        <li>Táplálkozási tanácsadás</li>
+        <li>Csoportos órák</li>
+      </ul>
+
+      <h2 id="contact-title">Kapcsolat</h2>
+      <p id="contact-text">Kérdésed van? Írj nekünk:</p>
+      <a href="mailto:youremail@example.com">youremail@example.com</a>
+
+      <footer>
+        <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      hu: {
+        'main-title': 'Fitness Weboldal Sablon',
+        'intro-title': 'Üdvözlünk!',
+        'intro-text': 'Ez a sablon személyi edzők számára készült, hogy bemutathassák szolgáltatásaikat.',
+        'services-title': 'Szolgáltatások',
+        'contact-title': 'Kapcsolat',
+        'contact-text': 'Kérdésed van? Írj nekünk:',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.'
+      },
+      sr: {
+        'main-title': 'Šablon sajta za fitnes trenere',
+        'intro-title': 'Dobrodošli!',
+        'intro-text': 'Ovaj šablon je napravljen za lične trenere da predstave svoje usluge.',
+        'services-title': 'Usluge',
+        'contact-title': 'Kontakt',
+        'contact-text': 'Imate pitanje? Pišite nam:',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – Ova stranica je dostupna pod MIT licencom.'
+      },
+      en: {
+        'main-title': 'Fitness Website Template',
+        'intro-title': 'Welcome!',
+        'intro-text': 'This template is made for personal trainers to present their services.',
+        'services-title': 'Services',
+        'contact-title': 'Contact',
+        'contact-text': 'Have a question? Write us:',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – This site is licensed under the MIT license.'
+      },
+      tr: {
+        'main-title': 'Fitness Web Sitesi Şablonu',
+        'intro-title': 'Hoş geldiniz!',
+        'intro-text': 'Bu şablon kişisel antrenörler için hazırlanmıştır.',
+        'services-title': 'Hizmetler',
+        'contact-title': 'İletişim',
+        'contact-text': 'Sorunuz mu var? Bize yazın:',
+        'footer-text': '© LENKE VARO PR VSTYLEDESIGN 2024 – Bu site MIT lisansı ile sunulmaktadır.'
+      }
+    };
+
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[id]');
+      elements.forEach(el => {
+        if (translations[lang][el.id]) {
+          el.textContent = translations[lang][el.id];
+        }
+      });
+    }
+  </script>
+</body>
+</html>
