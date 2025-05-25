@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Új e-book megjelent | vstyledesign">
+  <meta name="description" content="Fedezd fel az új e-bookot, amely segít elérni céljaidat. Töltsd le most magyarul, angolul, szerbül vagy törökül!">
+  <meta name="keywords" content="e-book, könyv, letöltés, motiváció, önfejlesztés, ebook download, könyv sablon">
+  <meta name="author" content="vstyledesign">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vstyledesign.com/ebook">
+  <meta property="og:title" content="Új e-book megjelent!">
+  <meta property="og:description" content="Töltsd le a legújabb e-bookot négy nyelven!">
+  <meta property="og:image" content="https://vstyledesign.com/images/ebook-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Új e-book megjelent!">
+  <meta name="twitter:description" content="Töltsd le az e-bookot magyarul, angolul, szerbül vagy törökül!">
+  <meta name="twitter:image" content="https://vstyledesign.com/images/ebook-cover.jpg">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
+  <title>E-book Landing Page | vstyledesign</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #121212;
+      --text-light: #000000;
+      --text-dark: #ffffff;
+      --primary: #4CAF50;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      padding: 0.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: #ccc;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.95rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #ddd;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-content p {
+      font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+      margin-bottom: 1rem;
+    }
+
+    .features ul {
+      list-style: none;
+      margin-top: 1.2rem;
+    }
+
+    .features li {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      margin: 0.3rem 0;
+    }
+
+    .download h2 {
+      font-size: clamp(1rem, 4vw, 1.3rem);
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .download ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+
+    .download a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .download a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: transparent;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+      nav ul { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="language-switcher">
+      <li><button onclick="switchLang('hu')">HU</button></li>
+      <li><button onclick="switchLang('en')">EN</button></li>
+      <li><button onclick="switchLang('sr')">SR</button></li>
+      <li><button onclick="switchLang('tr')">TR</button></li>
+      <li><button onclick="toggleDarkMode()">🌓</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero-content">
+      <h1 data-hu="Fedezd fel új e-bookunkat!" data-en="Discover our new e-book!" data-sr="Otkrij naš novi e-knjigu!" data-tr="Yeni e-kitabımızı keşfedin!">Fedezd fel új e-bookunkat!</h1>
+      <p data-hu="Motiváció, útmutató és fejlődés egy sablonban." data-en="Motivation, guidance and growth in one template." data-sr="Motivacija, smernice i razvoj u jednom šablonu." data-tr="Motivasyon, rehberlik ve gelişim bir arada.">Motiváció, útmutató és fejlődés egy sablonban.</p>
+    </div>
+
+    <div class="features">
+      <ul>
+        <li data-hu="Több nyelven használható" data-en="Multilingual support" data-sr="Podrška za više jezika" data-tr="Çok dilli destek">Több nyelven használható</li>
+        <li data-hu="Mobilbarát és gyors" data-en="Mobile-friendly and fast" data-sr="Prilagođeno mobilnim uređajima" data-tr="Mobil uyumlu ve hızlı">Mobilbarát és gyors</li>
+        <li data-hu="Egyszerűen testreszabható" data-en="Easy to customize" data-sr="Jednostavno prilagodljiv" data-tr="Kolayca özelleştirilebilir">Egyszerűen testreszabható</li>
+      </ul>
+    </div>
+
+    <div class="download" id="download">
+      <h2 data-hu="Vásárlási lehetőségek" data-en="Purchase Options" data-sr="Opcije kupovine" data-tr="Satın Alma Seçenekleri">Vásárlási lehetőségek</h2>
+      <ul>
+        <li data-hu="🟢 Gyors vásárlás automatikus letöltéssel:" data-en="🟢 Quick purchase with auto-download:" data-sr="🟢 Brza kupovina sa automatskim preuzimanjem:" data-tr="🟢 Hızlı satın alma otomatik indirme ile:">
+          🟢 <strong>Gumroad:</strong> <a href="https://vlenke33.gumroad.com/l/stxav" target="_blank">Kattints ide a vásárláshoz</a>
+        </li>
+        <li data-hu="🟢 Közvetlen vásárlás Payoneeren: írj emailt a vlenke33@gmail.com címre. Küldök fizetési kérelmet, és utána a sablont." data-en="🟢 Direct purchase via Payoneer: email me at vlenke33@gmail.com. I’ll send a payment request and the template after payment." data-sr="🟢 Direktna kupovina putem Payoneera: pišite na vlenke33@gmail.com. Poslaću zahtev i šablon nakon uplate." data-tr="🟢 Payoneer ile doğrudan satın alma: vlenke33@gmail.com adresine yazın. Ödeme sonrası şablonu göndereceğim.">
+          🟢 <strong>Payoneer:</strong> írj emailt a <strong>vlenke33@gmail.com</strong> címre. Küldök fizetési kérelmet, és utána a sablont.
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p id="footer-text"
+       data-hu="© LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható. | Megvásárolható itt: "
+       data-en="© LENKE VARO PR VSTYLEDESIGN 2024 This site is licensed under the MIT License. | Available here: "
+       data-sr="© LENKE VARO PR VSTYLEDESIGN 2024 Ova stranica je licencirana pod MIT licencom. | Dostupno ovde: "
+       data-tr="© LENKE VARO PR VSTYLEDESIGN 2024 Bu site MIT Lisansı altında lisanslanmıştır. | Satın al: ">
+       © LENKE VARO PR VSTYLEDESIGN 2024 Az oldal az MIT licenc alapján használható. | Megvásárolható itt:
+       <a href="https://vlenke33.gumroad.com/l/stxav" target="_blank">Gumroad</a>
+    </p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      const elements = document.querySelectorAll('[data-hu]');
+      elements.forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) el.textContent = text;
+      });
+      const footer = document.getElementById('footer-text');
+      const link = `<a href="https://vlenke33.gumroad.com/l/stxav" target="_blank">Gumroad</a>`;
+      footer.innerHTML = footer.getAttribute(`data-${lang}`) + link;
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
