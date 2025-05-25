@@ -17,12 +17,12 @@
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://vlenke33.gumroad.com/l/jilxj" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
   <title id="page-title">Könyvajánló</title>
   <style>
     body {
@@ -67,6 +67,10 @@
       margin: 30px auto;
       text-align: center;
     }
+    .buy-button p {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
     .buy-button a {
       background-color: #4CAF50;
       color: white;
@@ -76,6 +80,7 @@
       font-weight: bold;
       font-size: 16px;
       transition: background-color 0.3s ease;
+      display: inline-block;
     }
     .buy-button a:hover {
       background-color: #45a049;
@@ -135,12 +140,13 @@
   <div class="container">
     <div class="book-list" id="bookList"></div>
     <div class="buy-button">
-      <a href="https://vlenke33.gumroad.com/l/jilxj" target="_blank" id="buyButton">💡 Megvásárolom a sablont a Gumroadról</a>
+      <a href="https://vlenke33.gumroad.com/l/jilxj" target="_blank" id="buyButton">💡 Vásárlás a Gumroadról</a>
+      <p>vagy írj a <strong>vlenke33@gmail.com</strong> címre Payoneeres rendeléshez.</p>
     </div>
   </div>
 
   <footer>
-    <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható. | <a href="https://vlenke33.gumroad.com/l/jilxj" style="color: white; text-decoration: underline;">Gumroad link</a></p>
+    <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.</p>
   </footer>
 
   <script>
@@ -148,25 +154,25 @@
       hu: {
         header: "Könyvajánló",
         description: "Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.",
-        button: "💡 Megvásárolom a sablont a Gumroadról",
+        button: "💡 Vásárlás a Gumroadról",
         books: ["Gondolkodj és Gazdagodj", "Gazdag Papa, Szegény Papa", "A Pénz pszichológiája", "A 4 órás munkahét", "Nulláról Egyre"]
       },
       en: {
         header: "Book Recommendations",
         description: "Discover books to boost your mindset and business journey.",
-        button: "💡 Buy the template on Gumroad",
+        button: "💡 Buy on Gumroad",
         books: ["Think and Grow Rich", "Rich Dad Poor Dad", "The Psychology of Money", "The 4-Hour Workweek", "Zero to One"]
       },
       sr: {
         header: "Preporuke Knjiga",
         description: "Otkrijte knjige koje će poboljšati vaše razmišljanje i poslovni put.",
-        button: "💡 Kupite šablon na Gumroad-u",
+        button: "💡 Kupi na Gumroad-u",
         books: ["Misli i obogati se", "Bogati otac, siromašni otac", "Psihologija novca", "Radna nedelja od 4 sata", "Od nule do jedan"]
       },
       tr: {
         header: "Kitap Önerileri",
         description: "Zihniyetinizi ve iş yolculuğunuzu geliştiren kitapları keşfedin.",
-        button: "💡 Şablonu Gumroad'dan Satın Al",
+        button: "💡 Gumroad'dan Satın Al",
         books: ["Düşün ve Zengin Ol", "Zengin Baba Yoksul Baba", "Paranın Psikolojisi", "4 Saatlik Çalışma Haftası", "Sıfırdan Bire"]
       }
     };
@@ -190,14 +196,16 @@
 
     document.getElementById("languageSelect").addEventListener("change", (e) => switchLang(e.target.value));
 
-    // Default load
+    // Alapértelmezett nyelv
     switchLang("hu");
   </script>
 </body>
 </html>
 
-
-
-
-  
     
+ 
+
+
+ 
+    
+  
