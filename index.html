@@ -11,13 +11,6 @@
   <meta property="og:image" content="Me.jpg" />
   <meta property="og:url" content="https://www.vstyledesign.com/index" />
   <meta property="og:type" content="website" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-85RD19D4PP');
-  </script>
   <title>Home - Web Developer & Entrepreneur</title>
   <style>
     :root {
@@ -68,17 +61,8 @@
     .language-switcher a { margin-left: 1rem; }
     .theme-toggle { margin-left: 1rem; cursor: pointer; color: var(--link-color); }
     .hero-section { text-align: center; padding: 5rem 1rem; animation: fadeIn 2s ease-in-out; }
-    .hero-content h1 {
-      font-size: 3rem;
-      animation: slideUp 2s ease-in-out;
-      margin-bottom: 1.5rem;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-      color: var(--subtext-color);
-      max-width: 800px;
-      margin: 0 auto;
-    }
+    .hero-content h1 { font-size: 3rem; animation: slideUp 2s ease-in-out; margin-bottom: 1.5rem; }
+    .hero-content p { font-size: 1.2rem; color: var(--subtext-color); max-width: 800px; margin: 0 auto; }
     .explore-portfolio-btn {
       display: inline-block;
       background-color: var(--btn-bg);
@@ -141,9 +125,7 @@
   <section id="home" class="hero-section">
     <div class="hero-content">
       <h1>Welcome to My Website</h1>
-      <p>
-        Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. <strong>See what I've created!</strong>
-      </p>
+      <p>Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. <strong>See what I've created!</strong></p>
       <a href="portfolio.html" class="explore-portfolio-btn">Explore My Portfolio</a>
     </div>
   </section>
@@ -164,27 +146,8 @@
 
   <script>
     function switchLanguage(lang) {
-      const texts = {
-        en: {
-          h1: "Welcome to My Website",
-          p: "Explore my work – I create animated, SEO-optimized, and responsive website templates designed to help your business succeed online. See what I've created!",
-          home: "Home",
-          about: "About",
-          services: "Services",
-          portfolio: "Portfolio",
-          button: "Explore My Portfolio",
-          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved"
-        },
-        hu: {
-          h1: "Üdvözöllek a Weboldalamon",
-          p: "Fedezd fel munkáimat – Animált, SEO-optimalizált és reszponzív weboldal sablonokat készítek, amelyek segítenek vállalkozásod online sikerében. Nézd meg, amit készítettem!",
-          home: "Kezdőlap",
-          about: "Rólam",
-          services: "Szolgáltatások",
-          portfolio: "Portfólió",
-          button: "Nézd meg a portfóliómat",
-          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Minden jog fenntartva."
-        },
+      document.documentElement.lang = lang;
+      const t = {
         sr: {
           h1: "Dobrodošli na moj sajt",
           p: "Pogledajte moj rad – kreiram animirane, SEO-optimizovane i responzivne veb šablone koji pomažu vašem poslovanju da uspe online. Pogledaj šta sam kreirala!",
@@ -195,49 +158,38 @@
           button: "Pogledaj moj portfolio",
           footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Sva prava zadržana."
         },
-        tr: {
-          h1: "Web Siteme Hoş Geldiniz",
-          p: "Çalışmalarımı keşfedin – animasyonlu, SEO uyumlu ve duyarlı web site şablonları oluşturuyorum. İşinizi çevrimiçi başarıya ulaştırmak için buradayım!",
-          home: "Anasayfa",
-          about: "Hakkımda",
-          services: "Hizmetler",
-          portfolio: "Portföy",
-          button: "Portföyümü Gör",
-          footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Tüm hakları saklıdır."
-        }
+        // többi nyelv opcionálisan hozzáadható
       };
-      const t = texts[lang];
-      document.querySelector('.hero-content h1').textContent = t.h1;
-      document.querySelector('.hero-content p').textContent = t.p;
-      document.querySelector('.home-link').textContent = t.home;
-      document.querySelector('.about-link').textContent = t.about;
-      document.querySelector('.services-link').textContent = t.services;
-      document.querySelector('.portfolio-link').textContent = t.portfolio;
-      document.querySelector('.explore-portfolio-btn').textContent = t.button;
-      document.getElementById('footer-text').textContent = t.footer;
-    }
+      if (t[lang]) {
+        document.querySelector('.hero-content h1').textContent = t[lang].h1;
+        document.querySelector('.hero-content p').textContent = t[lang].p;
+        document.querySelector('.home-link').textContent = t[lang].home;
+        document.querySelector('.about-link').textContent = t[lang].about;
+        document.querySelector('.services-link').textContent = t[lang].services;
+        document.querySelector('.portfolio-link').textContent = t[lang].portfolio;
+        document.querySelector('.explore-portfolio-btn').textContent = t[lang].button;
+        document.getElementById('footer-text').textContent = t[lang].footer;
 
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      const root = document.documentElement;
-      const dark = root.getAttribute('data-theme') === 'dark';
-      if (dark) {
-        root.removeAttribute('data-theme');
-      } else {
-        root.setAttribute('data-theme', 'dark');
+        if (lang === 'sr') {
+          const affiliate = document.getElementById('affiliate-link');
+          affiliate.innerHTML += `
+            <div>
+              <br />🌿 <strong>Preporučen proizvod:</strong>
+              <a href="https://6uoas.doctormurin.com/l/?sub1=website&sub2=footer_link_sr&sub3=reduslim_cod_srbija_2025" target="_blank" rel="nofollow">
+                Reduslim kapsule – prirodno rešenje za mršavljenje »
+              </a>
+            </div>`;
+        }
       }
-    });
-
-    const currentLang = document.documentElement.lang;
-    if (currentLang === 'sr') {
-      const affiliateDiv = document.getElementById('affiliate-link');
-      affiliateDiv.innerHTML += `
-        <br />
-        🌿 <strong>Preporučen proizvod:</strong>
-        <a href="https://6uoas.doctormurin.com/l/?sub1=website&sub2=footer_link_sr&sub3=reduslim_cod_srbija_2025" target="_blank" rel="nofollow">
-          Reduslim kapsule – prirodno rešenje za mršavljenje »
-        </a>
-      `;
     }
   </script>
 </body>
 </html>
+
+ 
+  
+  
+  
+
+
+ 
