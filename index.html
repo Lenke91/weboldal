@@ -30,7 +30,6 @@
       --footer-bg: #222;
       --link-color: white;
     }
-
     [data-theme="dark"] {
       --bg-color: #121212;
       --text-color: #ffffff;
@@ -41,13 +40,7 @@
       --footer-bg: #1a1a1a;
       --link-color: #ffffff;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Arial', sans-serif;
       background-color: var(--bg-color);
@@ -58,7 +51,6 @@
       flex-direction: column;
       transition: background-color 0.3s, color 0.3s;
     }
-
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -66,52 +58,27 @@
       padding: 1rem 2rem;
       background-color: var(--navbar-bg);
     }
-
-    .navbar-links ul {
-      display: flex;
-      list-style: none;
-    }
-
-    .navbar-links li {
-      margin: 0 1.5rem;
-    }
-
-    .navbar-links a,
-    .language-switcher a {
+    .navbar-links ul { display: flex; list-style: none; }
+    .navbar-links li { margin: 0 1.5rem; }
+    .navbar-links a, .language-switcher a {
       color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
     }
-
-    .language-switcher a {
-      margin-left: 1rem;
-    }
-
-    .theme-toggle {
-      margin-left: 1rem;
-      cursor: pointer;
-      color: var(--link-color);
-    }
-
-    .hero-section {
-      text-align: center;
-      padding: 5rem 1rem;
-      animation: fadeIn 2s ease-in-out;
-    }
-
+    .language-switcher a { margin-left: 1rem; }
+    .theme-toggle { margin-left: 1rem; cursor: pointer; color: var(--link-color); }
+    .hero-section { text-align: center; padding: 5rem 1rem; animation: fadeIn 2s ease-in-out; }
     .hero-content h1 {
       font-size: 3rem;
       animation: slideUp 2s ease-in-out;
       margin-bottom: 1.5rem;
     }
-
     .hero-content p {
       font-size: 1.2rem;
       color: var(--subtext-color);
       max-width: 800px;
       margin: 0 auto;
     }
-
     .explore-portfolio-btn {
       display: inline-block;
       background-color: var(--btn-bg);
@@ -123,11 +90,7 @@
       margin-top: 2rem;
       transition: background-color 0.3s ease;
     }
-
-    .explore-portfolio-btn:hover {
-      background-color: var(--btn-hover);
-    }
-
+    .explore-portfolio-btn:hover { background-color: var(--btn-hover); }
     .footer {
       background-color: var(--footer-bg);
       color: white;
@@ -135,53 +98,25 @@
       padding: 2rem 1rem;
       margin-top: auto;
     }
-
-    .footer .social-icons {
-      margin: 1rem 0;
-    }
-
+    .footer .social-icons { margin: 1rem 0; }
     .footer .social-icons a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-size: 1.1rem;
     }
-
-    .footer p {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .footer .affiliate {
-      margin-top: 1rem;
-      font-size: 1rem;
-    }
-
+    .footer p { margin-top: 1rem; font-size: 0.9rem; }
+    .footer .affiliate { margin-top: 1rem; font-size: 1rem; }
     .footer .affiliate a {
       color: #00ffcc;
       text-decoration: underline;
     }
-
     @media (max-width: 768px) {
-      .navbar-links ul {
-        flex-direction: column;
-        padding-left: 1rem;
-      }
-
-      .navbar-links li {
-        margin: 0 1rem;
-      }
+      .navbar-links ul { flex-direction: column; padding-left: 1rem; }
+      .navbar-links li { margin: 0 1rem; }
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   </style>
 </head>
 <body>
@@ -214,7 +149,7 @@
   </section>
 
   <footer class="footer">
-    <div class="affiliate">
+    <div class="affiliate" id="affiliate-link">
       🌿 <strong>Ajánlott partnertermék:</strong>
       <a href="https://h6iov.doctormurin.com/l/?sub1=website&sub2=footer_link&sub3=vstyledesign&utm_source=website&utm_medium=footer&utm_campaign=hairflex_footer" target="_blank" rel="nofollow">
         HairFlex hajerősítő – utánvéttel rendelhető »
@@ -271,7 +206,6 @@
           footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Tüm hakları saklıdır."
         }
       };
-
       const t = texts[lang];
       document.querySelector('.hero-content h1').textContent = t.h1;
       document.querySelector('.hero-content p').textContent = t.p;
@@ -292,6 +226,18 @@
         root.setAttribute('data-theme', 'dark');
       }
     });
+
+    const currentLang = document.documentElement.lang;
+    if (currentLang === 'sr') {
+      const affiliateDiv = document.getElementById('affiliate-link');
+      affiliateDiv.innerHTML += `
+        <br />
+        🌿 <strong>Preporučen proizvod:</strong>
+        <a href="https://6uoas.doctormurin.com/l/?sub1=website&sub2=footer_link_sr&sub3=reduslim_cod_srbija_2025" target="_blank" rel="nofollow">
+          Reduslim kapsule – prirodno rešenje za mršavljenje »
+        </a>
+      `;
+    }
   </script>
 </body>
 </html>
