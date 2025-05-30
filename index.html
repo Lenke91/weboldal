@@ -11,13 +11,13 @@
   <meta property="og:image" content="Me.jpg" />
   <meta property="og:url" content="https://www.vstyledesign.com/index" />
   <meta property="og:type" content="website" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-85RD19D4PP');
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-85RD19D4PP');
+  </script>
   <title>Home - Web Developer & Entrepreneur</title>
   <style>
     :root {
@@ -40,7 +40,11 @@
       --footer-bg: #1a1a1a;
       --link-color: #ffffff;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Arial', sans-serif;
       background-color: var(--bg-color);
@@ -58,18 +62,43 @@
       padding: 1rem 2rem;
       background-color: var(--navbar-bg);
     }
-    .navbar-links ul { display: flex; list-style: none; }
-    .navbar-links li { margin: 0 1.5rem; }
-    .navbar-links a, .language-switcher a {
+    .navbar-links ul {
+      display: flex;
+      list-style: none;
+    }
+    .navbar-links li {
+      margin: 0 1.5rem;
+    }
+    .navbar-links a,
+    .language-switcher a {
       color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
     }
-    .language-switcher a { margin-left: 1rem; }
-    .theme-toggle { margin-left: 1rem; cursor: pointer; color: var(--link-color); }
-    .hero-section { text-align: center; padding: 5rem 1rem; animation: fadeIn 2s ease-in-out; }
-    .hero-content h1 { font-size: 3rem; animation: slideUp 2s ease-in-out; margin-bottom: 1.5rem; }
-    .hero-content p { font-size: 1.2rem; color: var(--subtext-color); max-width: 800px; margin: 0 auto; }
+    .language-switcher a {
+      margin-left: 1rem;
+    }
+    .theme-toggle {
+      margin-left: 1rem;
+      cursor: pointer;
+      color: var(--link-color);
+    }
+    .hero-section {
+      text-align: center;
+      padding: 5rem 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      animation: slideUp 2s ease-in-out;
+      margin-bottom: 1.5rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--subtext-color);
+      max-width: 800px;
+      margin: 0 auto;
+    }
     .explore-portfolio-btn {
       display: inline-block;
       background-color: var(--btn-bg);
@@ -81,7 +110,9 @@
       margin-top: 2rem;
       transition: background-color 0.3s ease;
     }
-    .explore-portfolio-btn:hover { background-color: var(--btn-hover); }
+    .explore-portfolio-btn:hover {
+      background-color: var(--btn-hover);
+    }
     .footer {
       background-color: var(--footer-bg);
       color: white;
@@ -89,25 +120,46 @@
       padding: 2rem 1rem;
       margin-top: auto;
     }
-    .footer .social-icons { margin: 1rem 0; }
-    .footer .social-icons a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1.1rem;
+    .footer .social-icons {
+      margin: 1rem 0;
     }
-    .footer p { margin-top: 1rem; font-size: 0.9rem; }
-    .footer .affiliate { margin-top: 1rem; font-size: 1rem; }
+    .footer .social-icons span,
+    .footer .social-icons a {
+      display: block;
+      color: white;
+      margin: 5px 0;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    .footer p {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .footer .affiliate {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
     .footer .affiliate a {
       color: #00ffcc;
       text-decoration: underline;
     }
     @media (max-width: 768px) {
-      .navbar-links ul { flex-direction: column; padding-left: 1rem; }
-      .navbar-links li { margin: 0 1rem; }
+      .navbar-links ul {
+        flex-direction: column;
+        padding-left: 1rem;
+      }
+      .navbar-links li {
+        margin: 0 1rem;
+      }
     }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -145,8 +197,8 @@
       </a>
     </div>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/in/lenke-varr%C3%B3-a61561341/" target="_blank">LinkedIn</a>
-      <a href="https://gumroad.com/products" target="_blank">Gumroad</a>
+      <span>A sablonokat a portfólió oldalon, a bemutatóknál tudod megvásárolni:</span>
+      <a href="portfolio.html">👉 Nézd meg a sablonokat itt »</a>
     </div>
     <p id="footer-text"> &copy; 2025 LENKE VARO PR VSTYLEDESIGN | All rights reserved</p>
   </footer>
@@ -164,8 +216,7 @@
           portfolio: "Portfolio",
           button: "Pogledaj moj portfolio",
           footer: "© 2025 LENKE VARO PR VSTYLEDESIGN | Sva prava zadržana."
-        },
-        // többi nyelv opcionálisan hozzáadható
+        }
       };
       if (t[lang]) {
         document.querySelector('.hero-content h1').textContent = t[lang].h1;
@@ -193,10 +244,4 @@
 </body>
 </html>
 
- 
-  
-  
-  
 
-
- 
