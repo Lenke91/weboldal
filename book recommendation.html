@@ -6,129 +6,98 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- SEO META TAG-ek -->
-  <meta name="description" content="Ajánlott üzleti könyvek négy nyelven: magyar, szerb, angol és török. Fedezd fel a sikerhez vezető olvasmányokat." />
-  <meta name="keywords" content="könyvajánló, üzleti könyvek, pénzügyi fejlődés, gazdagság, mindset, growth, business books, book tips" />
+  <meta name="description" content="Ajánlott üzleti és kriptovaluta könyvek négy nyelven: magyar, szerb, angol és török. Fejleszd gondolkodásod!" />
+  <meta name="keywords" content="könyvajánló, üzleti könyvek, kriptovaluta, bitcoin, blockchain, könyvek, könyvtippek" />
   <meta name="author" content="LENKE VARO PR VSTYLEDESIGN" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Könyvajánló | Book Recommendations" />
-  <meta property="og:description" content="Fedezd fel a legjobb üzleti könyveket négy nyelven. Inspiráló ötletek, sikeres gondolkodás." />
-  <meta property="og:image" content="https://www.vstyledesign.com/assets/konyvajanlo-cover.jpg" />
+  <meta property="og:title" content="Multinyelvű könyvajánló" />
+  <meta property="og:description" content="Üzleti és kripto könyvek – négy nyelven elérhető ajánlók." />
+  <meta property="og:image" content="https://vstyledesign.com/assets/konyvajanlo-cover.jpg" />
   <meta property="og:url" content="https://vlenke33.gumroad.com/l/jilxj" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://vlenke33.gumroad.com/l/jilxj" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85RD19D4PP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-85RD19D4PP');
-  </script>
-  <title id="page-title">Könyvajánló</title>
+  <title>Multinyelvű könyvajánló</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      background: #f4f4f4;
       margin: 0;
       padding: 0;
+      color: #333;
     }
     header {
-      background-color: #4CAF50;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
       color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 50px 20px;
       position: relative;
+      animation: slideIn 1s ease-out;
     }
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-    .book-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .book-item {
-      padding: 15px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    h2 {
-      color: #4CAF50;
-    }
-    .buy-button {
-      display: inline-block;
-      margin: 30px auto;
-      text-align: center;
-    }
-    .buy-button p {
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
-    .buy-button a {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-    .buy-button a:hover {
-      background-color: #45a049;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #4CAF50;
-      color: white;
+    @keyframes slideIn {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
     }
     .lang-switch {
       position: absolute;
       top: 10px;
       right: 20px;
     }
-    @media (max-width: 1024px) {
-      .container {
-        padding: 15px;
-      }
-      .book-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
-    @media (max-width: 768px) {
-      header {
-        padding: 30px 15px;
-      }
-      .container {
-        margin: 20px;
-        padding: 15px;
-      }
-      .book-item {
-        padding: 10px;
-      }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      animation: fadeIn 2s ease;
     }
-    @media (max-width: 480px) {
-      .book-list {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .book-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+    }
+    h2 {
+      font-size: 1.2rem;
+      color: #0072ff;
+    }
+    .buy {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .buy a {
+      background: #0072ff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      background: #0072ff;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 id="header-text">Könyvajánló</h1>
-    <p id="header-description">Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.</p>
+    <h1 id="header-title"></h1>
+    <p id="header-desc"></p>
     <div class="lang-switch">
-      <select id="languageSelect">
+      <select id="langSelect">
         <option value="hu">HU</option>
         <option value="en">EN</option>
         <option value="sr">SR</option>
@@ -136,76 +105,67 @@
       </select>
     </div>
   </header>
-
   <div class="container">
-    <div class="book-list" id="bookList"></div>
-    <div class="buy-button">
-      <a href="https://vlenke33.gumroad.com/l/jilxj" target="_blank" id="buyButton">💡 Vásárlás a Gumroadról</a>
-      <p>vagy írj a <strong>vlenke33@gmail.com</strong> címre Payoneeres rendeléshez.</p>
+    <div class="book-grid" id="bookGrid"></div>
+    <div class="buy">
+      <a id="buyBtn" href="https://vlenke33.gumroad.com/l/jilxj" target="_blank"></a>
     </div>
   </div>
-
   <footer>
-    <p id="footer-text">© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.</p>
+    <p>© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.</p>
   </footer>
 
   <script>
     const translations = {
       hu: {
-        header: "Könyvajánló",
-        description: "Fedezd fel azokat a könyveket, amelyek erősítik a gondolkodásod és segítik az üzleti utadat.",
-        button: "💡 Vásárlás a Gumroadról",
-        books: ["Gondolkodj és Gazdagodj", "Gazdag Papa, Szegény Papa", "A Pénz pszichológiája", "A 4 órás munkahét", "Nulláról Egyre"]
+        title: "Ajánlott üzleti és kripto könyvek",
+        desc: "Fejleszd tudásod kiváló könyvekkel!",
+        buy: "📘 Vásárlás a Gumroadról",
+        footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – Az oldal az MIT licenc alapján használható.",
+        books: ["Gondolkodj és Gazdagodj", "Gazdag Papa, Szegény Papa", "A Pénz Pszichológiája", "A 4 órás munkahét", "Nulláról Egyre", "Bitcoin Standard", "Mastering Bitcoin", "Kriptoeszközök", "Bitcoinek és Blockchain Alapok"]
       },
       en: {
-        header: "Book Recommendations",
-        description: "Discover books to boost your mindset and business journey.",
-        button: "💡 Buy on Gumroad",
-        books: ["Think and Grow Rich", "Rich Dad Poor Dad", "The Psychology of Money", "The 4-Hour Workweek", "Zero to One"]
+        title: "Recommended Business & Crypto Books",
+        desc: "Upgrade your knowledge with great books!",
+        buy: "📘 Buy on Gumroad",
+        footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – This site is licensed under the MIT license.",
+        books: ["Think and Grow Rich", "Rich Dad Poor Dad", "The Psychology of Money", "The 4-Hour Workweek", "Zero to One", "Bitcoin Standard", "Mastering Bitcoin", "Cryptoassets", "Bitcoin & Blockchain Basics"]
       },
       sr: {
-        header: "Preporuke Knjiga",
-        description: "Otkrijte knjige koje će poboljšati vaše razmišljanje i poslovni put.",
-        button: "💡 Kupi na Gumroad-u",
-        books: ["Misli i obogati se", "Bogati otac, siromašni otac", "Psihologija novca", "Radna nedelja od 4 sata", "Od nule do jedan"]
+        title: "Preporučene poslovne i kripto knjige",
+        desc: "Unapredi svoje znanje sa sjajnim knjigama!",
+        buy: "📘 Kupi na Gumroad-u",
+        footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – Ova stranica je licencirana pod MIT licencom.",
+        books: ["Misli i obogati se", "Bogati otac, siromašni otac", "Psihologija novca", "Radna nedelja od 4 sata", "Od nule do jedan", "Bitcoin Standard", "Mastering Bitcoin", "Kriptoimovina", "Osnove Bitcoina i Blockchaina"]
       },
       tr: {
-        header: "Kitap Önerileri",
-        description: "Zihniyetinizi ve iş yolculuğunuzu geliştiren kitapları keşfedin.",
-        button: "💡 Gumroad'dan Satın Al",
-        books: ["Düşün ve Zengin Ol", "Zengin Baba Yoksul Baba", "Paranın Psikolojisi", "4 Saatlik Çalışma Haftası", "Sıfırdan Bire"]
+        title: "İş ve Kripto Kitap Önerileri",
+        desc: "Bilginizi harika kitaplarla geliştirin!",
+        buy: "📘 Gumroad'dan Satın Al",
+        footer: "© LENKE VARO PR VSTYLEDESIGN 2024 – Bu site MIT lisansı altında lisanslanmıştır.",
+        books: ["Düşün ve Zengin Ol", "Zengin Baba Yoksul Baba", "Paranın Psikolojisi", "4 Saatlik Çalışma Haftası", "Sıfırdan Bire", "Bitcoin Standardı", "Bitcoin'e Hakim Olmak", "Kripto Varlıklar", "Bitcoin ve Blokzincir Temelleri"]
       }
     };
 
-    function switchLang(lang) {
-      const data = translations[lang];
-      document.getElementById("header-text").textContent = data.header;
-      document.getElementById("header-description").textContent = data.description;
-      document.getElementById("buyButton").textContent = data.button;
-      document.title = data.header;
+    function updateLang(lang) {
+      const t = translations[lang];
+      document.getElementById("header-title").textContent = t.title;
+      document.getElementById("header-desc").textContent = t.desc;
+      document.getElementById("buyBtn").textContent = t.buy;
+      document.querySelector("footer p").textContent = t.footer;
 
-      const list = document.getElementById("bookList");
-      list.innerHTML = "";
-      data.books.forEach(title => {
+      const grid = document.getElementById("bookGrid");
+      grid.innerHTML = "";
+      t.books.forEach(title => {
         const div = document.createElement("div");
-        div.className = "book-item";
+        div.className = "book-card";
         div.innerHTML = `<h2>${title}</h2>`;
-        list.appendChild(div);
+        grid.appendChild(div);
       });
     }
 
-    document.getElementById("languageSelect").addEventListener("change", (e) => switchLang(e.target.value));
-
-    // Alapértelmezett nyelv
-    switchLang("hu");
+    document.getElementById("langSelect").addEventListener("change", e => updateLang(e.target.value));
+    updateLang("hu");
   </script>
 </body>
 </html>
-
-    
- 
-
-
- 
-    
-  
